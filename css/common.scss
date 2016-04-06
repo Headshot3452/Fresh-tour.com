@@ -1338,6 +1338,8 @@ header, .hidden-top {
     margin-bottom: 0;
     .slick-slide {
       line-height: 102px;
+      margin-left: 10px;
+      margin-right: 10px;
       &:hover, &.slick-current {
         color: #00b185;
         outline: none;
@@ -1349,6 +1351,8 @@ header, .hidden-top {
         float: left;
         margin-right: 10px;
         padding-top: 33px;
+        width: 29px;
+        height: 75px;
       }
     }
   }

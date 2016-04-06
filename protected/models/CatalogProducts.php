@@ -403,12 +403,12 @@
          * @return string
          */
 
-        public function getUrlForItem($root_id,$only_parent=false,$language_id=null)
+        public function getUrlForItem($root_id, $only_parent = false, $language_id = null)
         {
             $parent=$this->parent;
             if ($parent)
             {
-                $url=$parent->findUrlForItem('name',false,$root_id,$language_id).$parent->name.'/';
+                $url=$parent->findUrlForItem('name', false, $root_id, $language_id).$parent->name.'/';
 
                 if (!$only_parent)
                 {

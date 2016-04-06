@@ -9,7 +9,11 @@ class SiteController extends FrontendController
     public function actionIndex()
     {
         $this->getPage($this->getHomeId());
-        $this->render('index');
+
+        $root = CatalogTree::model()->language($this->getCurrentLanguage()->id)->roots()->active()->findByPk(Yii::app()->params['strany_catalog']);
+        $categories = $root->children()->active()->findAll();
+
+        $this->render('index', array('categories' => $categories));
     }
 
     public function actionContacts()
