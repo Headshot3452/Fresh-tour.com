@@ -1,0 +1,483 @@
+@import "/css/font-awesome.css";
+@import "compass/css3";
+@import "compass/css3/images";
+@import "compass/css3/border-radius";
+@import "compass/utilities/sprites";
+@import "compass/utilities/general/hacks";
+
+body, html {
+  font-family: arial;
+  height: 100%;
+}
+
+a {
+  outline: none;
+}
+
+.ghost-footer {
+  height: 460px;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -460px;
+}
+
+.errorMessage, .help-block {
+  color: red;
+  font-size: 12px;
+}
+
+footer {
+  height: 460px;
+}
+
+#toTop {
+  bottom: 80px;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  right: 20px;
+  padding: 17px 15px;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.text {
+  line-height: 1.4em;
+  text-align: justify;
+  ul {
+    margin-bottom: 10px;
+    li {
+      list-style: square outside;
+      padding-left: 15px;
+    }
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  strong, b {
+    font-weight: bold;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  h5 {
+    font-size: 12px;
+  }
+  h6 {
+    font-size: 10px;
+  }
+  small {
+    font-size: 10px;
+  }
+  i {
+    font-style: italic;
+  }
+}
+
+.ui-autocomplete {
+  .ui-menu-item {
+    strong {
+      font-weight: bold;
+    }
+  }
+}
+
+// Для логиорвания
+
+.wrapper.user_login {
+  .logo {
+    margin: 35px 0;
+  }
+  .form-control {
+    border-radius: 0;
+  }
+  .title {
+    font-size: 18px;
+    color: #979797;
+  }
+  a {
+    font-family: Arial;
+    font-size: 14px;
+    color: #979797;
+    display: block;
+    margin: 20px 0 0 0;
+  }
+  .back {
+    float: right;
+    margin: 10px 0 0 0;
+  }
+  .btn {
+    padding: 4px 40px;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"] + label:not(.status) {
+    color: #979797;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 14px;
+    margin-left: 40px;
+  }
+  input[type="checkbox"] + label:not(.status)::before {
+    content: "";
+    display: inline-table;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    margin: -2px 5px 0 0;
+    background: url('/images/checkbox.png') no-repeat transparent;
+  }
+  input[type="checkbox"] + label:not(.status)::before {
+    background-position: 0px 0px;
+  }
+  input[type="checkbox"]:checked + label:not(.status)::before {
+    background-position: 0px -52px;
+  }
+  input[type="checkbox"]:checked:disabled + label:not(.status)::before {
+    opacity: 0.5;
+  }
+}
+
+.help-inline {
+  color: red;
+  position: absolute;
+  margin-left: 100%;
+  width: 100%;
+  margin-top: -25px;
+  font-size: 12px;
+}
+
+.require {
+  font-size: 12px;
+  color: #f84c32;
+  font-family: arial, sans-serif;
+  margin-bottom: 18px;
+}
+
+.lk_title {
+  font-size: 18px;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.lk_cat {
+  font-size: 18px;
+  font-family: arial, sans-serif;
+  margin-bottom: 18px;
+}
+
+.form-group {
+  .text-right label {
+    color: #979797;
+    font-size: 14px;
+    font-family: arial, sans-serif;
+    font-weight: normal;
+    margin-top: 6px;
+  }
+  input.form-control {
+    height: 31px;
+    border-radius: 0;
+  }
+}
+
+span.required {
+  color: #ff0000;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.field-note label {
+  color: #979797;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.birth-label {
+  margin-top: 24px;
+}
+
+.house input {
+  width: 60px;
+}
+
+.captcha input {
+  width: 140px;
+}
+
+.captcha img {
+  margin-top: -8px;
+}
+
+.all {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.left {
+  padding-left: 0;
+}
+
+.blue_link, .buttons .form-group a.blue_link, .buttons.form-group a.blue_link {
+  color: #0849e1;
+  text-decoration: none;
+  &:hover {
+    color: #0849e1;
+    text-decoration: underline;
+  }
+}
+
+.captcha-refresh {
+  position: absolute;
+  width: 80px;
+  margin-top: 7px;
+  margin-left: 70px;
+  font-size: 14px;
+  span {
+    display: none;
+  }
+}
+
+.buttons .form-group, .buttons.form-group {
+  margin-bottom: 60px;
+  button {
+    padding: 4px 33px;
+    height: 30px;
+    margin-right: 30px;
+    background: linear-gradient(to top, #1343e3, #446dfa);
+    &:hover {
+      background: linear-gradient(to bottom, #1343e3, #446dfa);
+    }
+  }
+  a {
+    font-size: 14px;
+    color: #000;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#users-login-form .buttons.form-group button {
+  margin-right: 0;
+  padding: 4px 14px;
+}
+
+.captcha_error .help-inline {
+  margin-top: 40px;
+  margin-left: -100%;
+}
+
+#users-login-form .lk_title, .restore_password.lk_title {
+  margin-bottom: 25px;
+}
+
+#users-login-form #reset {
+  margin-right: 20px;
+  padding: 4px 14px;
+}
+
+#registry_link {
+  float: right;
+  margin-top: 5px;
+}
+
+#forget_password {
+  position: absolute;
+  left: 100%;
+  width: 110px;
+  display: inline-block;
+  margin-top: -45px;
+}
+
+.buttons .form-group {
+  .green_btn {
+    background: linear-gradient(to top, #00a000, #66eb66);
+    color: #fff;
+    font-weight: normal;
+    padding: 4px 23px;
+    &:hover {
+      background: linear-gradient(to bottom, #00a000, #66eb66);
+    }
+  }
+}
+
+.profil_left_menu {
+  list-style: none;
+  padding-top: 5px;
+  a, #settings_submenu a {
+    color: #000;
+    &:hover, &.active {
+      text-decoration: none;
+      color: #0849e1;
+    }
+  }
+}
+
+.user_login {
+  #users-login-form {
+    background: #ffffff;
+    padding: 25px 20px;
+    .buttons.form-group {
+      margin-bottom: 0;
+      .btn {
+        padding: 4px 43px;
+      }
+    }
+  }
+}
+
+#users-login-form {
+  .buttons.form-group {
+    margin-bottom: 0;
+    .btn {
+      padding: 4px 33px;
+    }
+  }
+}
+
+#users-registration #reg_btn {
+  padding: 4px 17px;
+}
+
+#profil {
+  .lk_title {
+    padding-bottom: 10px;
+  }
+  .text-right {
+    font-size: 14px;
+    color: #979797;
+  }
+  .profil_left_menu {
+    padding-left: 0;
+    li {
+      a, div {
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding: 5px 0 5px 10px;
+      }
+    }
+    .fa {
+      float: right;
+      display: inline-block;
+      padding-right: 10px;
+      padding-top: 2px;
+    }
+    .dropdown-menu {
+      display: block !important;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility .3s, opacity .3s, top .4s;
+      top: 200%;
+    }
+    .open > .dropdown-menu {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility .3s, opacity .3s, bottom .4s;
+      top: calc(100% + 1px);
+    }
+  }
+  .hitarea {
+    background-color: #e4e4e4;
+    cursor: pointer;
+    &.collapsed {
+      background-color: transparent;
+    }
+    &:hover {
+      background-color: #e4e4e4;
+    }
+    .fa-caret-up:before {
+      content: "\f0d7";
+    }
+  }
+  .hitarea:not(.collapsed) {
+    background-color: #e4e4e4;
+    .fa-caret-up:before {
+      content: "\f0d8";
+    }
+  }
+  #settings_submenu {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  content: "\f0d8";
+}
+
+#profil_settings {
+  padding-top: 15px;
+  .btn {
+    padding: 4px 20px;
+    background: linear-gradient(to top, #1545e4, #446dfa);
+    &:hover {
+      background: linear-gradient(to bottom, #1545e4, #446dfa);
+    }
+  }
+}
+
+#users-changePassword-form {
+  padding-top: 10px;
+}
+
+.btn-primary {
+  font-size: 14px;
+  background: linear-gradient(to top, #1545e4, #446dfa);
+  &:hover {
+    background: linear-gradient(to bottom, #1545e4, #446dfa);
+  }
+}
+
+.lichnye {
+  padding-top: 10px;
+  label {
+    font-weight: normal;
+    color: #727272;
+  }
+}
+
+#user-info-index-form {
+  .qq-uploader {
+    display: none;
+  }
+}
+
+#user-info-index-form {
+  padding-top: 10px;
+}
+
+#load-avatar {
+  position: absolute !important;
+  margin-top: 5px;
+  width: 220px !important;
+  input {
+    font-size: 14px !important;
+    cursor: pointer;
+  }
+  color: #0849e1;
+}
+
+.photo_place {
+  margin-bottom: 35px;
+}
+
+#user-info-index-form .qq-upload-button-hover {
+  background: transparent;
+  text-decoration: underline;
+  color: #0849e1;
+}
