@@ -37,6 +37,8 @@
                 break;
         }
 
+        $count = $dataProducts->getItemCount();
+
         echo
             '<h1>'. $this->pageTitle . '<i> '.$count.'</i> </h1>
             <div class="sort">
@@ -44,7 +46,6 @@
             </div>
             <div class="row">';
 
-        $count = $dataProducts->getItemCount();
         if ($count > 0)
         {
             $cs = Yii::app()->getClientScript();

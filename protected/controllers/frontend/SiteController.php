@@ -66,6 +66,7 @@ class SiteController extends FrontendController
 	public function actionPage($url)
     {
 		$this->setPageForUrl($url);
+
         if($this->page_id == Yii::app()->params['pages']['o-kompanii'])
         {
             $url = $this->getUrlById(Yii::app()->params['pages']['nash-ofis']);
@@ -76,6 +77,12 @@ class SiteController extends FrontendController
             $url = $this->getUrlById(Yii::app()->params['pages']['sposoby-oplaty']);
             $this->redirect('/'.$url);
         }
+        elseif($this->page_id == Yii::app()->params['pages']['srochno'])
+        {
+            $url = $this->getUrlById(Yii::app()->params['pages']['hot-tour']);
+            $this->redirect('/'.$url);
+        }
+
         $this->render('page',array());
     }
 

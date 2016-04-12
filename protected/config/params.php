@@ -55,21 +55,24 @@
             'strany-i-oteli' => '3',
             'informaciya' => '4',
             'tema-tours' => '5',
+            'srochno' => '6',
             'o-kompanii' => '7',
             'agentstvam' => '8',
             'nash-ofis' => '10',
             'novosti' => '13',
             'sposoby-oplaty' => '18',
             'visy' => '16',
+            'hot-tour' => '20',
             'visa' => '77',
             'o-kompanii-array' => array(7, 8, 10, 11, 12, 13, 69, 71),
             'info-array' => array(4, 18, 19),
             'tyrs-array' => array(16, 76, 77),
             'strany-and-hotel' => array(3, 66, 67),
+            'hot-tours' => array(20, 81, 82),
         ),
 
         'vizy_catalog' => '3',      // Каталог "Визы"
-        'strany_catalog' => '4',    // Каталог "Визы"
+        'strany_catalog' => '4',    // Каталог "Страны"
 
         'date_from' => '5',         // Параметр "Дата отправления"
         'tema_tours' => '6',        // Параметр "Тематика тура"

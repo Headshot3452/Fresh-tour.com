@@ -149,11 +149,13 @@
         'Star rating'           => 'Звездный рейтинг',
         'Hotel type'            => 'Тип отеля',
         'Add group'             => 'Добавить группу',
+        'Where you want to go'  => 'Куда хотите поехать',
 
         'Products releated products' => 'Сопутствующие товары',
         'This user does not exist!'=>'Пользователь не существует!',
         'You have entered an invalid password!'=>'Вы указали неверный пароль!',
         'Last update date'=>'Дата последнего изменения',
+
         'You can not login. Please contact the site administrator!'=>'Вы не можете авторизоваться. Свяжитесь с администратором сайта!',
 
         'Drop files here to upload' => 'Перетащите файл для загрузки',
@@ -180,6 +182,7 @@
         'Apply parent widgets'=>'Применить родительские виджеты',
         'Apply Parental'=>'Применить родительский',
         'Choose a template'=>'Выберите шаблон',
+        'Choose the country' => 'Выберите страну',
         'Select the link module'=>'Выберите связь с модулем',
         'Select the link module level'=>'Выберите связь с уровнем модуля',
         'For children'=>'Для дочерних',
@@ -249,6 +252,7 @@
         'Client' => 'Клиент',
         'Theme ask' => 'Тема вопроса',
         'Ask' => 'Вопрос',
+        'Book' => 'Забронировать',
         'Capital' => 'Столица',
         'Currency' => 'Денежная единица',
         'Difference' => 'Разница во времени',

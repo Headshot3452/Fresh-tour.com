@@ -12,6 +12,9 @@
 
 					if(!empty($this->breadcrumbs))
 					{
+						$this->breadcrumbs[] = $tree->title;
+						$this->setPageTitle($tree->title);
+
 						echo '<div>';
 
 							$this->widget('bootstrap.widgets.BsBreadcrumb',
@@ -289,7 +292,7 @@
 						</div>
 					</div>
 					<div class="col-xs-9 no-right">
-						<h1>Туры <?php echo $tree->padej ;?> <i><?php echo $dataProducts->getTotalItemCount() ;?></i> </h1>
+						<h1>Туры <?php echo $tree->padej ;?> <i><?php echo $dataProducts->getItemCount() ;?></i> </h1>
 						<div class="sort">
 							Сортировка по: <a href = "" class="<?php echo $sort ;?>">Цене <span></span> </a>
 						</div>

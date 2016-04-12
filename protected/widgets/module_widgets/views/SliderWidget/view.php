@@ -1,4 +1,20 @@
 <?php
+	$cs = Yii::app()->getClientScript();
+	$slider_main = '
+		$("#slider-main").slick(
+		{
+			dots: true,
+			infinite: true,
+			speed: 500,
+			fade: true,
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 5000,
+		});
+	';
+
+	$cs->registerScript('slider_main', $slider_main, CClientScript::POS_READY);
+
 	if(isset($this->_items))
 	{
 		foreach($this->_items as $item)
@@ -21,19 +37,3 @@
 				</div>';
 		}
 	}
-
-	$cs = Yii::app()->getClientScript();
-	$slider_main = '
-		$("#slider-main").slick(
-		{
-			dots: true,
-			infinite: true,
-			speed: 500,
-			fade: true,
-			arrows: false,
-			autoplay: true,
-			autoplaySpeed: 5000,
-		});
-	';
-	$cs->registerScript('slider_main', $slider_main);
-?>

@@ -163,6 +163,13 @@ class CatalogTree extends Model
 		return parent::model($className);
 	}
 
+	public static function getCountry()
+	{
+		$root = self::model()->active()->find('id = :id', array(':id' => Yii::app()->params['strany_catalog']));
+		$child = $root->children()->active()->findAll(array('order' => 'title'));
+		return CHtml::listData($child, 'id', 'title');
+	}
+
     public function scopes()
     {
         $alias=$this->getTableAlias();

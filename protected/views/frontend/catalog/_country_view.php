@@ -8,6 +8,7 @@
 
 <a href = "<?php echo $data->name ;?>" class = "item-link">
 	<div class = "item">
+		<div class="border"></div>
 		<div class = "col-xs-4 no-left img-cont">
 			<img src = "/<?php echo $image ;?>" alt = "">
 <?php

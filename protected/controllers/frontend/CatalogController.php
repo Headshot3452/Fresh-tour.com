@@ -23,28 +23,28 @@
 
             $categories = $root->children()->active()->findAll();
 
+            $sort = Yii::app()->request->cookies['sort_products'];
+
+            if (!$sort || $sort == '')
+            {
+                $sort = 'price_asc';
+            }
+            else
+            {
+                $sort = $sort->value;
+            }
+
+            if (!empty($sort))
+            {
+                switch($sort)
+                {
+                    case 'price_asc': $order = 't.`price` ASC'; break;
+                    case 'price_desc': $order = 't.`price` DESC'; break;
+                }
+            }
+
             if(!$categories)
             {
-                $sort = Yii::app()->request->cookies['sort_products'];
-
-                if (!$sort || $sort == '')
-                {
-                    $sort = 'price_asc';
-                }
-                else
-                {
-                    $sort = $sort->value;
-                }
-
-                if (!empty($sort))
-                {
-                    switch($sort)
-                    {
-                        case 'price_asc': $order = 't.`price` ASC'; break;
-                        case 'price_desc': $order = 't.`price` DESC'; break;
-                    }
-                }
-
                 $products = CatalogProducts::model()->getDataProviderForCategory($root->id, $order);
                 $count = $products->getTotalItemCount();
             }
@@ -58,8 +58,21 @@
                         'limit' => '9'
                     )
                 );
+
+                if(in_array($this->page_id, Yii::app()->params['pages']['hot-tours']))
+                {
+                    $view = 'hot-tours';
+                    $list = CHtml::listData($categories, 'id', 'id');
+                    $products = CatalogProducts::model()->getDataProviderForCategory($list, $order);
+                    $count = $products->getTotalItemCount();
+                }
+                else
+                {
+                    $view = 'countrys';
+                }
+
                 $categories = $root->children()->active()->findAll(array('order' => 'title'));
-                $this->render('countrys', array('categories' => $categories, 'popular' => $popular));
+                $this->render($view, array('categories' => $categories, 'popular' => $popular, 'dataProducts' => $products, 'sort' => $sort));
                 Yii::app()->end();
             }
 
@@ -276,7 +289,14 @@
                 $products = CatalogProducts::model()->getDataProviderForCategory($id, $order, $count);
             }
 
-            $view = (in_array($this->page_id, Yii::app()->params['pages']['strany-and-hotel'])) ? 'country' : 'tree';
+            if(in_array($this->page_id, Yii::app()->params['pages']['strany-and-hotel']))
+            {
+                $view = 'country';
+            }
+            else
+            {
+                $view = 'tree';
+            }
 
             $this->render($view,
                 array(

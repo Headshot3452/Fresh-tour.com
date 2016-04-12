@@ -89,6 +89,11 @@
                     echo $hot ? '<span class = "hot">Горяший тур</span>' : '';
                     echo $popular ? '<span class = "popular">Популярное</span>' : '';
 
+                    if(!$hot || !$popular)
+                    {
+                        echo '<br>';
+                    }
+
                     if(isset($tema_tours))
                     {
                         foreach($tema_tours as $key => $value)
@@ -204,7 +209,7 @@
 ?>
                         </div>
                         <div class="clearfix"></div>
-                        <h2 class="descr hotel-title no-left"><?php echo $name_hotel ;?></h2>
+                        <h2 class="descr hotel-title no-left"><?php echo isset($name_hotel) ? $name_hotel : '' ;?></h2>
 
                         <div class="col-xs-7 no-left photo-tour">
                             <div id="big" class="big image-big">

@@ -1,7 +1,7 @@
 <?php
 	class CustomPagination extends CPagination
 	{
-		public function createPageUrl($page)
+		public function createPageUrl($controller, $page)
 		{	
 			$params=$this->params===null ? $_GET : $this->params;
 			if($page>0) // page 0 is the default

@@ -259,21 +259,45 @@
             return self::model()->active()->findAll('t.`parent_id`=:parent_id',array('parent_id'=>$parent_id));
         }
 
-        public function getDataProviderForCategory($parent_id, $order = '', $count = 10)
+        public function getDataProviderForCategory($parent_id, $order = '', $count = 6)
         {
             $criteria = new CDbCriteria;
-            $criteria->condition = 't.`parent_id` = :parent_id';
-            $criteria->params = array(
-                ':parent_id' => $parent_id,
-            );
-
-            $criteria->scopes = array(
-                  'active'
-            );
 
             $criteria->with = array(
                 'parameters' => array('alias' => 'p', 'joinType' => 'INNER JOIN'),
                 'parameters_value' => array('alias' => 'v', 'joinType' => 'INNER JOIN'),
+            );
+
+            $counter = 0;
+
+            if(is_array($parent_id))
+            {
+                $list = implode(',', $parent_id);
+                $criteria->addInCondition('t.`parent_id`', array($list));
+
+                if(!isset($_GET['CountryForm']))
+                {
+                    $criteria->condition = 'v.`params_id` = :hot AND v.`value` = 1';
+
+                    $criteria->together = true;
+
+                    $criteria->params = array(
+                        ':hot' => Yii::app()->params['hot'],
+                    );
+                }
+
+                $criteria->addInCondition('t.`parent_id`', array($list));
+            }
+            else
+            {
+                $criteria->condition = 't.`parent_id` = :parent_id';
+                $criteria->params = array(
+                    ':parent_id' => $parent_id,
+                );
+            }
+
+            $criteria->scopes = array(
+                  'active'
             );
 
             if(isset($_GET['CountryForm']) && !empty($_GET['CountryForm']))
@@ -282,8 +306,6 @@
                 {
                     $criteria->together = true;
                 }
-
-                $counter = 0;
 
                 $par = array();
 
@@ -296,11 +318,7 @@
                     $from = str_replace(" ", "", $matches[1]);
                     $to = str_replace(" ", "", $matches[2]);
 
-//                $par[] = '(t.`price` >= '.$from.' AND t.`price` <= '.$to.')';
-
                     $criteria->addCondition('t.`price` >= '.$from.' AND t.`price` <= '.$to);
-
-//                $counter ++;
                 }
 
                 if($_GET['CountryForm']['date_from'])
@@ -328,6 +346,20 @@
                             'params' => array(
                                 ':type_hotel_id' => Yii::app()->params['type_hotel'],
                                 ':type_hotel' => $id
+                            )
+                        )
+                    );
+                    $counter++;
+                }
+
+                if(is_array($parent_id))
+                {
+                    $par[] = '(v.`params_id` = :hot AND v.`value` = 1)';
+
+                    $criteria->mergeWith(
+                        array(
+                            'params' => array(
+                                ':hot' => Yii::app()->params['hot'],
                             )
                         )
                     );
@@ -573,6 +605,12 @@
         public function getStars()
         {
             $par = CatalogProductsParams::model()->find('`params_id` = :id AND `product_id` = :product_id', array(':id' => Yii::app()->params['stars'], ':product_id' => $this->id));
+            return CatalogParamsVal::model()->find('id = :id', array(':id' => $par['value_id']));
+        }
+
+        public function getSostav()
+        {
+            $par = CatalogProductsParams::model()->find('`params_id` = :id AND `product_id` = :product_id', array(':id' => Yii::app()->params['sostav'], ':product_id' => $this->id));
             return CatalogParamsVal::model()->find('id = :id', array(':id' => $par['value_id']));
         }
     }

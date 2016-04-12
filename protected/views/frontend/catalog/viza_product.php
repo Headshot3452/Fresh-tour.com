@@ -94,7 +94,7 @@
 
 			$menu =
 				'<ul class="left-title">
-                    <h2>Информация</h2>
+                    <h2>Туры и визы</h2>
                     [[w:MenuWidget|menu_id=27;menu_type=custom;]]
                 </ul>';
 

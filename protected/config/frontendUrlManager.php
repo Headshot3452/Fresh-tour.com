@@ -1,6 +1,4 @@
 <?php return array(
-"informaciya/akcii/" => "news/list",
-"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
 "tury-i-vizy/vizy/" => "catalog/index",
 "tury-i-vizy/vizy/search" => "catalog/search",
 "tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
@@ -8,6 +6,11 @@
 "o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
 "o-kompanii/novosti/" => "news/list",
 "o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
 "strany-i-oteli/" => "catalog/index",
 "strany-i-oteli/search" => "catalog/search",
 "strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",

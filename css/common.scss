@@ -1024,6 +1024,7 @@ header, .hidden-top {
   .item {
     margin-left: 15px;
     margin-right: 15px;
+    height: 198px;
     .no-left {
       width: 285px;
     }
@@ -1033,6 +1034,9 @@ header, .hidden-top {
     }
     img {
       width: 100%;
+    }
+    .img-cont > img {
+      height: 198px;
     }
     .col-xs-3 {
       width: 196px;
@@ -1325,6 +1329,15 @@ header, .hidden-top {
 ==================================
 */
 
+.border {
+  border-right: 2px dotted #c2c2c2;
+  height: 180px;
+  width: 1px;
+  position: absolute;
+  left: 100%;
+  margin-left: -205px;
+  margin-top: 10px;
+}
 #slider-hotels {
   .container {
     padding: 0 50px;
@@ -1408,6 +1421,13 @@ header, .hidden-top {
     }
     .med-container {
       position: relative;
+      .med-caption {
+        .forward {
+          position: absolute;
+          margin-left: 215px;
+          margin-top: -32px;
+        }
+      }
     }
     .caption {
       position: absolute;
@@ -1437,13 +1457,17 @@ header, .hidden-top {
         font-family: $lm;
         span:nth-child(1){
           margin: 0 40px;
-          padding-left: 23px;
-          background: url("/images/people.png") no-repeat 3px 2px;
+          width: 249px;
+          padding-left: 70px;
+          background: url("/images/people.png") no-repeat 45px 2px;
+          display: table-cell;
+          text-align: left;
         }
         span:nth-child(2){
           background: url("/images/calendar_small.png") no-repeat 2px 1px;
           margin: 0 20px;
           padding-left: 23px;
+          display: table-cell;
         }
       }
       .forward {
@@ -1475,20 +1499,24 @@ header, .hidden-top {
         padding-left: 72px;
       }
       .footer-container {
-        top: 57%;
+        top: 55%;
         span:nth-child(1){
-          margin: 0 15px 0 -20px;
-          padding-left: 23px;
-          background: url("/images/people.png") no-repeat 3px 2px;
+          margin: -14px 15px 0 0px;
+          background: url("/images/people.png") no-repeat 9px 2px;
+          display: table-cell;
+          width: 130px;
+          padding-left: 30px;
         }
         span:nth-child(2){
+          display: table-cell;
           background: url("/images/calendar_small.png") no-repeat 2px 1px;
+          height: 40px;
           margin: 0;
           padding-left: 23px;
         }
         .forward {
-          margin-left: -15px;
-          margin-top: 20px;
+          margin-left: 20px;
+          margin-top: 7px;
         }
       }
     }
@@ -1497,6 +1525,11 @@ header, .hidden-top {
         padding-left: 90px;
         padding-right: 90px;
         padding-top: 175px;
+        .forward {
+          position: absolute;
+          margin-left: 130px;
+          margin-top: -30px;
+        }
       }
       .stars {
         width: 132px;

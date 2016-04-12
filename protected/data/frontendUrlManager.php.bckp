@@ -12870,3 +12870,735 @@ return array(
 ?>
 
 
+12.04.2016 20:39:30
+<?php return array(
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 20:39:37
+<?php return array(
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 20:39:45
+<?php return array(
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 20:39:46
+<?php return array(
+"srochno-gorit/srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 20:39:53
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 20:39:53
+<?php return array(
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 20:39:54
+<?php return array(
+"srochno-gorit/srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 21:51:44
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 21:51:51
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 21:52:01
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 22:46:28
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 22:46:31
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 22:46:35
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 22:46:36
+<?php return array(
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 22:46:36
+<?php return array(
+"srochno-gorit/srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 22:47:32
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 22:47:33
+<?php return array(
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 22:47:34
+<?php return array(
+"srochno-gorit/srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 23:29:52
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 23:30:02
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 23:30:08
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 23:42:38
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 23:42:43
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+12.04.2016 23:52:27
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+13.04.2016 00:41:00
+<?php return array(
+"tury-i-vizy/vizy/" => "catalog/index",
+"tury-i-vizy/vizy/search" => "catalog/search",
+"tury-i-vizy/vizy/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"o-kompanii/sobytiya/" => "news/list",
+"o-kompanii/sobytiya/<name:([\w-]+)>/" => "news/item",
+"o-kompanii/novosti/" => "news/list",
+"o-kompanii/novosti/<name:([\w-]+)>/" => "news/item",
+"informaciya/akcii/" => "news/list",
+"informaciya/akcii/<name:([\w-]+)>/" => "news/item",
+"srochno-gorit/goryaschie-tury/" => "catalog/index",
+"srochno-gorit/goryaschie-tury/search" => "catalog/search",
+"srochno-gorit/goryaschie-tury/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"strany-i-oteli/" => "catalog/index",
+"strany-i-oteli/search" => "catalog/search",
+"strany-i-oteli/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"kontakty" => "site/contacts",
+"userlogin" => "client/loginUser",
+"<_c:(profile|user|client)>" => "<_c>/index",
+"<_c:(profile|user|client)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
