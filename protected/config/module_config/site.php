@@ -4,6 +4,7 @@ return array(
         ""=>"site/index",
         "kontakty"=>"site/contacts",
         "userlogin"=>"client/loginUser",
+        "search"=>"site/search",
         "<_c:(profile|user|client)>"=>"<_c>/index",
         "<_c:(profile|user|client)>/<_a>"=>"<_c>/<_a>",
         "<_a:(login|logout|register)>"=>"user/<_a>",

@@ -62,6 +62,46 @@ class SiteController extends FrontendController
 
         $this->render('contacts',array('model'=>$model));
     }
+
+    public function actionSearch($search)
+    {
+        $this->setPageForUrl('poisk');
+        $this->setPageTitle("Результаты поиска");
+
+        $this->breadcrumbs[] = $this->pageTitle;
+        $this->setPageTitle($this->pageTitle);
+
+        $words = explode(' ', $search);
+
+        $criteria = new CDbCriteria;
+
+        if (!empty($words))
+        {
+            $count = count($words);
+            for ($i=0; $i < $count; $i++)
+            {
+                $criteria->addSearchCondition('title', $words[$i]);
+            }
+        }
+
+        $criteria->scopes = array(
+            'language' => array($this->getCurrentLanguage()->id),
+            'active',
+        );
+
+        $criteria->compare('parent_id', '<>'.Yii::app()->params['vizy_catalog']);
+
+        $model = new CatalogProducts();
+
+        $products = new CActiveDataProvider($model,
+            array(
+                'criteria' => $criteria,
+                'pagination' => array(),
+            )
+        );
+
+        $this->render('search', array('dataProducts'=>$products));
+    }
 	
 	public function actionPage($url)
     {

@@ -50,8 +50,12 @@
 				ENG
 				<img src = "/images/flag.png" alt = "">
 			</div>
-			<input type = "text" placeholder = "ПОИСК ПО САЙТУ" class = "hid">
-			<a href = "" class = "search-link">Искать на сайте</a>
+<?php
+			echo CHtml::beginForm(array('/search'), 'get');
+			echo CHtml::textField('search', '', array('class' => 'hid', 'placeholder' => 'ПОИСК ПО САЙТУ'));
+			echo CHtml::linkButton('Искать на сайте',array('class' => 'search-link'));
+			echo CHtml::endForm();
+?>
 		</div>
 	</div>
 </ul>
@@ -70,14 +74,12 @@
 			<div class = "phones">
 				<div>
 					Горячая линия <br>
-
 					<div class = "number mts">
 						<?php echo $this->mts[1][0] ;?> <span> <?php echo $this->mts[2][0] ;?></span>
 					</div>
 				</div>
 				<div>
 					Для частных лиц <br>
-
 					<div class = "number velcom">
 						<?php echo $this->velcom[1][0] ;?> <span> <?php echo $this->velcom[2][0] ;?></span>
 					</div>
@@ -109,59 +111,21 @@
 				ENG
 				<img src = "/images/flag.png" alt = "">
 			</div>
-			<input type = "text" placeholder = "ПОИСК ПО САЙТУ" class = "top">
-			<a href = "" class = "search-link">Искать на сайте</a>
+<?php
+			echo CHtml::beginForm(array('/search'), 'get');
+			echo CHtml::textField('search', '', array('class' => 'top', 'placeholder' => 'ПОИСК ПО САЙТУ'));
+			echo CHtml::linkButton('Искать на сайте',array('class' => 'search-link'));
+			echo CHtml::endForm();
+?>
 		</div>
 	</nav>
 </header>
-
-<!--<div class = "wrapper">-->
-<!--		<header>-->
-<!--			<div class = "search">-->
-<!--				--><?php
-//				echo CHtml::beginForm(array('catalog/search'), 'get');
-//				$this->widget('application.widgets.AutoCompleteWidget', array(
-//						'name' => 'term',
-//						'value' => '',
-//						'source' => $this->createUrl('catalog/search'),
-//						'options' => array(
-//								'minLength' => '3', // min chars to start search
-//								'select' => 'js:function(event, ui) {
-//                         window.location = "' . Yii::app()->getBaseUrl(true) . '"+ui.item.url;
-//                     }'
-//						),
-//						'methodChain' => '.data( "ui-autocomplete" )._renderItem = function( ul, item ) {
-//                            var words=this.term.split(" ");
-//                            var length=words.length;
-//                            for (var i=0;i<words.length;i++)
-//                            {
-//                                if (words[i]!="")
-//                                {
-//                                    item.label=item.label.replace(new RegExp("("+words[i]+")","gi"),"<strong>$1</strong>");
-//                                }
-//                            }
-//                       return $( "<li>" )
-//                           .data( "item.autocomplete", item )
-//                           .append( "<a href=\""+item.url+"\"><img src=\"/"+item.src+"\">" + item.label +  "</a>")
-//                           .appendTo( ul );
-//                     }',
-//						'htmlOptions' => array(
-//								'id' => 'searchstring',
-//								'rel' => 'url',
-//								'placeholder' => 'поиск',
-//								'class' => 'search-input'
-//						),
-//				));
-//				echo '<button id="searchsubmit" type="submit"><span class="glyphicon glyphicon-search"></span></button>';
-//				echo CHtml::endForm();
-//				?>
-<!--			</div>-->
-
 	<section>
 	</section>
 
 <?php
 	$cs = Yii::app()->getClientScript();
+
 	$menu = '
 		$("header .dropdown, .hidden-top .dropdown").bind("mouseenter", function()
 		{
@@ -173,12 +137,25 @@
 
 		$(function(f)
 		{
-		    var element = f(\'.hidden-top\');
+		    var element = f(".hidden-top");
 		    f(window).scroll(function ()
 		    {
-		        element[\'fade\' + (f(this).scrollTop() > 164 ? \'In\' : \'Out\')](500);
+		        element["fade" + (f(this).scrollTop() > 164 ? "In" : "Out")](500);
 		    });
 		});
+
+		$(".search.top i").on("click", function()
+		{
+			$("header input.top").fadeToggle();
+			$("header input.top + a").fadeToggle();
+		});
+
+		$(".search.hid i").on("click", function()
+		{
+			$("input.hid + a").fadeToggle();
+			$("input.hid").fadeToggle();
+		});
 	';
+
 	$cs->registerScript('menu', $menu);
 ?>

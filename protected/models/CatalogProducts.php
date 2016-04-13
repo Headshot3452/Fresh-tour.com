@@ -613,4 +613,10 @@
             $par = CatalogProductsParams::model()->find('`params_id` = :id AND `product_id` = :product_id', array(':id' => Yii::app()->params['sostav'], ':product_id' => $this->id));
             return CatalogParamsVal::model()->find('id = :id', array(':id' => $par['value_id']));
         }
+
+        public function getDlitelnost()
+        {
+            $par = CatalogProductsParams::model()->find('`params_id` = :id AND `product_id` = :product_id', array(':id' => Yii::app()->params['dlitelnost'], ':product_id' => $this->id));
+            return CatalogParamsVal::model()->find('id = :id', array(':id' => $par['value_id']));
+        }
     }

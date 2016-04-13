@@ -36,6 +36,10 @@
 		<div class="row">
 			<div id="tyrs">
 				<div class="col-xs-3 no-left">
+					<ul class="left-title">
+						<h2>Срочно!Горит!</h2>
+						[[w:MenuWidget|menu_id=33;menu_type=custom;]]
+					</ul>
 <?php
 					$form = $this->beginWidget('BsActiveForm',
 						array(
