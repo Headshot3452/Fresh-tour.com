@@ -60,9 +60,11 @@
             'agentstvam' => '8',
             'nash-ofis' => '10',
             'novosti' => '13',
-            'sposoby-oplaty' => '18',
+            'bron' => '15',
             'visy' => '16',
+            'sposoby-oplaty' => '18',
             'hot-tour' => '20',
+            'hot-avia' => '21',
             'visa' => '77',
             'o-kompanii-array' => array(7, 8, 10, 11, 12, 13, 69, 71),
             'info-array' => array(4, 18, 19),
@@ -73,6 +75,7 @@
 
         'vizy_catalog' => '3',      // Каталог "Визы"
         'strany_catalog' => '4',    // Каталог "Страны"
+        'avia_catalog' => '15',     // Каталог "Авиабилеты"
 
         'date_from' => '5',         // Параметр "Дата отправления"
         'tema_tours' => '6',        // Параметр "Тематика тура"

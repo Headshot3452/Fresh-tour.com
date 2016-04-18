@@ -109,37 +109,6 @@
 						</div>
 					</div>
 					<div class="col-xs-9 no-right">
-						<h2 class="descr descr-kyr">Курорты</h2>
-						<div class="kyrorts">
-							<div class="row">
-								<div class="col-xs-2">
-									<a href = "india-description.php">Агра</a>
-								</div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Гоа</a>
-								</div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Дели</a>
-								</div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Джайпур</a>
-								</div>
-								<div class="clearfix"></div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Агра</a>
-								</div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Гоа</a>
-								</div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Дели</a>
-								</div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Джайпур</a>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-						</div>
 						<h2 class="descr descr-about">О стране</h2>
 						<div class="text">
 							<?php echo $tree->text ;?>

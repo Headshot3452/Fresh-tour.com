@@ -13,7 +13,13 @@ class SiteController extends FrontendController
         $root = CatalogTree::model()->language($this->getCurrentLanguage()->id)->roots()->active()->findByPk(Yii::app()->params['strany_catalog']);
         $categories = $root->children()->active()->findAll();
 
-        $this->render('index', array('categories' => $categories));
+        $_list_fresh = CHtml::listData($categories, 'id', 'id');
+
+        $list_fresh = implode(',', $_list_fresh);
+
+        $fresh = CatalogProducts::model()->active()->findAll('parent_id IN (:id) AND new = 1', array('id' => $list_fresh));
+
+        $this->render('index', array('categories' => $categories, 'fresh' => $fresh));
     }
 
     public function actionContacts()
@@ -78,7 +84,7 @@ class SiteController extends FrontendController
         if (!empty($words))
         {
             $count = count($words);
-            for ($i=0; $i < $count; $i++)
+            for ($i = 0; $i < $count; $i++)
             {
                 $criteria->addSearchCondition('title', $words[$i]);
             }

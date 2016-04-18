@@ -76,7 +76,9 @@
                 Yii::app()->end();
             }
 
-            $this->render('tree', array('categories' => $categories, 'dataProducts' => $products, 'count' => $count, 'sort' => $sort));
+            $view = ($this->page_id == Yii::app()->params['pages']['hot-avia']) ? 'hot-avia' : 'tree';
+
+            $this->render($view, array('categories' => $categories, 'dataProducts' => $products, 'count' => $count, 'sort' => $sort));
         }
 
         public function actionList()

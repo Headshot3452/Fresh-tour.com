@@ -40,7 +40,7 @@
 </div>
 
 <div id="main-content">
-	<div class="container no-all">
+	<div class="container no-all" id="search_page">
 		<div class="row">
 <?php
 			if(isset($_GET['search']) && $_GET['search'] != '')

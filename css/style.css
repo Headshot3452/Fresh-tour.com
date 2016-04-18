@@ -394,53 +394,62 @@ span.required {
 .user_login #users-login-form .buttons.form-group .btn {
   padding: 4px 43px;
 }
-
+/* line 342, style.scss */
+.user_login #users-login-form .buttons.form-group a {
+  float: right;
+  margin-top: 5px;
+}
 /* line 347, style.scss */
+.user_login #users-login-form input[type="checkbox"] + label:not(.status) {
+  display: none;
+}
+
+/* line 354, style.scss */
 #users-login-form .buttons.form-group {
   margin-bottom: 0;
 }
-/* line 349, style.scss */
+/* line 356, style.scss */
 #users-login-form .buttons.form-group .btn {
   padding: 4px 33px;
 }
 
-/* line 355, style.scss */
+/* line 362, style.scss */
 #users-registration #reg_btn {
   padding: 4px 17px;
 }
 
-/* line 359, style.scss */
+/* line 366, style.scss */
 #profil {
   content: "\f0d8";
 }
-/* line 360, style.scss */
+/* line 367, style.scss */
 #profil .lk_title {
   padding-bottom: 10px;
 }
-/* line 363, style.scss */
+/* line 370, style.scss */
 #profil .text-right {
   font-size: 14px;
   color: #979797;
 }
-/* line 367, style.scss */
+/* line 374, style.scss */
 #profil .profil_left_menu {
   padding-left: 0;
 }
-/* line 370, style.scss */
+/* line 377, style.scss */
 #profil .profil_left_menu li a, #profil .profil_left_menu li div {
   width: 100%;
   height: 100%;
   display: block;
   padding: 5px 0 5px 10px;
 }
-/* line 377, style.scss */
+/* line 384, style.scss */
 #profil .profil_left_menu .fa {
   float: right;
   display: inline-block;
   padding-right: 10px;
   padding-top: 2px;
 }
-/* line 383, style.scss */
+/* line 390, style.scss */
 #profil .profil_left_menu .dropdown-menu {
   display: block !important;
   visibility: hidden;
@@ -448,112 +457,112 @@ span.required {
   transition: visibility .3s, opacity .3s, top .4s;
   top: 200%;
 }
-/* line 390, style.scss */
+/* line 397, style.scss */
 #profil .profil_left_menu .open > .dropdown-menu {
   visibility: visible;
   opacity: 1;
   transition: visibility .3s, opacity .3s, bottom .4s;
   top: calc(100% + 1px);
 }
-/* line 397, style.scss */
+/* line 404, style.scss */
 #profil .hitarea {
   background-color: #e4e4e4;
   cursor: pointer;
 }
-/* line 400, style.scss */
+/* line 407, style.scss */
 #profil .hitarea.collapsed {
   background-color: transparent;
 }
-/* line 403, style.scss */
+/* line 410, style.scss */
 #profil .hitarea:hover {
   background-color: #e4e4e4;
 }
-/* line 406, style.scss */
+/* line 413, style.scss */
 #profil .hitarea .fa-caret-up:before {
   content: "\f0d7";
 }
-/* line 410, style.scss */
+/* line 417, style.scss */
 #profil .hitarea:not(.collapsed) {
   background-color: #e4e4e4;
 }
-/* line 412, style.scss */
+/* line 419, style.scss */
 #profil .hitarea:not(.collapsed) .fa-caret-up:before {
   content: "\f0d8";
 }
-/* line 416, style.scss */
+/* line 423, style.scss */
 #profil #settings_submenu {
   list-style-type: none;
   padding-left: 20px;
 }
 
-/* line 423, style.scss */
+/* line 430, style.scss */
 #profil_settings {
   padding-top: 15px;
 }
-/* line 425, style.scss */
+/* line 432, style.scss */
 #profil_settings .btn {
   padding: 4px 20px;
   background: linear-gradient(to top, #1545e4, #446dfa);
 }
-/* line 428, style.scss */
+/* line 435, style.scss */
 #profil_settings .btn:hover {
   background: linear-gradient(to bottom, #1545e4, #446dfa);
 }
 
-/* line 434, style.scss */
+/* line 441, style.scss */
 #users-changePassword-form {
   padding-top: 10px;
 }
 
-/* line 438, style.scss */
+/* line 445, style.scss */
 .btn-primary {
   font-size: 14px;
   background: linear-gradient(to top, #1545e4, #446dfa);
 }
-/* line 441, style.scss */
+/* line 448, style.scss */
 .btn-primary:hover {
   background: linear-gradient(to bottom, #1545e4, #446dfa);
 }
 
-/* line 446, style.scss */
+/* line 453, style.scss */
 .lichnye {
   padding-top: 10px;
 }
-/* line 448, style.scss */
+/* line 455, style.scss */
 .lichnye label {
   font-weight: normal;
   color: #727272;
 }
 
-/* line 455, style.scss */
+/* line 462, style.scss */
 #user-info-index-form .qq-uploader {
   display: none;
 }
 
-/* line 460, style.scss */
+/* line 467, style.scss */
 #user-info-index-form {
   padding-top: 10px;
 }
 
-/* line 464, style.scss */
+/* line 471, style.scss */
 #load-avatar {
   position: absolute !important;
   margin-top: 5px;
   width: 220px !important;
   color: #0849e1;
 }
-/* line 468, style.scss */
+/* line 475, style.scss */
 #load-avatar input {
   font-size: 14px !important;
   cursor: pointer;
 }
 
-/* line 475, style.scss */
+/* line 482, style.scss */
 .photo_place {
   margin-bottom: 35px;
 }
 
-/* line 479, style.scss */
+/* line 486, style.scss */
 #user-info-index-form .qq-upload-button-hover {
   background: transparent;
   text-decoration: underline;

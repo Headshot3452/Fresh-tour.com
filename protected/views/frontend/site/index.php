@@ -1031,726 +1031,209 @@
                     <img src = "/images/oae.png" alt = "">
                     <h2>ОАЭ</h2>
                     <a href = "">150 туров</a>
+                    <div class="slider_fresh_for">
+                        <div class="row">
+                            <div class="items">
+                                <div class="item">
+                                    <div class="inner">
+                                        <h5 class="title">STEUNG SIEM REAP</h5>
+                                        <img src = "/images/fresh1.png" alt = "">
+                                        <div class="clearfix"></div>
+                                        <div class="stars">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                        </div>
+                                        <h5>От <span>5 000 000 руб.</span></h5>
+                                    </div>
+                                    <div class="inner">
+                                        <h5 class="title">STEUNG SIEM REAP</h5>
+                                        <img src = "/images/fresh1.png" alt = "">
+                                        <div class="clearfix"></div>
+                                        <div class="stars">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                        </div>
+                                        <h5>От <span>5 000 000 руб.</span></h5>
+                                    </div>
+                                    <div class="inner">
+                                        <h5 class="title">STEUNG SIEM REAP</h5>
+                                        <img src = "/images/fresh1.png" alt = "">
+                                        <div class="clearfix"></div>
+                                        <div class="stars">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                        </div>
+                                        <h5>От <span>5 000 000 руб.</span></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="item">
-                    <img src = "/images/egypt.png" alt = "">
-                    <h2>Франция</h2>
-                    <a href = "">120 туров</a>
+                    <img src = "/images/oae.png" alt = "">
+                    <h2>ОАЭ</h2>
+                    <a href = "">150 туров</a>
+                    <div class="slider_fresh_for">
+                        <div class="row">
+                            <div class="items">
+                                <div class="item">
+                                    <div class="inner">
+                                        <h5 class="title">STEUNG SIEM REAP</h5>
+                                        <img src = "/images/fresh1.png" alt = "">
+                                        <div class="clearfix"></div>
+                                        <div class="stars">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                        </div>
+                                        <h5>От <span>5 000 000 руб.</span></h5>
+                                    </div>
+                                    <div class="inner">
+                                        <h5 class="title">STEUNG SIEM REAP</h5>
+                                        <img src = "/images/fresh1.png" alt = "">
+                                        <div class="clearfix"></div>
+                                        <div class="stars">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                        </div>
+                                        <h5>От <span>5 000 000 руб.</span></h5>
+                                    </div>
+                                    <div class="inner">
+                                        <h5 class="title">STEUNG SIEM REAP</h5>
+                                        <img src = "/images/fresh1.png" alt = "">
+                                        <div class="clearfix"></div>
+                                        <div class="stars">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                        </div>
+                                        <h5>От <span>5 000 000 руб.</span></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="item">
-                    <img src = "/images/france.png" alt = "">
-                    <h2>Египет</h2>
-                    <a href = "">110 туров</a>
+                    <img src = "/images/oae.png" alt = "">
+                    <h2>ОАЭ</h2>
+                    <a href = "">150 туров</a>
+                    <div class="slider_fresh_for">
+                        <div class="row">
+                            <div class="items">
+                                <div class="item">
+                                    <div class="inner">
+                                        <h5 class="title">STEUNG SIEM REAP</h5>
+                                        <img src = "/images/fresh1.png" alt = "">
+                                        <div class="clearfix"></div>
+                                        <div class="stars">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                        </div>
+                                        <h5>От <span>5 000 000 руб.</span></h5>
+                                    </div>
+                                    <div class="inner">
+                                        <h5 class="title">STEUNG SIEM REAP</h5>
+                                        <img src = "/images/fresh1.png" alt = "">
+                                        <div class="clearfix"></div>
+                                        <div class="stars">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                        </div>
+                                        <h5>От <span>5 000 000 руб.</span></h5>
+                                    </div>
+                                    <div class="inner">
+                                        <h5 class="title">STEUNG SIEM REAP</h5>
+                                        <img src = "/images/fresh1.png" alt = "">
+                                        <div class="clearfix"></div>
+                                        <div class="stars">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                        </div>
+                                        <h5>От <span>5 000 000 руб.</span></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="item">
-                    <img src = "/images/egypt.png" alt = "">
-                    <h2>Франция</h2>
-                    <a href = "">120 туров</a>
-                </div>
-                <div class="item">
-                    <img src = "/images/france.png" alt = "">
-                    <h2>Египет</h2>
-                    <a href = "">110 туров</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="slider_fresh_for" class="container no-all">
-    <div class="row">
-        <div class="items">
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
+                    <img src = "/images/oae.png" alt = "">
+                    <h2>ОАЭ</h2>
+                    <a href = "">150 туров</a>
+                    <div class="slider_fresh_for">
+                        <div class="row">
+                            <div class="items">
+                                <div class="item">
+                                    <div class="inner">
+                                        <h5 class="title">STEUNG SIEM REAP</h5>
+                                        <img src = "/images/fresh1.png" alt = "">
+                                        <div class="clearfix"></div>
+                                        <div class="stars">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                        </div>
+                                        <h5>От <span>5 000 000 руб.</span></h5>
+                                    </div>
+                                    <div class="inner">
+                                        <h5 class="title">STEUNG SIEM REAP</h5>
+                                        <img src = "/images/fresh1.png" alt = "">
+                                        <div class="clearfix"></div>
+                                        <div class="stars">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                        </div>
+                                        <h5>От <span>5 000 000 руб.</span></h5>
+                                    </div>
+                                    <div class="inner">
+                                        <h5 class="title">STEUNG SIEM REAP</h5>
+                                        <img src = "/images/fresh1.png" alt = "">
+                                        <div class="clearfix"></div>
+                                        <div class="stars">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                            <img src = "/images/star_full.png" alt = "">
+                                        </div>
+                                        <h5>От <span>5 000 000 руб.</span></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">RADISSON BLU TALA
-                                      BAY RESORT
-                                      AQABA</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-        </div>
-        <div class="items">
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">RADISSON BLU TALA
-                                      BAY RESORT
-                                      AQABA</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-        </div>
-        <div class="items">
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">RADISSON BLU TALA
-                                      BAY RESORT
-                                      AQABA</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-        </div>
-        <div class="items">
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">RADISSON BLU TALA
-                                      BAY RESORT
-                                      AQABA</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-        </div>
-        <div class="items">
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">RADISSON BLU TALA
-                                      BAY RESORT
-                                      AQABA</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
-                </div>
-            </div>
-            <div class="col-xs-4 item">
-                <div class="inner">
-                    <h5 class="title">STEUNG SIEM REAP</h5>
-                    <img src = "/images/fresh1.png" alt = "">
-                    <div class="clearfix"></div>
-                    <div class="stars">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                        <img src = "/images/star_full.png" alt = "">
-                    </div>
-                    <h5>От <span>5 000 000 руб.</span></h5>
                 </div>
             </div>
         </div>
@@ -1762,56 +1245,83 @@
         <div class="row">
             <div class="col-xs-6 bron">
                 <h1>Раннее бронирование</h1>
-                <p>
-                    По любому из наших 26 направлений мы предлагаем
-                    широкий выбор экономичных отелей, стоимость размещения в которых ниже, чем в гостиницах
-                </p>
+                [[w:BlockWidget|block_id=1;]]
+<?php
+                $model = new BronForm();
 
-                <form action = "" id="form-bron">
+                $form = $this->beginWidget('BsActiveForm',
+                    array(
+                        'id' => 'form-bron',
+                        'htmlOptions' => array(
+                            'role' => 'form',
+                            'class' => 'poland'
+                        ),
+                        'enableAjaxValidation' => false,
+                        'enableClientValidation' => true,
+                        'clientOptions' => array(
+                            'validateOnSubmit' => true,
+                            'validateOnChange' => true,
+                            'validateOnType' => false,
+                        ),
+                    )
+                );
+?>
+                <div class = "form-group">
+                    <?php echo $form->label($model, 'country', array('label' => Yii::t('app', 'Where you want to go'))); ?>
+                    <?php echo $form->dropDownList($model, 'country', CatalogTree::getCountry(), array('empty' => Yii::t('app', 'Choose the country'))); ?>
+                    <?php echo $form->error($model, 'country'); ?>
+                </div>
 
-                    <div class="form-group">
-                        <label for = "country_to">Куда хотите поехать</label>
-                        <select type = "text" name = "country_to" placeholder = "Куда хотите поехать" class="form-control">
-                            <option value = "Россия">Россия</option>
-                            <option value = "Беларусь">Беларусь</option>
-                        </select>
-                    </div>
+                <div class = "form-group">
+                    <?php echo $form->label($model, 'name'); ?>
+                    <?php echo $form->textField($model, 'name', array('placeholder' => 'Иванов Иван')); ?>
+                    <?php echo $form->error($model, 'name'); ?>
+                </div>
 
-                    <div class="form-group">
-                        <label for = "name">Ваше имя</label>
-                        <input type = "text" name = "name" placeholder = "Иванов Иван" class="form-control">
-                    </div>
+                <div class = "form-group">
+<?php
+                    echo $form->label($model, 'phone');
 
-                    <div class="form-group">
-                        <label for = "phone">Телефон</label>
-                        <input type = "text" name = "phone" placeholder = "+75 33 987 77 77" class="form-control">
-                    </div>
+                    $this->widget('CMaskedTextField',
+                        array(
+                            'model' => $model,
+                            'attribute' => 'phone',
+                            'mask' => Yii::app()->params['phone']['mask'],
+                            'htmlOptions' => array(
+                                'placeholder' => $model->getAttributeLabel('phone'),
+                                'class' => 'form-control',
+                            )
+                        )
+                    );
+                    echo $form->error($model, 'phone');
+?>
+                </div>
 
-                    <div class="form-group">
-                        <label for = "email">Ваше имя</label>
-                        <input type = "text" name = "email" placeholder = "ivanov@gmail.com" class="form-control">
-                    </div>
+                <div class = "form-group">
+                    <?php echo $form->label($model, 'email'); ?>
+                    <?php echo $form->textField($model, 'email', array('placeholder' => 'ivanov@gmail.com')); ?>
+                    <?php echo $form->error($model, 'email'); ?>
+                </div>
 
-                    <div class="form-group">
-                        <label for = "comment">Комментарий</label>
-                        <textarea name = "comment" placeholder="Оставьте свой комментарий..."></textarea>
-                    </div>
+                <div class = "form-group">
+                    <?php echo $form->label($model, 'questions'); ?>
+                    <?php echo $form->textarea($model, 'questions', array('placeholder' => 'Оставьте свой комментарий...')); ?>
+                    <?php echo $form->error($model, 'questions'); ?>
+                </div>
 
-                    <div class="clearfix"></div>
-
-                    <button type="submit">Забронировать</button>
-
-                    <div class="clearfix"></div>
-                </form>
-
+                <div class="clearfix"></div>
+<?php
+                echo BsHtml::submitButton(Yii::t('app', 'Book'), array('id' => 'viz_submit'));
+                $this->endWidget();
+?>
             </div>
             <div class="col-xs-6 news">
                 <h1>Новости</h1>
-                [[w:NewsLastWidget|count=4;parent_id=2;]]
+                [[w:NewsLastWidget|count=4;parent_id=2;view=main;]]
 
                 <a href = "<?php echo $this->getUrlById(Yii::app()->params['pages']['novosti']) ;?>" class="all_items">Все новости</a>
                 <div id="send">
-                    <input type = "text" placeholder="Ваш email"><a href = "" class = "show_all">Показать всё</a>
+                    <input type = "text" placeholder="Ваш email"><a href = "" class = "show_all">Подписаться</a>
                 </div>
             </div>
         </div>
@@ -1854,22 +1364,22 @@
         $("#slider_fresh").slick({
 			slidesToShow: 3,
 			slidesToScroll: 1,
-			asNavFor: "#slider_fresh_for .row",
 			dots: false,
 			centerMode: false,
-			focusOnSelect: true
 		});
 
-		$("#slider_fresh_for .row").slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: false,
-			fade: true,
-			dots: false,
-			autoplay: false,
-			draggable: false
-		});
+
     ';
 
     $cs->registerScript('slider', $slider);
 ?>
+
+<!--$("#slider_fresh_for .row").slick({-->
+<!--slidesToShow: 1,-->
+<!--slidesToScroll: 1,-->
+<!--arrows: false,-->
+<!--fade: true,-->
+<!--dots: false,-->
+<!--autoplay: false,-->
+<!--draggable: false-->
+<!--});-->

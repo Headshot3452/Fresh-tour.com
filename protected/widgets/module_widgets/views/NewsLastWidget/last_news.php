@@ -8,16 +8,13 @@
             {
                 $image = Yii::app()->params['noimage'];
             }
-
             echo
                 '<a href="/'.$this->controller->getUrlById(Yii::app()->params['pages']['novosti']).'/'.$item->name.'">
                     <div class="item">
                         <div class="img-container">
                             <img src = "/'.$image.'" alt = "">
                         </div>
-
                         <h5>'.$item->preview.'</h5>
-
                         <div class="date">
                             '.date($this->dateFormat, $item->time).'
                         </div>

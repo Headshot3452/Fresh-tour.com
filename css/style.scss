@@ -339,6 +339,13 @@ span.required {
       .btn {
         padding: 4px 43px;
       }
+      a {
+        float: right;
+        margin-top: 5px;
+      }
+    }
+    input[type="checkbox"] + label:not(.status){
+      display: none;
     }
   }
 }
