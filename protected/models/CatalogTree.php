@@ -57,7 +57,7 @@ class CatalogTree extends Model
 			array('lft, rgt, level, create_time, update_time, status, root', 'numerical', 'integerOnly'=>true),
 			array('language_id', 'length', 'max'=>11),
 			array('seo_title, seo_keywords, title, name', 'length', 'max'=>255),
-            array('seo_description, item_file, text, popular, capital, language, currency, difference, viza', 'safe'),
+            array('seo_description, item_file, text, map, preview, popular, capital, language, currency, difference, viza', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
             array('id, lft, rgt, level, language_id, icon, images, seo_title, seo_keywords, seo_description, title, name, text, create_time, update_time, status, root', 'safe', 'on'=>'search'),
@@ -97,6 +97,7 @@ class CatalogTree extends Model
 			'title' => Yii::t('app','Title category'),
 			'name' => Yii::t('app','Name category'),
 			'text' => Yii::t('app','Text'),
+			'preview' => Yii::t('app','Preview'),
 			'create_time' => Yii::t('app', 'Create Time'),
 			'update_time' => Yii::t('app', 'Update Time'),
 			'status' => Yii::t('app', 'Status'),
@@ -108,6 +109,7 @@ class CatalogTree extends Model
 			'difference' => Yii::t('app', 'Difference'),
 			'viza' => Yii::t('app', 'Viza'),
 			'padej' => Yii::t('app', 'The name in the nominative'),
+			'map' => Yii::t('app', 'Map'),
 		);
 	}
 

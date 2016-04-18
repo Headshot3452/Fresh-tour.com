@@ -41,6 +41,48 @@
     </div>
 
     <div class="form-group">
+        <?php echo $form->labelEx($model, 'preview'); ?>
+<?php
+        $this->widget('application.widgets.ImperaviRedactorWidget',
+            array(
+                'model' => $model,
+                'attribute' => 'preview',
+                'plugins' => array(
+                    'imagemanager' => array(
+                        'js' => array('imagemanager.js',),
+                    ),
+                    'filemanager' => array(
+                        'js' => array('filemanager.js',),
+                    ),
+                    'fullscreen' => array(
+                        'js' => array('fullscreen.js'),
+                    ),
+                    'table' => array(
+                        'js' => array('table.js'),
+                    ),
+                ),
+                'options' => array(
+                    'lang' => Yii::app()->language,
+                    'imageUpload' => $this->createUrl('admin/imageImperaviUpload'),
+                    'imageManagerJson' => $this->createUrl('admin/imageImperaviJson'),
+                    'fileUpload' => $this->createUrl('admin/fileImperaviUpload'),
+                    'fileManagerJson' => $this->createUrl('admin/fileImperaviJson'),
+                    'uploadFileFields' => array(
+                        'name' => '#redactor-filename'
+                    ),
+                    'changeCallback' => 'js:function()
+                    {
+                        viewSubmitButton(this.$element[0]);
+                    }',
+                    'buttonSource' => true,
+                ),
+            )
+        );
+?>
+        <?php echo $form->error($model,'preview'); ?>
+    </div>
+
+    <div class="form-group">
         <?php echo $form->labelEx($model,'text'); ?>
 <?php
         $this->widget('application.widgets.ImperaviRedactorWidget',
@@ -80,6 +122,12 @@
         );
 ?>
         <?php echo $form->error($model,'text'); ?>
+    </div>
+
+    <div class="form-group">
+        <?php echo $form->labelEx($model, 'map'); ?>
+        <?php echo $form->textField($model, 'map'); ?>
+        <?php echo $form->error($model, 'map'); ?>
     </div>
 
     <div class="form-group">

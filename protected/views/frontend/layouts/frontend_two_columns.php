@@ -78,7 +78,11 @@
 	                    [[w:MenuWidget|menu_id=24;menu_type=custom;]]
 	                </ul>
 
-					[[w:BannerDescriptionWidget|banner_id=1;view=custom;]]';
+					[[w:BannerDescriptionWidget|banner_id=1;view=custom;]]
+					[[w:BannerDescriptionWidget|banner_id=2;view=custom;]]
+					[[w:BannerDescriptionWidget|banner_id=3;view=custom;]]
+					[[w:BannerDescriptionWidget|banner_id=4;view=custom;]]
+					[[w:BannerDescriptionWidget|banner_id=5;view=custom;]]';
 			}
 			elseif(in_array($this->page_id, Yii::app()->params['pages']['tyrs-array']))
 			{

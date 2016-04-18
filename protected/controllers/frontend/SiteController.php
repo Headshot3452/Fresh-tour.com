@@ -17,7 +17,7 @@ class SiteController extends FrontendController
 
         $list_fresh = implode(',', $_list_fresh);
 
-        $fresh = CatalogProducts::model()->active()->findAll('parent_id IN (:id) AND new = 1', array('id' => $list_fresh));
+        $fresh = CatalogProducts::model()->active()->findAll(array('condition' => 'parent_id IN ('.$list_fresh.') AND new = 1', 'order' => 'parent_id'));
 
         $this->render('index', array('categories' => $categories, 'fresh' => $fresh));
     }

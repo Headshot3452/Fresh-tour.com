@@ -113,8 +113,10 @@
 						<div class="text">
 							<?php echo $tree->text ;?>
 						</div>
-						<h2 class="descr descr-kart">Индия на карте</h2>
-						<img class="map" src = "/images/map.png" alt = "">
+						<h2 class="descr descr-kart"><?php echo $tree->title ;?> на карте</h2>
+						<div id="map_country">
+							<?php echo $tree->map ;?>
+						</div>
 						<h2 class="descr descr-near">Страны рядом</h2>
 						<div class="kyrorts">
 							<div class="row">
@@ -319,9 +321,15 @@
 ?>
 						</div>
 						<div class="clearfix"></div>
-						<div class="text">
-							<?php echo $tree->text ;?>
-						</div>
+<?php
+						if(!isset($_GET['page']))
+						{
+							echo
+								'<div class="text">
+									'.$tree->preview.'
+								</div>';
+						}
+?>
 					</div>
 				</div>
 			</div>

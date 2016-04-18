@@ -1006,13 +1006,9 @@
 <div class = "redirect gray">
     <div class="container">
         <div class="row">
-            <h1>Текстовый блок</h1>
-            <h4 class="col-xs-11 no-all">
-                Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
-                <br><br>
-                Самым известным «рыбным» текстом является знаменитый Lorem ipsum. Считается, что впервые его применили в книгопечатании еще в XVI веке. Своим появлением Lorem ipsum обязан древнеримскому философу Цицерону, ведь именно из его трактата «О пределах добра и зла» средневековый книгопечатник вырвал отдельные фразы и слова, получив текст-«рыбу», широко используемый и по сей день. Конечно, возникают некоторые вопросы, связанные с использованием Lorem ipsum на сайтах и проектах, ориентированных на кириллический контент – написание символов на латыни и на кириллице значительно различается.
-                <br><br>
-                И даже с языками, использующими латинский алфавит, могут возникнуть небольшие проблемы: в различных языках те или иные буквы </h4>
+            <div class="col-xs-11 no-all">
+                <?php echo $this->text ;?>
+            </div>
         </div>
     </div>
 </div>
@@ -1027,214 +1023,108 @@
     <div class="container no-all">
         <div class="row">
             <div id="slider_fresh">
-                <div class="item">
-                    <img src = "/images/oae.png" alt = "">
-                    <h2>ОАЭ</h2>
-                    <a href = "">150 туров</a>
-                    <div class="slider_fresh_for">
-                        <div class="row">
-                            <div class="items">
-                                <div class="item">
-                                    <div class="inner">
-                                        <h5 class="title">STEUNG SIEM REAP</h5>
-                                        <img src = "/images/fresh1.png" alt = "">
-                                        <div class="clearfix"></div>
-                                        <div class="stars">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
+<?php
+                if(isset($fresh))
+                {
+                    $end = false;
+                    $parent_id = 0;
+                    foreach($fresh as $value)
+                    {
+                        if($parent_id != $value->parent_id)
+                        {
+                            $parent_id = $value->parent_id;
+
+                            if($end && $kol < 3)
+                            {
+                                echo
+                                                '</div>
+                                            </div>
                                         </div>
-                                        <h5>От <span>5 000 000 руб.</span></h5>
                                     </div>
-                                    <div class="inner">
-                                        <h5 class="title">STEUNG SIEM REAP</h5>
-                                        <img src = "/images/fresh1.png" alt = "">
-                                        <div class="clearfix"></div>
-                                        <div class="stars">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
+                                </div>';
+                            }
+
+                            $kol = 0;
+
+                            $parent = CatalogTree::model()->active()->find('id = :id', array('id' => $value->parent_id));
+                            $image = $parent->getOneFile('small');
+
+                            $tour_img = $value->getOneFile('small');
+
+                            $stars = $value->getStars();
+
+                            $count = CatalogProducts::model()->active()->count('parent_id = :id', array('id' => $parent->id));
+                        }
+
+                        if(isset($kol) && $kol > 2)
+                        {
+                            continue;
+                        }
+
+                        if($kol == 0)
+                        {
+                            $end = true;
+                            $link = $this->getUrlById(Yii::app()->params['pages']['strany-i-oteli']).'/'.$parent->name;
+
+                            echo
+                                '<div class="item">
+                                    <img src = "/'.$image.'" alt = "">
+                                    <h2>'.$parent->title.'</h2>
+                                    <a href = "/'.$link.'" class="fresh_counts">'.$count.' '. Yii::t('app', 'Tours', $count).'</a>
+                                    <div class="slider_fresh_for">
+                                    <div class="row">
+                                        <div class="items">
+                                            <div class="item">';
+                        }
+                                            echo
+                                                '<a href="'.$link.'/'.$value->name.'" class="inner_cont">
+                                                    <div class="inner">
+                                                        <h5 class="title">'.$value->title.'</h5>
+                                                        <img src = "/'.$tour_img.'" alt = "">
+                                                        <div class="clearfix"></div>
+                                                        <div class="stars">';
+
+                                                            for($i = 0; $i < 5; $i++)
+                                                            {
+                                                                if($i < $stars['value'])
+                                                                {
+                                                                    echo '<img src = "/images/star_full.png" alt = "">';
+                                                                }
+                                                                else
+                                                                {
+                                                                    echo '<img src = "/images/star.png" alt = "">';
+                                                                }
+                                                            }
+                                            echo
+                                                        '</div>
+                                                        <h5>От <span>'.Yii::app()->format->formatNumber($value->price).' руб.</span></h5>
+                                                    </div>
+                                                </a>';
+
+                                                $kol++;
+
+                        if($kol % 3 == 0 && $kol < 4)
+                        {
+                            echo
+                                            '</div>
                                         </div>
-                                        <h5>От <span>5 000 000 руб.</span></h5>
                                     </div>
-                                    <div class="inner">
-                                        <h5 class="title">STEUNG SIEM REAP</h5>
-                                        <img src = "/images/fresh1.png" alt = "">
-                                        <div class="clearfix"></div>
-                                        <div class="stars">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                        </div>
-                                        <h5>От <span>5 000 000 руб.</span></h5>
-                                    </div>
+                                </div>
+                            </div>';
+                        }
+                    }
+                }
+
+                if($kol % 3 != 0)
+                {
+                    echo
+                                '</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src = "/images/oae.png" alt = "">
-                    <h2>ОАЭ</h2>
-                    <a href = "">150 туров</a>
-                    <div class="slider_fresh_for">
-                        <div class="row">
-                            <div class="items">
-                                <div class="item">
-                                    <div class="inner">
-                                        <h5 class="title">STEUNG SIEM REAP</h5>
-                                        <img src = "/images/fresh1.png" alt = "">
-                                        <div class="clearfix"></div>
-                                        <div class="stars">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                        </div>
-                                        <h5>От <span>5 000 000 руб.</span></h5>
-                                    </div>
-                                    <div class="inner">
-                                        <h5 class="title">STEUNG SIEM REAP</h5>
-                                        <img src = "/images/fresh1.png" alt = "">
-                                        <div class="clearfix"></div>
-                                        <div class="stars">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                        </div>
-                                        <h5>От <span>5 000 000 руб.</span></h5>
-                                    </div>
-                                    <div class="inner">
-                                        <h5 class="title">STEUNG SIEM REAP</h5>
-                                        <img src = "/images/fresh1.png" alt = "">
-                                        <div class="clearfix"></div>
-                                        <div class="stars">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                        </div>
-                                        <h5>От <span>5 000 000 руб.</span></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src = "/images/oae.png" alt = "">
-                    <h2>ОАЭ</h2>
-                    <a href = "">150 туров</a>
-                    <div class="slider_fresh_for">
-                        <div class="row">
-                            <div class="items">
-                                <div class="item">
-                                    <div class="inner">
-                                        <h5 class="title">STEUNG SIEM REAP</h5>
-                                        <img src = "/images/fresh1.png" alt = "">
-                                        <div class="clearfix"></div>
-                                        <div class="stars">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                        </div>
-                                        <h5>От <span>5 000 000 руб.</span></h5>
-                                    </div>
-                                    <div class="inner">
-                                        <h5 class="title">STEUNG SIEM REAP</h5>
-                                        <img src = "/images/fresh1.png" alt = "">
-                                        <div class="clearfix"></div>
-                                        <div class="stars">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                        </div>
-                                        <h5>От <span>5 000 000 руб.</span></h5>
-                                    </div>
-                                    <div class="inner">
-                                        <h5 class="title">STEUNG SIEM REAP</h5>
-                                        <img src = "/images/fresh1.png" alt = "">
-                                        <div class="clearfix"></div>
-                                        <div class="stars">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                        </div>
-                                        <h5>От <span>5 000 000 руб.</span></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src = "/images/oae.png" alt = "">
-                    <h2>ОАЭ</h2>
-                    <a href = "">150 туров</a>
-                    <div class="slider_fresh_for">
-                        <div class="row">
-                            <div class="items">
-                                <div class="item">
-                                    <div class="inner">
-                                        <h5 class="title">STEUNG SIEM REAP</h5>
-                                        <img src = "/images/fresh1.png" alt = "">
-                                        <div class="clearfix"></div>
-                                        <div class="stars">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                        </div>
-                                        <h5>От <span>5 000 000 руб.</span></h5>
-                                    </div>
-                                    <div class="inner">
-                                        <h5 class="title">STEUNG SIEM REAP</h5>
-                                        <img src = "/images/fresh1.png" alt = "">
-                                        <div class="clearfix"></div>
-                                        <div class="stars">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                        </div>
-                                        <h5>От <span>5 000 000 руб.</span></h5>
-                                    </div>
-                                    <div class="inner">
-                                        <h5 class="title">STEUNG SIEM REAP</h5>
-                                        <img src = "/images/fresh1.png" alt = "">
-                                        <div class="clearfix"></div>
-                                        <div class="stars">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                            <img src = "/images/star_full.png" alt = "">
-                                        </div>
-                                        <h5>От <span>5 000 000 руб.</span></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </div>';
+                }
+?>
             </div>
         </div>
     </div>

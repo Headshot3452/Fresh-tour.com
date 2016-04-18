@@ -715,126 +715,131 @@ body, html {
   font-size: 14px;
 }
 
-/* line 26, backend.scss */
+/* line 27, backend.scss */
+.form-group #CatalogTree_popular {
+  display: inline-block;
+}
+
+/* line 32, backend.scss */
 .text-blue2 {
   color: #0849e1;
 }
 
-/* line 30, backend.scss */
+/* line 36, backend.scss */
 .text-gray4 {
   color: #979797;
 }
 
-/* line 34, backend.scss */
+/* line 40, backend.scss */
 .ghost-footer {
   height: 100px;
 }
 
-/* line 38, backend.scss */
+/* line 44, backend.scss */
 .wrapper {
   min-height: 100%;
   margin-bottom: -100px;
 }
 
-/* line 43, backend.scss */
+/* line 49, backend.scss */
 footer {
   height: 100px;
 }
 
-/* line 47, backend.scss */
+/* line 53, backend.scss */
 a {
   color: #000000;
 }
 
-/* line 51, backend.scss */
+/* line 57, backend.scss */
 textArea {
   height: 150px;
   width: 60%;
 }
 
-/* line 56, backend.scss */
+/* line 62, backend.scss */
 .redactor_box {
   margin-bottom: 10px;
 }
-/* line 58, backend.scss */
+/* line 64, backend.scss */
 .redactor_box .redactor_editor {
   height: 200px;
 }
 
-/* line 63, backend.scss */
+/* line 69, backend.scss */
 .container {
   max-width: 980px !important;
 }
 
-/* line 67, backend.scss */
+/* line 73, backend.scss */
 .container-fluid {
   padding: 0;
 }
 
-/* line 71, backend.scss */
+/* line 77, backend.scss */
 .no-right {
   padding-right: 0;
 }
 
-/* line 75, backend.scss */
+/* line 81, backend.scss */
 .no-left {
   padding-left: 0;
 }
 
-/* line 79, backend.scss */
+/* line 85, backend.scss */
 .no-all {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 84, backend.scss */
+/* line 90, backend.scss */
 .head-line {
   height: 20px;
   background-color: #e4e4e4;
   border-bottom: 1px solid #cfcfcf;
 }
 
-/* line 91, backend.scss */
+/* line 97, backend.scss */
 .nav-tabs > li > a {
   padding: 5px 15px;
   color: #979797;
 }
 
 /* ╨Т╨╡╤А╤Е╨╜╨╡╨╡ ╨╝╨╡╨╜╤О ╨╜╨░ ╨│╨╗╨░╨╜╨▓╨╜╨╛╨╣ */
-/* line 99, backend.scss */
+/* line 105, backend.scss */
 .home-menu-block {
   margin-top: 15px;
 }
-/* line 101, backend.scss */
+/* line 107, backend.scss */
 .home-menu-block .logo {
   margin-bottom: 12px;
 }
 
-/* line 106, backend.scss */
+/* line 112, backend.scss */
 #home-menu {
   margin-top: 13px;
 }
-/* line 108, backend.scss */
+/* line 114, backend.scss */
 #home-menu li {
   float: left;
   list-style: none;
   padding: 0 10px;
 }
-/* line 112, backend.scss */
+/* line 118, backend.scss */
 #home-menu li a {
   display: block;
   padding: 15px 0;
   color: #1246d8;
   border-bottom: 3px solid transparent;
 }
-/* line 117, backend.scss */
+/* line 123, backend.scss */
 #home-menu li a:hover {
   text-decoration: none;
   color: black;
   border-bottom: 3px solid #00ab00;
 }
 
-/* line 127, backend.scss */
+/* line 133, backend.scss */
 .main_page h3 {
   font-size: 18px;
   font-weight: bold;
@@ -843,14 +848,14 @@ textArea {
   display: inline-block;
   margin-bottom: 15px;
 }
-/* line 134, backend.scss */
+/* line 140, backend.scss */
 .main_page h3 + a {
   padding-top: 27px;
   margin-left: 30px;
   color: #0749e1;
   display: inline-block;
 }
-/* line 141, backend.scss */
+/* line 147, backend.scss */
 .main_page .main_page_cont {
   width: 173px;
   height: 173px;
@@ -862,7 +867,7 @@ textArea {
   position: relative;
   margin-bottom: 10px;
 }
-/* line 151, backend.scss */
+/* line 157, backend.scss */
 .main_page .main_page_cont img {
   width: 79px;
   position: relative;
@@ -872,17 +877,17 @@ textArea {
   background-color: #efefef;
   box-shadow: 3px 3px 5px #b9b9b9;
 }
-/* line 160, backend.scss */
+/* line 166, backend.scss */
 .main_page .main_page_cont:hover {
   padding: 0;
 }
-/* line 162, backend.scss */
+/* line 168, backend.scss */
 .main_page .main_page_cont:hover img {
   width: 100%;
   height: 100%;
   background-color: #efefef;
 }
-/* line 168, backend.scss */
+/* line 174, backend.scss */
 .main_page .main_page_cont span {
   position: absolute;
   top: 135px;
@@ -894,197 +899,197 @@ textArea {
   padding-right: 10px;
   text-align: center;
 }
-/* line 180, backend.scss */
+/* line 186, backend.scss */
 .main_page .modules {
   margin-left: 7px;
   margin-right: 7px;
 }
 
-/* line 187, backend.scss */
+/* line 193, backend.scss */
 .news-_form-form .qq-uploader .qq-upload-button, .catalog-tree-form-form .qq-uploader .qq-upload-button {
   left: 22px;
 }
 
-/* line 192, backend.scss */
+/* line 198, backend.scss */
 .rotate {
   transform: rotate(180deg);
 }
 
 /*╨Ъ╨╛╨╜╨╡╤Ж ╨Т╨╡╤А╤Е╨╜╨╡╨╡ ╨╝╨╡╨╜╤О ╨╜╨░ ╨│╨╗╨░╨▓╨╜╨╛╨╣*/
 /*╨▓╨╡╤А╤Е╨╜╨╕╨╡ ╨╝╨╡╨╜╤О*/
-/* line 200, backend.scss */
+/* line 206, backend.scss */
 .main-title-block {
   height: 75px;
   vertical-align: middle;
 }
-/* line 203, backend.scss */
+/* line 209, backend.scss */
 .main-title-block.main-title {
   padding-top: 20px;
 }
-/* line 205, backend.scss */
+/* line 211, backend.scss */
 .main-title-block.main-title .title {
   font-size: 30px;
 }
-/* line 209, backend.scss */
+/* line 215, backend.scss */
 .main-title-block.module-title {
   background-color: #e4e4e4;
   border: 1px solid #cfcfcf;
   padding-top: 25px;
 }
-/* line 213, backend.scss */
+/* line 219, backend.scss */
 .main-title-block.module-title .title {
   font-size: 24px;
   float: left;
 }
-/* line 218, backend.scss */
+/* line 224, backend.scss */
 .main-title-block.module-title .top-filter .title {
   margin-top: 15px;
   font-weight: normal !important;
 }
-/* line 222, backend.scss */
+/* line 228, backend.scss */
 .main-title-block.module-title .top-filter .fa {
   margin-top: 16px;
 }
-/* line 226, backend.scss */
+/* line 232, backend.scss */
 .main-title-block.module-title .menu-back, .main-title-block.module-title .fa.fa-angle-left {
   line-height: 20px;
   font-size: 25px;
 }
-/* line 230, backend.scss */
+/* line 236, backend.scss */
 .main-title-block.module-title .title-block {
   float: left;
   padding-top: 25px;
 }
-/* line 233, backend.scss */
+/* line 239, backend.scss */
 .main-title-block.module-title .title-block .date {
   font-size: 12px;
   padding-left: 25px;
 }
-/* line 239, backend.scss */
+/* line 245, backend.scss */
 .main-title-block.module-title a:hover {
   text-decoration: none;
 }
-/* line 244, backend.scss */
+/* line 250, backend.scss */
 .main-title-block.module-title .order-block .price-block, .main-title-block.module-title .order-block .status-block {
   margin-left: 60px;
   float: left;
 }
-/* line 248, backend.scss */
+/* line 254, backend.scss */
 .main-title-block.module-title .order-block .price-block {
   font-size: 16px;
   margin-top: 20px;
 }
-/* line 251, backend.scss */
+/* line 257, backend.scss */
 .main-title-block.module-title .order-block .price-block > * {
   float: left;
 }
-/* line 254, backend.scss */
+/* line 260, backend.scss */
 .main-title-block.module-title .order-block .price-block .price {
   margin-top: 10px;
   margin-left: 10px;
 }
-/* line 258, backend.scss */
+/* line 264, backend.scss */
 .main-title-block.module-title .order-block .price-block .number {
   color: #1242e3;
 }
-/* line 261, backend.scss */
+/* line 267, backend.scss */
 .main-title-block.module-title .order-block .price-block .cur {
   color: #979797;
 }
-/* line 265, backend.scss */
+/* line 271, backend.scss */
 .main-title-block.module-title .order-block .status-block {
   margin-top: 10px;
 }
-/* line 268, backend.scss */
+/* line 274, backend.scss */
 .main-title-block.module-title .order-block .gray-title {
   color: #979797;
   margin-bottom: 5px;
 }
-/* line 274, backend.scss */
+/* line 280, backend.scss */
 .main-title-block .title {
   float: left;
 }
-/* line 277, backend.scss */
+/* line 283, backend.scss */
 .main-title-block .menu-back {
   font-size: 30px;
   margin-right: 5px;
   padding: 0 5px;
   float: left;
 }
-/* line 283, backend.scss */
+/* line 289, backend.scss */
 .main-title-block .dropdown {
   float: left;
   margin-top: 5px;
   margin-left: 10px;
 }
-/* line 287, backend.scss */
+/* line 293, backend.scss */
 .main-title-block .dropdown .btn {
   padding: 2px 6px;
 }
 
 /*╨║╨╛╨╜╨╡╤Ж ╨▓╨╡╤А╤Е╨╜╨╕╨╡ ╨╝╨╡╨╜╤О*/
 /*╨Ъ╤А╨╛╤И╨║╨╕*/
-/* line 297, backend.scss */
+/* line 303, backend.scss */
 .breadcrumbs {
   font-size: 12px;
   margin-top: 5px;
   margin-bottom: 25px;
   color: #737373;
 }
-/* line 302, backend.scss */
+/* line 308, backend.scss */
 .breadcrumbs a {
   color: #979797;
 }
-/* line 304, backend.scss */
+/* line 310, backend.scss */
 .breadcrumbs a:hover {
   color: #979797;
   text-decoration: underline;
 }
-/* line 309, backend.scss */
+/* line 315, backend.scss */
 .breadcrumbs span {
   color: #737373;
 }
 
 /*╨Ъ╨╛╨╜╨╡╤Ж ╨Ъ╤А╨╛╤И╨║╨╕*/
-/* line 316, backend.scss */
+/* line 322, backend.scss */
 .qq-upload-list li.qq-upload-success {
   width: 130px;
   margin-top: 15px;
 }
 
-/* line 321, backend.scss */
+/* line 327, backend.scss */
 .qq-upload-drop-area span {
   padding-right: 10px;
   padding-left: 10px;
 }
 
 /*╨Ь╨╡╨╜╤О ╤Б╨┐╨╕╤Б╨╛╨║ ╨▓ ╨╛╤Б╨╜╨╛╨▓╨╜╨╛╨╝ ╨║╨╛╨╜╤В╨╡╨╜╤В╨╡*/
-/* line 328, backend.scss */
+/* line 334, backend.scss */
 .menu-list .menu-item {
   padding: 10px;
   display: table;
   font-size: 16px;
   font-weight: bold;
 }
-/* line 333, backend.scss */
+/* line 339, backend.scss */
 .menu-list .menu-item:hover {
   background-color: #e4e4e4;
   color: #0849e1;
   text-decoration: none;
 }
-/* line 337, backend.scss */
+/* line 343, backend.scss */
 .menu-list .menu-item:hover img {
   border: 1px solid #cfcfcf;
   background-color: #fff;
   box-shadow: none;
 }
-/* line 343, backend.scss */
+/* line 349, backend.scss */
 .menu-list .menu-item img {
   background-color: #efefef;
   box-shadow: 2px 2px 5px #cfcfcf;
   border: 1px solid transparent;
 }
-/* line 348, backend.scss */
+/* line 354, backend.scss */
 .menu-list .menu-item > div {
   float: none;
   display: table-cell;
@@ -1093,13 +1098,13 @@ textArea {
 
 /* ╨Ъ╨╛╨╜╨╡╤Ж ╨Ь╨╡╨╜╤О ╤Б╨┐╨╕╤Б╨╛╨║ ╨▓ ╨╛╤Б╨╜╨╛╨▓╨╜╨╛╨╝ ╨║╨╛╨╜╤В╨╡╨╜╤В╨╡*/
 /*╨б╤В╨░╤В╤Г╤Б╤Л ╨╖╨░╨║╨░╨╖╨╛╨▓*/
-/* line 359, backend.scss */
+/* line 365, backend.scss */
 [class*=order-status] {
   width: 21px;
   height: 21px;
   display: inline-block;
 }
-/* line 363, backend.scss */
+/* line 369, backend.scss */
 [class*=order-status].big {
   width: 36px;
   height: 36px;
@@ -1107,7 +1112,7 @@ textArea {
 
 /*╨Ъ╨╛╨╜╨╡╤Ж ╨б╤В╨░╤В╤Г╤Б╤Л ╨╖╨░╨║╨░╨╖╨╛╨▓*/
 /*╨б╨┐╨╕╤Б╨╛╨║ ╨╖╨░╨║╨░╨╖╨╛╨▓*/
-/* line 480, backend.scss */
+/* line 486, backend.scss */
 .c-client .status {
   color: white;
   padding: 1px 7px;
@@ -1116,103 +1121,103 @@ textArea {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 485, backend.scss */
+/* line 491, backend.scss */
 .c-client .status.s0 {
   background-color: #B94A48;
 }
-/* line 488, backend.scss */
+/* line 494, backend.scss */
 .c-client .status.s1 {
   background-color: #7fcf7f;
 }
-/* line 492, backend.scss */
+/* line 498, backend.scss */
 .c-client .name {
   margin-bottom: 20px;
 }
 
-/* line 497, backend.scss */
+/* line 503, backend.scss */
 .order-list {
   font-size: 12px;
 }
-/* line 500, backend.scss */
+/* line 506, backend.scss */
 .order-list [class*="c-"] {
   float: left;
   margin-right: 11px;
   line-height: 17px;
 }
-/* line 505, backend.scss */
+/* line 511, backend.scss */
 .order-list .c-num {
   width: 60px;
 }
-/* line 509, backend.scss */
+/* line 515, backend.scss */
 .order-list .c-date {
   width: 80px;
 }
-/* line 513, backend.scss */
+/* line 519, backend.scss */
 .order-list .c-client {
   width: 230px;
 }
-/* line 518, backend.scss */
+/* line 524, backend.scss */
 .order-list .c-sum {
   width: 110px;
   position: relative;
 }
-/* line 521, backend.scss */
+/* line 527, backend.scss */
 .order-list .c-sum .status {
   right: 0;
   position: absolute;
   bottom: 0;
 }
-/* line 528, backend.scss */
+/* line 534, backend.scss */
 .order-list .items .c-sum {
   min-height: 85px;
 }
-/* line 533, backend.scss */
+/* line 539, backend.scss */
 .order-list .c-worker {
   width: 250px;
 }
-/* line 537, backend.scss */
+/* line 543, backend.scss */
 .order-list .c-status {
   width: 150px;
 }
-/* line 539, backend.scss */
+/* line 545, backend.scss */
 .order-list .c-status [class*=order-status] {
   margin-right: 9px;
 }
-/* line 542, backend.scss */
+/* line 548, backend.scss */
 .order-list .c-status .left, .order-list .c-status .right {
   float: left;
 }
-/* line 545, backend.scss */
+/* line 551, backend.scss */
 .order-list .c-status .left {
   width: 60px;
 }
-/* line 547, backend.scss */
+/* line 553, backend.scss */
 .order-list .c-status .left .icon-admin-delivery {
   height: 17px;
   width: 23px;
 }
-/* line 551, backend.scss */
+/* line 557, backend.scss */
 .order-list .c-status .left .icon-admin-self-pickup {
   height: 12px;
   width: 19px;
 }
-/* line 556, backend.scss */
+/* line 562, backend.scss */
 .order-list .c-status .right {
   width: 90px;
 }
-/* line 559, backend.scss */
+/* line 565, backend.scss */
 .order-list .c-status .info {
   margin-top: 14px;
 }
-/* line 564, backend.scss */
+/* line 570, backend.scss */
 .order-list .header {
   margin-bottom: 25px;
 }
-/* line 566, backend.scss */
+/* line 572, backend.scss */
 .order-list .header [class*="c-"] {
   color: #979797;
 }
-/* line 571, backend.scss */
+/* line 577, backend.scss */
 .order-list .item {
   font-size: 12px;
   display: block;
@@ -1220,7 +1225,7 @@ textArea {
   padding-top: 15px;
   padding-bottom: 10px;
 }
-/* line 577, backend.scss */
+/* line 583, backend.scss */
 .order-list .item:hover {
   background-color: #e4e4e4;
   color: black;
@@ -1228,103 +1233,103 @@ textArea {
 
 /*╨Ъ╨╛╨╜╨╡╤Ж ╨б╨┐╨╕╤Б╨╛╨║ ╨╖╨░╨║╨░╨╖╨╛╨▓*/
 /*╨б╨в╤А╨░╨╜╨╕╤Ж╨░ ╨╖╨░╨║╨░╨╖╨░*/
-/* line 591, backend.scss */
+/* line 597, backend.scss */
 .order-block .block-title {
   font-size: 16px;
   font-weight: bold;
   color: black;
 }
-/* line 597, backend.scss */
+/* line 603, backend.scss */
 .order-block .order-info-block {
   font-size: 12px;
   line-height: 17px;
 }
-/* line 600, backend.scss */
+/* line 606, backend.scss */
 .order-block .order-info-block [class*="col-md-"] {
   padding: 0 10px;
 }
-/* line 604, backend.scss */
+/* line 610, backend.scss */
 .order-block .order-info-block .c-status .big {
   margin-right: 5px;
 }
-/* line 608, backend.scss */
+/* line 614, backend.scss */
 .order-block .order-info-block .c-avatar img {
   max-width: 60px;
   max-height: 60px;
 }
-/* line 612, backend.scss */
+/* line 618, backend.scss */
 .order-block .order-info-block .title {
   margin-bottom: 15px;
   color: #979797;
 }
-/* line 619, backend.scss */
+/* line 625, backend.scss */
 .order-block .form-horizontal .title {
   color: #979797;
   text-align: right;
 }
-/* line 626, backend.scss */
+/* line 632, backend.scss */
 .order-block .tabs-block [class*="c-"], .order-block #items-products-print [class*="c-"] {
   float: left;
 }
-/* line 630, backend.scss */
+/* line 636, backend.scss */
 .order-block .tabs-block .tab-content, .order-block #items-products-print .tab-content {
   margin-top: 30px;
 }
-/* line 632, backend.scss */
+/* line 638, backend.scss */
 .order-block .tabs-block .tab-content .block-title, .order-block #items-products-print .tab-content .block-title {
   margin-bottom: 30px;
 }
-/* line 637, backend.scss */
+/* line 643, backend.scss */
 .order-block .tabs-block .header, .order-block #items-products-print .header {
   margin-bottom: 25px;
 }
-/* line 639, backend.scss */
+/* line 645, backend.scss */
 .order-block .tabs-block .header [class*="c-"], .order-block #items-products-print .header [class*="c-"] {
   color: #979797;
   text-align: center;
 }
-/* line 645, backend.scss */
+/* line 651, backend.scss */
 .order-block .tabs-block {
   margin-top: 30px;
 }
-/* line 648, backend.scss */
+/* line 654, backend.scss */
 .order-block #tab-details, .order-block #items-products-print {
   font-size: 12px;
 }
-/* line 650, backend.scss */
+/* line 656, backend.scss */
 .order-block #tab-details [class*="c-"], .order-block #items-products-print [class*="c-"] {
   padding: 0 7px;
   text-align: center;
 }
-/* line 654, backend.scss */
+/* line 660, backend.scss */
 .order-block #tab-details .c-num, .order-block #items-products-print .c-num {
   width: 60px;
 }
-/* line 657, backend.scss */
+/* line 663, backend.scss */
 .order-block #tab-details .c-image, .order-block #items-products-print .c-image {
   width: 60px;
 }
-/* line 660, backend.scss */
+/* line 666, backend.scss */
 .order-block #tab-details .c-barcode, .order-block #items-products-print .c-barcode {
   width: 235px;
 }
-/* line 663, backend.scss */
+/* line 669, backend.scss */
 .order-block #tab-details .c-title, .order-block #items-products-print .c-title {
   width: 240px;
 }
-/* line 666, backend.scss */
+/* line 672, backend.scss */
 .order-block #tab-details .c-price, .order-block #items-products-print .c-price {
   width: 130px;
 }
-/* line 669, backend.scss */
+/* line 675, backend.scss */
 .order-block #tab-details .c-count, .order-block #items-products-print .c-count {
   width: 130px;
 }
-/* line 670, backend.scss */
+/* line 676, backend.scss */
 .order-block #tab-details .c-count i, .order-block #items-products-print .c-count i {
   color: #979797;
 }
-/* line 674, backend.scss */
+/* line 680, backend.scss */
 .order-block #tab-details .c-count span.input, .order-block #items-products-print .c-count span.input {
   width: 60px;
   line-height: 30px;
@@ -1332,55 +1337,55 @@ textArea {
   display: inline-block;
   margin: 0 5px;
 }
-/* line 682, backend.scss */
+/* line 688, backend.scss */
 .order-block #tab-details .c-sum, .order-block #items-products-print .c-sum {
   width: 100px;
 }
-/* line 685, backend.scss */
+/* line 691, backend.scss */
 .order-block #tab-details .c-status, .order-block #items-products-print .c-status {
   width: 130px;
 }
-/* line 688, backend.scss */
+/* line 694, backend.scss */
 .order-block #tab-details .order, .order-block #items-products-print .order {
   margin-bottom: 20px;
 }
-/* line 691, backend.scss */
+/* line 697, backend.scss */
 .order-block #tab-details .add-link, .order-block #items-products-print .add-link {
   font-size: 14px;
 }
-/* line 693, backend.scss */
+/* line 699, backend.scss */
 .order-block #tab-details .add-link a, .order-block #items-products-print .add-link a {
   color: #1242e3;
 }
-/* line 697, backend.scss */
+/* line 703, backend.scss */
 .order-block #tab-details .footer, .order-block #items-products-print .footer {
   margin: 30px 0;
   padding: 15px 0;
   border-top: 1px solid #979797;
   border-bottom: 1px solid #979797;
 }
-/* line 704, backend.scss */
+/* line 710, backend.scss */
 .order-block #tab-details .label, .order-block #tab-details .value, .order-block #items-products-print .label, .order-block #items-products-print .value {
   font-weight: normal;
   font-size: 14px;
 }
-/* line 708, backend.scss */
+/* line 714, backend.scss */
 .order-block #tab-details .label, .order-block #items-products-print .label {
   color: #979797;
   text-align: right;
 }
-/* line 713, backend.scss */
+/* line 719, backend.scss */
 .order-block #tab-details .value span, .order-block #items-products-print .value span {
   color: #979797;
 }
 
 /*╨Ъ╨╛╨╜╨╡╤Ж ╨б╨в╤А╨░╨╜╨╕╤Ж╨░ ╨╖╨░╨║╨░╨╖╨░*/
 /*╨д╨Ш╨╗╤М╤В╤А ╨▓ ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨╡*/
-/* line 723, backend.scss */
+/* line 729, backend.scss */
 .top-filter {
   margin-top: -15px;
 }
-/* line 725, backend.scss */
+/* line 731, backend.scss */
 .top-filter input[type=text], .top-filter select {
   -moz-border-radius: 0 / 0;
   -webkit-border-radius: 0 0;
@@ -1388,13 +1393,13 @@ textArea {
   height: 30px;
   padding: 5px;
 }
-/* line 730, backend.scss */
+/* line 736, backend.scss */
 .top-filter .filter-title {
   margin-bottom: 10px;
   color: #979797;
   font-size: 12px;
 }
-/* line 736, backend.scss */
+/* line 742, backend.scss */
 .top-filter .period .from, .top-filter .period .to {
   display: inline-block;
   width: 90px;
@@ -1402,177 +1407,177 @@ textArea {
 
 /*╨Ъ╨╛╨╜╨╡╤Ж ╨д╨Ш╨╗╤М╤В╤А ╨▓ ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨╡*/
 /*PopupFormWidget*/
-/* line 746, backend.scss */
+/* line 752, backend.scss */
 .popup-form {
   border-radius: 0;
   width: 325px;
 }
 
-/* line 751, backend.scss */
+/* line 757, backend.scss */
 .popup-form .popover-title {
   border: none;
 }
 
-/* line 755, backend.scss */
+/* line 761, backend.scss */
 .popup-form .popup-form-content {
   height: 200px;
   overflow: auto;
 }
 
-/* line 760, backend.scss */
+/* line 766, backend.scss */
 .popup-form select {
   outline: 0;
   border: none;
   width: 100%;
 }
 
-/* line 766, backend.scss */
+/* line 772, backend.scss */
 .popup-form .popup-form-footer {
   margin-top: 15px;
   padding-top: 15px;
   border-top: 1px solid #A9A9A9;
 }
 
-/* line 772, backend.scss */
+/* line 778, backend.scss */
 .popup-form label {
   display: inline;
   margin: 0;
 }
 
-/* line 777, backend.scss */
+/* line 783, backend.scss */
 .popup-form .item-container {
   min-height: 35px;
 }
 
-/* line 781, backend.scss */
+/* line 787, backend.scss */
 .popup-form .item-container input {
   margin: 0;
 }
 
-/* line 785, backend.scss */
+/* line 791, backend.scss */
 .popup-form .popup-form-footer .item-container {
   margin-bottom: 10px;
 }
 
-/* line 789, backend.scss */
+/* line 795, backend.scss */
 .popup-form .popover-content {
   padding-bottom: 0;
 }
 
-/* line 793, backend.scss */
+/* line 799, backend.scss */
 .popup-form .popup-form-footer label {
   font-size: 12px;
   color: #595959;
   padding-left: 5px;
 }
 
-/* line 799, backend.scss */
+/* line 805, backend.scss */
 .popup-form option {
   padding: 7px;
   margin-top: 10px;
 }
 
 /*╨║╨╛╨╜╨╡╤Ж PopupFormWidget*/
-/* line 807, backend.scss */
+/* line 813, backend.scss */
 #main-left-menu a.action {
   display: inline;
 }
 
-/* line 812, backend.scss */
+/* line 818, backend.scss */
 .main-content #main-left-tree-menu {
   margin-top: 30px;
 }
 
-/* line 816, backend.scss */
+/* line 822, backend.scss */
 #main-left-tree-menu .icon-admin-folder-news {
   vertical-align: -6px;
 }
-/* line 819, backend.scss */
+/* line 825, backend.scss */
 #main-left-tree-menu li {
   line-height: 30px;
 }
-/* line 825, backend.scss */
+/* line 831, backend.scss */
 #main-left-tree-menu li a.disable {
   color: #ff0000;
 }
-/* line 828, backend.scss */
+/* line 834, backend.scss */
 #main-left-tree-menu li a:hover, #main-left-tree-menu li a.active {
   color: #0849e1;
   text-decoration: none;
 }
-/* line 829, backend.scss */
+/* line 835, backend.scss */
 #main-left-tree-menu li a:hover.disable, #main-left-tree-menu li a.active.disable {
   color: #ff0000;
 }
-/* line 840, backend.scss */
+/* line 846, backend.scss */
 #main-left-tree-menu li ul li a:last-child:after {
   content: url("/images/drag_drop.png");
   float: right;
 }
 
-/* line 851, backend.scss */
+/* line 857, backend.scss */
 #settings-index-form .qq-drop-processing {
   display: none;
 }
 
-/* line 858, backend.scss */
+/* line 864, backend.scss */
 .wrapper .main-title-block.module-title img {
   margin-left: 0;
 }
 
-/* line 864, backend.scss */
+/* line 870, backend.scss */
 .line {
   border-bottom: 1px solid #a9a9a9;
   height: 1px;
   margin: 20px 0 30px 0;
 }
 
-/* line 870, backend.scss */
+/* line 876, backend.scss */
 .left-content {
   font-size: 12px;
 }
-/* line 872, backend.scss */
+/* line 878, backend.scss */
 .left-content .buttons {
   margin-bottom: 20px;
 }
-/* line 875, backend.scss */
+/* line 881, backend.scss */
 .left-content .buttons .dropdown > a {
   padding: 0;
   width: 40px;
   height: 26px;
 }
-/* line 881, backend.scss */
+/* line 887, backend.scss */
 .left-content .buttons .dropdown a:hover {
   background: #2853e4;
   color: white;
 }
-/* line 888, backend.scss */
+/* line 894, backend.scss */
 .left-content .list-view {
   padding-top: 10px;
 }
 
-/* line 892, backend.scss */
+/* line 898, backend.scss */
 .form .title.related_title {
   margin-top: 44px;
   float: left;
 }
 
-/* line 897, backend.scss */
+/* line 903, backend.scss */
 .right-content .title {
   font-size: 18px;
   color: #000000;
   margin: 35px 0 30px 0;
 }
-/* line 901, backend.scss */
+/* line 907, backend.scss */
 .right-content .title.title-page {
   margin-top: 5px;
 }
-/* line 905, backend.scss */
+/* line 911, backend.scss */
 .right-content .pagination {
   float: left;
 }
 
-/* line 910, backend.scss */
+/* line 916, backend.scss */
 .btn-small {
   border: 1px solid #cfcfcf;
   line-height: 1;
@@ -1584,31 +1589,31 @@ textArea {
   background-image: -webkit-linear-gradient(bottom, #e8e8e8, #ffffff);
   background-image: linear-gradient(to top, #e8e8e8, #ffffff);
 }
-/* line 915, backend.scss */
+/* line 921, backend.scss */
 .btn-small:hover {
   background: none;
   background-color: #fff;
 }
-/* line 919, backend.scss */
+/* line 925, backend.scss */
 .btn-small.btn-active {
   margin-left: 115px;
 }
-/* line 922, backend.scss */
+/* line 928, backend.scss */
 .btn-small.btn-trash {
   margin-left: 40px;
   padding: 2px 10.5px;
 }
-/* line 926, backend.scss */
+/* line 932, backend.scss */
 .btn-small .fa {
   font-size: 19px;
 }
 
-/* line 931, backend.scss */
+/* line 937, backend.scss */
 #edittitle {
   margin-left: 8px;
 }
 
-/* line 935, backend.scss */
+/* line 941, backend.scss */
 .main-center-block .left-title {
   height: 20px;
   font-size: 18px;
@@ -1616,37 +1621,37 @@ textArea {
   margin-bottom: 20px;
 }
 
-/* line 942, backend.scss */
+/* line 948, backend.scss */
 .errorMessage {
   color: #B94A48;
   display: block;
 }
 
-/* line 947, backend.scss */
+/* line 953, backend.scss */
 .thumbnail {
   border: none;
   box-shadow: none;
 }
 
-/* line 952, backend.scss */
+/* line 958, backend.scss */
 .main-center-block {
   width: 940px;
   margin: 0 auto;
 }
 
-/* line 957, backend.scss */
+/* line 963, backend.scss */
 .btn-link {
   color: black;
   text-decoration: underline;
 }
 
-/* line 962, backend.scss */
+/* line 968, backend.scss */
 .btn-link:hover {
   color: black;
   text-decoration: none;
 }
 
-/* line 967, backend.scss */
+/* line 973, backend.scss */
 .no-effect-menu .btn {
   border: none;
   border-radius: 0;
@@ -1655,29 +1660,29 @@ textArea {
   box-shadow: none;
 }
 
-/* line 975, backend.scss */
+/* line 981, backend.scss */
 .no-effect-menu .btn .caret {
   margin-top: 11px;
 }
 
-/* line 979, backend.scss */
+/* line 985, backend.scss */
 .form-group {
   margin-top: 20px;
   font-size: 14px;
   margin-bottom: 13px;
 }
-/* line 983, backend.scss */
+/* line 989, backend.scss */
 .form-group .label-block {
   line-height: 18px;
   color: #979797;
   padding-top: 6px;
   font-weight: normal;
 }
-/* line 989, backend.scss */
+/* line 995, backend.scss */
 .form-group .value-block {
   padding-top: 6px;
 }
-/* line 992, backend.scss */
+/* line 998, backend.scss */
 .form-group.buttons {
   position: fixed;
   bottom: 0px;
@@ -1690,7 +1695,7 @@ textArea {
   margin: 0px;
   z-index: 1100;
 }
-/* line 1003, backend.scss */
+/* line 1009, backend.scss */
 .form-group.buttons button {
   margin-left: 35%;
   background: #17c917;
@@ -1698,69 +1703,69 @@ textArea {
   font-size: 16px;
   font-weight: normal;
 }
-/* line 1011, backend.scss */
+/* line 1017, backend.scss */
 .form-group .form-control {
   color: #000000;
   line-height: 16px;
   height: 30px;
 }
-/* line 1016, backend.scss */
+/* line 1022, backend.scss */
 .form-group textarea {
   min-height: 130px;
 }
 
-/* line 1021, backend.scss */
+/* line 1027, backend.scss */
 .nav-tabs {
   font-size: 14px;
 }
 
-/* line 1025, backend.scss */
+/* line 1031, backend.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #1242e3;
 }
 
-/* line 1030, backend.scss */
+/* line 1036, backend.scss */
 .list .item {
   margin-bottom: 10px;
   padding: 5px 10px;
   border-left: 5px solid #B94A48;
 }
-/* line 1034, backend.scss */
+/* line 1040, backend.scss */
 .list .item.active {
   border-left: 5px solid #7fcf7f;
 }
-/* line 1037, backend.scss */
+/* line 1043, backend.scss */
 .list .item:hover {
   background-color: #e4e4e4;
 }
 
-/* line 1043, backend.scss */
+/* line 1049, backend.scss */
 #modal_tree.treeview li.closed {
   line-height: 30px;
 }
 
-/* line 1048, backend.scss */
+/* line 1054, backend.scss */
 .modal-dialog .modal-header {
   border-bottom: 0px;
   padding-bottom: 25px;
 }
-/* line 1053, backend.scss */
+/* line 1059, backend.scss */
 .modal-dialog .modal-footer {
   border-top: 0px;
   text-align: center;
 }
-/* line 1057, backend.scss */
+/* line 1063, backend.scss */
 .modal-dialog .modal-title {
   font-size: 18px;
 }
 
-/* line 1062, backend.scss */
+/* line 1068, backend.scss */
 .main-title-page {
   font-size: 18px;
   font-weight: bold;
 }
 
-/* line 1067, backend.scss */
+/* line 1073, backend.scss */
 .barcode {
   font-family: Barcode;
   font-size: 18px;
@@ -1768,11 +1773,11 @@ textArea {
   width: 160px;
 }
 
-/* line 1075, backend.scss */
+/* line 1081, backend.scss */
 #items-products-print .title {
   font-size: 24px;
 }
-/* line 1078, backend.scss */
+/* line 1084, backend.scss */
 #items-products-print .page-num {
   background: #e4e4e4 !important;
   color: #ffffff !important;
@@ -1781,39 +1786,39 @@ textArea {
   line-height: 56px;
   -webkit-print-color-adjust: exact;
 }
-/* line 1086, backend.scss */
+/* line 1092, backend.scss */
 #items-products-print .price {
   font-size: 16px;
   color: #979797;
 }
-/* line 1089, backend.scss */
+/* line 1095, backend.scss */
 #items-products-print .price span {
   color: #000000;
 }
-/* line 1093, backend.scss */
+/* line 1099, backend.scss */
 #items-products-print .label {
   color: #979797 !important;
   border: 0 !important;
 }
-/* line 1096, backend.scss */
+/* line 1102, backend.scss */
 #items-products-print .label.text-left {
   text-align: left;
 }
-/* line 1101, backend.scss */
+/* line 1107, backend.scss */
 #items-products-print .value span {
   color: #979797 !important;
 }
-/* line 1105, backend.scss */
+/* line 1111, backend.scss */
 #items-products-print .head-block {
   border-bottom: 1px solid #979797;
   margin-bottom: 22px;
 }
-/* line 1109, backend.scss */
+/* line 1115, backend.scss */
 #items-products-print .page {
   page-break-after: always;
 }
 
-/* line 1115, backend.scss */
+/* line 1121, backend.scss */
 #modalAddProducts #searchstring {
   width: 100%;
   height: 30px;
@@ -1822,22 +1827,22 @@ textArea {
 }
 
 /*---------╨Ш╤Б╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╤П-----------*/
-/* line 1130, backend.scss */
+/* line 1136, backend.scss */
 .form .title_label {
   font-size: 18px;
   color: black;
   font-weight: bold;
 }
-/* line 1134, backend.scss */
+/* line 1140, backend.scss */
 .form .title_label label {
   color: black;
 }
-/* line 1138, backend.scss */
+/* line 1144, backend.scss */
 .form label {
   color: #979797;
   margin-bottom: 8px;
 }
-/* line 1141, backend.scss */
+/* line 1147, backend.scss */
 .form label.parent_label {
   color: #000000;
   font-weight: bold;
@@ -1846,81 +1851,81 @@ textArea {
   margin-left: 15px;
   width: 100%;
 }
-/* line 1150, backend.scss */
+/* line 1156, backend.scss */
 .form input[type="text"], .form select, .form textarea {
   border-radius: 0;
   height: 30px;
 }
-/* line 1155, backend.scss */
+/* line 1161, backend.scss */
 .form #Parameters input[type="text"], .form #Parameters select, .form #Parameters textarea {
   width: 220px;
   display: initial;
 }
-/* line 1160, backend.scss */
+/* line 1166, backend.scss */
 .form #Parameters label.child_label {
   width: 230px;
   text-align: right;
   margin-right: 14px;
 }
-/* line 1166, backend.scss */
+/* line 1172, backend.scss */
 .form #Parameters input[type="checkbox"] + label:not(.status) {
   margin: 0;
   display: block;
   margin-bottom: 10px;
   margin-left: 30%;
 }
-/* line 1172, backend.scss */
+/* line 1178, backend.scss */
 .form #Parameters input[type="checkbox"] {
   display: inline-block;
 }
-/* line 1177, backend.scss */
+/* line 1183, backend.scss */
 .form #Parameters span input[type="checkbox"] {
   display: none;
 }
-/* line 1182, backend.scss */
+/* line 1188, backend.scss */
 .form .mar_t {
   margin-top: 22px;
 }
-/* line 1184, backend.scss */
+/* line 1190, backend.scss */
 .form .mar_t label {
   margin-top: 8px;
 }
-/* line 1188, backend.scss */
+/* line 1194, backend.scss */
 .form .title {
   font-size: 18px;
   font-weight: bold;
   margin: 0 0 24px 0;
 }
-/* line 1193, backend.scss */
+/* line 1199, backend.scss */
 .form .add_sale {
   cursor: pointer;
   color: #1242e3;
   margin-bottom: 10px;
 }
-/* line 1198, backend.scss */
+/* line 1204, backend.scss */
 .form .marker {
   color: #979797;
   cursor: pointer;
 }
-/* line 1201, backend.scss */
+/* line 1207, backend.scss */
 .form .marker i {
   font-size: 20px;
   margin-right: 9px;
 }
-/* line 1205, backend.scss */
+/* line 1211, backend.scss */
 .form .marker input[type="checkbox"] {
   display: none;
 }
-/* line 1209, backend.scss */
+/* line 1215, backend.scss */
 .form .marker:hover, .form .marker:focus, .form .marker.active {
   color: #000000;
 }
-/* line 1213, backend.scss */
+/* line 1219, backend.scss */
 .form .seo textarea {
   resize: none;
   height: 100px;
 }
-/* line 1219, backend.scss */
+/* line 1225, backend.scss */
 .form .sale {
   padding: 20px;
   background: #e4e4e4;
@@ -1928,47 +1933,47 @@ textArea {
   border: 1px solid #dadada;
   display: none;
 }
-/* line 1226, backend.scss */
+/* line 1232, backend.scss */
 .form .sale .period .from, .form .sale .period .to {
   display: inline-block;
   width: 100px;
   padding: 5px;
 }
-/* line 1232, backend.scss */
+/* line 1238, backend.scss */
 .form .sale .sale_price {
   margin-top: 7px;
   color: #1246d8;
 }
-/* line 1235, backend.scss */
+/* line 1241, backend.scss */
 .form .sale .sale_price span {
   color: #737373;
 }
 
-/* line 1243, backend.scss */
+/* line 1249, backend.scss */
 .form-structure .seo-title, .form .seo-title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 18px;
 }
 
-/* line 1251, backend.scss */
+/* line 1257, backend.scss */
 #products-list.catalog .img-cont {
   margin-left: 25px;
 }
-/* line 1253, backend.scss */
+/* line 1259, backend.scss */
 #products-list.catalog .img-cont img {
   border: none;
 }
-/* line 1257, backend.scss */
+/* line 1263, backend.scss */
 #products-list.catalog .btn-small.btn-active {
   margin-right: 15px;
 }
-/* line 1261, backend.scss */
+/* line 1267, backend.scss */
 #products-list ul {
   float: left;
   width: 100%;
 }
-/* line 1265, backend.scss */
+/* line 1271, backend.scss */
 #products-list .product_for_page {
   float: right;
   border: 1px solid #d1d1d1;
@@ -1977,18 +1982,18 @@ textArea {
   height: 27px;
   background: linear-gradient(to top, #e8e8e8, #ffffff);
 }
-/* line 1272, backend.scss */
+/* line 1278, backend.scss */
 #products-list .product_for_page:hover, #products-list .product_for_page:focus {
   background: linear-gradient(to top, #ffffff, #e8e8e8);
   cursor: pointer;
 }
-/* line 1277, backend.scss */
+/* line 1283, backend.scss */
 #products-list .items {
   margin-top: 25px;
   float: left;
   width: 100%;
 }
-/* line 1282, backend.scss */
+/* line 1288, backend.scss */
 #products-list .one_item {
   min-height: 75px;
   margin-bottom: 12px;
@@ -2000,18 +2005,18 @@ textArea {
   cursor: pointer;
   list-style: none;
 }
-/* line 1292, backend.scss */
+/* line 1298, backend.scss */
 #products-list .one_item:hover {
   background: #e4e4e4;
 }
-/* line 1295, backend.scss */
+/* line 1301, backend.scss */
 #products-list .one_item .checkbox {
   width: 15px;
   height: 15px;
   margin: 27px 20px 0;
   float: left;
 }
-/* line 1301, backend.scss */
+/* line 1307, backend.scss */
 #products-list .one_item .date {
   color: #737373;
   font-size: 12px;
@@ -2019,41 +2024,41 @@ textArea {
   text-align: left;
   margin-top: 27px;
 }
-/* line 1307, backend.scss */
+/* line 1313, backend.scss */
 #products-list .one_item .date div {
   margin-top: 5px;
 }
-/* line 1311, backend.scss */
+/* line 1317, backend.scss */
 #products-list .one_item .status {
   height: 75px;
   border-left: 4px solid transparent;
 }
-/* line 1314, backend.scss */
+/* line 1320, backend.scss */
 #products-list .one_item .status.active {
   border-left: 4px solid green;
 }
-/* line 1317, backend.scss */
+/* line 1323, backend.scss */
 #products-list .one_item .status.not_active {
   border-left: 4px solid red;
 }
-/* line 1320, backend.scss */
+/* line 1326, backend.scss */
 #products-list .one_item .status div.identity {
   margin-left: 15px;
   margin-top: -35px;
 }
-/* line 1325, backend.scss */
+/* line 1331, backend.scss */
 #products-list .one_item .name {
   padding-left: 30px;
   margin-top: 10px;
 }
-/* line 1328, backend.scss */
+/* line 1334, backend.scss */
 #products-list .one_item .name a {
   display: inline-block;
   min-height: 34px;
   font-size: 12px;
   line-height: 18px;
 }
-/* line 1336, backend.scss */
+/* line 1342, backend.scss */
 #products-list .one_item .article span {
   background: #0849e1;
   font-size: 10px;
@@ -2062,21 +2067,21 @@ textArea {
   border-radius: 3px;
   margin-right: 4px;
 }
-/* line 1345, backend.scss */
+/* line 1351, backend.scss */
 #products-list .one_item div.price {
   color: #1b49e3;
   margin-top: 11px;
 }
-/* line 1348, backend.scss */
+/* line 1354, backend.scss */
 #products-list .one_item div.price span {
   color: #666666;
 }
-/* line 1352, backend.scss */
+/* line 1358, backend.scss */
 #products-list .one_item div.deals {
   margin-top: 7px;
   width: 5%;
 }
-/* line 1356, backend.scss */
+/* line 1362, backend.scss */
 #products-list .one_item div.price_sale {
   margin-top: 11px;
   padding-top: 12px;
@@ -2084,19 +2089,19 @@ textArea {
   color: #979797;
   text-decoration: line-through;
 }
-/* line 1366, backend.scss */
+/* line 1372, backend.scss */
 #products-list .one_item img.sort {
   float: right;
   margin-top: 30px;
   margin-right: 10px;
 }
-/* line 1371, backend.scss */
+/* line 1377, backend.scss */
 #products-list .one_item img.answer_ok {
   float: right;
   margin-top: 25px;
   margin-right: 20px;
 }
-/* line 1377, backend.scss */
+/* line 1383, backend.scss */
 #products-list .title_parent {
   font-family: Arial;
   color: #000000;
@@ -2106,28 +2111,28 @@ textArea {
   float: left;
 }
 
-/* line 1387, backend.scss */
+/* line 1393, backend.scss */
 .mar_product_list, #products-list .one_item .deals, #products-list .one_item .price_sale, #products-list .one_item .price, #products-list .one_item img {
   margin-top: 13px;
 }
 
-/* line 1391, backend.scss */
+/* line 1397, backend.scss */
 .fa.new {
   color: #009f00;
 }
 
-/* line 1395, backend.scss */
+/* line 1401, backend.scss */
 .fa.popular {
   color: #ffcb2d;
 }
 
-/* line 1399, backend.scss */
+/* line 1405, backend.scss */
 .fa.sale_product {
   color: #ff2d2d;
 }
 
 /*checkboxes*/
-/* line 1408, backend.scss */
+/* line 1414, backend.scss */
 .btn-group.checkbox > .btn {
   border-radius: 0;
   border: 1px solid #dadada;
@@ -2135,28 +2140,28 @@ textArea {
   outline: none;
 }
 
-/* line 1415, backend.scss */
+/* line 1421, backend.scss */
 .btn-group.checkbox > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
   background: url("/images/checkbox.png") no-repeat center 4px #ffffff;
   width: 28px;
   text-indent: -999999999px;
 }
 
-/* line 1421, backend.scss */
+/* line 1427, backend.scss */
 .btn-group.checkbox > .btn.checked-single:first-child:not(:last-child):not(.dropdown-toggle) {
   background: url("/images/checkbox.png") no-repeat center -22px #ffffff;
   width: 28px;
   text-indent: -999999999px;
 }
 
-/* line 1427, backend.scss */
+/* line 1433, backend.scss */
 .btn-group.checkbox > .btn.checked-all:first-child:not(:last-child):not(.dropdown-toggle) {
   background: url("/images/checkbox.png") no-repeat center -48px #ffffff;
   width: 28px;
   text-indent: -999999999px;
 }
 
-/* line 1433, backend.scss */
+/* line 1439, backend.scss */
 .btn-group.checkbox > .btn + .dropdown-toggle {
   background: -moz-linear-gradient(top, #e8e8e8, #ffffff);
   background: -webkit-linear-gradient(top, #e8e8e8, #ffffff);
@@ -2167,7 +2172,7 @@ textArea {
   padding: 2px 3px 3px;
 }
 
-/* line 1443, backend.scss */
+/* line 1449, backend.scss */
 .btn-group.checkbox .btn .caret {
   border-top: 4px solid #000000;
   border-right: 4px solid transparent;
@@ -2176,13 +2181,13 @@ textArea {
   padding: 0 !important;
 }
 
-/* line 1451, backend.scss */
+/* line 1457, backend.scss */
 .btn-group.checkbox.open .dropdown-toggle {
   box-shadow: none;
   padding: 2px 3px 3px;
 }
 
-/* line 1456, backend.scss */
+/* line 1462, backend.scss */
 .btn-group.checkbox .btn.active,
 .btn-group.checkbox .btn:active,
 .btn-group.checkbox.open .dropdown-toggle,
@@ -2193,7 +2198,7 @@ textArea {
   padding: 2px 3px 3px !important;
 }
 
-/* line 1466, backend.scss */
+/* line 1472, backend.scss */
 .btn-group.checkbox.open .btn .caret,
 .btn-group.checkbox .btn:active .caret,
 .btn-group.checkbox.open .btn .caret {
@@ -2202,12 +2207,12 @@ textArea {
   border-left: 4px solid transparent;
 }
 
-/* line 1474, backend.scss */
+/* line 1480, backend.scss */
 input[type="checkbox"] {
   display: none;
 }
 
-/* line 1478, backend.scss */
+/* line 1484, backend.scss */
 input[type="checkbox"] + label:not(.status) {
   /*font: 18px bold;*/
   color: #444;
@@ -2215,7 +2220,7 @@ input[type="checkbox"] + label:not(.status) {
   margin: 27px 16px 0;
 }
 
-/* line 1485, backend.scss */
+/* line 1491, backend.scss */
 input[type="checkbox"] + label:not(.status)::before {
   content: "";
   display: inline-table;
@@ -2226,27 +2231,27 @@ input[type="checkbox"] + label:not(.status)::before {
   background: url("/images/checkbox.png") no-repeat transparent;
 }
 
-/* line 1495, backend.scss */
+/* line 1501, backend.scss */
 input[type="checkbox"] + label:not(.status)::before {
   background-position: 0px 0px;
 }
 
-/* line 1499, backend.scss */
+/* line 1505, backend.scss */
 input[type="checkbox"]:checked + label:not(.status)::before {
   background-position: 0px -52px;
 }
 
-/* line 1503, backend.scss */
+/* line 1509, backend.scss */
 input[type="checkbox"]:checked:disabled + label:not(.status)::before {
   /*background-position: 0px -26px;*/
   opacity: 0.5;
 }
 
-/* line 1510, backend.scss */
+/* line 1516, backend.scss */
 #modal_delete .modal-header .close, #modal_not_active .modal-header .close, #modal_active .modal-header .close, #modal_new .modal-header .close, #modal_archive .modal-header .close, #modal_answer .modal-header .close {
   opacity: 1;
 }
-/* line 1513, backend.scss */
+/* line 1519, backend.scss */
 #modal_delete .modal-header h3, #modal_not_active .modal-header h3, #modal_active .modal-header h3, #modal_new .modal-header h3, #modal_archive .modal-header h3, #modal_answer .modal-header h3 {
   font-family: Arial;
   font-weight: bold;
@@ -2254,16 +2259,16 @@ input[type="checkbox"]:checked:disabled + label:not(.status)::before {
   text-align: center;
   color: #000000;
 }
-/* line 1521, backend.scss */
+/* line 1527, backend.scss */
 #modal_delete .modal-body, #modal_not_active .modal-body, #modal_active .modal-body, #modal_new .modal-body, #modal_archive .modal-body, #modal_answer .modal-body {
   text-align: center;
   color: #000000;
 }
-/* line 1526, backend.scss */
+/* line 1532, backend.scss */
 #modal_delete .modal-footer button, #modal_not_active .modal-footer button, #modal_active .modal-footer button, #modal_new .modal-footer button, #modal_archive .modal-footer button, #modal_answer .modal-footer button {
   margin: 0 10px;
 }
-/* line 1528, backend.scss */
+/* line 1534, backend.scss */
 #modal_delete .modal-footer button:last-child, #modal_not_active .modal-footer button:last-child, #modal_active .modal-footer button:last-child, #modal_new .modal-footer button:last-child, #modal_archive .modal-footer button:last-child, #modal_answer .modal-footer button:last-child {
   background: none;
   border: none;
@@ -2273,20 +2278,20 @@ input[type="checkbox"]:checked:disabled + label:not(.status)::before {
   text-decoration: underline;
 }
 
-/* line 1540, backend.scss */
+/* line 1546, backend.scss */
 .buttons_group {
   float: left;
 }
-/* line 1542, backend.scss */
+/* line 1548, backend.scss */
 .buttons_group .btn-group {
   margin: 0px 15px 10px 10px;
   float: left;
 }
-/* line 1547, backend.scss */
+/* line 1553, backend.scss */
 .buttons_group .btn-small:hover, .buttons_group .btn-small:focus {
   background: #3c60e4;
 }
-/* line 1551, backend.scss */
+/* line 1557, backend.scss */
 .buttons_group .btn-action {
   width: 38px;
   height: 25px;
@@ -2296,17 +2301,17 @@ input[type="checkbox"]:checked:disabled + label:not(.status)::before {
   border: 1px solid #dcdcdc;
   float: left;
 }
-/* line 1559, backend.scss */
+/* line 1565, backend.scss */
 .buttons_group .btn-action:hover, .buttons_group .btn-action:focus {
   background: #2853e4;
 }
 
-/* line 1565, backend.scss */
+/* line 1571, backend.scss */
 #ui-datepicker-div {
   z-index: 2 !important;
 }
 
-/* line 1569, backend.scss */
+/* line 1575, backend.scss */
 .title_news {
   margin-bottom: 30px;
   float: left;
@@ -2314,118 +2319,118 @@ input[type="checkbox"]:checked:disabled + label:not(.status)::before {
   font-family: arial, sans-serif;
   font-weight: bold;
 }
-/* line 1575, backend.scss */
+/* line 1581, backend.scss */
 .title_news h2 {
   font-size: 18px;
   font-weight: bold;
   float: left;
 }
 
-/* line 1582, backend.scss */
+/* line 1588, backend.scss */
 .head_labels {
   color: #979797;
   font-size: 12px;
   margin-bottom: 10px;
 }
 
-/* line 1589, backend.scss */
+/* line 1595, backend.scss */
 #catalog-params-form-form h3 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 25px;
 }
-/* line 1594, backend.scss */
+/* line 1600, backend.scss */
 #catalog-params-form-form .params_title.form-control {
   width: 220px;
 }
-/* line 1597, backend.scss */
+/* line 1603, backend.scss */
 #catalog-params-form-form .add-sub-form-child {
   margin-left: 15px;
 }
-/* line 1600, backend.scss */
+/* line 1606, backend.scss */
 #catalog-params-form-form .add-sub-form {
   margin-bottom: 10px;
   display: inline-block;
   margin-top: 15px;
 }
-/* line 1607, backend.scss */
+/* line 1613, backend.scss */
 #catalog-params-form-form .head_labels label:nth-child(1) {
   margin-right: 182px;
 }
-/* line 1610, backend.scss */
+/* line 1616, backend.scss */
 #catalog-params-form-form .head_labels label:nth-child(2) {
   margin-right: 109px;
 }
-/* line 1616, backend.scss */
+/* line 1622, backend.scss */
 #catalog-params-form-form .head_param span {
   color: #979797;
   font-size: 12px;
   display: inline-block;
 }
-/* line 1620, backend.scss */
+/* line 1626, backend.scss */
 #catalog-params-form-form .head_param span:first-child {
   width: 250px;
 }
-/* line 1623, backend.scss */
+/* line 1629, backend.scss */
 #catalog-params-form-form .head_param span:nth-child(2) {
   width: 120px;
 }
-/* line 1628, backend.scss */
+/* line 1634, backend.scss */
 #catalog-params-form-form .add-sub-form-child, #catalog-params-form-form .add-sub-form {
   color: #1242e3;
 }
-/* line 1631, backend.scss */
+/* line 1637, backend.scss */
 #catalog-params-form-form .parent {
   float: left;
   clear: both;
   width: 100%;
   margin-top: 15px;
 }
-/* line 1636, backend.scss */
+/* line 1642, backend.scss */
 #catalog-params-form-form .parent .del-form, #catalog-params-form-form .parent .del-value {
   float: right;
   margin-top: 7px;
 }
-/* line 1640, backend.scss */
+/* line 1646, backend.scss */
 #catalog-params-form-form .parent .del-form {
   margin-right: 31px;
 }
-/* line 1643, backend.scss */
+/* line 1649, backend.scss */
 #catalog-params-form-form .parent .sort {
   margin: 9px 0 0 20px;
   cursor: pointer;
 }
-/* line 1647, backend.scss */
+/* line 1653, backend.scss */
 #catalog-params-form-form .parent .child {
   width: 100%;
   margin: 25px 0 0;
   display: inline-block;
 }
-/* line 1649, backend.scss */
+/* line 1655, backend.scss */
 #catalog-params-form-form .parent .child .del-form {
   margin-right: 0px;
 }
-/* line 1658, backend.scss */
+/* line 1664, backend.scss */
 #catalog-params-form-form .parent .child .item {
   float: left;
   clear: both;
   margin-bottom: 10px;
   width: 100%;
 }
-/* line 1663, backend.scss */
+/* line 1669, backend.scss */
 #catalog-params-form-form .parent .child .item input, #catalog-params-form-form .parent .child .item select {
   margin-right: 15px;
 }
-/* line 1666, backend.scss */
+/* line 1672, backend.scss */
 #catalog-params-form-form .parent .child .item select {
   width: 99px;
   padding-left: 3px;
 }
-/* line 1670, backend.scss */
+/* line 1676, backend.scss */
 #catalog-params-form-form .parent .child .item input {
   padding-left: 9px;
 }
-/* line 1673, backend.scss */
+/* line 1679, backend.scss */
 #catalog-params-form-form .parent .child .item:before {
   content: '';
   width: 4px;
@@ -2435,38 +2440,38 @@ input[type="checkbox"]:checked:disabled + label:not(.status)::before {
   float: left;
   margin: 14px 8px 0 0;
 }
-/* line 1682, backend.scss */
+/* line 1688, backend.scss */
 #catalog-params-form-form .parent .child .item .values {
   float: left;
   clear: both;
   width: 100%;
 }
-/* line 1686, backend.scss */
+/* line 1692, backend.scss */
 #catalog-params-form-form .parent .child .item .values .add-value {
   color: #1242e3;
   float: left;
   margin-left: 240px;
   margin-top: 10px;
 }
-/* line 1692, backend.scss */
+/* line 1698, backend.scss */
 #catalog-params-form-form .parent .child .item .values .value {
   float: right;
   margin-top: 10px;
   margin-right: 0px;
 }
-/* line 1698, backend.scss */
+/* line 1704, backend.scss */
 #catalog-params-form-form .parent .child .item .values .item:before {
   display: none;
 }
-/* line 1701, backend.scss */
+/* line 1707, backend.scss */
 #catalog-params-form-form .parent .child .item .values .item .help-inline {
   display: block;
 }
-/* line 1704, backend.scss */
+/* line 1710, backend.scss */
 #catalog-params-form-form .parent .child .item .values .item input {
   margin-right: 20px;
 }
-/* line 1709, backend.scss */
+/* line 1715, backend.scss */
 #catalog-params-form-form .parent .child .item input[type="checkbox"] + label:not(.status)::before {
   content: "";
   display: inline-table;
@@ -2476,86 +2481,86 @@ input[type="checkbox"]:checked:disabled + label:not(.status)::before {
   margin: -2px 5px 0 0;
   background: url("/images/checkbox_params.png") no-repeat transparent;
 }
-/* line 1718, backend.scss */
+/* line 1724, backend.scss */
 #catalog-params-form-form .parent .child .item input[type="checkbox"] + label:not(.status)::before {
   background-position: 0px -36px;
 }
-/* line 1722, backend.scss */
+/* line 1728, backend.scss */
 #catalog-params-form-form .parent .child .item input[type="checkbox"]:checked + label:not(.status)::before {
   background-position: 0px -0px;
 }
-/* line 1725, backend.scss */
+/* line 1731, backend.scss */
 #catalog-params-form-form .parent .child .item input[type="checkbox"] + label:not(.status) {
   margin: 0 0 0 35px;
 }
 
-/* line 1735, backend.scss */
+/* line 1741, backend.scss */
 .tab-content img.sort {
   margin-top: 10px;
   margin-right: 5px;
   float: right;
 }
-/* line 1740, backend.scss */
+/* line 1746, backend.scss */
 .tab-content img.delete {
   margin-top: 11px;
   margin-right: 30px;
   float: right;
   cursor: pointer;
 }
-/* line 1746, backend.scss */
+/* line 1752, backend.scss */
 .tab-content span.add_param {
   color: #1242e3;
   cursor: pointer;
   float: left;
 }
-/* line 1750, backend.scss */
+/* line 1756, backend.scss */
 .tab-content span.add_param:hover, .tab-content span.add_param:focus {
   text-decoration: underline;
 }
 
-/* line 1756, backend.scss */
+/* line 1762, backend.scss */
 .sort_params {
   float: left;
   width: 100%;
   margin-top: -30px;
 }
 
-/* line 1764, backend.scss */
+/* line 1770, backend.scss */
 #products-list .feedback.one_item .date {
   font-size: 12px;
   color: #979797;
 }
 
-/* line 1771, backend.scss */
+/* line 1777, backend.scss */
 .main-title-block.module-title img {
   width: 50px;
 }
 
-/* line 1775, backend.scss */
+/* line 1781, backend.scss */
 .feedback_system {
   font-size: 12px;
   color: #979797;
   margin-bottom: 6px;
 }
-/* line 1779, backend.scss */
+/* line 1785, backend.scss */
 .feedback_system:before {
   content: url("/images/feedback_user.png");
   margin-right: 5px;
 }
-/* line 1783, backend.scss */
+/* line 1789, backend.scss */
 .feedback_system:first-child {
   margin-bottom: 15px;
 }
-/* line 1787, backend.scss */
+/* line 1793, backend.scss */
 .feedback_system:nth-child(2):before {
   content: url("/images/feedback_phone.png");
 }
-/* line 1792, backend.scss */
+/* line 1798, backend.scss */
 .feedback_system:nth-child(3):before {
   content: url("/images/feedback_email.png");
 }
 
-/* line 1799, backend.scss */
+/* line 1805, backend.scss */
 .buttons_group .spisok {
   float: left;
   font-size: 16px;
@@ -2563,52 +2568,52 @@ input[type="checkbox"]:checked:disabled + label:not(.status)::before {
   margin-left: 20px;
 }
 
-/* line 1808, backend.scss */
+/* line 1814, backend.scss */
 #catalog-products-product-form .btn-small.btn-trash {
   margin-right: 0;
   padding: 2px 10.5px;
   float: right;
 }
-/* line 1813, backend.scss */
+/* line 1819, backend.scss */
 #catalog-products-product-form .btn-small.btn-active {
   position: absolute;
   left: 100%;
   margin-left: -135px;
 }
-/* line 1818, backend.scss */
+/* line 1824, backend.scss */
 #catalog-products-product-form .theme, #catalog-products-product-form .ask {
   border: 1px solid #CCC;
   padding: 10px 15px 30px;
   margin-bottom: 40px;
 }
-/* line 1823, backend.scss */
+/* line 1829, backend.scss */
 #catalog-products-product-form .ask {
   margin-bottom: 80px;
 }
-/* line 1827, backend.scss */
+/* line 1833, backend.scss */
 #catalog-products-product-form #Description .seo-title {
   margin-bottom: 0;
 }
 
-/* line 1833, backend.scss */
+/* line 1839, backend.scss */
 input#AskAnswer_answer_ok + label {
   margin-top: 0;
 }
 
-/* line 1840, backend.scss */
+/* line 1846, backend.scss */
 #menu-_menu-form .head_labels label:nth-child(1) {
   margin-right: 149px;
 }
-/* line 1843, backend.scss */
+/* line 1849, backend.scss */
 #menu-_menu-form .head_labels label:nth-child(2) {
   margin-right: 67px;
 }
-/* line 1848, backend.scss */
+/* line 1854, backend.scss */
 #menu-_menu-form .circle {
   float: left;
   margin-right: 0 !important;
 }
-/* line 1851, backend.scss */
+/* line 1857, backend.scss */
 #menu-_menu-form .circle:before {
   content: '';
   width: 4px;
@@ -2618,14 +2623,14 @@ input#AskAnswer_answer_ok + label {
   float: left;
   margin: 14px 15px 0 0;
 }
-/* line 1870, backend.scss */
+/* line 1876, backend.scss */
 #menu-_menu-form .children .items {
   clear: both;
   margin: 20px 0 10px 16px;
   float: left;
   width: 100%;
 }
-/* line 1877, backend.scss */
+/* line 1883, backend.scss */
 #menu-_menu-form .add-children {
   color: #1242e3;
   display: inline-block;
@@ -2636,11 +2641,11 @@ input#AskAnswer_answer_ok + label {
   margin-right: 15px;
   border: 1px solid #dcdcdc;
 }
-/* line 1886, backend.scss */
+/* line 1892, backend.scss */
 #menu-_menu-form .add-children:hover {
   background: #2853e4;
 }
-/* line 1889, backend.scss */
+/* line 1895, backend.scss */
 #menu-_menu-form .add-children.last {
   background: none;
   width: 200px;
@@ -2650,23 +2655,23 @@ input#AskAnswer_answer_ok + label {
   color: #1242e3;
   display: block;
 }
-/* line 1902, backend.scss */
+/* line 1908, backend.scss */
 #menu-_menu-form .del-form {
   float: right;
   margin: 7px 20px 0 15px;
 }
-/* line 1907, backend.scss */
+/* line 1913, backend.scss */
 #menu-_menu-form .one_item div {
   margin-right: 20px;
   float: left;
 }
 
-/* line 1914, backend.scss */
+/* line 1920, backend.scss */
 .module-title {
   position: relative;
   z-index: 1;
 }
-/* line 1917, backend.scss */
+/* line 1923, backend.scss */
 .module-title .add-children {
   color: #1242e3;
   display: inline-block;
@@ -2677,12 +2682,12 @@ input#AskAnswer_answer_ok + label {
   margin-right: 10px;
   border: 1px solid #dcdcdc;
 }
-/* line 1926, backend.scss */
+/* line 1932, backend.scss */
 .module-title .add-children:hover {
   background: #2853e4;
 }
 
-/* line 1934, backend.scss */
+/* line 1940, backend.scss */
 .module-title #products-list .one_item {
   float: right;
   width: 925px;
@@ -2691,55 +2696,55 @@ input#AskAnswer_answer_ok + label {
   height: 75px;
   overflow: hidden;
 }
-/* line 1941, backend.scss */
+/* line 1947, backend.scss */
 .module-title #products-list .one_item:hover, .module-title #products-list .one_item:focus {
   background: none;
 }
-/* line 1944, backend.scss */
+/* line 1950, backend.scss */
 .module-title #products-list .one_item .fa.fa-trash-o {
   font-size: 18px;
   margin: 0;
 }
-/* line 1948, backend.scss */
+/* line 1954, backend.scss */
 .module-title #products-list .one_item .btn-small.btn-active {
   margin-left: 10px;
 }
-/* line 1951, backend.scss */
+/* line 1957, backend.scss */
 .module-title #products-list .one_item .btn-small.btn-trash {
   margin-left: 20px;
 }
-/* line 1954, backend.scss */
+/* line 1960, backend.scss */
 .module-title #products-list .one_item .btn-small.btn-active, .module-title #products-list .one_item .btn-small.btn-trash {
   margin-top: 25px;
 }
-/* line 1957, backend.scss */
+/* line 1963, backend.scss */
 .module-title #products-list .one_item .fa {
   margin-bottom: 3px;
 }
 
-/* line 1964, backend.scss */
+/* line 1970, backend.scss */
 #modal_releated {
   z-index: 1000;
   width: 100%;
   top: 0px;
 }
-/* line 1968, backend.scss */
+/* line 1974, backend.scss */
 #modal_releated .form-group.buttons {
   display: none;
 }
-/* line 1971, backend.scss */
+/* line 1977, backend.scss */
 #modal_releated .buttons_group {
   width: 100%;
   height: 100%;
 }
-/* line 1975, backend.scss */
+/* line 1981, backend.scss */
 #modal_releated .modal-dialog {
   width: 100%;
   margin: 0;
   min-height: 100%;
   height: 100%;
 }
-/* line 1980, backend.scss */
+/* line 1986, backend.scss */
 #modal_releated .modal-dialog .modal-content {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -2747,7 +2752,7 @@ input#AskAnswer_answer_ok + label {
   min-height: 100%;
   height: 100%;
 }
-/* line 1986, backend.scss */
+/* line 1992, backend.scss */
 #modal_releated .modal-dialog .modal-content .modal-header {
   margin-left: auto;
   margin-right: auto;
@@ -2756,37 +2761,37 @@ input#AskAnswer_answer_ok + label {
   color: black;
   height: 8%;
 }
-/* line 1993, backend.scss */
+/* line 1999, backend.scss */
 #modal_releated .modal-dialog .modal-content .modal-header .close {
   opacity: 1;
 }
-/* line 1997, backend.scss */
+/* line 2003, backend.scss */
 #modal_releated .modal-dialog .modal-content .modal-footer {
   display: none;
 }
-/* line 2001, backend.scss */
+/* line 2007, backend.scss */
 #modal_releated .modal-dialog #modal_tree {
   width: 30%;
   float: left;
 }
-/* line 2004, backend.scss */
+/* line 2010, backend.scss */
 #modal_releated .modal-dialog #modal_tree > li:first-child {
   padding-bottom: 10px;
 }
-/* line 2007, backend.scss */
+/* line 2013, backend.scss */
 #modal_releated .modal-dialog #modal_tree a {
   font-size: 12px;
 }
-/* line 2009, backend.scss */
+/* line 2015, backend.scss */
 #modal_releated .modal-dialog #modal_tree a:hover, #modal_releated .modal-dialog #modal_tree a:focus {
   color: #004cff;
   text-decoration: none;
 }
-/* line 2014, backend.scss */
+/* line 2020, backend.scss */
 #modal_releated .modal-dialog #modal_tree .modal_first {
   vertical-align: -5px;
 }
-/* line 2019, backend.scss */
+/* line 2025, backend.scss */
 #modal_releated .modal-body {
   margin-left: auto;
   margin-right: auto;
@@ -2794,93 +2799,93 @@ input#AskAnswer_answer_ok + label {
   height: 92%;
   width: 100%;
 }
-/* line 2026, backend.scss */
+/* line 2032, backend.scss */
 #modal_releated .products {
   float: left;
   width: 70%;
   padding-right: 25px;
   height: 85%;
 }
-/* line 2031, backend.scss */
+/* line 2037, backend.scss */
 #modal_releated .products #products-list {
   height: 100%;
 }
-/* line 2034, backend.scss */
+/* line 2040, backend.scss */
 #modal_releated .products .items {
   overflow-y: auto;
   height: calc(100% - 100px);
   overflow-x: hidden;
   padding-top: 5px;
 }
-/* line 2042, backend.scss */
+/* line 2048, backend.scss */
 #modal_releated .pagination {
   margin-top: 15px;
 }
 
-/* line 2050, backend.scss */
+/* line 2056, backend.scss */
 #main-left-tree-menu li a.active, #modal_tree li a.active {
   color: #1246d8;
 }
-/* line 2053, backend.scss */
+/* line 2059, backend.scss */
 #main-left-tree-menu li a.status2, #modal_tree li a.status2 {
   color: #B94A48;
 }
 
-/* line 2059, backend.scss */
+/* line 2065, backend.scss */
 button.save {
   background: #17c917;
   color: #ffffff;
   font-size: 16px;
   font-weight: normal;
 }
-/* line 2064, backend.scss */
+/* line 2070, backend.scss */
 button.save:hover, button.save:focus {
   background: #17c917;
   color: #ffffff;
   cursor: pointer;
 }
 
-/* line 2072, backend.scss */
+/* line 2078, backend.scss */
 #Products_releated .releated_products {
   margin: 35px 0;
   float: right;
 }
-/* line 2076, backend.scss */
+/* line 2082, backend.scss */
 #Products_releated .icon-admin-delete {
   margin-left: 20px;
   float: right;
   margin-top: 35px;
 }
-/* line 2081, backend.scss */
+/* line 2087, backend.scss */
 #Products_releated #products-list .one_item img.sort {
   margin-top: 34px;
 }
 
-/* line 2086, backend.scss */
+/* line 2092, backend.scss */
 .fa.fa-byr:before {
   content: "Br";
 }
 
-/* line 2090, backend.scss */
+/* line 2096, backend.scss */
 .fa.fa-uah:before {
   content: "\20B4";
 }
 
-/* line 2094, backend.scss */
+/* line 2100, backend.scss */
 .settings-label {
   margin-top: 12px;
   margin-bottom: 12px;
 }
-/* line 2097, backend.scss */
+/* line 2103, backend.scss */
 .settings-label input[type="checkbox"] + label:not(.status) {
   position: absolute;
   margin-top: 17px;
 }
-/* line 2101, backend.scss */
+/* line 2107, backend.scss */
 .settings-label input[type="checkbox"]:checked + label::before {
   background-position: 0px -52px;
 }
-/* line 2104, backend.scss */
+/* line 2110, backend.scss */
 .settings-label img {
   max-width: 48px;
   max-height: 48px;
@@ -2890,7 +2895,7 @@ button.save:hover, button.save:focus {
   margin-left: 55px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.44);
 }
-/* line 2113, backend.scss */
+/* line 2119, backend.scss */
 .settings-label span {
   vertical-align: 18px;
   color: #0849e1;
@@ -2898,11 +2903,11 @@ button.save:hover, button.save:focus {
   font-family: 'Arial';
   font-weight: bold;
 }
-/* line 2121, backend.scss */
+/* line 2127, backend.scss */
 .settings-label.disabled span {
   color: #979797;
 }
-/* line 2124, backend.scss */
+/* line 2130, backend.scss */
 .settings-label.disabled img {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -2915,54 +2920,54 @@ button.save:hover, button.save:focus {
   /* IE 6-9 */
 }
 
-/* line 2137, backend.scss */
+/* line 2143, backend.scss */
 #currency-form .col-xs-1.text-center {
   margin-top: 10px;
 }
-/* line 2140, backend.scss */
+/* line 2146, backend.scss */
 #currency-form .col-xs-2.text-right {
   padding-top: 10px;
 }
-/* line 2143, backend.scss */
+/* line 2149, backend.scss */
 #currency-form .one_item {
   cursor: pointer;
   margin-bottom: 0px;
 }
-/* line 2146, backend.scss */
+/* line 2152, backend.scss */
 #currency-form .one_item > div {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-/* line 2150, backend.scss */
+/* line 2156, backend.scss */
 #currency-form .one_item:hover {
   background: #e4e4e4;
 }
-/* line 2153, backend.scss */
+/* line 2159, backend.scss */
 #currency-form .one_item input[type="text"], #currency-form .one_item select {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
   border: 1px solid #CCC;
 }
-/* line 2159, backend.scss */
+/* line 2165, backend.scss */
 #currency-form .one_item select {
   width: 90px;
   margin: 0 0 0 20px;
 }
-/* line 2163, backend.scss */
+/* line 2169, backend.scss */
 #currency-form .one_item .status {
   height: 40px;
   padding-top: 2px;
 }
-/* line 2166, backend.scss */
+/* line 2172, backend.scss */
 #currency-form .one_item .status.active {
   border-left: 4px solid green;
 }
-/* line 2169, backend.scss */
+/* line 2175, backend.scss */
 #currency-form .one_item .status.not_active {
   border-left: 4px solid red;
 }
-/* line 2173, backend.scss */
+/* line 2179, backend.scss */
 #currency-form .one_item .icon {
   margin-top: 2px;
   border: 1px solid #CCC;
@@ -2970,7 +2975,7 @@ button.save:hover, button.save:focus {
   width: 60px;
   padding: 8px 0 0 20px;
 }
-/* line 2180, backend.scss */
+/* line 2186, backend.scss */
 #currency-form .one_item .one {
   border: 1px solid #CCC;
   height: 34px;
@@ -2978,43 +2983,43 @@ button.save:hover, button.save:focus {
   float: left;
   padding: 9px 0 0 24px;
 }
-/* line 2187, backend.scss */
+/* line 2193, backend.scss */
 #currency-form .one_item label[for="one"] {
   margin: 9px 12px 0;
   float: left;
 }
-/* line 2191, backend.scss */
+/* line 2197, backend.scss */
 #currency-form .one_item .course {
   float: left;
   width: 120px;
 }
-/* line 2194, backend.scss */
+/* line 2200, backend.scss */
 #currency-form .one_item .course p {
   color: #0849e1;
   margin-top: 9px;
 }
-/* line 2199, backend.scss */
+/* line 2205, backend.scss */
 #currency-form .one_item .kind {
   color: #CCC;
   margin-top: 7px;
 }
-/* line 2203, backend.scss */
+/* line 2209, backend.scss */
 #currency-form .one_item .btn-small {
   padding: 0;
   width: 38px;
   height: 25px;
 }
-/* line 2207, backend.scss */
+/* line 2213, backend.scss */
 #currency-form .one_item .btn-small:hover {
   background: #2853e4;
   color: white;
 }
-/* line 2214, backend.scss */
+/* line 2220, backend.scss */
 #currency-form .one_item .dropdown a:hover {
   background: #2853e4;
   color: white;
 }
-/* line 2221, backend.scss */
+/* line 2227, backend.scss */
 #currency-form .labels {
   color: #CCC;
   margin-bottom: 10px;
@@ -3027,7 +3032,7 @@ button.save:hover, button.save:focus {
 
   ==============================
 */
-/* line 2235, backend.scss */
+/* line 2241, backend.scss */
 h2.title {
   font-size: 18px;
   color: #000;
@@ -3036,7 +3041,7 @@ h2.title {
   float: left;
   margin-top: 8px;
 }
-/* line 2242, backend.scss */
+/* line 2248, backend.scss */
 h2.title a {
   font-size: 12px;
   font-weight: normal;
@@ -3044,44 +3049,44 @@ h2.title a {
   text-decoration: none;
   margin-left: 5px;
 }
-/* line 2248, backend.scss */
+/* line 2254, backend.scss */
 h2.title a:hover {
   color: #000;
   text-decoration: none;
 }
 
-/* line 2257, backend.scss */
+/* line 2263, backend.scss */
 .settings-registration #users-registration label {
   margin-top: 7px;
 }
-/* line 2260, backend.scss */
+/* line 2266, backend.scss */
 .settings-registration #users-registration #Users_password {
   width: 100%;
 }
-/* line 2264, backend.scss */
+/* line 2270, backend.scss */
 .settings-registration #users-registration .buttons #reg_btn {
   margin-left: 5px;
   margin-right: 15px;
 }
-/* line 2270, backend.scss */
+/* line 2276, backend.scss */
 .settings-registration .lk_cat {
   font-size: 18px;
   font-family: arial, sans-serif;
 }
 
-/* line 2276, backend.scss */
+/* line 2282, backend.scss */
 a#all_products, a#add_user {
   font-size: 12px;
   color: #004cff;
   text-decoration: none;
 }
-/* line 2280, backend.scss */
+/* line 2286, backend.scss */
 a#all_products:hover, a#add_user:hover {
   color: #000;
   text-decoration: none;
 }
 
-/* line 2286, backend.scss */
+/* line 2292, backend.scss */
 a#all_products {
   position: absolute;
   margin-left: 15px;
@@ -3089,14 +3094,14 @@ a#all_products {
   display: inline-block;
 }
 
-/* line 2293, backend.scss */
+/* line 2299, backend.scss */
 a#add_user {
   float: right;
   margin-top: 12px;
   margin-right: 55px;
 }
 
-/* line 2299, backend.scss */
+/* line 2305, backend.scss */
 #changePsw {
   background: url("/images/icon-admin/changePsw.png") no-repeat;
   width: 42px;
@@ -3105,27 +3110,27 @@ a#add_user {
   margin-left: 12px;
 }
 
-/* line 2309, backend.scss */
+/* line 2315, backend.scss */
 .basic_settings #settings-index-form .qq-upload-success {
   display: none;
 }
-/* line 2312, backend.scss */
+/* line 2318, backend.scss */
 .basic_settings #settings-index-form .qq-upload-drop-area {
   width: 138px;
   height: 138px;
 }
-/* line 2316, backend.scss */
+/* line 2322, backend.scss */
 .basic_settings #settings-index-form label {
   text-align: right;
   width: 100%;
   height: 19px;
   margin-top: 7px;
 }
-/* line 2322, backend.scss */
+/* line 2328, backend.scss */
 .basic_settings #settings-index-form .form-group.image {
   margin-top: 0;
 }
-/* line 2325, backend.scss */
+/* line 2331, backend.scss */
 .basic_settings #settings-index-form .film {
   text-align: right;
   opacity: 0;
@@ -3136,18 +3141,18 @@ a#add_user {
   position: absolute;
   z-index: 100;
 }
-/* line 2334, backend.scss */
+/* line 2340, backend.scss */
 .basic_settings #settings-index-form .film p {
   height: 138px;
   width: 139px;
   text-align: center;
 }
-/* line 2339, backend.scss */
+/* line 2345, backend.scss */
 .basic_settings #settings-index-form .film:hover {
   background-color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-/* line 2344, backend.scss */
+/* line 2350, backend.scss */
 .basic_settings #settings-index-form .close-img.fa-close {
   position: absolute;
   top: 0;
@@ -3156,26 +3161,26 @@ a#add_user {
   cursor: pointer;
   margin-top: 1px;
 }
-/* line 2352, backend.scss */
+/* line 2358, backend.scss */
 .basic_settings #settings-index-form span.required {
   margin-top: 0;
 }
-/* line 2355, backend.scss */
+/* line 2361, backend.scss */
 .basic_settings #settings-index-form .qq-upload-drop-area span {
   position: static;
   margin-top: 20px;
 }
-/* line 2359, backend.scss */
+/* line 2365, backend.scss */
 .basic_settings #settings-index-form #avatar {
   width: 138px;
   height: 138px;
   z-index: 9000;
 }
-/* line 2363, backend.scss */
+/* line 2369, backend.scss */
 .basic_settings #settings-index-form #avatar:hover {
   opacity: 0.2;
 }
-/* line 2367, backend.scss */
+/* line 2373, backend.scss */
 .basic_settings #settings-index-form #load_from_disk {
   width: 90px;
   margin-top: 15px;
@@ -3184,11 +3189,11 @@ a#add_user {
   margin-right: 0px;
   margin-left: 4px;
 }
-/* line 2374, backend.scss */
+/* line 2380, backend.scss */
 .basic_settings #settings-index-form #load_from_disk input {
   cursor: pointer;
 }
-/* line 2378, backend.scss */
+/* line 2384, backend.scss */
 .basic_settings #settings-index-form h3 {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -3200,18 +3205,18 @@ a#add_user {
   color: #000000;
 }
 
-/* line 2393, backend.scss */
+/* line 2399, backend.scss */
 .main-title-block.module-title .one_item.users .img-cont.col-xs-1 {
   margin-left: 0;
   margin-top: 0;
   background-color: transparent;
   border: none;
 }
-/* line 2401, backend.scss */
+/* line 2407, backend.scss */
 .main-title-block.module-title #user_item_setting .table-img {
   margin-top: -18px;
 }
-/* line 2403, backend.scss */
+/* line 2409, backend.scss */
 .main-title-block.module-title #user_item_setting .table-img img {
   float: left;
   width: 50px;
@@ -3221,7 +3226,7 @@ a#add_user {
   margin-right: 10px;
   border: none;
 }
-/* line 2413, backend.scss */
+/* line 2419, backend.scss */
 .main-title-block.module-title #user_item_setting img {
   float: none;
   vertical-align: middle;
@@ -3229,51 +3234,51 @@ a#add_user {
   margin-right: 3px;
   margin-left: -2px;
 }
-/* line 2420, backend.scss */
+/* line 2426, backend.scss */
 .main-title-block.module-title #user_item_setting .number-user {
   margin-left: 65px;
 }
-/* line 2425, backend.scss */
+/* line 2431, backend.scss */
 .main-title-block.module-title .user img, .main-title-block.module-title .mail img, .main-title-block.module-title .phone img {
   width: auto;
   border: none;
   background: transparent;
 }
 
-/* line 2434, backend.scss */
+/* line 2440, backend.scss */
 .add-children.btn.btn-action.btn-add-menu:hover {
   background-image: linear-gradient(to top, #1849e4, #4265e4);
 }
 
-/* line 2440, backend.scss */
+/* line 2446, backend.scss */
 #products-list .fa-angle-left:before, #products-list .fa-angle-right:before, .user_list .fa-angle-left:before, .user_list .fa-angle-right:before {
   vertical-align: -3px;
   position: relative;
   left: 9px;
 }
-/* line 2445, backend.scss */
+/* line 2451, backend.scss */
 #products-list .pag-cont, .user_list .pag-cont {
   margin-left: -225px;
   position: absolute;
   left: 100%;
   width: 110px;
 }
-/* line 2452, backend.scss */
+/* line 2458, backend.scss */
 #products-list .pag-cont ul.pagination li a, .user_list .pag-cont ul.pagination li a {
   width: 26px;
   height: 27px;
   padding: 0;
 }
-/* line 2460, backend.scss */
+/* line 2466, backend.scss */
 #products-list .pag-cont.news .pagination, .user_list .pag-cont.news .pagination {
   margin-top: 0;
 }
-/* line 2463, backend.scss */
+/* line 2469, backend.scss */
 #products-list .pag-cont.news .fa-angle-left:before, #products-list .pag-cont.news .fa-angle-right:before, .user_list .pag-cont.news .fa-angle-left:before, .user_list .pag-cont.news .fa-angle-right:before {
   left: 9px;
   vertical-align: -4px;
 }
-/* line 2468, backend.scss */
+/* line 2474, backend.scss */
 #products-list .pag-cont .dropdown.dropdown-select, .user_list .pag-cont .dropdown.dropdown-select {
   display: inline-block;
   padding-left: 0;
@@ -3281,7 +3286,7 @@ a#add_user {
   margin: 7px 0 20px 46px;
   border-radius: 4px;
 }
-/* line 2474, backend.scss */
+/* line 2480, backend.scss */
 #products-list .pag-cont .dropdown.dropdown-select .btn, .user_list .pag-cont .dropdown.dropdown-select .btn {
   font-size: 12px;
   width: 38px;
@@ -3289,25 +3294,25 @@ a#add_user {
   padding: 0;
   padding-top: 1px;
 }
-/* line 2482, backend.scss */
+/* line 2488, backend.scss */
 #products-list .pag-cont .pagination, .user_list .pag-cont .pagination {
   display: inline-block;
   padding-left: 0;
   margin: 5px 0 20px;
   border-radius: 4px;
 }
-/* line 2488, backend.scss */
+/* line 2494, backend.scss */
 #products-list .pag-cont .pagination li a, .user_list .pag-cont .pagination li a {
   padding: 4px 9px;
   font-size: 14px;
   color: #343434;
 }
-/* line 2492, backend.scss */
+/* line 2498, backend.scss */
 #products-list .pag-cont .pagination li a:hover, .user_list .pag-cont .pagination li a:hover {
   background-color: #004cff !important;
   color: white !important;
 }
-/* line 2499, backend.scss */
+/* line 2505, backend.scss */
 #products-list .pag-cont .pagination select, .user_list .pag-cont .pagination select {
   border-right: none;
   border-radius: 0px;
@@ -3324,28 +3329,28 @@ a#add_user {
   cursor: pointer;
   padding-left: 7px;
 }
-/* line 2514, backend.scss */
+/* line 2520, backend.scss */
 #products-list .pag-cont .pagination select:hover, #products-list .pag-cont .pagination select:focus, #products-list .pag-cont .pagination select:active, .user_list .pag-cont .pagination select:hover, .user_list .pag-cont .pagination select:focus, .user_list .pag-cont .pagination select:active {
   outline: none;
 }
 
-/* line 2521, backend.scss */
+/* line 2527, backend.scss */
 .user_list {
   position: relative;
   width: 950px;
   margin-left: -15px;
 }
-/* line 2525, backend.scss */
+/* line 2531, backend.scss */
 .user_list h2 {
   margin-bottom: 30px;
 }
-/* line 2529, backend.scss */
+/* line 2535, backend.scss */
 .user_list .fa-angle-left:before, .user_list .fa-angle-right:before {
   vertical-align: -3px;
   position: relative;
   left: 9px;
 }
-/* line 2534, backend.scss */
+/* line 2540, backend.scss */
 .user_list .product_for_page {
   position: absolute;
   margin-left: -50px;
@@ -3357,65 +3362,65 @@ a#add_user {
   height: 27px;
   background: linear-gradient(to top, #e8e8e8, #ffffff);
 }
-/* line 2545, backend.scss */
+/* line 2551, backend.scss */
 .user_list .form-control {
   border-radius: none;
 }
-/* line 2548, backend.scss */
+/* line 2554, backend.scss */
 .user_list .table {
   font-size: 12px;
   color: #999999;
 }
-/* line 2552, backend.scss */
+/* line 2558, backend.scss */
 .user_list input[type="checkbox"] + label:not(.status) {
   margin: 0;
 }
-/* line 2555, backend.scss */
+/* line 2561, backend.scss */
 .user_list .checkbox label {
   padding-left: 6px;
 }
 
-/* line 2563, backend.scss */
+/* line 2569, backend.scss */
 #table-sotrudniki thead td:nth-child(1) {
   padding-top: 2px;
 }
-/* line 2566, backend.scss */
+/* line 2572, backend.scss */
 #table-sotrudniki thead td .checkbox {
   margin-top: 0;
 }
-/* line 2571, backend.scss */
+/* line 2577, backend.scss */
 #table-sotrudniki tbody {
   cursor: pointer;
 }
-/* line 2574, backend.scss */
+/* line 2580, backend.scss */
 #table-sotrudniki tbody tr:hover {
   background-color: #e4e4e4;
 }
-/* line 2578, backend.scss */
+/* line 2584, backend.scss */
 #table-sotrudniki tbody td {
   border: none;
 }
-/* line 2580, backend.scss */
+/* line 2586, backend.scss */
 #table-sotrudniki tbody td .table-img {
   margin-right: 9px;
   float: left;
 }
-/* line 2583, backend.scss */
+/* line 2589, backend.scss */
 #table-sotrudniki tbody td .table-img img {
   width: 60px;
   height: 60px;
 }
-/* line 2590, backend.scss */
+/* line 2596, backend.scss */
 #table-sotrudniki .btn-small.btn-active {
   margin-left: 0;
 }
 
-/* line 2595, backend.scss */
+/* line 2601, backend.scss */
 .dropdown.navbar-top-links {
   width: 42px !important;
 }
 
-/* line 2599, backend.scss */
+/* line 2605, backend.scss */
 .status-drop {
   float: left;
   width: 45px;
@@ -3423,7 +3428,7 @@ a#add_user {
   background-position: 10% 60%;
 }
 
-/* line 2606, backend.scss */
+/* line 2612, backend.scss */
 .active-sotr {
   width: 45px;
   height: 30px;
@@ -3432,7 +3437,7 @@ a#add_user {
   margin-top: -9px;
 }
 
-/* line 2615, backend.scss */
+/* line 2621, backend.scss */
 .img-cont img {
   border: 1px solid #cfcfcf;
   background-color: #fff;
@@ -3441,41 +3446,41 @@ a#add_user {
   padding: 0;
 }
 
-/* line 2624, backend.scss */
+/* line 2630, backend.scss */
 .one_item.users {
   margin-left: 15px;
 }
-/* line 2627, backend.scss */
+/* line 2633, backend.scss */
 .one_item.users .img-cont img {
   padding: 6px 9px;
 }
-/* line 2631, backend.scss */
+/* line 2637, backend.scss */
 .one_item.users .form-group {
   position: relative;
   float: left;
   margin-top: -3px;
 }
-/* line 2635, backend.scss */
+/* line 2641, backend.scss */
 .one_item.users .form-group:nth-child(1), .one_item.users .form-group:nth-child(2) {
   width: 180px;
   margin-right: 23px;
 }
-/* line 2639, backend.scss */
+/* line 2645, backend.scss */
 .one_item.users .form-group:nth-child(3), .one_item.users .form-group:nth-child(4) {
   width: 100px;
 }
-/* line 2642, backend.scss */
+/* line 2648, backend.scss */
 .one_item.users .form-group:nth-child(3) {
   margin-right: 23px;
 }
-/* line 2645, backend.scss */
+/* line 2651, backend.scss */
 .one_item.users .form-group label {
   margin-top: -15px;
   position: absolute;
   font-size: 12px;
   color: #999999;
 }
-/* line 2651, backend.scss */
+/* line 2657, backend.scss */
 .one_item.users .form-group input, .one_item.users .form-group select {
   height: 31px;
   width: 100%;
@@ -3484,49 +3489,49 @@ a#add_user {
   border: 1px solid #dadada;
   padding-left: 5px;
 }
-/* line 2660, backend.scss */
+/* line 2666, backend.scss */
 .one_item.users .glyphicon-search {
   margin-top: -23px;
   margin-right: 7px;
   cursor: pointer;
 }
-/* line 2665, backend.scss */
+/* line 2671, backend.scss */
 .one_item.users .title {
   margin-right: 20px;
 }
 
-/* line 2672, backend.scss */
+/* line 2678, backend.scss */
 #profil_form .avatar .qq-upload-drop-area {
   width: 140px;
   height: 140px;
   border: 2px dashed #dadada;
 }
 
-/* line 2680, backend.scss */
+/* line 2686, backend.scss */
 .qq-uploader {
   width: 145px;
 }
-/* line 2681, backend.scss */
+/* line 2687, backend.scss */
 .qq-uploader .qq-upload-button {
   left: 27px;
 }
 
-/* line 2688, backend.scss */
+/* line 2694, backend.scss */
 #user_setting #load_from_disk {
   display: none;
   width: 90px;
   z-index: 1;
   margin-left: 25px;
 }
-/* line 2694, backend.scss */
+/* line 2700, backend.scss */
 #user_setting span.help-inline {
   position: static;
 }
-/* line 2697, backend.scss */
+/* line 2703, backend.scss */
 #user_setting #profile {
   padding-top: 20px;
 }
-/* line 2699, backend.scss */
+/* line 2705, backend.scss */
 #user_setting #profile .film {
   padding-top: 20px;
   position: absolute;
@@ -3537,24 +3542,24 @@ a#add_user {
   height: 140px;
   display: none;
 }
-/* line 2709, backend.scss */
+/* line 2715, backend.scss */
 #user_setting #profile .information {
   position: absolute;
   margin-top: 150px;
 }
-/* line 2712, backend.scss */
+/* line 2718, backend.scss */
 #user_setting #profile .information label.control-label {
   padding-left: 0;
   padding-top: 0;
   text-align: left;
   padding-right: 25px;
 }
-/* line 2720, backend.scss */
+/* line 2726, backend.scss */
 #user_setting #profile .avatar .photo-label {
   margin-left: -54px;
   padding-top: 0;
 }
-/* line 2724, backend.scss */
+/* line 2730, backend.scss */
 #user_setting #profile .avatar .avatar {
   width: 140px;
   height: 140px;
@@ -3562,31 +3567,31 @@ a#add_user {
   left: 155px;
   top: 20px;
 }
-/* line 2731, backend.scss */
+/* line 2737, backend.scss */
 #user_setting #profile .avatar .avatar:hover .film {
   display: block;
 }
-/* line 2733, backend.scss */
+/* line 2739, backend.scss */
 #user_setting #profile .avatar .avatar:hover .film #load_from_disk {
   display: block;
   z-index: 9999;
 }
-/* line 2740, backend.scss */
+/* line 2746, backend.scss */
 #user_setting #profile .avatar #FineUploader, #user_setting #profile .avatar .qq-uploader {
   top: 10px;
   width: 100%;
   height: 100%;
   position: absolute;
 }
-/* line 2746, backend.scss */
+/* line 2752, backend.scss */
 #user_setting #profile .avatar .qq-upload-list {
   display: none;
 }
-/* line 2749, backend.scss */
+/* line 2755, backend.scss */
 #user_setting #profile .avatar .qq-upload-drop-area {
   margin-left: 140px;
 }
-/* line 2752, backend.scss */
+/* line 2758, backend.scss */
 #user_setting #profile .avatar img#avatar {
   width: 140px;
   height: 140px;
@@ -3594,11 +3599,11 @@ a#add_user {
   overflow: hidden;
   z-index: 1000;
 }
-/* line 2758, backend.scss */
+/* line 2764, backend.scss */
 #user_setting #profile .avatar img#avatar:hover {
   opacity: 0.3;
 }
-/* line 2763, backend.scss */
+/* line 2769, backend.scss */
 #user_setting #profile .close-img {
   position: absolute;
   z-index: 10000;
@@ -3606,11 +3611,11 @@ a#add_user {
   left: 116px;
   cursor: pointer;
 }
-/* line 2770, backend.scss */
+/* line 2776, backend.scss */
 #user_setting #profile .photo-company {
   height: 140px;
 }
-/* line 2772, backend.scss */
+/* line 2778, backend.scss */
 #user_setting #profile .photo-company .film {
   position: absolute;
   top: 0;
@@ -3618,84 +3623,84 @@ a#add_user {
   width: 100%;
   height: 100%;
 }
-/* line 2778, backend.scss */
+/* line 2784, backend.scss */
 #user_setting #profile .photo-company .film p {
   text-align: center;
   width: 140px;
   margin-left: -14px;
 }
-/* line 2786, backend.scss */
+/* line 2792, backend.scss */
 #user_setting #profile .photo-company label, #user_setting #profile .information label {
   padding-right: 30px;
 }
 
-/* line 2793, backend.scss */
+/* line 2799, backend.scss */
 .sweet-alert .icon.success.animate .placeholder {
   top: 10px;
 }
 
-/* line 2798, backend.scss */
+/* line 2804, backend.scss */
 .sweet-alert .icon.error .line {
   top: 19px;
 }
 
-/* line 2803, backend.scss */
+/* line 2809, backend.scss */
 #orders-filter {
   position: absolute;
   width: 913px;
   top: -10px;
 }
 
-/* line 2810, backend.scss */
+/* line 2816, backend.scss */
 .top-filter #review-filter {
   position: absolute;
   width: 913px;
   top: 5px;
 }
-/* line 2815, backend.scss */
+/* line 2821, backend.scss */
 .top-filter #review-filter .period .from, .top-filter #review-filter .period .to {
   width: 90px;
 }
 
-/* line 2825, backend.scss */
+/* line 2831, backend.scss */
 .main-title-block.module-title .container #review-filter .buttons {
   width: 25%;
 }
-/* line 2827, backend.scss */
+/* line 2833, backend.scss */
 .main-title-block.module-title .container #review-filter .buttons .btn span {
   font-size: 14px;
 }
-/* line 2830, backend.scss */
+/* line 2836, backend.scss */
 .main-title-block.module-title .container #review-filter .buttons > * {
   height: 25px;
 }
-/* line 2833, backend.scss */
+/* line 2839, backend.scss */
 .main-title-block.module-title .container #review-filter .buttons a#reset {
   margin-right: 40px;
 }
 
-/* line 2841, backend.scss */
+/* line 2847, backend.scss */
 #catalog-tree-form-form .form-group.image-file, #catalog-products-product-form .form-group.image-file {
   margin-left: 0;
-}
-/* line 2844, backend.scss */
-#catalog-tree-form-form .qq-upload-success, #catalog-products-product-form .qq-upload-success {
-  display: none;
-}
-/* line 2847, backend.scss */
-#catalog-tree-form-form .qq-uploader .qq-upload-button, #catalog-products-product-form .qq-uploader .qq-upload-button {
-  left: 22px;
 }
 /* line 2850, backend.scss */
 #catalog-tree-form-form .qq-upload-success, #catalog-products-product-form .qq-upload-success {
   display: none;
 }
 /* line 2853, backend.scss */
+#catalog-tree-form-form .qq-uploader .qq-upload-button, #catalog-products-product-form .qq-uploader .qq-upload-button {
+  left: 22px;
+}
+/* line 2856, backend.scss */
+#catalog-tree-form-form .qq-upload-success, #catalog-products-product-form .qq-upload-success {
+  display: none;
+}
+/* line 2859, backend.scss */
 #catalog-tree-form-form li.image, #catalog-products-product-form li.image {
   position: relative;
   margin: 0 15px 15px;
 }
-/* line 2857, backend.scss */
+/* line 2863, backend.scss */
 #catalog-tree-form-form .fa-close, #catalog-products-product-form .fa-close {
   position: absolute;
   margin-left: -24px;
@@ -3704,28 +3709,28 @@ a#add_user {
   left: 100%;
 }
 
-/* line 2868, backend.scss */
+/* line 2874, backend.scss */
 .form-structure #structure-_form-form .form-group.image-file {
   margin-left: 0;
 }
-/* line 2871, backend.scss */
-.form-structure #structure-_form-form .qq-upload-success {
-  display: none;
-}
-/* line 2876, backend.scss */
-.form-structure #structure-_form-form .qq-uploader .qq-upload-button {
-  left: 22px;
-}
-/* line 2879, backend.scss */
+/* line 2877, backend.scss */
 .form-structure #structure-_form-form .qq-upload-success {
   display: none;
 }
 /* line 2882, backend.scss */
+.form-structure #structure-_form-form .qq-uploader .qq-upload-button {
+  left: 22px;
+}
+/* line 2885, backend.scss */
+.form-structure #structure-_form-form .qq-upload-success {
+  display: none;
+}
+/* line 2888, backend.scss */
 .form-structure #structure-_form-form li.image {
   position: relative;
   margin: 0 15px 15px;
 }
-/* line 2886, backend.scss */
+/* line 2892, backend.scss */
 .form-structure #structure-_form-form .fa-close {
   position: absolute;
   margin-left: -24px;
@@ -3733,7 +3738,7 @@ a#add_user {
   top: 0;
   left: 100%;
 }
-/* line 2895, backend.scss */
+/* line 2901, backend.scss */
 .form-structure .add-children.btn.btn-action.btn-add-menu:hover {
   background: linear-gradient(to top, #1849e4, #4265e4);
 }

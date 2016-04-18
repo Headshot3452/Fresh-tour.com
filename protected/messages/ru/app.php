@@ -150,6 +150,7 @@
         'Hotel type'            => 'Тип отеля',
         'Add group'             => 'Добавить группу',
         'Where you want to go'  => 'Куда хотите поехать',
+        'Map'                   => 'Карта',
 
         'Products releated products' => 'Сопутствующие товары',
         'This user does not exist!'=>'Пользователь не существует!',
