@@ -1013,19 +1013,21 @@
     </div>
 </div>
 
-<div class = "redirect container">
-    <div class="row">
-        <h1>Свежие туры <a href = "" class = "show_all">Показать всё</a></h1>
-    </div>
-</div>
-
-<div id="fresh-tyr">
-    <div class="container no-all">
-        <div class="row">
-            <div id="slider_fresh">
 <?php
-                if(isset($fresh))
-                {
+    if(isset($fresh) && !empty($fresh))
+    {
+?>
+        <div class = "redirect container">
+            <div class="row">
+                <h1>Свежие туры <a href = "" class = "show_all">Показать всё</a></h1>
+            </div>
+        </div>
+
+        <div id="fresh-tyr">
+            <div class="container no-all">
+                <div class="row">
+                    <div id="slider_fresh">
+<?php
                     $end = false;
                     $parent_id = 0;
                     foreach($fresh as $value)
@@ -1113,22 +1115,24 @@
                             </div>';
                         }
                     }
-                }
-
-                if($kol % 3 != 0)
-                {
-                    echo
-                                '</div>
+                    if($kol % 3 != 0)
+                    {
+                        echo
+                                        '</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>';
-                }
+                        </div>';
+                    }
 ?>
             </div>
         </div>
     </div>
 </div>
+
+<?php
+    }
+?>
 
 <div id="news-main">
     <div class="container no-all">

@@ -1122,7 +1122,7 @@ header .translate, .hidden-top .translate {
 /* line 1064, common.scss */
 #tyrs.vizy .item h3 {
   padding-top: 50px;
-  background: url("/images/vizy.png") no-repeat 60px 5px;
+  background: url("/images/vizy.png") no-repeat 65px 5px;
 }
 /* line 1070, common.scss */
 #tyrs .item {
@@ -2193,7 +2193,6 @@ header .translate, .hidden-top .translate {
 /* line 2013, common.scss */
 #slider_fresh {
   margin-bottom: 15px;
-  height: 800px;
 }
 /* line 2016, common.scss */
 #slider_fresh .item {

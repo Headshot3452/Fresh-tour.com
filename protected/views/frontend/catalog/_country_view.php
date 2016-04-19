@@ -4,9 +4,11 @@
 	{
 		$image = Yii::app()->params['noimage'];
 	}
+
+	$link = $data->getUrlForItem(1);
 ?>
 
-<a href = "<?php echo $data->name ;?>" class = "item-link">
+<a href = "/<?php echo $link ;?>" class = "item-link">
 	<div class = "item">
 		<div class="border"></div>
 		<div class = "col-xs-4 no-left img-cont">
@@ -129,7 +131,7 @@
 						}
 					}
 ?>
-					<a href = "<?php echo $data->name ;?>" class = "forward">Подробнее</a>
+					<a href = "/<?php echo $link ;?>" class = "forward">Подробнее</a>
 				</div>
 			</div>
 		</div>

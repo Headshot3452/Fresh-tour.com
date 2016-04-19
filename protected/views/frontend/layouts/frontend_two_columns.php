@@ -55,7 +55,17 @@
 
 			$news = '[[w:NewsLastWidget|parent_id=2;count=3;]]';
 
-			if(in_array($this->page_id, Yii::app()->params['pages']['o-kompanii-array']))
+			$child = Structure::model()->active()->findByPk($this->page_id);
+			$parent = array();
+
+			if($child)
+			{
+				$parent = $child->ancestors()->active()->find('level = 2');
+			}
+
+			$parent_id = isset($parent->id) ? $parent->id : 0;
+
+			if(in_array(Yii::app()->params['pages']['o-kompanii'], array($this->page_id, $parent_id)) || $this->page_id == Yii::app()->params['pages']['agentstvam'])
 			{
 				$menu =
 					'<ul class="left-title">
@@ -70,7 +80,7 @@
 					$result = $recently;
 				}
 			}
-			elseif(in_array($this->page_id, Yii::app()->params['pages']['info-array']))
+			elseif(in_array(Yii::app()->params['pages']['informaciya'], array($this->page_id, $parent_id)))
 			{
 				$result =
 					'<ul class="left-title">
@@ -84,7 +94,7 @@
 					[[w:BannerDescriptionWidget|banner_id=4;view=custom;]]
 					[[w:BannerDescriptionWidget|banner_id=5;view=custom;]]';
 			}
-			elseif(in_array($this->page_id, Yii::app()->params['pages']['tyrs-array']))
+			elseif(in_array(Yii::app()->params['pages']['visy'], array($this->page_id, $parent_id)) || $parent_id == Yii::app()->params['pages']['tours_and_vizy'])
 			{
 				$menu =
 						'<ul class="left-title">
@@ -103,7 +113,7 @@
 					$result .= $recently;
 				}
 			}
-			elseif(in_array($this->page_id, Yii::app()->params['pages']['strany-and-hotel']))
+			elseif(in_array(Yii::app()->params['pages']['strany-i-oteli'], array($this->page_id, $parent_id)))
 			{
 				$result = $news;
 			}

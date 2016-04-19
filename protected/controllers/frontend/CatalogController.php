@@ -19,6 +19,16 @@
             $count = '';
             $sort = '';
 
+            $child_struct = Structure::model()->active()->findByPk($this->page_id);
+            $parent_struct = array();
+
+            if($child_struct)
+            {
+                $parent_struct = $child_struct->ancestors()->active()->find('level = 2');
+            }
+
+            $parent_id = isset($parent_struct->id) ? $parent_struct->id : 0;
+
             $root = CatalogTree::model()->language($this->getCurrentLanguage()->id)->roots()->active()->findByPk($this->root_id);
 
             $categories = $root->children()->active()->findAll();
@@ -59,7 +69,7 @@
                     )
                 );
 
-                if(in_array($this->page_id, Yii::app()->params['pages']['hot-tours']))
+                if(in_array(Yii::app()->params['pages']['hot-tour'], array($this->page_id, $parent_id)))
                 {
                     $view = 'hot-tours';
                     $list = CHtml::listData($categories, 'id', 'id');
@@ -146,7 +156,7 @@
 
         public function actionTree($url)
         {
-            $pages = explode('/',$url);
+            $pages = explode('/', $url);
 
             $root = CatalogTree::model()->language($this->getCurrentLanguage()->id)->roots()->active()->findByPk($this->root_id);
 
@@ -161,7 +171,7 @@
 
             if ($count_page > 0)
             {
-                $path=$root->findPath('name', $pages);
+                $path = $root->findPath('name', $pages);
 
                 if (!empty($path['item']))
                 {
@@ -173,10 +183,13 @@
 
                     $id = $path['item']['id'];
                 }
+                $tree = $this->getPageTree($id);
 
-                $tree=$this->getPageTree($id);
+                $count_breadcrumbs = count($path['breadcrumbs']);
 
-                $count_breadcrumbs=count($path['breadcrumbs']);
+                $child_struct = Structure::model()->active()->findByPk($this->page_id);
+
+                $parent_id = isset($child_struct->id) ? $child_struct->id : 0;
 
                 if ($count_page > $count_breadcrumbs && ($count_page - 1) == $count_breadcrumbs)
                 {
@@ -214,7 +227,15 @@
                         }
                     }
 
-                    $view = (in_array($this->page_id, Yii::app()->params['pages']['tyrs-array'])) ? 'viza_product' : 'product';
+                    if(in_array(Yii::app()->params['pages']['visy'], array($this->page_id, $parent_id)))
+                    {
+                        $view = 'viza_product';
+                    }
+                    else
+                    {
+                        $view = 'product';
+                    }
+
                     $this->render($view, array('product' => $product, 'tree' => $tree));
                     Yii::app()->end();
                 }
@@ -234,7 +255,6 @@
             {
                 $this->setBreadcrumbs($path['breadcrumbs'],'catalog/tree');
             }
-
             if (isset($tree))
             {
                 //type catalog full/small
@@ -291,7 +311,7 @@
                 $products = CatalogProducts::model()->getDataProviderForCategory($id, $order, $count);
             }
 
-            if(in_array($this->page_id, Yii::app()->params['pages']['strany-and-hotel']))
+            if(in_array(Yii::app()->params['pages']['strany-i-oteli'], array($this->page_id, $parent_id)))
             {
                 $view = 'country';
             }

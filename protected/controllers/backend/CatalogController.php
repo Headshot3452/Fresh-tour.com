@@ -104,10 +104,6 @@
                     'class' => 'actionsBackend.Tree.SortAction',
                     'Model' => 'CatalogProducts',
                 ),
-//                'params_sort' => array(
-//                    'class' => 'actionsBackend.Catalog.ParamsSortAction',
-//                    'Model' => 'CatalogParams',
-//                ),
                 'copy_product' => array(
                     'class' => 'actionsBackend.Tree.CopyMoveAction',
                     'Model' => 'CatalogProducts',

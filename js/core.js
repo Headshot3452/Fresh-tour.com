@@ -2,7 +2,7 @@
 {
     $(".form-group.buttons").hide();
 
-    $("body").on("change click", "input, textarea, select",function()
+    $("body").on("change click", "input, textarea, select, .marker",function()
     {
         viewSubmitButton(this);
     });

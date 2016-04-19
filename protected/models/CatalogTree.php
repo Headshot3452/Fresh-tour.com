@@ -57,7 +57,7 @@ class CatalogTree extends Model
 			array('lft, rgt, level, create_time, update_time, status, root', 'numerical', 'integerOnly'=>true),
 			array('language_id', 'length', 'max'=>11),
 			array('seo_title, seo_keywords, title, name', 'length', 'max'=>255),
-            array('seo_description, item_file, text, map, preview, popular, capital, language, currency, difference, viza', 'safe'),
+            array('seo_description, item_file, text, map, preview, popular, capital, language, currency, difference, viza, viza_info, country_near', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
             array('id, lft, rgt, level, language_id, icon, images, seo_title, seo_keywords, seo_description, title, name, text, create_time, update_time, status, root', 'safe', 'on'=>'search'),
@@ -110,6 +110,7 @@ class CatalogTree extends Model
 			'viza' => Yii::t('app', 'Viza'),
 			'padej' => Yii::t('app', 'The name in the nominative'),
 			'map' => Yii::t('app', 'Map'),
+			'country_near' => Yii::t('app', 'Country Near'),
 		);
 	}
 
@@ -213,7 +214,7 @@ class CatalogTree extends Model
         );
     }
 
-    public static function getAllTree($language_id=1)
+	public static function getAllTree($language_id=1)
     {
         return self::model()->language($language_id)->notDeleted()->tree()->findAll();
     }

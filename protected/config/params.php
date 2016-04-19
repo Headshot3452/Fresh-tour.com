@@ -52,6 +52,7 @@
         'multi_language'=>false,
 
         'pages' => array(
+            'tours_and_vizy' => '2',
             'strany-i-oteli' => '3',
             'informaciya' => '4',
             'tema-tours' => '5',
@@ -66,16 +67,11 @@
             'hot-tour' => '20',
             'hot-avia' => '21',
             'visa' => '77',
-            'o-kompanii-array' => array(7, 8, 10, 11, 12, 13, 69, 71),
-            'info-array' => array(4, 18, 19),
-            'tyrs-array' => array(16, 76, 77),
-            'strany-and-hotel' => array(3, 66, 67),
-            'hot-tours' => array(20, 81, 82),
         ),
 
-        'vizy_catalog' => '3',      // Каталог "Визы"
+        'vizy_catalog' => '15',     // Каталог "Визы"
         'strany_catalog' => '4',    // Каталог "Страны"
-        'avia_catalog' => '15',     // Каталог "Авиабилеты"
+        'avia_catalog' => '16',     // Каталог "Авиабилеты"
 
         'date_from' => '5',         // Параметр "Дата отправления"
         'tema_tours' => '6',        // Параметр "Тематика тура"

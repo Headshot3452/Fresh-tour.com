@@ -46,15 +46,17 @@
 
 				<a href = "/<?php echo $this->getUrlById(Yii::app()->params['pages']['visy']) ;?>" class="back-to-country">Визы</a>
 
-				<div id="bonus-cont">
-					<span class="hot count"><?php echo isset($type) ? $type : '' ;?></span>
-				</div>
-
+<?php
+				echo isset($type) ?
+					'<div id="bonus-cont">
+						<span class="hot count">'.$type.'</span>
+					</div>' : '';
+?>
 				<div class="price">
 <?php
 					preg_match_all("/([0-9]*)([0-9]{3})$/", $product->price, $price);
 ?>
-					<span><?php echo Yii::app()->format->formatNumber($price[1][0]) ;?> </span> 000 руб
+					<span><?php isset($price[1][0]) ? Yii::app()->format->formatNumber($price[1][0]) : 0;?> </span> 000 руб
 				</div>
 
 				<h1><?php echo $product->title; ?><img class="flag-country" src = "/<?php echo isset($flag) ? $flag : '' ;?> " alt = ""></h1>

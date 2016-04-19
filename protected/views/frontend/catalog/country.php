@@ -1,3 +1,4 @@
+
 <div id="title-container">
 	<img src = "/images/title-img.png" alt = "">
 	<div class="breadcrumbs-container">
@@ -56,9 +57,10 @@
 <?php
 					if ($tree->viza)
 					{
+						$t = $tree->viza_info ? 'Информация' : 'Заказать визу';
 						echo
 							'<div class="col-xs-2">
-								<a href = "/'.$this->getUrlById(Yii::app()->params['pages']['visy']).'/'.$tree->viza .'">Заказать визу</a>
+								<a href = "/'.$this->getUrlById(Yii::app()->params['pages']['visy']).'/'.$tree->viza .'">'.$t.'</a>
 							</div>';
 					}
 ?>
@@ -120,31 +122,25 @@
 						<h2 class="descr descr-near">Страны рядом</h2>
 						<div class="kyrorts">
 							<div class="row">
-								<div class="col-xs-2">
-									<a href = "india-description.php">Агра</a>
-								</div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Гоа</a>
-								</div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Дели</a>
-								</div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Джайпур</a>
-								</div>
-								<div class="clearfix"></div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Агра</a>
-								</div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Гоа</a>
-								</div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Дели</a>
-								</div>
-								<div class="col-xs-2">
-									<a href = "india-description.php">Джайпур</a>
-								</div>
+<?php
+								if($tree->country_near)
+								{
+									$_list = unserialize($tree->country_near);
+									$_country_list = implode(',', array_values($_list));
+									$country_list = CatalogTree::model()->active()->findAll('id IN ('.$_country_list.')');
+
+									if($country_list)
+									{
+										foreach($country_list as $value)
+										{
+											echo
+												'<div class="col-xs-2">
+													<a href = "/'.$this->getUrlById(Yii::app()->params['pages']['strany-i-oteli']).'/'.$value->name.'">'.$value->title.'</a>
+												</div>';
+										}
+									}
+								}
+?>
 								<div class="clearfix"></div>
 							</div>
 						</div>

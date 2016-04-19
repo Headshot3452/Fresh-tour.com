@@ -10,6 +10,8 @@ class NestedMultiRootUpdateAction extends Action
             $model->attributes = $_POST[$this->modelName];
             if ($model->validate())
             {
+                $model->country_near = serialize($model->country_near);
+
                 if ($model->getIsNewRecord())
                 {
                     $id_parent = Yii::app()->request->getParam('parent');
@@ -39,6 +41,7 @@ class NestedMultiRootUpdateAction extends Action
                             NestedSetHelper::nestedSetChildrenStatus($model);
                         }
                     }
+
                     $model->saveNode(false);
                 }
                 if ($this->model->getIsNewRecord())
@@ -47,7 +50,7 @@ class NestedMultiRootUpdateAction extends Action
                 }
                 else
                 {
-                    Yii::app()->user->setFlash('success', Yii::t('app','Saved'));
+                    Yii::app()->user->setFlash('success', Yii::t('app', 'Saved'));
                     $this->refresh();
                 }
             }

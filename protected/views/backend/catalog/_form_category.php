@@ -131,6 +131,7 @@
     </div>
 
     <div class="form-group">
+        <span>1. Картинка, 2. Флаг, 3. Иконка</span><br/><br/>
 <?php
         $this->widget('application.extensions.EFineUploader.EFineUploader',
             array(
@@ -240,6 +241,11 @@
                 '</ul>
             </div>
         </div>';
+
+        if($model->country_near)
+        {
+            $model->country_near = unserialize($model->country_near);
+        }
 ?>
     </div>
 
@@ -271,6 +277,18 @@
         <?php echo $form->labelEx($model, 'viza'); ?>
         <?php echo $form->dropdownlist($model, 'viza', CatalogProducts::model()->getViza(), array('empty' => '-')); ?>
         <?php echo $form->error($model, 'viza'); ?>
+    </div>
+
+    <div class="form-group">
+        <?php echo $form->labelEx($model, 'viza_info', array('label' => 'Виза по прилёту')); ?>
+        <?php echo $form->checkbox($model, 'viza_info', array('class' => 'visible')); ?>
+        <?php echo $form->error($model, 'viza_info'); ?>
+    </div>
+
+    <div class="form-group">
+        <?php echo $form->labelEx($model, 'country_near'); ?>
+        <?php echo $form->dropDownList($model, 'country_near', $model->getCountry(), array('class' => 'selectpicker', 'multiple' => true, 'title' => "Выберите страны")); ?>
+        <?php echo $form->error($model, 'country_near'); ?>
     </div>
 
     <div class="form-group">
@@ -306,4 +324,8 @@
 
     <?php $this->endWidget(); ?>
 
-</div><!-- form --> 
+</div><!-- form -->
+
+<?php
+    $cs = Yii::app()->getClientScript();
+    $cs->registerPackage('boot-select');

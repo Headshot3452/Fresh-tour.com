@@ -285,8 +285,6 @@
                         ':hot' => Yii::app()->params['hot'],
                     );
                 }
-
-                $criteria->addInCondition('t.`parent_id`', array($list));
             }
             else
             {
@@ -302,7 +300,9 @@
 
             if(isset($_GET['CountryForm']) && !empty($_GET['CountryForm']))
             {
-                if($_GET['CountryForm']["date_from"] || $_GET['CountryForm']["tema_tours"] || $_GET['CountryForm']["stars"] || $_GET['CountryForm']["type_hotel"])
+                if($_GET['CountryForm']["date_from"] || $_GET['CountryForm']["tema_tours"] ||
+                    $_GET['CountryForm']["stars"] || $_GET['CountryForm']["type_hotel"] ||
+                    $_GET['CountryForm']['price_tours'])
                 {
                     $criteria->together = true;
                 }

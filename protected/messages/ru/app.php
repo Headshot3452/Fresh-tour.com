@@ -258,6 +258,7 @@
         'Currency' => 'Денежная единица',
         'Difference' => 'Разница во времени',
         'The name in the nominative' => 'Название в падеже',
+        'Country Near' => 'Страны рядом',
 
         'Apartment' => 'Квартира / Офис:',
         'To complete the recover password' => 'Для завершения восстановления пароля',
