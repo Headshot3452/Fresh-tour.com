@@ -17,9 +17,35 @@ class SiteController extends FrontendController
 
         $list_fresh = implode(',', $_list_fresh);
 
+        $tem_tours = CatalogProducts::model()->active()->findAll(
+            array(
+                'condition' => 'parent_id = :parent',
+                'params' => array('parent' => Yii::app()->params['tema_catalog']),
+                'limit' => '5',
+                'order' => 'sort'
+            )
+        );
+
+        if($tem_tours)
+        {
+            foreach($tem_tours as $value)
+            {
+                $tem_products[$value->name] = CatalogProducts::model()->with('parameters_value')->active()->findAll(
+                    array(
+                        'condition' => 'parameters_value.value = :value',
+                        'params' => array('value' => $value->title),
+                        'together' => true,
+                        'limit' => '6',
+                        'order' => 't.sort'
+                    )
+                );
+            }
+        }
+
+
         $fresh = CatalogProducts::model()->active()->findAll(array('condition' => 'parent_id IN ('.$list_fresh.') AND new = 1', 'order' => 'parent_id'));
 
-        $this->render('index', array('categories' => $categories, 'fresh' => $fresh));
+        $this->render('index', array('categories' => $categories, 'fresh' => $fresh, 'tem_tours' => $tem_tours, 'tem_products' => $tem_products));
     }
 
     public function actionContacts()

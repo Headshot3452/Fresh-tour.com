@@ -36,7 +36,7 @@ class ImageBehavior extends FileUploadBehavior
         $owner=$this->getOwner();
 
         $oldFiles=$this->getFiles();
-
+var_dump($oldFiles);
         parent::beforeSave($event);
         $files = unserialize($owner->{$this->files_attr_name});
 

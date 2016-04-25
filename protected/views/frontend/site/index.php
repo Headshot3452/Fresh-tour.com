@@ -412,593 +412,106 @@
             <div class="col-xs-5 no-right">
                 <div class="row">
                     <ul class="nav nav-tabs">
-                        <li class="active"><img src = "/images/temat1.png" alt = ""><a href="#winter" data-toggle="tab">Зимний отдых</a></li>
-                        <li><img src = "/images/temat2.png" alt = ""><a href="#corp" data-toggle="tab">Корпоративный отдых</a></li>
-                        <li><img src = "/images/temat1.png" alt = ""><a href="#spa" data-toggle="tab">Спа отдых</a></li>
-                        <li><img src = "/images/temat2.png" alt = ""><a href="#family" data-toggle="tab">Семейный отдых</a></li>
-                        <li><img src = "/images/temat1.png" alt = ""><a href="#spa1" data-toggle="tab">Спа отдых</a></li>
+<?php
+                        if($tem_tours)
+                        {
+                            foreach($tem_tours as $key => $value)
+                            {
+                                $image = $value->getOneFile('big');
+                                $active = ($key == 0) ? 'active' : '';
+                                echo
+                                    '<li class="'.$active.'">
+                                        <img src = "/'.$image.'" alt = "">
+                                        <a href="#'.$value['name'].'" data-toggle="tab">
+                                            '.$value['title'].'
+                                        </a>
+                                    </li>';
+
+                                $description[$value->name] = $value->preview;
+                                $title[$value->name] = $value->title;
+                            }
+                        }
+?>
                     </ul>
                 </div>
             </div>
             <div class="col-xs-7 no-right">
                 <div class="tab-content">
-                    <div class="tab-pane active" id = "winter">
-                        <div class="col-xs-6 no-all">
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 no-all">
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id = "corp">
-                        <div class="col-xs-6 no-all">
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 no-all">
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id = "spa">
-                        <div class="col-xs-6 no-all">
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 no-all">
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id = "family">
-                        <div class="col-xs-6 no-all">
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>5 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 no-all">
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id = "spa1">
-                        <div class="col-xs-6 no-all">
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>10 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 no-all">
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>5 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/hot_tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>5 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src = "/images/popular-tyr.png" alt = "">
-                                <div class="caption">
-                                    <h3>STEUNG SIEM REAP</h3>
-                                    <div class="stars">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                        <img src = "/images/star_full.png" alt = "">
-                                    </div>
-                                    <h5>От <span>5 000 000 руб.</span></h5>
-                                    <div class="footer-container">
-                                        <span>2 человека</span>
-                                        <span>7 ночей с 7.09</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<?php
+                    if(isset($tem_products))
+                    {
+                        $count = 0;
+                        foreach($tem_products as $key => $value)
+                        {
+                            $active = ($count == 0) ? 'active' : '';
+                            $count++;
+
+                            echo '<div class="tab-pane '.$active.'" id = "'.$key.'">';
+
+                            echo
+                                '<div class="row">
+                                    <h2>'.$title[$key].'</h2>
+                                    <h4 class="col-xs-11 no-all">
+                                        '.$description[$key].'
+                                    </h4>
+                                </div>';
+
+                                foreach($value as $k => $v)
+                                {
+                                    $end = false;
+                                    $image = $v->getOneFile('big');
+                                    $stars = $v->getStars();
+
+                                    if($k == 0 || $k == 3)
+                                    {
+                                        echo '<div class="col-xs-6 no-all">';
+                                    }
+
+                                    echo
+                                        '<div class="item">
+                                            <img src = "/'.$image.'" alt = "">
+                                            <div class="caption">
+                                                <h3>'.$v->title.'</h3>
+                                                <div class="stars">';
+                                                    for($i = 0; $i < 5; $i++)
+                                                    {
+                                                        if($i < $stars['value'])
+                                                        {
+                                                            echo '<img src = "/images/star_full.png" alt = "">';
+                                                        }
+                                                        else
+                                                        {
+                                                            echo '<img src = "/images/star.png" alt = "">';
+                                                        }
+                                                    }
+                                    echo
+                                                '</div>
+                                                <h5>От <span>'.Yii::app()->format->formatNumber($v->price).' руб.</span></h5>
+                                                <div class="footer-container">
+                                                    <span>2 человека</span>
+                                                    <span>7 ночей с 7.09</span>
+                                                </div>
+                                            </div>
+                                        </div>';
+
+                                    if($k == 2 || $k == 5)
+                                    {
+                                        $end = true;
+                                        echo '</div>';
+                                    }
+                                }
+                            echo '</div>';
+
+                            if(isset($end) && !$end)
+                            {
+                                echo '</div>';
+                                unset($end);
+                            }
+                        }
+                    }
+?>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <h2>Семейный отдых</h2>
-            <h4 class="col-xs-11 no-all">Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
-                                         Самым известным «рыбным» текстом является знаменитый Lorem ipsum. Считается, что впервые его применили в книгопечатании еще в XVI веке. Своим появлением Lorem ipsum обязан древнеримскому философу Цицерону, ведь именно из его трактата «О </h4>
         </div>
     </div>
 </div>
@@ -1224,6 +737,7 @@
 
 <?php
     $cs = Yii::app()->getClientScript();
+
     $slider = '
         $("#slider-for").slick(
         {
@@ -1261,19 +775,7 @@
 			dots: false,
 			centerMode: false,
 		});
-
-
     ';
 
     $cs->registerScript('slider', $slider);
 ?>
-
-<!--$("#slider_fresh_for .row").slick({-->
-<!--slidesToShow: 1,-->
-<!--slidesToScroll: 1,-->
-<!--arrows: false,-->
-<!--fade: true,-->
-<!--dots: false,-->
-<!--autoplay: false,-->
-<!--draggable: false-->
-<!--});-->

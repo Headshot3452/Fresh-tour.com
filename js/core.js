@@ -7,7 +7,7 @@
         viewSubmitButton(this);
     });
 
-    $('textarea').on('keyup', function()
+    $('.seo-text textarea').on('keyup', function()
     {
         if($(this).val().length > 255)
         {

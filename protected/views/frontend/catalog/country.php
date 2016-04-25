@@ -1,4 +1,3 @@
-
 <div id="title-container">
 	<img src = "/images/title-img.png" alt = "">
 	<div class="breadcrumbs-container">
@@ -125,9 +124,13 @@
 <?php
 								if($tree->country_near)
 								{
+									$country_list = array();
 									$_list = unserialize($tree->country_near);
-									$_country_list = implode(',', array_values($_list));
-									$country_list = CatalogTree::model()->active()->findAll('id IN ('.$_country_list.')');
+									if(is_array($_list))
+									{
+										$_country_list = implode(',', array_values($_list));
+										$country_list = CatalogTree::model()->active()->findAll('id IN ('.$_country_list.')');
+									}
 
 									if($country_list)
 									{

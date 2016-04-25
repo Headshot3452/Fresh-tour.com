@@ -88,6 +88,11 @@
 
             $view = ($this->page_id == Yii::app()->params['pages']['hot-avia']) ? 'hot-avia' : 'tree';
 
+            if($root->id == Yii::app()->params['tema_catalog'])
+            {
+                $view = 'tema_tours';
+            }
+
             $this->render($view, array('categories' => $categories, 'dataProducts' => $products, 'count' => $count, 'sort' => $sort));
         }
 

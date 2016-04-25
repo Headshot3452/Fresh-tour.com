@@ -29,7 +29,8 @@ class NewsController extends FrontendController
         }
 
         $news->count++;
-        $news->save();
+        $news->scenario = 'update_status';
+        $news->save(false, 'count');
 
         $this->getPageModule('item');
 
