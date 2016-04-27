@@ -149,7 +149,7 @@ return array(
                         'slider-slick'=>array(
                             'basePath'=>'webroot.js.slick',
                             'js'=>array('slick.min.js'),
-                            'css'=>array('slick.css'),
+                            'css'=>array('slick.css', 'slick-theme.css'),
                             'depends'=>array('jquery'),
                         ),
                     )

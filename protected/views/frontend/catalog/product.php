@@ -110,8 +110,19 @@
                 <div class="price">
 <?php
                     preg_match_all("/([0-9]*)([0-9]{3})$/", $product->price, $price);
+
+                    if(isset($price[1][0]) && $price[1][0])
+                    {
+                        echo '<span>'.Yii::app()->format->formatNumber($price[1][0]).'</span> 000 руб';
+                    }
+                    else
+                    {
+                        echo $product->price.' руб';
+                    }
+
 ?>
-                    <span><?php echo Yii::app()->format->formatNumber($price[1][0]) ;?> </span> 000 руб
+
+
                 </div>
                 <h1><?php echo $country ;?> <img class="flag-country" src = "/<?php echo $flag ;?>" alt = ""><span class="tyr-title"> <?php echo $product->title ;?> </span></h1>
                 <div id="country-info">

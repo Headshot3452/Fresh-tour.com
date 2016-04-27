@@ -77,7 +77,16 @@
 						{
 							foreach($tours as $key => $value)
 							{
+								$tem_slider_array = CatalogProducts::model()->with('parameters_value')->active()->findAll(
+									array(
+										'condition' => 'parameters_value.value = :par',
+										'params' => array('par' => $value['title']),
+										'order' => 't.parent_id'
+									)
+								);
+
 								$active = ($key == 0) ? 'active' : '';
+								$num = 0;
 
 								echo
 									'<div role="tabpanel" class="tab-pane '.$active.'" id="'.$value['name'].'">
@@ -86,325 +95,91 @@
 											'.$this->text.'
 										</div>';
 
-								$tem_slider = CatalogProducts::model()->with('parameters_value')->active()->findAll(
-									array(
-										'condition' => 'parameters_value.value = :par',
-										'params' => array('par' => $value['title']),
-										'order' => 't.parent_id'
-									)
-								);
-
-								if($tem_slider)
-								{
-									foreach($tem_slider as $k => $v)
-									{
-										if(!isset($new_parent) || $new_parent != $v->parent_id)
+										if($tem_slider_array)
 										{
-											$new_parent = $v->parent_id;
-											$parent = CatalogTree::model()->active()->findByPk($v->parent_id);
-											if($parent)
+											$tem_slider = '';
+
+											foreach($tem_slider_array as $k => $v)
 											{
-												$img = $parent->getOneFile('small');
-												echo
-													'<div class="list-tour">
-														<img src = "/'.$img.'">
-														<span>'.$parent->title.'</span>
-														<a href = "/'.$this->getUrlById(Yii::app()->params['pages']['strany-i-oteli']).'/'.$parent->name.'">Список туров</a>
+												$stars = $v->getStars();
+												$end = false;
+
+												$image = $v->getOneFile('big');
+
+												if(!$image)
+												{
+													$image = Yii::app()->params['noimage'];
+												}
+
+												if(!isset($new_parent) || $new_parent != $v->parent_id)
+												{
+													$new_parent = $v->parent_id;
+													$parent = CatalogTree::model()->active()->findByPk($v->parent_id);
+													if($parent)
+													{
+														$img = $parent->getOneFile('small');
+
+														if($num > 0)
+														{
+															echo $tem_slider . '</div>';
+															$tem_slider = '';
+															$end = true;
+														}
+
+														echo
+															'<div class="list-tour">
+																<img src = "/' . $img . '">
+																<span>' . $parent->title . '</span>
+																<a href = "/' . $this->getUrlById(Yii::app()->params['pages']['strany-i-oteli']) . '/' . $parent->name . '">Список туров</a>
+															</div>';
+
+														$num++;
+														$tem_slider = '<div class="tem-slide-' . $num . '">';
+														$end = false;
+													}
+												}
+
+												$tem_slider .=
+													'<div>
+														<img class="small" src = "/' . $image . '">
+														<div class="small-caption caption">
+															<h2>' . $v->title . '</h2>
+															<div class="stars">';
+																for($i = 0; $i < 5; $i++)
+																{
+																	if($i < $stars['value'])
+																	{
+																		$tem_slider .= '<img src = "/images/star_full.png">';
+																	}
+																	else
+																	{
+																		$tem_slider .= '<img src = "/images/star.png">';
+																	}
+																}
+												$tem_slider .=
+															'</div>
+															<h3>От <span>' . Yii::app()->format->formatNumber($v->price) . ' руб.</span></h3>
+															<div class="footer-container">
+																<span>2 человека</span>
+																<span>7 ночей с 7.09</span>
+																<a class="forward" href = "/' . $this->getUrlById(Yii::app()->params['pages']['strany-i-oteli']) . '/' . $parent->name . '/' . $v->name . '">Перейти</a>
+															</div>
+														</div>
 													</div>';
 											}
+											if(isset($end) && !$end)
+											{
+												echo $tem_slider.'</div>';
+												$end = true;
+											}
 										}
-									}
-								}
-								echo '</div>';
+								echo
+										'<div class="clearfix"></div>
+									</div>';
 							}
 						}
 ?>
 					</div>
-
-<!--					<div class="list-tour">-->
-<!--						<img src = "/images/fresh2.png" alt = "">-->
-<!--						<span>ОАЭ</span>-->
-<!--						<a href = "">Список туров</a>-->
-<!--					</div>-->
-<!---->
-<!--					<div id="tem-slide-1">-->
-<!--						<div>-->
-<!--							<img class="small" src = "/images/hotel1.png" alt = "">-->
-<!--							<div class="small-caption caption">-->
-<!--								<h2>STEUNG SIEM REAP-->
-<!--								    STEUNG SIEM REAP</h2>-->
-<!--								<div class="stars">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star.png" alt = "">-->
-<!--								</div>-->
-<!--								<h3>От <span>10 400 000 руб.</span></h3>-->
-<!--								<div class="footer-container">-->
-<!--									<span>2 человека</span>-->
-<!--									<span>7 ночей с 7.09</span>-->
-<!--									<a class="forward" href = "">Перейти</a>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--						<div>-->
-<!--							<img class="small" src = "/images/hotel1.png" alt = "">-->
-<!--							<div class="small-caption caption">-->
-<!--								<h2>STEUNG SIEM REAP</h2>-->
-<!--								<div class="stars">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star.png" alt = "">-->
-<!--								</div>-->
-<!--								<h3>От <span>10 400 000 руб.</span></h3>-->
-<!--								<div class="footer-container">-->
-<!--									<span>2 человека</span>-->
-<!--									<span>7 ночей с 7.09</span>-->
-<!--									<a class="forward" href = "">Перейти</a>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--						<div>-->
-<!--							<img class="small" src = "/images/hotel1.png" alt = "">-->
-<!--							<div class="small-caption caption">-->
-<!--								<h2>STEUNG SIEM REAP</h2>-->
-<!--								<div class="stars">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star.png" alt = "">-->
-<!--								</div>-->
-<!--								<h3>От <span>10 400 000 руб.</span></h3>-->
-<!--								<div class="footer-container">-->
-<!--									<span>2 человека</span>-->
-<!--									<span>7 ночей с 7.09</span>-->
-<!--									<a class="forward" href = "">Перейти</a>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--						<div>-->
-<!--							<img class="small" src = "/images/hotel1.png" alt = "">-->
-<!--							<div class="small-caption caption">-->
-<!--								<h2>STEUNG SIEM REAP</h2>-->
-<!--								<div class="stars">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star.png" alt = "">-->
-<!--								</div>-->
-<!--								<h3>От <span>10 400 000 руб.</span></h3>-->
-<!--								<div class="footer-container">-->
-<!--									<span>2 человека</span>-->
-<!--									<span>7 ночей с 7.09</span>-->
-<!--									<a class="forward" href = "">Перейти</a>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--					</div>-->
-<!---->
-<!--					<div class="list-tour">-->
-<!--						<img src = "/images/fresh2.png" alt = "">-->
-<!--						<span>Индия</span>-->
-<!--						<a href = "">Список туров</a>-->
-<!--					</div>-->
-<!---->
-<!--					<div id="tem-slide-2">-->
-<!--						<div>-->
-<!--							<img class="small" src = "/images/hotel1.png" alt = "">-->
-<!--							<div class="small-caption caption">-->
-<!--								<h2>STEUNG SIEM REAP-->
-<!--								    STEUNG SIEM REAP</h2>-->
-<!--								<div class="stars">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star.png" alt = "">-->
-<!--								</div>-->
-<!--								<h3>От <span>10 400 000 руб.</span></h3>-->
-<!--								<div class="footer-container">-->
-<!--									<span>2 человека</span>-->
-<!--									<span>7 ночей с 7.09</span>-->
-<!--									<a class="forward" href = "">Перейти</a>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--						<div>-->
-<!--							<img class="small" src = "/images/hotel1.png" alt = "">-->
-<!--							<div class="small-caption caption">-->
-<!--								<h2>STEUNG SIEM REAP</h2>-->
-<!--								<div class="stars">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star.png" alt = "">-->
-<!--								</div>-->
-<!--								<h3>От <span>10 400 000 руб.</span></h3>-->
-<!--								<div class="footer-container">-->
-<!--									<span>2 человека</span>-->
-<!--									<span>7 ночей с 7.09</span>-->
-<!--									<a class="forward" href = "">Перейти</a>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--						<div>-->
-<!--							<img class="small" src = "/images/hotel1.png" alt = "">-->
-<!--							<div class="small-caption caption">-->
-<!--								<h2>STEUNG SIEM REAP</h2>-->
-<!--								<div class="stars">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star.png" alt = "">-->
-<!--								</div>-->
-<!--								<h3>От <span>10 400 000 руб.</span></h3>-->
-<!--								<div class="footer-container">-->
-<!--									<span>2 человека</span>-->
-<!--									<span>7 ночей с 7.09</span>-->
-<!--									<a class="forward" href = "">Перейти</a>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--						<div>-->
-<!--							<img class="small" src = "/images/hotel1.png" alt = "">-->
-<!--							<div class="small-caption caption">-->
-<!--								<h2>STEUNG SIEM REAP</h2>-->
-<!--								<div class="stars">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star.png" alt = "">-->
-<!--								</div>-->
-<!--								<h3>От <span>10 400 000 руб.</span></h3>-->
-<!--								<div class="footer-container">-->
-<!--									<span>2 человека</span>-->
-<!--									<span>7 ночей с 7.09</span>-->
-<!--									<a class="forward" href = "">Перейти</a>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--					</div>-->
-<!---->
-<!--					<div class="list-tour">-->
-<!--						<img src = "/images/fresh2.png" alt = "">-->
-<!--						<span>Турция</span>-->
-<!--						<a href = "">Список туров</a>-->
-<!--					</div>-->
-<!---->
-<!--					<div id="tem-slide-3">-->
-<!--						<div>-->
-<!--							<img class="small" src = "/images/hotel1.png" alt = "">-->
-<!--							<div class="small-caption caption">-->
-<!--								<h2>STEUNG SIEM REAP-->
-<!--								    STEUNG SIEM REAP</h2>-->
-<!--								<div class="stars">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star.png" alt = "">-->
-<!--								</div>-->
-<!--								<h3>От <span>10 400 000 руб.</span></h3>-->
-<!--								<div class="footer-container">-->
-<!--									<span>2 человека</span>-->
-<!--									<span>7 ночей с 7.09</span>-->
-<!--									<a class="forward" href = "">Перейти</a>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--						<div>-->
-<!--							<img class="small" src = "/images/hotel1.png" alt = "">-->
-<!--							<div class="small-caption caption">-->
-<!--								<h2>STEUNG SIEM REAP</h2>-->
-<!--								<div class="stars">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star.png" alt = "">-->
-<!--								</div>-->
-<!--								<h3>От <span>10 400 000 руб.</span></h3>-->
-<!--								<div class="footer-container">-->
-<!--									<span>2 человека</span>-->
-<!--									<span>7 ночей с 7.09</span>-->
-<!--									<a class="forward" href = "">Перейти</a>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--						<div>-->
-<!--							<img class="small" src = "/images/hotel1.png" alt = "">-->
-<!--							<div class="small-caption caption">-->
-<!--								<h2>STEUNG SIEM REAP</h2>-->
-<!--								<div class="stars">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star.png" alt = "">-->
-<!--								</div>-->
-<!--								<h3>От <span>10 400 000 руб.</span></h3>-->
-<!--								<div class="footer-container">-->
-<!--									<span>2 человека</span>-->
-<!--									<span>7 ночей с 7.09</span>-->
-<!--									<a class="forward" href = "">Перейти</a>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--						<div>-->
-<!--							<img class="small" src = "/images/hotel1.png" alt = "">-->
-<!--							<div class="small-caption caption">-->
-<!--								<h2>STEUNG SIEM REAP</h2>-->
-<!--								<div class="stars">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star_full.png" alt = "">-->
-<!--									<img src = "/images/star.png" alt = "">-->
-<!--								</div>-->
-<!--								<h3>От <span>10 400 000 руб.</span></h3>-->
-<!--								<div class="footer-container">-->
-<!--									<span>2 человека</span>-->
-<!--									<span>7 ночей с 7.09</span>-->
-<!--									<a class="forward" href = "">Перейти</a>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--					</div>-->
-<!---->
-<!--					<div class="row">-->
-<!--						<div class="list-tour col-xs-4">-->
-<!--							<img src = "/images/fresh2.png" alt = "">-->
-<!--							<span>Австралия</span>-->
-<!--							<a href = "">Список туров</a>-->
-<!--						</div>-->
-<!---->
-<!--						<div class="list-tour col-xs-4">-->
-<!--							<img src = "/images/fresh2.png" alt = "">-->
-<!--							<span>Польша</span>-->
-<!--							<a href = "">Список туров</a>-->
-<!--						</div>-->
-<!---->
-<!--						<div class="list-tour col-xs-4">-->
-<!--							<img src = "/images/fresh2.png" alt = "">-->
-<!--							<span>Франция</span>-->
-<!--							<a href = "">Список туров</a>-->
-<!--						</div>-->
-<!---->
-<!--						<div class="list-tour col-xs-4">-->
-<!--							<img src = "/images/fresh2.png" alt = "">-->
-<!--							<span>Франция</span>-->
-<!--							<a href = "">Список туров</a>-->
-<!--						</div>-->
-<!--					</div>-->
-
 				</div>
 			</div>
 		</div>
@@ -413,7 +188,41 @@
 
 <?php
 	$cs = Yii::app()->getClientScript();
-	$sorter = '
+	$slider_tem = '
+		$(".tem-slide-1").slick(
+		{
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			dots: true,
+			infinite: true,
+			speed: 500,
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 5000,
+		});
 
+		$(".tem-slide-2").slick(
+		{
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			dots: true,
+			infinite: true,
+			speed: 500,
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 5000,
+		});
+
+		$(".tem-slide-3").slick(
+		{
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			dots: true,
+			infinite: true,
+			speed: 500,
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 5000,
+		});
     ';
-	$cs->registerPackage("cookie")->registerScript('sorter', $sorter);
+	$cs->registerScript('slider_tem', $slider_tem,  CClientScript::POS_END);
