@@ -11,9 +11,9 @@
     $cs->registerPackage('bootstrap');
     $cs->registerCssFile(Yii::app()->getBaseUrl().'/css/non-responsive.css');
 
-    $cs->registerCssFile(Yii::app()->getBaseUrl().'/css/backend.css');
-    $cs->registerCssFile(Yii::app()->getBaseUrl().'/css/backend_manenok.css');
-    $cs->registerCssFile(Yii::app()->getBaseUrl().'/css/backend_new_goncharov.css');
+    $cs->registerCssFile(Yii::app()->getBaseUrl().'/css/backend_h.css');
+    $cs->registerCssFile(Yii::app()->getBaseUrl().'/css/backend_w.css');
+    $cs->registerCssFile(Yii::app()->getBaseUrl().'/css/backend_m.css');
     $cs->registerCssFile(Yii::app()->getBaseUrl().'/css/font-awesome.css');
 ?>
 </head>

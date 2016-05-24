@@ -41,20 +41,22 @@
 						[[w:MenuWidget|menu_id=33;menu_type=custom;]]
 					</ul>
 				</div>
+<?php
+				$table_title =array();
+				$table_title = CatalogParams::model()->active()->findAll('catalog_tree_id = :id AND parent_id > 0', array('id' => Yii::app()->params["avia_catalog"]));
 
+?>
 				<div class="col-xs-9 no-right">
 					<h1> <?php echo $this->pageTitle ;?> </h1>
 					<table id="avia">
 						<thead>
 							<tr>
-								<td>Страна</td>
-								<td>Даты</td>
-								<td>Направление</td>
-								<td>А/компания</td>
-								<td>№ рейса</td>
-								<td>Аэрапорт</td>
-								<td>Вылет</td>
-								<td>Стоимость</td>
+<?php
+								foreach($table_title as $value)
+								{
+									echo '<td>'.$value->title.'</td>';
+								}
+?>
 								<td>Заказ</td>
 							</tr>
 						</thead>

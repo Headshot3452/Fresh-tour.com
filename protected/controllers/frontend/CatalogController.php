@@ -73,6 +73,16 @@
                 {
                     $view = 'hot-tours';
                     $list = CHtml::listData($categories, 'id', 'id');
+
+                    if(isset($_GET['country']) && $_GET['country'])
+                    {
+                        $id_country = CatalogTree::model()->active()->findByPk(CHtml::encode($_GET['country']));
+                        if($id_country)
+                        {
+                            $list = $id_country->id;
+                        }
+                    }
+
                     $products = CatalogProducts::model()->getDataProviderForCategory($list, $order);
                     $count = $products->getTotalItemCount();
                 }
@@ -81,8 +91,18 @@
                     $view = 'countrys';
                 }
 
+                $one_country =Yii::app()->request->cookies['$one_country'];
+                if (!$one_country)
+                {
+                    $one_country = 'default';
+                }
+                else
+                {
+                    $one_country = $one_country->value;
+                }
+
                 $categories = $root->children()->active()->findAll(array('order' => 'title'));
-                $this->render($view, array('categories' => $categories, 'popular' => $popular, 'dataProducts' => $products, 'sort' => $sort));
+                $this->render($view, array('categories' => $categories, 'popular' => $popular, 'dataProducts' => $products, 'sort' => $sort, 'one_country' => $one_country));
                 Yii::app()->end();
             }
 
@@ -149,10 +169,10 @@
                 Yii::app()->end();
             }
 
-            $products=new CActiveDataProvider($model,
+            $products = new CActiveDataProvider($model,
                 array(
-                    'criteria'=>$criteria,
-                    'pagination'=>array(),
+                    'criteria' => $criteria,
+                    'pagination' => array(),
                 )
             );
 
@@ -319,10 +339,12 @@
             if(in_array(Yii::app()->params['pages']['strany-i-oteli'], array($this->page_id, $parent_id)))
             {
                 $view = 'country';
+                $hots = CatalogProducts::model()->getHotsTours($id);
             }
             else
             {
                 $view = 'tree';
+                $hots = array();
             }
 
             $this->render($view,
@@ -332,6 +354,7 @@
                     'tree'=>$tree,
                     'count' => $count,
                     'sort' => $sort,
+                    'hots' => $hots
                 )
             );
         }

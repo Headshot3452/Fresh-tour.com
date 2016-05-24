@@ -81,14 +81,64 @@
 				<div class="tab-pane" id="description">
 					<div class="col-xs-3 no-left">
 						<div id="recently">
-							<h2>Горящие туры в Индию</h2>
-							<div class="item">
-								<img src = "/images/recently-img.png" alt = "">
-							</div>
-							<div class="item">
-								<img src = "/images/recently-img2.png" alt = "">
-							</div>
-							<a href = "" class="all_news">Все горщие туры в Индию</a>
+							<h2>Горящие туры <?php echo $tree->padej ;?></h2>
+<?php
+							$hot = $hots->getData();
+							if(isset($hot))
+							{
+								foreach($hot as $value)
+								{
+									$sale_array = unserialize($value->sale_info);
+									$link = $value->getUrlForItem(1);
+									$stars = $value->getStars();
+
+									$image = $value->getOneFile('original');
+
+									$sostav = $value->getSostav();
+
+									$dlitelnost = $value->getDlitelnost();
+
+									if(!$image)
+									{
+										$image = Yii::app()->params['noimage'];
+									}
+
+									$sale = $sale_array[0] ? '<span class = "sale">'.$sale_array[0].'%</span>' : '';
+
+									echo
+										'<div class="item img-cont hot_tours_item">
+											<a href="/'.$link.'">
+												<img src = "/'.$image.'" alt = "">
+												<h3>'.$value->title.'</h3>
+
+												<div class = "stars">';
+
+													for($i = 0; $i < 5; $i++)
+													{
+														if($i < $stars['value'])
+														{
+															echo '<img src = "/images/star_full.png" alt = "">';
+														}
+														else
+														{
+															echo '<img src = "/images/star.png" alt = "">';
+														}
+													}
+									echo
+												'</div>
+												<h5>От <span>'.Yii::app()->format->formatNumber($value->price).' руб.</span></h5>
+												<span class = "hot">Горящий тур</span>
+												'.$sale.'
+												<div class="footer-container">
+													<span>'.$sostav['value'].'</span>
+													<span>'.$dlitelnost['value'].'</span>
+												</div>
+											</a>
+										</div>';
+								}
+							}
+?>
+							<a href = "/<?php echo $this->getUrlById(Yii::app()->params['pages']['hot-tour']).'?country='.$tree->id ;?>" class="all_news all_news_hot">Все горщие туры <?php echo $tree->padej ;?></a>
 						</div>
 						<div id="recently-tours">
 							<h2>Полезные статьи</h2>
@@ -118,7 +168,7 @@
 						<div id="map_country">
 							<?php echo $tree->map ;?>
 						</div>
-						<h2 class="descr descr-near">Страны рядом</h2>
+						<h2 class="descr descr-near">FRESH TOUR рекомендует</h2>
 						<div class="kyrorts">
 							<div class="row">
 <?php
@@ -126,6 +176,7 @@
 								{
 									$country_list = array();
 									$_list = unserialize($tree->country_near);
+
 									if(is_array($_list))
 									{
 										$_country_list = implode(',', array_values($_list));
@@ -134,6 +185,19 @@
 
 									if($country_list)
 									{
+										for($i = 0; $i < count($country_list); $i++)
+										{
+											$el_arr = $country_list[$i]['title'];
+											$new_arr[] = $el_arr;
+										}
+										asort($new_arr);
+										$keys = array_keys($new_arr);
+										for($key=0; $key<count($keys); $key++)
+										{
+											$result[] = $country_list[$keys[$key]];
+										}
+										$country_list = $result;
+
 										foreach($country_list as $value)
 										{
 											echo

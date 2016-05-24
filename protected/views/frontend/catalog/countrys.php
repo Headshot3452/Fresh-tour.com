@@ -32,6 +32,8 @@
 				<h1>Все маршруты <h2>'.$kol.' <span>'.Yii::t('app', 'Countries', array($kol)).'</span></h2></h1>
 				<div class="clearfix"></div>';
 
+				mb_internal_encoding("UTF-8");
+
 				foreach($categories as $value)
 				{
 					$new_letter = mb_substr($value->title, 0, 1);

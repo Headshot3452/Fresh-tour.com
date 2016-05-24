@@ -245,6 +245,13 @@
         if($model->country_near)
         {
             $model->country_near = unserialize($model->country_near);
+
+            $all_countrys = $model->getCountry();
+
+            if(($key = array_search($model->title, $all_countrys)) !== FALSE)
+            {
+                unset($all_countrys[$key]);
+            }
         }
 ?>
     </div>
@@ -287,7 +294,7 @@
 
     <div class="form-group">
         <?php echo $form->labelEx($model, 'country_near'); ?>
-        <?php echo $form->dropDownList($model, 'country_near', $model->getCountry(), array('class' => 'selectpicker', 'multiple' => true, 'title' => "Выберите страны")); ?>
+        <?php echo $form->dropDownList($model, 'country_near', $all_countrys, array('class' => 'selectpicker', 'data-size' => '10', 'multiple' => true, 'title' => "Выберите страны")); ?>
         <?php echo $form->error($model, 'country_near'); ?>
     </div>
 

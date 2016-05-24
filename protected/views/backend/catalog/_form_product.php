@@ -111,7 +111,7 @@
             </div>
             <div class="col-xs-3">
                 <label>Цена со скидкой</label>
-                <div class="sale_price"><?php echo CatalogProducts::getSalePrice($model->price,$model->sale_info);?> <span>USD</span></div>
+                <div class="sale_price"><?php echo CatalogProducts::model()->getSalePrice($model->price,$model->sale_info);?> <span>USD</span></div>
             </div>
         </div>
     </div>

@@ -10,10 +10,11 @@
 	'id'=>'users-login-form',
 	'enableAjaxValidation'=>false,
     'htmlOptions'=>array('class'=>'form-horizontal'),
-)); ?>
+));
+?>
     <div class="form-group text-center title">
         <?php // добавить описание в app.php?>
-        Вход в систему
+        Вход
     </div>
 
 	<div class="form-group">

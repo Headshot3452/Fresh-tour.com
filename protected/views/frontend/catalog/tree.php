@@ -79,6 +79,7 @@
                 ),
                 'typeCatalog' => $typeCatalog,
                 'itemView' => $itemView,
+                'enablePagination' => true,
                 'dataProvider' => $dataProducts,
                 'ajaxUpdate' => false,
                 'template' => "{items}\n<div class=\"col-xs-12 text-center\">{pager}$counter</div>",
@@ -88,7 +89,7 @@
                 ),
                 'pager' => array(
                     'class' => 'bootstrap.widgets.BsPager',
-                    'firstPageLabel' => '',
+                    'firstPageLabel' => '<<',
                     'prevPageLabel' => '',
                     'nextPageLabel' => '',
                     'lastPageLabel' => '',

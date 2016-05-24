@@ -67,7 +67,7 @@
 			$sale_price = ($data->getSalePrice($data->price, $data->sale_info));
 			$sale_price = round(str_replace(" ", "", $sale_price));
 
-			echo $hot ? '<span class = "hot">Горяший тур</span>' : '';
+			echo $hot ? '<span class = "hot">Горящий тур</span>' : '';
 			echo $popular ? '<span class = "popular">Популярное</span>' : '';
 
 			echo $sale[0] ? '<span class = "sale">'.$sale[0].'%</span>' : '';

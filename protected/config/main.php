@@ -51,7 +51,7 @@ return array(
                 'db' => file_exists(__DIR__ . '/db.php') ? require_once __DIR__ . '/db.php' : array(),
 //				'errorHandler'=>array(
 //					// use 'site/error' action to display errors
-//					'errorAction'=>'site/index',
+//					'errorAction'=>'site/error',
 //				),
                 'urlManager'=>array(
                         'class'=>'UrlManager',

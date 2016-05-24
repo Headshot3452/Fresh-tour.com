@@ -264,13 +264,13 @@
             $criteria = new CDbCriteria;
 
             $criteria->with = array(
-                'parameters' => array('alias' => 'p', 'joinType' => 'INNER JOIN'),
-                'parameters_value' => array('alias' => 'v', 'joinType' => 'INNER JOIN'),
+                'parameters' => array('alias' => 'p'),
+                'parameters_value' => array('alias' => 'v'),
             );
 
             $counter = 0;
 
-            if(is_array($parent_id))
+            if(is_array($parent_id) && !isset($_GET['country']))
             {
                 $list = implode(',', $parent_id);
                 $criteria->addInCondition('t.`parent_id`', array($list));
@@ -285,6 +285,17 @@
                         ':hot' => Yii::app()->params['hot'],
                     );
                 }
+            }
+            elseif(!is_array($parent_id) && isset($_GET['country']) && $_GET['country'])
+            {
+                $criteria->condition = 't.`parent_id` = :parent_id AND v.`params_id` = :hot AND v.`value` = 1';
+
+                $criteria->together = true;
+
+                $criteria->params = array(
+                    ':hot' => Yii::app()->params['hot'],
+                    ':parent_id' => $parent_id,
+                );
             }
             else
             {
@@ -424,6 +435,33 @@
                         'pageSize' => $count,
                         'pageVar' => 'page',
                     ),
+                )
+            );
+        }
+
+        public function getHotsTours($parent_id)
+        {
+            $criteria = new CDbCriteria;
+
+            $criteria->with = array(
+                'parameters' => array('alias' => 'p', 'joinType' => 'INNER JOIN'),
+                'parameters_value' => array('alias' => 'v', 'joinType' => 'INNER JOIN'),
+            );
+
+            $criteria->condition = 'v.`params_id` = :hot AND v.`value` = 1 AND t.`parent_id` = :parent_id';
+
+            $criteria->together = true;
+
+            $criteria->params = array(
+                ':hot' => Yii::app()->params['hot'],
+                ':parent_id' => $parent_id,
+            );
+
+            $criteria->limit = 3;
+
+            return new CActiveDataProvider($this,
+                array(
+                    'criteria' => $criteria,
                 )
             );
         }

@@ -4,7 +4,7 @@
 		<div class = "container">
 			<div class = "row">
 				<div class = "breadcrumbs">
-					<?php
+<?php
 					if(!empty($this->breadcrumbs))
 					{
 						echo '<div>';
@@ -17,7 +17,7 @@
 
 						echo '</div>';
 					}
-					?>
+?>
 				</div>
 				<h1><?php echo $this->pageTitle; ?></h1>
 			</div>

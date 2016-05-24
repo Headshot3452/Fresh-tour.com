@@ -47,6 +47,9 @@ footer {
 .text {
   line-height: 1.4em;
   text-align: justify;
+  h1, h2, h3 {
+    text-align: left;
+  }
   ul {
     margin-bottom: 10px;
     li {
@@ -102,10 +105,12 @@ footer {
   }
   .form-control {
     border-radius: 0;
+    height: 38px;
+    border-radius: 4px;
   }
   .title {
-    font-size: 18px;
-    color: #979797;
+    font-size: 24px;
+    color: #000;
   }
   a {
     font-family: Arial;
@@ -115,11 +120,27 @@ footer {
     margin: 20px 0 0 0;
   }
   .back {
-    float: right;
+    float: none;
+    display: block;
+    text-align: center;
+    text-decoration: underline;
     margin: 10px 0 0 0;
+    font-size: 18px;
+    color: #000;
+    &:hover {
+      text-decoration: none;
+    }
   }
   .btn {
     padding: 4px 40px;
+    background-image: linear-gradient(#48ca35, #2ed12e, #00ff00, #30cfcf);
+    color: #000;
+    display: block;
+    float: none;
+    margin: 0 auto;
+    font-weight: bold;
+    height: 42px;
+    font-size: 24px;
   }
   input[type="checkbox"] {
     display: none;
@@ -318,6 +339,47 @@ span.required {
   }
 }
 
+#error_page {
+  position: relative;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  h1 {
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 475px;
+    margin-left: -177px;
+  }
+  a {
+    display: block;
+    margin: 0 auto;
+    width: 373px;
+    height: 75px;
+    position: absolute;
+    color: #fff;
+    font-family: 'Lato-Light';
+    font-size: 24px;
+    left: 50%;
+    top: 595px;
+    margin-left: -186px;
+    -webkit-border-radius: 37px 38px 38px 37px/37px 37px 38px 38px;
+    -moz-border-radius: 37px 38px 38px 37px/37px 37px 38px 38px;
+    border-radius: 37px 38px 38px 37px/37px 37px 38px 38px;
+    padding: 19px 10px 5px 100px;
+    background-color: #1c87b9;
+    padding: 19px 10px 5px 105px;
+    background-image: url("/images/home-error.png");
+    background-repeat: no-repeat;
+    background-position: 43px 19px;
+    &:hover {
+      background-color: #55a9ea;
+      text-decoration: none;
+    }
+  }
+}
+
 .profil_left_menu {
   list-style: none;
   padding-top: 5px;
@@ -337,11 +399,28 @@ span.required {
     .buttons.form-group {
       margin-bottom: 0;
       .btn {
-        padding: 4px 43px;
+        padding: 4px 60px;
+        font-weight: bold;
+        height: 42px;
+        font-size: 24px;
+        background-image: linear-gradient(#48ca35, #2ed12e, #00ff00, #30cfcf);
+        color: #000;
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
       }
       a {
-        float: right;
-        margin-top: 5px;
+        display: block;
+        margin: 5px auto;
+        float: none;
+        text-align: center;
+        color: #000;
+        font-size: 18px;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
     input[type="checkbox"] + label:not(.status){

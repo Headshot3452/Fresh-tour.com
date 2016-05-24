@@ -1005,6 +1005,140 @@ header, .hidden-top {
   font-family: $lB;
 }
 
+#description {
+  #recently {
+    .hot_tours_item {
+      .stars {
+        position: absolute;
+        top: 0px;
+        margin-top: 65px;
+        margin-left: 12px;
+        img {
+          width: auto;
+        }
+      }
+      h3 {
+        margin-top: 40px;
+        font-size: 13px;
+      }
+      h5 {
+        position: absolute;
+        top: 0;
+        left: 72px;
+        color: #fff;
+        margin-top: 85px;
+        span {
+          font-family: $lB;
+        }
+      }
+      .hot {
+        color: #fff;
+      }
+      .footer-container {
+        top: 55%;
+        padding-left: 5px;
+        color: #fff;
+        position: absolute;
+        top: 67%;
+        font-family: "Lato-Medium";
+        span {
+          margin: -14px 15px 0 0px;
+          background: url("/images/people.png") no-repeat 30px 2px;
+          display: table-cell;
+          width: 130px;
+          font-size: 12px;
+          padding-left: 49px;
+          text-align: left;
+          background-size: 13px 12px;
+        }
+        span:last-child {
+          background: url("/images/calendar_small.png") no-repeat 2px 1px;
+          padding-left: 23px;
+          background-size: 13px 12px;
+        }
+      }
+      .sale {
+        top: 0px;
+        left: 100%;
+        z-index: 8888;
+        margin-left: -51px;
+        margin-top: -53px;
+        padding-top: 59px;
+        padding-left: 16px;
+        font-size: 14px;
+      }
+    }
+    .all_news_hot {
+      margin-top: -15px;
+      display: block;
+    }
+  }
+}
+
+.hot_tours_container {
+  .dropdown-menu.open {
+    z-index: 9999;
+  }
+  .bootstrap-select.open {
+    .bs-caret {
+      transform: rotate(180deg);
+    }
+  }
+  .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: auto;
+  }
+  .bootstrap-select.btn-group {
+    width: auto;
+    .inner {
+      li {
+        a {
+          span {
+            font-family: "Lato-Heavy";
+            color: #2e97e8;
+            font-size: 18px;
+            &:hover, &:active, &:focus {
+              outline: none;
+            }
+          }
+          &:hover, &:active, &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+    .dropdown-toggle {
+      padding-right: 40px;
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+      .filter-option {
+        font-family: $lh;
+        color: #2e97e8;
+        font-size: 18px;
+      }
+      .caret {
+        background: url("/images/arrow-blue-down.png") no-repeat;
+
+        border: none;
+        width: 14px;
+        height: 9px;
+      }
+    }
+  }
+}
+
+#products-list {
+  .item {
+    .img-cont {
+      background-clip: content-box;
+      background-color: #000;
+      img {
+        opacity: .6;
+      }
+    }
+  }
+}
+
 #tyrs {
   h1 {
     font-family: $ll;
@@ -1029,6 +1163,9 @@ header, .hidden-top {
       }
     }
     .srok {
+      display: block;
+      max-height: 20px;
+      overflow: hidden;
       font-size: 14px;
       padding-left: 30px;
       background-size: 21px 21px;
@@ -1042,12 +1179,16 @@ header, .hidden-top {
       margin-top: 20px;
       height: 100px;
       line-height: 17px;
+      max-height: 87px;
+      overflow: hidden;
     }
     .price-cont {
       margin-top: 20px;
     }
     .item {
       height: 168px;
+      //opacity: .6;
+
       .img-cont {
         img {
           height: 168px;
@@ -1173,6 +1314,7 @@ header, .hidden-top {
     .kyrort, .vylet, .people, .supper, .avia, .calendar {
       padding-left: 23px;
       margin-bottom: 16px;
+      display: block;
     }
     .vylet {
       background: url("/images/loc-india.png") no-repeat;
@@ -2401,6 +2543,7 @@ a.show_all {
   border: 1px solid #b1b1b1;
   padding-left: 28px;
   float: right;
+  transition: .5s;
   background: #fff url("/images/arrow_green.png") no-repeat 86% 50%;
   &:hover {
     transition: .5s;
@@ -2477,7 +2620,7 @@ a.show_all {
     font-family: $ls;
     width: 1170px;
     font-size: 18px;
-    color: #919796;
+    color: #BFC6C6;
     margin-top: 240px;
     a {
       width: 171px;
@@ -2499,7 +2642,9 @@ a.show_all {
     }
     p {
       color: #fff;
-      line-height: 0;
+      line-height: 20px;
+      margin-top: -10px;
+
     }
   }
   .back-to-country {
@@ -2516,6 +2661,7 @@ a.show_all {
     margin-top: 88px;
     padding-left: 70px;
     background: url("/images/back-to-country-arrow.png") no-repeat 25px 50%;
+    transition: .5s;
     &:hover {
       text-decoration: none;
       transition: .5s;
@@ -3075,6 +3221,12 @@ a.show_all {
       .item {
         margin-left: 0;
         margin-right: 0;
+        background-color: #000;
+
+        img {
+          opacity: 0.8;
+
+        }
       }
     }
     .item {

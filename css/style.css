@@ -52,74 +52,80 @@ footer {
   text-align: justify;
 }
 /* line 50, style.scss */
+.text h1, .text h2, .text h3 {
+  text-align: left;
+}
+/* line 53, style.scss */
 .text ul {
   margin-bottom: 10px;
 }
-/* line 52, style.scss */
+/* line 55, style.scss */
 .text ul li {
   list-style: square outside;
   padding-left: 15px;
 }
-/* line 57, style.scss */
+/* line 60, style.scss */
 .text p {
   margin-bottom: 10px;
 }
-/* line 60, style.scss */
+/* line 63, style.scss */
 .text strong, .text b {
   font-weight: bold;
 }
-/* line 63, style.scss */
+/* line 66, style.scss */
 .text h1 {
   font-size: 32px;
 }
-/* line 66, style.scss */
+/* line 69, style.scss */
 .text h2 {
   font-size: 24px;
 }
-/* line 69, style.scss */
+/* line 72, style.scss */
 .text h3 {
   font-size: 18px;
 }
-/* line 72, style.scss */
+/* line 75, style.scss */
 .text h4 {
   font-size: 14px;
 }
-/* line 75, style.scss */
+/* line 78, style.scss */
 .text h5 {
   font-size: 12px;
 }
-/* line 78, style.scss */
+/* line 81, style.scss */
 .text h6 {
   font-size: 10px;
 }
-/* line 81, style.scss */
+/* line 84, style.scss */
 .text small {
   font-size: 10px;
 }
-/* line 84, style.scss */
+/* line 87, style.scss */
 .text i {
   font-style: italic;
 }
 
-/* line 91, style.scss */
+/* line 94, style.scss */
 .ui-autocomplete .ui-menu-item strong {
   font-weight: bold;
 }
 
-/* line 100, style.scss */
+/* line 103, style.scss */
 .wrapper.user_login .logo {
   margin: 35px 0;
 }
-/* line 103, style.scss */
+/* line 106, style.scss */
 .wrapper.user_login .form-control {
   border-radius: 0;
+  height: 38px;
+  border-radius: 4px;
 }
-/* line 106, style.scss */
+/* line 111, style.scss */
 .wrapper.user_login .title {
-  font-size: 18px;
-  color: #979797;
+  font-size: 24px;
+  color: #000;
 }
-/* line 110, style.scss */
+/* line 115, style.scss */
 .wrapper.user_login a {
   font-family: Arial;
   font-size: 14px;
@@ -127,20 +133,37 @@ footer {
   display: block;
   margin: 20px 0 0 0;
 }
-/* line 117, style.scss */
+/* line 122, style.scss */
 .wrapper.user_login .back {
-  float: right;
+  float: none;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
   margin: 10px 0 0 0;
+  font-size: 18px;
+  color: #000;
 }
-/* line 121, style.scss */
+/* line 130, style.scss */
+.wrapper.user_login .back:hover {
+  text-decoration: none;
+}
+/* line 134, style.scss */
 .wrapper.user_login .btn {
   padding: 4px 40px;
+  background-image: linear-gradient(#48ca35, #2ed12e, #00ff00, #30cfcf);
+  color: #000;
+  display: block;
+  float: none;
+  margin: 0 auto;
+  font-weight: bold;
+  height: 42px;
+  font-size: 24px;
 }
-/* line 124, style.scss */
+/* line 145, style.scss */
 .wrapper.user_login input[type="checkbox"] {
   display: none;
 }
-/* line 127, style.scss */
+/* line 148, style.scss */
 .wrapper.user_login input[type="checkbox"] + label:not(.status) {
   color: #979797;
   cursor: pointer;
@@ -148,7 +171,7 @@ footer {
   font-size: 14px;
   margin-left: 40px;
 }
-/* line 134, style.scss */
+/* line 155, style.scss */
 .wrapper.user_login input[type="checkbox"] + label:not(.status)::before {
   content: "";
   display: inline-table;
@@ -158,20 +181,20 @@ footer {
   margin: -2px 5px 0 0;
   background: url("/images/checkbox.png") no-repeat transparent;
 }
-/* line 143, style.scss */
+/* line 164, style.scss */
 .wrapper.user_login input[type="checkbox"] + label:not(.status)::before {
   background-position: 0px 0px;
 }
-/* line 146, style.scss */
+/* line 167, style.scss */
 .wrapper.user_login input[type="checkbox"]:checked + label:not(.status)::before {
   background-position: 0px -52px;
 }
-/* line 149, style.scss */
+/* line 170, style.scss */
 .wrapper.user_login input[type="checkbox"]:checked:disabled + label:not(.status)::before {
   opacity: 0.5;
 }
 
-/* line 154, style.scss */
+/* line 175, style.scss */
 .help-inline {
   color: red;
   position: absolute;
@@ -181,7 +204,7 @@ footer {
   font-size: 12px;
 }
 
-/* line 163, style.scss */
+/* line 184, style.scss */
 .require {
   font-size: 12px;
   color: #f84c32;
@@ -189,7 +212,7 @@ footer {
   margin-bottom: 18px;
 }
 
-/* line 170, style.scss */
+/* line 191, style.scss */
 .lk_title {
   font-size: 18px;
   font-family: arial, sans-serif;
@@ -197,14 +220,14 @@ footer {
   margin-bottom: 0px;
 }
 
-/* line 177, style.scss */
+/* line 198, style.scss */
 .lk_cat {
   font-size: 18px;
   font-family: arial, sans-serif;
   margin-bottom: 18px;
 }
 
-/* line 184, style.scss */
+/* line 205, style.scss */
 .form-group .text-right label {
   color: #979797;
   font-size: 14px;
@@ -212,72 +235,72 @@ footer {
   font-weight: normal;
   margin-top: 6px;
 }
-/* line 191, style.scss */
+/* line 212, style.scss */
 .form-group input.form-control {
   height: 31px;
   border-radius: 0;
 }
 
-/* line 197, style.scss */
+/* line 218, style.scss */
 span.required {
   color: #ff0000;
 }
 
-/* line 201, style.scss */
+/* line 222, style.scss */
 .form-group {
   margin-bottom: 20px;
 }
 
-/* line 205, style.scss */
+/* line 226, style.scss */
 .field-note label {
   color: #979797;
   font-size: 12px;
   font-weight: normal;
 }
 
-/* line 211, style.scss */
+/* line 232, style.scss */
 .birth-label {
   margin-top: 24px;
 }
 
-/* line 215, style.scss */
+/* line 236, style.scss */
 .house input {
   width: 60px;
 }
 
-/* line 219, style.scss */
+/* line 240, style.scss */
 .captcha input {
   width: 140px;
 }
 
-/* line 223, style.scss */
+/* line 244, style.scss */
 .captcha img {
   margin-top: -8px;
 }
 
-/* line 227, style.scss */
+/* line 248, style.scss */
 .all {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 232, style.scss */
+/* line 253, style.scss */
 .left {
   padding-left: 0;
 }
 
-/* line 236, style.scss */
+/* line 257, style.scss */
 .blue_link, .buttons .form-group a.blue_link, .buttons.form-group a.blue_link {
   color: #0849e1;
   text-decoration: none;
 }
-/* line 239, style.scss */
+/* line 260, style.scss */
 .blue_link:hover, .buttons .form-group a.blue_link:hover, .buttons.form-group a.blue_link:hover {
   color: #0849e1;
   text-decoration: underline;
 }
 
-/* line 245, style.scss */
+/* line 266, style.scss */
 .captcha-refresh {
   position: absolute;
   width: 80px;
@@ -285,67 +308,67 @@ span.required {
   margin-left: 70px;
   font-size: 14px;
 }
-/* line 251, style.scss */
+/* line 272, style.scss */
 .captcha-refresh span {
   display: none;
 }
 
-/* line 256, style.scss */
+/* line 277, style.scss */
 .buttons .form-group, .buttons.form-group {
   margin-bottom: 60px;
 }
-/* line 258, style.scss */
+/* line 279, style.scss */
 .buttons .form-group button, .buttons.form-group button {
   padding: 4px 33px;
   height: 30px;
   margin-right: 30px;
   background: linear-gradient(to top, #1343e3, #446dfa);
 }
-/* line 263, style.scss */
+/* line 284, style.scss */
 .buttons .form-group button:hover, .buttons.form-group button:hover {
   background: linear-gradient(to bottom, #1343e3, #446dfa);
 }
-/* line 267, style.scss */
+/* line 288, style.scss */
 .buttons .form-group a, .buttons.form-group a {
   font-size: 14px;
   color: #000;
   text-decoration: underline;
 }
-/* line 271, style.scss */
+/* line 292, style.scss */
 .buttons .form-group a:hover, .buttons.form-group a:hover {
   text-decoration: none;
 }
 
-/* line 277, style.scss */
+/* line 298, style.scss */
 #users-login-form .buttons.form-group button {
   margin-right: 0;
   padding: 4px 14px;
 }
 
-/* line 282, style.scss */
+/* line 303, style.scss */
 .captcha_error .help-inline {
   margin-top: 40px;
   margin-left: -100%;
 }
 
-/* line 287, style.scss */
+/* line 308, style.scss */
 #users-login-form .lk_title, .restore_password.lk_title {
   margin-bottom: 25px;
 }
 
-/* line 291, style.scss */
+/* line 312, style.scss */
 #users-login-form #reset {
   margin-right: 20px;
   padding: 4px 14px;
 }
 
-/* line 296, style.scss */
+/* line 317, style.scss */
 #registry_link {
   float: right;
   margin-top: 5px;
 }
 
-/* line 301, style.scss */
+/* line 322, style.scss */
 #forget_password {
   position: absolute;
   left: 100%;
@@ -354,102 +377,166 @@ span.required {
   margin-top: -45px;
 }
 
-/* line 310, style.scss */
+/* line 331, style.scss */
 .buttons .form-group .green_btn {
   background: linear-gradient(to top, #00a000, #66eb66);
   color: #fff;
   font-weight: normal;
   padding: 4px 23px;
 }
-/* line 315, style.scss */
+/* line 336, style.scss */
 .buttons .form-group .green_btn:hover {
   background: linear-gradient(to bottom, #00a000, #66eb66);
 }
 
-/* line 321, style.scss */
+/* line 342, style.scss */
+#error_page {
+  position: relative;
+}
+/* line 344, style.scss */
+#error_page img {
+  width: 100%;
+  object-fit: cover;
+}
+/* line 348, style.scss */
+#error_page h1 {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 475px;
+  margin-left: -177px;
+}
+/* line 355, style.scss */
+#error_page a {
+  display: block;
+  margin: 0 auto;
+  width: 373px;
+  height: 75px;
+  position: absolute;
+  color: #fff;
+  font-family: 'Lato-Light';
+  font-size: 24px;
+  left: 50%;
+  top: 595px;
+  margin-left: -186px;
+  -webkit-border-radius: 37px 38px 38px 37px/37px 37px 38px 38px;
+  -moz-border-radius: 37px 38px 38px 37px/37px 37px 38px 38px;
+  border-radius: 37px 38px 38px 37px/37px 37px 38px 38px;
+  padding: 19px 10px 5px 100px;
+  background-color: #1c87b9;
+  padding: 19px 10px 5px 105px;
+  background-image: url("/images/home-error.png");
+  background-repeat: no-repeat;
+  background-position: 43px 19px;
+}
+/* line 376, style.scss */
+#error_page a:hover {
+  background-color: #55a9ea;
+  text-decoration: none;
+}
+
+/* line 383, style.scss */
 .profil_left_menu {
   list-style: none;
   padding-top: 5px;
 }
-/* line 324, style.scss */
+/* line 386, style.scss */
 .profil_left_menu a, .profil_left_menu #settings_submenu a {
   color: #000;
 }
-/* line 326, style.scss */
+/* line 388, style.scss */
 .profil_left_menu a:hover, .profil_left_menu a.active, .profil_left_menu #settings_submenu a:hover, .profil_left_menu #settings_submenu a.active {
   text-decoration: none;
   color: #0849e1;
 }
 
-/* line 334, style.scss */
+/* line 396, style.scss */
 .user_login #users-login-form {
   background: #ffffff;
   padding: 25px 20px;
 }
-/* line 337, style.scss */
+/* line 399, style.scss */
 .user_login #users-login-form .buttons.form-group {
   margin-bottom: 0;
 }
-/* line 339, style.scss */
+/* line 401, style.scss */
 .user_login #users-login-form .buttons.form-group .btn {
-  padding: 4px 43px;
+  padding: 4px 60px;
+  font-weight: bold;
+  height: 42px;
+  font-size: 24px;
+  background-image: linear-gradient(#48ca35, #2ed12e, #00ff00, #30cfcf);
+  color: #000;
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
 }
-/* line 342, style.scss */
+/* line 413, style.scss */
 .user_login #users-login-form .buttons.form-group a {
-  float: right;
-  margin-top: 5px;
+  display: block;
+  margin: 5px auto;
+  float: none;
+  text-align: center;
+  color: #000;
+  font-size: 18px;
+  text-decoration: underline;
 }
-/* line 347, style.scss */
+/* line 421, style.scss */
+.user_login #users-login-form .buttons.form-group a:hover {
+  text-decoration: none;
+}
+/* line 426, style.scss */
 .user_login #users-login-form input[type="checkbox"] + label:not(.status) {
   display: none;
 }
 
-/* line 354, style.scss */
+/* line 433, style.scss */
 #users-login-form .buttons.form-group {
   margin-bottom: 0;
 }
-/* line 356, style.scss */
+/* line 435, style.scss */
 #users-login-form .buttons.form-group .btn {
   padding: 4px 33px;
 }
 
-/* line 362, style.scss */
+/* line 441, style.scss */
 #users-registration #reg_btn {
   padding: 4px 17px;
 }
 
-/* line 366, style.scss */
+/* line 445, style.scss */
 #profil {
   content: "\f0d8";
 }
-/* line 367, style.scss */
+/* line 446, style.scss */
 #profil .lk_title {
   padding-bottom: 10px;
 }
-/* line 370, style.scss */
+/* line 449, style.scss */
 #profil .text-right {
   font-size: 14px;
   color: #979797;
 }
-/* line 374, style.scss */
+/* line 453, style.scss */
 #profil .profil_left_menu {
   padding-left: 0;
 }
-/* line 377, style.scss */
+/* line 456, style.scss */
 #profil .profil_left_menu li a, #profil .profil_left_menu li div {
   width: 100%;
   height: 100%;
   display: block;
   padding: 5px 0 5px 10px;
 }
-/* line 384, style.scss */
+/* line 463, style.scss */
 #profil .profil_left_menu .fa {
   float: right;
   display: inline-block;
   padding-right: 10px;
   padding-top: 2px;
 }
-/* line 390, style.scss */
+/* line 469, style.scss */
 #profil .profil_left_menu .dropdown-menu {
   display: block !important;
   visibility: hidden;
@@ -457,112 +544,112 @@ span.required {
   transition: visibility .3s, opacity .3s, top .4s;
   top: 200%;
 }
-/* line 397, style.scss */
+/* line 476, style.scss */
 #profil .profil_left_menu .open > .dropdown-menu {
   visibility: visible;
   opacity: 1;
   transition: visibility .3s, opacity .3s, bottom .4s;
   top: calc(100% + 1px);
 }
-/* line 404, style.scss */
+/* line 483, style.scss */
 #profil .hitarea {
   background-color: #e4e4e4;
   cursor: pointer;
 }
-/* line 407, style.scss */
+/* line 486, style.scss */
 #profil .hitarea.collapsed {
   background-color: transparent;
 }
-/* line 410, style.scss */
+/* line 489, style.scss */
 #profil .hitarea:hover {
   background-color: #e4e4e4;
 }
-/* line 413, style.scss */
+/* line 492, style.scss */
 #profil .hitarea .fa-caret-up:before {
   content: "\f0d7";
 }
-/* line 417, style.scss */
+/* line 496, style.scss */
 #profil .hitarea:not(.collapsed) {
   background-color: #e4e4e4;
 }
-/* line 419, style.scss */
+/* line 498, style.scss */
 #profil .hitarea:not(.collapsed) .fa-caret-up:before {
   content: "\f0d8";
 }
-/* line 423, style.scss */
+/* line 502, style.scss */
 #profil #settings_submenu {
   list-style-type: none;
   padding-left: 20px;
 }
 
-/* line 430, style.scss */
+/* line 509, style.scss */
 #profil_settings {
   padding-top: 15px;
 }
-/* line 432, style.scss */
+/* line 511, style.scss */
 #profil_settings .btn {
   padding: 4px 20px;
   background: linear-gradient(to top, #1545e4, #446dfa);
 }
-/* line 435, style.scss */
+/* line 514, style.scss */
 #profil_settings .btn:hover {
   background: linear-gradient(to bottom, #1545e4, #446dfa);
 }
 
-/* line 441, style.scss */
+/* line 520, style.scss */
 #users-changePassword-form {
   padding-top: 10px;
 }
 
-/* line 445, style.scss */
+/* line 524, style.scss */
 .btn-primary {
   font-size: 14px;
   background: linear-gradient(to top, #1545e4, #446dfa);
 }
-/* line 448, style.scss */
+/* line 527, style.scss */
 .btn-primary:hover {
   background: linear-gradient(to bottom, #1545e4, #446dfa);
 }
 
-/* line 453, style.scss */
+/* line 532, style.scss */
 .lichnye {
   padding-top: 10px;
 }
-/* line 455, style.scss */
+/* line 534, style.scss */
 .lichnye label {
   font-weight: normal;
   color: #727272;
 }
 
-/* line 462, style.scss */
+/* line 541, style.scss */
 #user-info-index-form .qq-uploader {
   display: none;
 }
 
-/* line 467, style.scss */
+/* line 546, style.scss */
 #user-info-index-form {
   padding-top: 10px;
 }
 
-/* line 471, style.scss */
+/* line 550, style.scss */
 #load-avatar {
   position: absolute !important;
   margin-top: 5px;
   width: 220px !important;
   color: #0849e1;
 }
-/* line 475, style.scss */
+/* line 554, style.scss */
 #load-avatar input {
   font-size: 14px !important;
   cursor: pointer;
 }
 
-/* line 482, style.scss */
+/* line 561, style.scss */
 .photo_place {
   margin-bottom: 35px;
 }
 
-/* line 486, style.scss */
+/* line 565, style.scss */
 #user-info-index-form .qq-upload-button-hover {
   background: transparent;
   text-decoration: underline;

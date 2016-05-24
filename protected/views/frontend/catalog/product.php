@@ -86,7 +86,7 @@
                 <a href = "<?php echo $back ;?>" class="back-to-country">К списку туров</a>
                 <div id="bonus-cont">
 <?php
-                    echo $hot ? '<span class = "hot">Горяший тур</span>' : '';
+                    echo $hot ? '<span class = "hot">Горящий тур</span>' : '';
                     echo $popular ? '<span class = "popular">Популярное</span>' : '';
 
                     if(!$hot || !$popular)

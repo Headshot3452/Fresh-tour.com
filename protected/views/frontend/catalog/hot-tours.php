@@ -147,11 +147,14 @@
 
 						echo BsHtml::submitButton(Yii::t('app', 'Show'));
 						$this->endWidget();
+
+						$selected = (isset($_GET['country']) && $_GET['country']) ? CHtml::encode($_GET['country']) : '';
 ?>
 					</div>
 				</div>
-					<div class="col-xs-9 no-right">
-						<h1><?php echo $this->pageTitle ;?> </h1>
+					<div class="col-xs-9 no-right hot_tours_container">
+						<h1><?php echo $this->pageTitle ;?> <?php echo CHtml::dropDownList('one_country', $one_country, CatalogTree::getCountry(), array('class' => 'selectpicker', 'data-size' => '6', 'empty' => 'Все страны', 'options' => array($selected => array('selected' => true)))) ;?></h1>
+
 						<div class="sort">
 							Сортировка по: <a href = "" class="<?php echo $sort ;?>">Цене <span></span> </a>
 						</div>
@@ -231,6 +234,11 @@
 					return false;
 				});
 
+				$(".hot_tours_container #one_country").on("change", function()
+				{
+					document.location.href = window.location.pathname+"?country="+$(this).val();
+				});
+
 				$("#tours-form .all_news").on("click", function()
 				{
 					$("#CountryForm_tema_tours").css({"height": "auto"});
@@ -261,5 +269,5 @@
 			});
 		';
 
-	$cs->registerPackage('jquery.ui')->registerScript("price_line", $price_line);
+$cs->registerPackage('jquery.ui')->registerPackage('boot-select')->registerScript("price_line", $price_line);
 ?>
