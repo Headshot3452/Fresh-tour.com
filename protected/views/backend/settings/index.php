@@ -38,6 +38,46 @@
 
         <div class="row form-group">
             <div class="col-xs-5 no-left">
+                <?php echo $form->labelEx($model, 'address', array('label' => 'Адрес:', 'style' => 'padding-left: 10px;')); ?>
+            </div>
+            <div class="col-xs-7">
+                <?php echo $form->textField($model, 'address', array('placeholder' => '')); ?>
+                <?php echo $form->error($model, 'address'); ?>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-xs-5 no-left">
+                <?php echo $form->labelEx($model, 'mts', array('label' => 'МТС:', 'style' => 'padding-left: 10px;')); ?>
+            </div>
+            <div class="col-xs-7">
+                <?php echo $form->textField($model, 'mts', array('placeholder' => '')); ?>
+                <?php echo $form->error($model, 'mts'); ?>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-xs-5 no-left">
+                <?php echo $form->labelEx($model, 'work', array('label' => 'Рабочее время:', 'style' => 'padding-left: 10px;')); ?>
+            </div>
+            <div class="col-xs-7">
+                <?php echo $form->textArea($model, 'work', array('placeholder' => '', 'col' => '2')); ?>
+                <?php echo $form->error($model, 'work'); ?>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-xs-5 no-left">
+                <?php echo $form->labelEx($model, 'velcom', array('label' => 'Velcom:', 'style' => 'padding-left: 10px;')); ?>
+            </div>
+            <div class="col-xs-7">
+                <?php echo $form->textField($model, 'velcom', array('placeholder' => '')); ?>
+                <?php echo $form->error($model, 'velcom'); ?>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-xs-5 no-left">
                 <?php echo $form->labelEx($model, 'email', array('label' => 'Email суперадминистратора для восстановления пароля:', 'style' => 'padding-left: 10px; margin-top: 0;')); ?>
             </div>
             <div class="col-xs-7">

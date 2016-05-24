@@ -36,18 +36,24 @@ class UserController extends FrontendController
 
         if(isset($_POST['Users']))
         {
-            $model->attributes=$_POST['Users'];
+            $model->attributes = $_POST['Users'];
             if ($model->validate())
             {
-                $UserSession=UsersSessions::model()->findByPk(Yii::app()->session->getSessionId());
-                $UserSession->user_id=Yii::app()->user->id;
+                $UserSession = UsersSessions::model()->findByPk(Yii::app()->session->getSessionId());
+                $UserSession->user_id = Yii::app()->user->id;
                 $UserSession->save();
 
+                $Users = Users::model()->findByPk(Yii::app()->user->id);
+                $Users->last_ip = CHttpRequest::getUserHostAddress();
+                $Users->setScenario('login');
+
+                $Users->update(true, 'last_ip');
+
                 Yii::app()->user->removeCaptcha();
-                $this->redirect( Yii::app()->user->returnUrl&&Yii::app()->user->returnUrl!='/' ? Yii::app()->user->returnUrl : $this->createUrl('/admin/admin'));
+                $this->redirect(Yii::app()->user->returnUrl && Yii::app()->user->returnUrl != '/' ? Yii::app()->user->returnUrl : $this->createUrl('/admin'));
             }
         }
-        $this->render('login',array('model'=>$model));
+        $this->render('login', array('model' => $model));
     }
 
     public function actionLogout()
@@ -195,7 +201,6 @@ class UserController extends FrontendController
                 $model->password=$model->new_password;
                 $model->save(false,array('salt','password'));
                 Yii::app()->user->setFlash('modal','Password changed');
-//                $this->refresh();
             }
         }
         $this->render('change_password',array('model'=>$model));

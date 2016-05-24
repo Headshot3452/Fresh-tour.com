@@ -562,7 +562,7 @@
                             $kol = 0;
 
                             $parent = CatalogTree::model()->active()->find('id = :id', array('id' => $value->parent_id));
-                            $image = $parent->getOneFile('small');
+                            $image = $parent->getOneFile('big');
 
                             $tour_img = $value->getOneFile('small');
 

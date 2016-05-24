@@ -3,18 +3,11 @@ class CoreEvents extends CModelEvent
 {
     public static function onLogin($event)
     {
-        $sender=$event->sender;
+        $sender = $event->sender;
 
-        $UserSession=UsersSessions::model()->findByPk(Yii::app()->session->getSessionId());
-        $UserSession->user_id=$sender->id;
+        $UserSession = UsersSessions::model()->findByPk(Yii::app()->session->getSessionId());
+        $UserSession->user_id = $sender->id;
         $UserSession->save();
-
-
-        $Users = Users::model()->findByPk($sender->id);
-        $Users->last_ip = CHttpRequest::getUserHostAddress();
-        $Users->setScenario('login');
-
-        $Users->update(true, 'last_ip');
 
         $check = UsersCheckAction::model()->not_active();
         $check->deleteAll($check->getDbCriteria());

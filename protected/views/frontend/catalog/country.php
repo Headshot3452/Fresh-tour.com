@@ -80,12 +80,13 @@
 			<div class="tab-content">
 				<div class="tab-pane" id="description">
 					<div class="col-xs-3 no-left">
-						<div id="recently">
-							<h2>Горящие туры <?php echo $tree->padej ;?></h2>
 <?php
-							$hot = $hots->getData();
-							if(isset($hot))
-							{
+						$hot = $hots->getData();
+						if(isset($hot) && !empty($hot))
+						{
+							echo
+							'<div id="recently">
+								<h2>Горящие туры '.$tree->padej.' </h2>';
 								foreach($hot as $value)
 								{
 									$sale_array = unserialize($value->sale_info);
@@ -136,10 +137,11 @@
 											</a>
 										</div>';
 								}
-							}
+							echo
+								'<a href = "/'. $this->getUrlById(Yii::app()->params['pages']['hot-tour']).'?country='.$tree->id .'" class="all_news all_news_hot">Все горщие туры '.$tree->padej.' </a>
+							</div>';
+						}
 ?>
-							<a href = "/<?php echo $this->getUrlById(Yii::app()->params['pages']['hot-tour']).'?country='.$tree->id ;?>" class="all_news all_news_hot">Все горщие туры <?php echo $tree->padej ;?></a>
-						</div>
 						<div id="recently-tours">
 							<h2>Полезные статьи</h2>
 							<ul class="useful-articles">
@@ -326,16 +328,18 @@
 						</div>
 					</div>
 					<div class="col-xs-9 no-right">
-						<h1>Туры <?php echo $tree->padej ;?> <i><?php echo $dataProducts->getItemCount() ;?></i> </h1>
+						<h1>Туры <?php echo $tree->padej ;?> <i><?php echo $dataProducts->getTotalItemCount() ;?></i> </h1>
 						<div class="sort">
 							Сортировка по: <a href = "" class="<?php echo $sort ;?>">Цене <span></span> </a>
 						</div>
 <?php
-						$count = $dataProducts->getItemCount();
+						$count = $dataProducts->getTotalItemCount();
+
+						$selected = isset($_COOKIE['count_item']) ? $_COOKIE['count_item'] : '';
 
 						$counter = '
 							<div id="count">
-	                            Показывать по <a href = "" >6</a> строк
+								Показывать по '. CHtml::dropDownList('count_item', '', array('6' => '6', '15' => '15' , '30' => '30'), array('class' => 'selectpicker', 'data-size' => '3', 'options' => array($selected => array('selected' => true)))) .' строк
 				            </div>';
 
 						if ($count > 0)
@@ -346,16 +350,27 @@
 								{
 									if($(this).hasClass("price_asc"))
 									{
-										$.cookie("sort_products", "price_desc", {expires: 3600, path: "/"});
+										$.cookie("sort_products", "price_desc", {expires: 60, path: "/"});
 									}
 									else if($(this).hasClass("price_desc"))
 									{
-										$.cookie("sort_products", "price_asc", {expires: 3600, path: "/"});
+										$.cookie("sort_products", "price_asc", {expires: 60, path: "/"});
+									}
+									else
+									{
+										$.cookie("sort_products", "price_desc", {expires: 60, path: "/"});
 									}
 									window.location.reload();
 								});
+
+								$("body").on("click", "#count li a", function()
+				                {
+				                    val = $(this).find("span").text();
+				                    $.cookie("count_item", parseInt(val), {expires: 60, path: "/"});
+				                    window.location.reload();
+				                });
 							';
-							$cs->registerPackage("cookie")->registerScript('sorter', $sorter);
+							$cs->registerPackage('boot-select')->registerPackage("cookie")->registerScript('sorter', $sorter);
 						}
 ?>
 						<div class="row">
@@ -435,10 +450,10 @@
 				}
 			});
 
-			$( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) + " Руб - " + $( "#slider-range" ).slider( "values", 1 ) + " Руб " );
-
-			var new_amount = String($("#amount").val()).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, "$1 ");
-			$("#amount").val(new_amount);
+//			$( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) + " Руб - " + $( "#slider-range" ).slider( "values", 1 ) + " Руб " );
+//
+//			var new_amount = String($("#amount").val()).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, "$1 ");
+//			$("#amount").val(new_amount);
 		});
 	';
 

@@ -1,16 +1,17 @@
 <?php
-/* @var $this UsersController */
-/* @var $model Users */
-/* @var $form BsActiveForm */
+    /* @var $this UsersController */
+    /* @var $model Users */
+    /* @var $form BsActiveForm */
 ?>
-
-<div class="form">
-
-<?php $form=$this->beginWidget('bootstrap.widgets.BsActiveForm', array(
-	'id'=>'users-login-form',
-	'enableAjaxValidation'=>false,
-    'htmlOptions'=>array('class'=>'form-horizontal'),
-));
+    <div class="form">
+<?php
+    $form = $this->beginWidget('bootstrap.widgets.BsActiveForm',
+        array(
+            'id' => 'users-login-form',
+            'enableAjaxValidation' => false,
+            'htmlOptions' => array('class' => 'form-horizontal'),
+        )
+    );
 ?>
     <div class="form-group text-center title">
         <?php // добавить описание в app.php?>

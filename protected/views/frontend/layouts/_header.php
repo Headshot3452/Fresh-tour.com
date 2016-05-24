@@ -12,6 +12,7 @@
 
 	$cs->registerPackage('bootstrap');
 	$cs->registerPackage('slider-slick');
+	$cs->registerPackage('function');
 
 	$cs->registerCssFile(
 		Yii::app()->assetManager->publish($css_path . '/style.css')

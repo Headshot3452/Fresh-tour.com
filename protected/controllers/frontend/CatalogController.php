@@ -18,6 +18,7 @@
             $products = array();
             $count = '';
             $sort = '';
+            $count_item = '';
 
             $child_struct = Structure::model()->active()->findByPk($this->page_id);
             $parent_struct = array();
@@ -35,9 +36,20 @@
 
             $sort = Yii::app()->request->cookies['sort_products'];
 
+            $count_item = Yii::app()->request->cookies['count_item'];
+
+            if(!isset($count_item->value))
+            {
+                $count_item = 6;
+            }
+            else
+            {
+                $count_item = $count_item->value;
+            }
+
             if (!$sort || $sort == '')
             {
-                $sort = 'price_asc';
+                $order = 't.`sort`';
             }
             else
             {
@@ -55,7 +67,7 @@
 
             if(!$categories)
             {
-                $products = CatalogProducts::model()->getDataProviderForCategory($root->id, $order);
+                $products = CatalogProducts::model()->getDataProviderForCategory($root->id, $order, $count_item);
                 $count = $products->getTotalItemCount();
             }
             else
@@ -296,7 +308,7 @@
 
                 if (!$sort)
                 {
-                    $sort = 'price_asc';
+                    $sort = 't.`sort`';
                 }
                 else
                 {

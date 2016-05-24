@@ -153,7 +153,7 @@
 					</div>
 				</div>
 					<div class="col-xs-9 no-right hot_tours_container">
-						<h1><?php echo $this->pageTitle ;?> <?php echo CHtml::dropDownList('one_country', $one_country, CatalogTree::getCountry(), array('class' => 'selectpicker', 'data-size' => '6', 'empty' => 'Все страны', 'options' => array($selected => array('selected' => true)))) ;?></h1>
+						<h1 id="one_country"><?php echo $this->pageTitle ;?> <?php echo CHtml::dropDownList('one_country', $one_country, CatalogTree::getCountry(), array('class' => 'selectpicker', 'data-size' => '6', 'empty' => 'Все страны', 'options' => array($selected => array('selected' => true)))) ;?></h1>
 
 						<div class="sort">
 							Сортировка по: <a href = "" class="<?php echo $sort ;?>">Цене <span></span> </a>
@@ -163,7 +163,7 @@
 
 						$counter = '
 							<div id="count">
-	                            Показывать по <a href = "" >6</a> строк
+								Показывать по '. CHtml::dropDownList('count_item', '', array('6' => '6', '15' => '15' , '30' => '30'), array('class' => 'selectpicker', 'data-size' => '3', 'options' => array($selected => array('selected' => true)))) .' строк
 				            </div>';
 
 						if ($count > 0)
@@ -174,11 +174,15 @@
 								{
 									if($(this).hasClass("price_asc"))
 									{
-										$.cookie("sort_products", "price_desc", {expires: 3600, path: "/"});
+										$.cookie("sort_products", "price_desc", {expires: 60, path: "/"});
 									}
 									else if($(this).hasClass("price_desc"))
 									{
-										$.cookie("sort_products", "price_asc", {expires: 3600, path: "/"});
+										$.cookie("sort_products", "price_asc", {expires: 60, path: "/"});
+									}
+									else
+									{
+										$.cookie("sort_products", "price_desc", {expires: 60, path: "/"});
 									}
 									window.location.reload();
 								});
@@ -236,7 +240,14 @@
 
 				$(".hot_tours_container #one_country").on("change", function()
 				{
-					document.location.href = window.location.pathname+"?country="+$(this).val();
+					if($(this).val())
+					{
+						document.location.href = window.location.pathname+"?country="+$(this).val();
+					}
+					else
+					{
+						document.location.href = window.location.pathname;
+					}
 				});
 
 				$("#tours-form .all_news").on("click", function()
@@ -268,6 +279,4 @@
 				$("#amount").val(new_amount);
 			});
 		';
-
-$cs->registerPackage('jquery.ui')->registerPackage('boot-select')->registerScript("price_line", $price_line);
-?>
+	$cs->registerPackage('jquery.ui')->registerPackage('boot-select')->registerScript("price_line", $price_line);

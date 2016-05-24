@@ -37,7 +37,7 @@
                 break;
         }
 
-        $count = $dataProducts->getItemCount();
+        $count = $dataProducts->getTotalItemCount();
 
         echo
             '<h1>'. $this->pageTitle . '<i> '.$count.'</i> </h1>
@@ -54,21 +54,35 @@
                 {
                     if($(this).hasClass("price_asc"))
                     {
-                        $.cookie("sort_products", "price_desc", {expires: 3600, path: "/"});
+                        $.cookie("sort_products", "price_desc", {expires: 60, path: "/"});
                     }
                     else if($(this).hasClass("price_desc"))
                     {
-                        $.cookie("sort_products", "price_asc", {expires: 3600, path: "/"});
+                        $.cookie("sort_products", "price_asc", {expires: 60, path: "/"});
+                    }
+                    else
+                    {
+                        $.cookie("sort_products", "price_desc", {expires: 60, path: "/"});
                     }
                     window.location.reload();
                 });
+
+                $("body").on("click", "#count li a", function()
+                {
+                    val = $(this).find("span").text();
+                    $.cookie("count_item", parseInt(val), {expires: 60, path: "/"});
+                    window.location.reload();
+                });
             ';
-            $cs->registerPackage("cookie")->registerScript('sorter', $sorter);
+            $cs->registerPackage('boot-select')->registerPackage("cookie")->registerScript('sorter', $sorter);
         }
 
-        $counter = '<div id="count">
-                        Показывать по <a href = "" >6</a> строк
-			        </div>';
+        $selected = isset($_COOKIE['count_item']) ? $_COOKIE['count_item'] : '';
+
+        $counter = '
+            <div id="count">
+                Показывать по '. CHtml::dropDownList('count_item', '', array('6' => '6', '15' => '15' , '30' => '30'), array('class' => 'selectpicker', 'data-size' => '3', 'options' => array($selected => array('selected' => true)))) .' строк
+            </div>';
 
 
         $this->widget('application.widgets.ProductListView',

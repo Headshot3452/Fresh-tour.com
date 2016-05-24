@@ -11,7 +11,7 @@ return array(
 	'language'=>'ru',
 	'charset'=>'utf-8',
 	// preloading 'log' component
-	'preload'=>array('log','debug'),
+//	'preload'=>array('log','debug'),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -71,11 +71,11 @@ return array(
                         'defaultRoles'=>array('guest'),
                 ),
                 'user' => array(
-                        'class' => 'WebUserFront',
-                        'allowAutoLogin' => true,
-                        'autoRenewCookie'=>true,
-                        'loginUrl'=>'/login',
-                        'onLogin'=>array('CoreEvents','onLogin'),
+                    'class' => 'WebUserFront',
+                    'allowAutoLogin' => true,
+                    'autoRenewCookie' => true,
+                    'loginUrl' => '/login',
+                    'onLogin' => array('CoreEvents', 'onLogin'),
                 ),
                 'session' => array(
                         'class' => 'CDbHttpSession',
@@ -137,9 +137,9 @@ return array(
                             'js'=>array('jstorage.js'),
                             'depends'=>array('jquery'),
                         ),
-                        'function'=>array(
-                            'basePath'=>'webroot.js.function',
-                            'js'=>array('function.js'),
+                        'function' => array(
+                            'basePath' => 'webroot.js.function',
+                            'js' => array('function.js'),
                         ),
                         'cart'=>array(
                             'basePath'=>'webroot.js.cart',

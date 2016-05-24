@@ -1,7 +1,7 @@
 <?php
     $this->widget('application.widgets.AlertWidget');
 
-    if (Yii::app()->user->hasFlash('alert-swal'))
+    if (!Yii::app()->user->isGuest && Yii::app()->user->hasFlash('alert-swal'))
     {
         $cs=Yii::app()->getClientScript();
         $message=Yii::app()->user->getFlash('alert-swal');
@@ -13,7 +13,7 @@
         $cs->registerPackage('sweet')->registerScript("alert_swal",$alert_swal);
     }
 
-    if (Yii::app()->user->hasFlash('error-swal'))
+    if (!Yii::app()->user->isGuest && Yii::app()->user->hasFlash('error-swal'))
     {
         $cs=Yii::app()->getClientScript();
         $message=Yii::app()->user->getFlash('error-swal');
@@ -24,7 +24,6 @@
             ';
         $cs->registerPackage('sweet')->registerScript("alert_swal",$alert_swal);
     }
-
 
 //    if (Yii::app()->user->hasFlash('storage')) //синхронизации карзины и любимых товаров
 //    {

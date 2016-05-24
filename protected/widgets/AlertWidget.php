@@ -19,7 +19,7 @@ class AlertWidget extends CWidget
     {
         foreach ($this->alerts as $alert)
         {
-            if (Yii::app()->{$this->componentId}->hasFlash($alert['type']))
+            if (is_object(Yii::app()->{$this->componentId}) && Yii::app()->{$this->componentId}->hasFlash($alert['type']))
             {
                 $this->$alert['render'](Yii::app()->{$this->componentId}->getFlash($alert['type']));
             }

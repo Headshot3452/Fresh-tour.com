@@ -9,7 +9,7 @@ $map_script='
 
             ymaps.ready(function(){
                 map = new ymaps.Map("'.$this->id.'", {
-                    center: '.$this->_data->getCenter().',
+                    center: ['.$this->_data->getCenter().'],
                     zoom: '.$this->_data->getZoom().',
                     type: "'.$this->_data->getType().'",
                     controls: ["fullscreenControl","geolocationControl","zoomControl","typeSelector"],

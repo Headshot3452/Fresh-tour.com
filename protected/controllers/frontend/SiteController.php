@@ -4,6 +4,14 @@ class SiteController extends FrontendController
     public function init()
     {
         parent::init();
+        if(isset(Yii::app()->request->cookies['sort_products']))
+        {
+            unset(Yii::app()->request->cookies['sort_products']);
+        }
+        if(isset(Yii::app()->request->cookies['count_item']))
+        {
+            unset(Yii::app()->request->cookies['count_item']);
+        }
     }
 
     public function actionIndex()

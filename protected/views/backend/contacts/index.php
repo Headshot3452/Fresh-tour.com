@@ -254,19 +254,19 @@ $cs->registerScript("products_sortable",$products_sortable);
 <?php
 $cs=Yii::app()->getClientScript();
 
-$checkbox="
-        $('label.checkbox-active').click(function(){
-        	if($(this).hasClass('active')){
-        		$(this).removeClass('active');
-        		$(this).next().attr('value',0);
-        	}
-        	else
-        	{
-        		$(this).addClass('active');
-        		$(this).next().attr('value',1);
-        	}
-        });
-    ";
+$checkbox = "
+    $('label.checkbox-active').click(function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            $(this).next().attr('value',0);
+        }
+        else
+        {
+            $(this).addClass('active');
+            $(this).next().attr('value',1);
+        }
+    });
+";
 
 
     $cs->registerPackage('jquery')->registerScript('sub_forms',$checkbox);
