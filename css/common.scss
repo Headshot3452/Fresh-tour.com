@@ -1005,33 +1005,45 @@ header, .hidden-top {
   font-family: $lB;
 }
 
-#description {
+#description, #left_panel {
   #recently {
     .hot_tours_item {
+      a {
+        & > img {
+          height: 168px;
+        }
+      }
       .stars {
         position: absolute;
-        top: 0px;
-        margin-top: 65px;
-        margin-left: 12px;
+        top: 72px;
+        margin-top: 5px;
+        width: 100%;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 0;
         img {
-          width: auto;
+          width: 14px;
+          margin-right: 7px;
         }
       }
       h3 {
         margin-top: 40px;
         font-size: 13px;
+        line-height: 1.5;
       }
       h5 {
         position: absolute;
         top: 0;
-        left: 72px;
         color: #fff;
-        margin-top: 85px;
+        font-size: 12px;
+        margin-top: 95px;
+        width: 100%;
+        text-align: center;
         span {
           font-family: $lB;
         }
       }
-      .hot {
+      .hot, .popular {
         color: #fff;
       }
       .footer-container {
@@ -1039,15 +1051,15 @@ header, .hidden-top {
         padding-left: 5px;
         color: #fff;
         position: absolute;
-        top: 67%;
+        top: 75%;
         font-family: "Lato-Medium";
         span {
           margin: -14px 15px 0 0px;
-          background: url("/images/people.png") no-repeat 30px 2px;
+          background: url("/images/people.png") no-repeat 15px 2px;
           display: table-cell;
           width: 130px;
           font-size: 12px;
-          padding-left: 49px;
+          padding-left: 35px;
           text-align: left;
           background-size: 13px 12px;
         }
@@ -1071,6 +1083,19 @@ header, .hidden-top {
     .all_news_hot {
       margin-top: -15px;
       display: block;
+    }
+  }
+}
+
+#left_panel {
+  #recently {
+    .hot_tours_item {
+      margin-left: 0;
+      margin-right: 0;
+      h3 {
+        background-image: none;
+        margin-top: -15px;
+      }
     }
   }
 }
@@ -3059,7 +3084,7 @@ a.show_all {
       }
     }
   }
-  #description {
+  #description, #left_panel {
     .kyrorts {
       margin-bottom: 15px;
       color: #262626;
@@ -3129,7 +3154,7 @@ a.show_all {
       &.active, &:hover, &:focus {
         a {
           color: #2e97e8;
-          
+
         }
         span {
           color: #2e97e8;
@@ -3190,6 +3215,17 @@ a.show_all {
       img {
         width: 100%;
         margin-bottom: 10px;
+      }
+    }
+  }
+  #recently {
+    .hot_tours_item {
+      background-color: #000;
+      a {
+        & > img {
+          margin-bottom: 0;
+          opacity: 0.6;
+        }
       }
     }
   }

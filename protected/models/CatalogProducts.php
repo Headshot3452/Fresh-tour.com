@@ -658,4 +658,18 @@
             $par = CatalogProductsParams::model()->find('`params_id` = :id AND `product_id` = :product_id', array(':id' => Yii::app()->params['dlitelnost'], ':product_id' => $this->id));
             return CatalogParamsVal::model()->find('id = :id', array(':id' => $par['value_id']));
         }
+
+        public function getIsHot()
+        {
+            $par = CatalogProductsParams::model()->find('`params_id` = :id AND `product_id` = :product_id', array(':id' => Yii::app()->params['hot'], ':product_id' => $this->id));
+            $product = CatalogParamsVal::model()->find('id = :id', array(':id' => $par['value_id']));
+            return $product["value"] ? true : false;;
+        }
+
+        public function getIsPopular()
+        {
+            $par = CatalogProductsParams::model()->find('`params_id` = :id AND `product_id` = :product_id', array(':id' => Yii::app()->params['popular'], ':product_id' => $this->id));
+            $product = CatalogParamsVal::model()->find('id = :id', array(':id' => $par['value_id']));
+            return $product["value"] ? true : false;;
+        }
     }

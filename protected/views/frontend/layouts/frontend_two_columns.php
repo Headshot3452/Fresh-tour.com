@@ -33,7 +33,7 @@
 
 <div id="main-content">
 	<div class="container">
-		<div class="row">
+		<div class="row" id="left_panel">
 <?php
 			$recently =
 				'<div id="recently">
@@ -97,10 +97,10 @@
 			elseif(in_array(Yii::app()->params['pages']['visy'], array($this->page_id, $parent_id)) || $parent_id == Yii::app()->params['pages']['tours_and_vizy'])
 			{
 				$menu =
-						'<ul class="left-title">
-		                    <h2>Информация</h2>
-		                    [[w:MenuWidget|menu_id=27;menu_type=custom;]]
-		                </ul>';
+					'<ul class="left-title">
+	                    <h2>Информация</h2>
+	                    [[w:MenuWidget|menu_id=27;menu_type=custom;]]
+	                </ul>';
 
 				$result = $menu;
 
@@ -115,18 +115,96 @@
 			}
 			elseif(in_array(Yii::app()->params['pages']['strany-i-oteli'], array($this->page_id, $parent_id)))
 			{
-				$result = $news;
+				$session = Yii::app()->session;
+				$session->open();
+
+				$viewed = '';
+
+				if($session['viewed'])
+				{
+					ob_start();
+					echo
+					'<div id="recently">
+						<h2>Недавно просмотренные</h2>';
+
+						foreach($session['viewed'] as $val)
+						{
+							$value = CatalogProducts::model()->active()->findByPk($val);
+
+							$sale_array = unserialize($value->sale_info);
+							$link = $value->getUrlForItem(1);
+							$stars = $value->getStars();
+
+							$image = $value->getOneFile('original');
+
+							$sostav = $value->getSostav();
+
+							$dlitelnost = $value->getDlitelnost();
+
+							$hot = $value->getIsHot() ? '<span class = "hot">Горящий тур</span>' : '';
+							$popular = '';
+
+							if(!$hot)
+							{
+								$popular = $value->getIsPopular() ? '<span class = "popular">Популярное</span>' : '';
+							}
+
+							if(!$image)
+							{
+								$image = Yii::app()->params['noimage'];
+							}
+
+							$sale = $sale_array[0] ? '<span class = "sale">'.$sale_array[0].'%</span>' : '';
+
+							echo
+							'<div class="item img-cont hot_tours_item">
+								<a href="/'.$link.'">
+									<img src = "/'.$image.'" alt = "">
+									<h3>'.$value->title.'</h3>
+
+									<div class = "stars">';
+
+										for($i = 0; $i < 5; $i++)
+										{
+											if($i < $stars['value'])
+											{
+												echo '<img src = "/images/star_full.png" alt = "">';
+											}
+											else
+											{
+												echo '<img src = "/images/star.png" alt = "">';
+											}
+										}
+							echo
+									'</div>
+									<h5>От <span>'.Yii::app()->format->formatNumber($value->price).' руб.</span></h5>
+									'.$hot.$popular.'
+									'.$sale.'
+									<div class="footer-container">
+										<span>'.$sostav['value'].'</span>
+										<span>'.$dlitelnost['value'].'</span>
+									</div>
+								</a>
+							</div>';
+						}
+					echo
+					'</div>';
+
+					$viewed = ob_get_clean();
+				}
+
+				$result = $viewed . $news;
 			}
 
 			echo
-				'<div id="tyrs" class="vizy">
-                    <div class="col-xs-3 no-left">
-                        '.$result.'
-                    </div>
-                    <div class="col-xs-9 no-right">
-                        '.$content.'
-                    </div>
-                </div>';
+			'<div id="tyrs" class="vizy">
+                <div class="col-xs-3 no-left">
+                    '.$result.'
+                </div>
+                <div class="col-xs-9 no-right">
+                    '.$content.'
+                </div>
+            </div>';
 ?>
 		</div>
 	</div>

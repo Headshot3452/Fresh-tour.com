@@ -6,7 +6,9 @@
 
     if (isset($trees))
     {
-        echo '<div class="trees">';
+        echo
+        '<div class="trees">';
+
         if (isset($tree))
         {
             $url = $tree->findUrlForItem('name',false,$this->root_id) . $tree->name . '/';
@@ -16,12 +18,14 @@
             $image = Yii::app()->params['noimage'];
 
             $link=$this->createUrl('catalog/tree',array('url' => $url.$item->name));
-            echo '<div class="item">';
-                echo '<div class="image"><a href="'.$link.'"><img src="/'.$image.'" class="img-responsive"></a></div>';
-                echo '<div class="title text-center">'.CHtml::link($item->title,$link).'</div>';
-            echo '</div>';
+            echo
+            '<div class="item">
+                <div class="image"><a href="'.$link.'"><img src="/'.$image.'" class="img-responsive"></a></div>
+                <div class="title text-center">'.CHtml::link($item->title,$link).'</div>
+            </div>';
         }
-        echo '</div>';
+        echo
+        '</div>';
     }
 
     if (isset($dataProducts) && !empty($dataProducts))

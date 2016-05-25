@@ -107,35 +107,35 @@
 									$sale = $sale_array[0] ? '<span class = "sale">'.$sale_array[0].'%</span>' : '';
 
 									echo
-										'<div class="item img-cont hot_tours_item">
-											<a href="/'.$link.'">
-												<img src = "/'.$image.'" alt = "">
-												<h3>'.$value->title.'</h3>
+									'<div class="item img-cont hot_tours_item">
+										<a href="/'.$link.'">
+											<img src = "/'.$image.'" alt = "">
+											<h3>'.$value->title.'</h3>
 
-												<div class = "stars">';
+											<div class = "stars">';
 
-													for($i = 0; $i < 5; $i++)
+												for($i = 0; $i < 5; $i++)
+												{
+													if($i < $stars['value'])
 													{
-														if($i < $stars['value'])
-														{
-															echo '<img src = "/images/star_full.png" alt = "">';
-														}
-														else
-														{
-															echo '<img src = "/images/star.png" alt = "">';
-														}
+														echo '<img src = "/images/star_full.png" alt = "">';
 													}
+													else
+													{
+														echo '<img src = "/images/star.png" alt = "">';
+													}
+												}
 									echo
-												'</div>
-												<h5>От <span>'.Yii::app()->format->formatNumber($value->price).' руб.</span></h5>
-												<span class = "hot">Горящий тур</span>
-												'.$sale.'
-												<div class="footer-container">
-													<span>'.$sostav['value'].'</span>
-													<span>'.$dlitelnost['value'].'</span>
-												</div>
-											</a>
-										</div>';
+											'</div>
+											<h5>От <span>'.Yii::app()->format->formatNumber($value->price).' руб.</span></h5>
+											<span class = "hot">Горящий тур</span>
+											'.$sale.'
+											<div class="footer-container">
+												<span>'.$sostav['value'].'</span>
+												<span>'.$dlitelnost['value'].'</span>
+											</div>
+										</a>
+									</div>';
 								}
 							echo
 								'<a href = "/'. $this->getUrlById(Yii::app()->params['pages']['hot-tour']).'?country='.$tree->id .'" class="all_news all_news_hot">Все горщие туры '.$tree->padej.' </a>
