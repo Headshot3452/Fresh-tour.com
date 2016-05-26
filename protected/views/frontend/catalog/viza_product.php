@@ -55,8 +55,10 @@
 				<div class="price">
 <?php
 					preg_match_all("/([0-9]*)([0-9]{3})$/", $product->price, $price);
+
+					$little_price = (isset($price[1][0]) && $price[1][0] < 1000) ? $price[1][0] : 0;
 ?>
-					<span><?php isset($price[1][0]) ? Yii::app()->format->formatNumber($price[1][0]) : 0;?> </span> 000 руб
+					<span><?php (isset($price[1][0]) && $price[1][0] > 999) ? Yii::app()->format->formatNumber($price[1][0]) : $little_price ;?> </span> 000 руб
 				</div>
 
 				<h1><?php echo $product->title; ?><img class="flag-country" src = "/<?php echo isset($flag) ? $flag : '' ;?> " alt = ""></h1>
