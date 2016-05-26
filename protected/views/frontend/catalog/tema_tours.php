@@ -224,5 +224,15 @@
 			autoplay: true,
 			autoplaySpeed: 5000,
 		});
+
+		var tab = window.location.hash;
+		tab = tab.replace("#", "");
+
+		if(tab)
+		{
+			var link = "a[href=#"+tab+"]";
+			$("#temat-tyrs .nav-tabs").find(link).tab("show");
+		}
+
     ';
 	$cs->registerScript('slider_tem', $slider_tem,  CClientScript::POS_END);

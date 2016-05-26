@@ -119,6 +119,7 @@
 				$session->open();
 
 				$viewed = '';
+				$tema_tours = '';
 
 				if($session['viewed'])
 				{
@@ -127,73 +128,97 @@
 					'<div id="recently">
 						<h2>Недавно просмотренные</h2>';
 
-						foreach($session['viewed'] as $val)
+					foreach($session['viewed'] as $val)
+					{
+						$value = CatalogProducts::model()->active()->findByPk($val);
+
+						$sale_array = unserialize($value->sale_info);
+						$link = $value->getUrlForItem(1);
+						$stars = $value->getStars();
+
+						$image = $value->getOneFile('original');
+
+						$sostav = $value->getSostav();
+
+						$dlitelnost = $value->getDlitelnost();
+
+						$hot = $value->getIsHot() ? '<span class = "hot">Горящий тур</span>' : '';
+						$popular = '';
+
+						if(!$hot)
 						{
-							$value = CatalogProducts::model()->active()->findByPk($val);
+							$popular = $value->getIsPopular() ? '<span class = "popular">Популярное</span>' : '';
+						}
 
-							$sale_array = unserialize($value->sale_info);
-							$link = $value->getUrlForItem(1);
-							$stars = $value->getStars();
+						if(!$image)
+						{
+							$image = Yii::app()->params['noimage'];
+						}
 
-							$image = $value->getOneFile('original');
+						$sale = $sale_array[0] ? '<span class = "sale">' . $sale_array[0] . '%</span>' : '';
 
-							$sostav = $value->getSostav();
-
-							$dlitelnost = $value->getDlitelnost();
-
-							$hot = $value->getIsHot() ? '<span class = "hot">Горящий тур</span>' : '';
-							$popular = '';
-
-							if(!$hot)
-							{
-								$popular = $value->getIsPopular() ? '<span class = "popular">Популярное</span>' : '';
-							}
-
-							if(!$image)
-							{
-								$image = Yii::app()->params['noimage'];
-							}
-
-							$sale = $sale_array[0] ? '<span class = "sale">'.$sale_array[0].'%</span>' : '';
-
-							echo
-							'<div class="item img-cont hot_tours_item">
-								<a href="/'.$link.'">
-									<img src = "/'.$image.'" alt = "">
-									<h3>'.$value->title.'</h3>
+						echo
+								'<div class="item img-cont hot_tours_item">
+								<a href="/' . $link . '">
+									<img src = "/' . $image . '" alt = "">
+									<h3>' . $value->title . '</h3>
 
 									<div class = "stars">';
 
-										for($i = 0; $i < 5; $i++)
-										{
-											if($i < $stars['value'])
-											{
-												echo '<img src = "/images/star_full.png" alt = "">';
-											}
-											else
-											{
-												echo '<img src = "/images/star.png" alt = "">';
-											}
-										}
-							echo
-									'</div>
-									<h5>От <span>'.Yii::app()->format->formatNumber($value->price).' руб.</span></h5>
-									'.$hot.$popular.'
-									'.$sale.'
+						for($i = 0; $i < 5; $i++)
+						{
+							if($i < $stars['value'])
+							{
+								echo '<img src = "/images/star_full.png" alt = "">';
+							} else
+							{
+								echo '<img src = "/images/star.png" alt = "">';
+							}
+						}
+						echo
+								'</div>
+									<h5>От <span>' . Yii::app()->format->formatNumber($value->price) . ' руб.</span></h5>
+									' . $hot . $popular . '
+									' . $sale . '
 									<div class="footer-container">
-										<span>'.$sostav['value'].'</span>
-										<span>'.$dlitelnost['value'].'</span>
+										<span>' . $sostav['value'] . '</span>
+										<span>' . $dlitelnost['value'] . '</span>
 									</div>
 								</a>
 							</div>';
-						}
+					}
 					echo
 					'</div>';
 
 					$viewed = ob_get_clean();
 				}
 
-				$result = $viewed . $news;
+				$tema_categories = CatalogProducts::model()->active()->findAllByAttributes(array('parent_id' => Yii::app()->params['tema_catalog']));
+
+				if($tema_categories)
+				{
+					ob_start();
+
+					echo
+					'<div id="recently-tours">
+						<h2>Тематические туры</h2>';
+
+						foreach($tema_categories as $key => $value)
+						{
+							if($key > 5)
+							{
+								break;
+							}
+							echo '<a href = "/'.$this->getUrlById(Yii::app()->params['pages']['tema-tours']).'/#'.$value->name.'">' . $value->title . '</a>';
+						}
+					echo
+					'</div>
+					<div class="clearfix"></div>';
+
+					$tema_tours = ob_get_clean();
+				}
+
+				$result = $viewed . $tema_tours . $news;
 			}
 
 			echo

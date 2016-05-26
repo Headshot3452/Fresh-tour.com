@@ -214,6 +214,17 @@
                         $session = Yii::app()->session;
                         $session->open();
 
+                        $cookies = Yii::app()->getRequest()->getCookies();
+
+                        $cookie = $cookies->itemAt('PHPSESSID');
+
+                        if ($cookie != FALSE)
+                        {
+                            $cookie->expire = time() + 3600 * 24;
+
+                            $cookies->add('PHPSESSID', $cookie);
+                        }
+
                         $viewed = '';
 
                         if($session['viewed'])
