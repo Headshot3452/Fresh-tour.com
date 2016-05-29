@@ -3411,30 +3411,34 @@ a#add_user {
   background-color: #e4e4e4;
 }
 /* line 2596, backend_h.scss */
+#table-sotrudniki tbody tr a:hover {
+  text-decoration: none;
+}
+/* line 2601, backend_h.scss */
 #table-sotrudniki tbody td {
   border: none;
 }
-/* line 2598, backend_h.scss */
+/* line 2603, backend_h.scss */
 #table-sotrudniki tbody td .table-img {
   margin-right: 9px;
   float: left;
 }
-/* line 2601, backend_h.scss */
+/* line 2606, backend_h.scss */
 #table-sotrudniki tbody td .table-img img {
   width: 60px;
   height: 60px;
 }
-/* line 2608, backend_h.scss */
+/* line 2613, backend_h.scss */
 #table-sotrudniki .btn-small.btn-active {
   margin-left: 0;
 }
 
-/* line 2613, backend_h.scss */
+/* line 2618, backend_h.scss */
 .dropdown.navbar-top-links {
   width: 42px !important;
 }
 
-/* line 2617, backend_h.scss */
+/* line 2622, backend_h.scss */
 .status-drop {
   float: left;
   width: 45px;
@@ -3442,7 +3446,7 @@ a#add_user {
   background-position: 10% 60%;
 }
 
-/* line 2624, backend_h.scss */
+/* line 2629, backend_h.scss */
 .active-sotr {
   width: 45px;
   height: 30px;
@@ -3451,7 +3455,7 @@ a#add_user {
   margin-top: -9px;
 }
 
-/* line 2633, backend_h.scss */
+/* line 2638, backend_h.scss */
 .img-cont img {
   border: 1px solid #cfcfcf;
   background-color: #fff;
@@ -3460,41 +3464,41 @@ a#add_user {
   padding: 0;
 }
 
-/* line 2642, backend_h.scss */
+/* line 2647, backend_h.scss */
 .one_item.users {
   margin-left: 15px;
 }
-/* line 2645, backend_h.scss */
+/* line 2650, backend_h.scss */
 .one_item.users .img-cont img {
   padding: 6px 9px;
 }
-/* line 2649, backend_h.scss */
+/* line 2654, backend_h.scss */
 .one_item.users .form-group {
   position: relative;
   float: left;
   margin-top: -3px;
 }
-/* line 2653, backend_h.scss */
+/* line 2658, backend_h.scss */
 .one_item.users .form-group:nth-child(1), .one_item.users .form-group:nth-child(2) {
   width: 180px;
   margin-right: 23px;
 }
-/* line 2657, backend_h.scss */
+/* line 2662, backend_h.scss */
 .one_item.users .form-group:nth-child(3), .one_item.users .form-group:nth-child(4) {
   width: 100px;
 }
-/* line 2660, backend_h.scss */
+/* line 2665, backend_h.scss */
 .one_item.users .form-group:nth-child(3) {
   margin-right: 23px;
 }
-/* line 2663, backend_h.scss */
+/* line 2668, backend_h.scss */
 .one_item.users .form-group label {
   margin-top: -15px;
   position: absolute;
   font-size: 12px;
   color: #999999;
 }
-/* line 2669, backend_h.scss */
+/* line 2674, backend_h.scss */
 .one_item.users .form-group input, .one_item.users .form-group select {
   height: 31px;
   width: 100%;
@@ -3503,49 +3507,49 @@ a#add_user {
   border: 1px solid #dadada;
   padding-left: 5px;
 }
-/* line 2678, backend_h.scss */
+/* line 2683, backend_h.scss */
 .one_item.users .glyphicon-search {
   margin-top: -23px;
   margin-right: 7px;
   cursor: pointer;
 }
-/* line 2683, backend_h.scss */
+/* line 2688, backend_h.scss */
 .one_item.users .title {
   margin-right: 20px;
 }
 
-/* line 2690, backend_h.scss */
+/* line 2695, backend_h.scss */
 #profil_form .avatar .qq-upload-drop-area {
   width: 140px;
   height: 140px;
   border: 2px dashed #dadada;
 }
 
-/* line 2698, backend_h.scss */
+/* line 2703, backend_h.scss */
 .qq-uploader {
   width: 145px;
 }
-/* line 2699, backend_h.scss */
+/* line 2704, backend_h.scss */
 .qq-uploader .qq-upload-button {
   left: 27px;
 }
 
-/* line 2706, backend_h.scss */
+/* line 2711, backend_h.scss */
 #user_setting #load_from_disk {
   display: none;
   width: 90px;
   z-index: 1;
   margin-left: 25px;
 }
-/* line 2712, backend_h.scss */
+/* line 2717, backend_h.scss */
 #user_setting span.help-inline {
   position: static;
 }
-/* line 2715, backend_h.scss */
+/* line 2720, backend_h.scss */
 #user_setting #profile {
   padding-top: 20px;
 }
-/* line 2717, backend_h.scss */
+/* line 2722, backend_h.scss */
 #user_setting #profile .film {
   padding-top: 20px;
   position: absolute;
@@ -3556,24 +3560,24 @@ a#add_user {
   height: 140px;
   display: none;
 }
-/* line 2727, backend_h.scss */
+/* line 2732, backend_h.scss */
 #user_setting #profile .information {
   position: absolute;
   margin-top: 150px;
 }
-/* line 2730, backend_h.scss */
+/* line 2735, backend_h.scss */
 #user_setting #profile .information label.control-label {
   padding-left: 0;
   padding-top: 0;
   text-align: left;
   padding-right: 25px;
 }
-/* line 2738, backend_h.scss */
+/* line 2743, backend_h.scss */
 #user_setting #profile .avatar .photo-label {
   margin-left: -54px;
   padding-top: 0;
 }
-/* line 2742, backend_h.scss */
+/* line 2747, backend_h.scss */
 #user_setting #profile .avatar .avatar {
   width: 140px;
   height: 140px;
@@ -3581,31 +3585,31 @@ a#add_user {
   left: 155px;
   top: 20px;
 }
-/* line 2749, backend_h.scss */
+/* line 2754, backend_h.scss */
 #user_setting #profile .avatar .avatar:hover .film {
   display: block;
 }
-/* line 2751, backend_h.scss */
+/* line 2756, backend_h.scss */
 #user_setting #profile .avatar .avatar:hover .film #load_from_disk {
   display: block;
   z-index: 9999;
 }
-/* line 2758, backend_h.scss */
+/* line 2763, backend_h.scss */
 #user_setting #profile .avatar #FineUploader, #user_setting #profile .avatar .qq-uploader {
   top: 10px;
   width: 100%;
   height: 100%;
   position: absolute;
 }
-/* line 2764, backend_h.scss */
+/* line 2769, backend_h.scss */
 #user_setting #profile .avatar .qq-upload-list {
   display: none;
 }
-/* line 2767, backend_h.scss */
+/* line 2772, backend_h.scss */
 #user_setting #profile .avatar .qq-upload-drop-area {
   margin-left: 140px;
 }
-/* line 2770, backend_h.scss */
+/* line 2775, backend_h.scss */
 #user_setting #profile .avatar img#avatar {
   width: 140px;
   height: 140px;
@@ -3613,11 +3617,11 @@ a#add_user {
   overflow: hidden;
   z-index: 1000;
 }
-/* line 2776, backend_h.scss */
+/* line 2781, backend_h.scss */
 #user_setting #profile .avatar img#avatar:hover {
   opacity: 0.3;
 }
-/* line 2781, backend_h.scss */
+/* line 2786, backend_h.scss */
 #user_setting #profile .close-img {
   position: absolute;
   z-index: 10000;
@@ -3625,11 +3629,11 @@ a#add_user {
   left: 116px;
   cursor: pointer;
 }
-/* line 2788, backend_h.scss */
+/* line 2793, backend_h.scss */
 #user_setting #profile .photo-company {
   height: 140px;
 }
-/* line 2790, backend_h.scss */
+/* line 2795, backend_h.scss */
 #user_setting #profile .photo-company .film {
   position: absolute;
   top: 0;
@@ -3637,84 +3641,84 @@ a#add_user {
   width: 100%;
   height: 100%;
 }
-/* line 2796, backend_h.scss */
+/* line 2801, backend_h.scss */
 #user_setting #profile .photo-company .film p {
   text-align: center;
   width: 140px;
   margin-left: -14px;
 }
-/* line 2804, backend_h.scss */
+/* line 2809, backend_h.scss */
 #user_setting #profile .photo-company label, #user_setting #profile .information label {
   padding-right: 30px;
 }
 
-/* line 2811, backend_h.scss */
+/* line 2816, backend_h.scss */
 .sweet-alert .icon.success.animate .placeholder {
   top: 10px;
 }
 
-/* line 2816, backend_h.scss */
+/* line 2821, backend_h.scss */
 .sweet-alert .icon.error .line {
   top: 19px;
 }
 
-/* line 2821, backend_h.scss */
+/* line 2826, backend_h.scss */
 #orders-filter {
   position: absolute;
   width: 913px;
   top: -10px;
 }
 
-/* line 2828, backend_h.scss */
+/* line 2833, backend_h.scss */
 .top-filter #review-filter {
   position: absolute;
   width: 913px;
   top: 5px;
 }
-/* line 2833, backend_h.scss */
+/* line 2838, backend_h.scss */
 .top-filter #review-filter .period .from, .top-filter #review-filter .period .to {
   width: 90px;
 }
 
-/* line 2843, backend_h.scss */
+/* line 2848, backend_h.scss */
 .main-title-block.module-title .container #review-filter .buttons {
   width: 25%;
 }
-/* line 2845, backend_h.scss */
+/* line 2850, backend_h.scss */
 .main-title-block.module-title .container #review-filter .buttons .btn span {
   font-size: 14px;
 }
-/* line 2848, backend_h.scss */
+/* line 2853, backend_h.scss */
 .main-title-block.module-title .container #review-filter .buttons > * {
   height: 25px;
 }
-/* line 2851, backend_h.scss */
+/* line 2856, backend_h.scss */
 .main-title-block.module-title .container #review-filter .buttons a#reset {
   margin-right: 40px;
 }
 
-/* line 2859, backend_h.scss */
+/* line 2864, backend_h.scss */
 #catalog-tree-form-form .form-group.image-file, #catalog-products-product-form .form-group.image-file {
   margin-left: 0;
 }
-/* line 2862, backend_h.scss */
+/* line 2867, backend_h.scss */
 #catalog-tree-form-form .qq-upload-success, #catalog-products-product-form .qq-upload-success {
   display: none;
 }
-/* line 2865, backend_h.scss */
+/* line 2870, backend_h.scss */
 #catalog-tree-form-form .qq-uploader .qq-upload-button, #catalog-products-product-form .qq-uploader .qq-upload-button {
   left: 22px;
 }
-/* line 2868, backend_h.scss */
+/* line 2873, backend_h.scss */
 #catalog-tree-form-form .qq-upload-success, #catalog-products-product-form .qq-upload-success {
   display: none;
 }
-/* line 2871, backend_h.scss */
+/* line 2876, backend_h.scss */
 #catalog-tree-form-form li.image, #catalog-products-product-form li.image {
   position: relative;
   margin: 0 15px 15px;
 }
-/* line 2875, backend_h.scss */
+/* line 2880, backend_h.scss */
 #catalog-tree-form-form .fa-close, #catalog-products-product-form .fa-close {
   position: absolute;
   margin-left: -24px;
@@ -3723,28 +3727,28 @@ a#add_user {
   left: 100%;
 }
 
-/* line 2886, backend_h.scss */
+/* line 2891, backend_h.scss */
 .form-structure #structure-_form-form .form-group.image-file {
   margin-left: 0;
 }
-/* line 2889, backend_h.scss */
+/* line 2894, backend_h.scss */
 .form-structure #structure-_form-form .qq-upload-success {
   display: none;
 }
-/* line 2894, backend_h.scss */
+/* line 2899, backend_h.scss */
 .form-structure #structure-_form-form .qq-uploader .qq-upload-button {
   left: 22px;
 }
-/* line 2897, backend_h.scss */
+/* line 2902, backend_h.scss */
 .form-structure #structure-_form-form .qq-upload-success {
   display: none;
 }
-/* line 2900, backend_h.scss */
+/* line 2905, backend_h.scss */
 .form-structure #structure-_form-form li.image {
   position: relative;
   margin: 0 15px 15px;
 }
-/* line 2904, backend_h.scss */
+/* line 2909, backend_h.scss */
 .form-structure #structure-_form-form .fa-close {
   position: absolute;
   margin-left: -24px;
@@ -3752,7 +3756,7 @@ a#add_user {
   top: 0;
   left: 100%;
 }
-/* line 2913, backend_h.scss */
+/* line 2918, backend_h.scss */
 .form-structure .add-children.btn.btn-action.btn-add-menu:hover {
   background: linear-gradient(to top, #1849e4, #4265e4);
 }

@@ -169,10 +169,26 @@
     <div class = "container">
         <div id="slider-nav">
 <?php
+            $cookies = Yii::app()->getRequest()->getCookies();
+
+            $cookie = $cookies->itemAt('PHPSESSID');
+
+            if ($cookie != FALSE)
+            {
+                $cookie->expire = time() + 3600 * 24 * 7;
+
+                $cookies->add('PHPSESSID', $cookie);
+            }
+
             if(isset($categories))
             {
                 foreach($categories as $key =>$category)
                 {
+                    $products = CatalogProducts::model()->active()->findAll('parent_id = :id', array('id' => $category->id));
+                    if(!$products)
+                    {
+                        continue;
+                    }
                     $images = $category->getFiles();
                     $flag = next($images);
                     $gerb = next($images);
@@ -205,6 +221,7 @@
                                 $stars = $products[$i]->getStars();
 
                                 $sostav = $products[$i]->getSostav();
+                                $dlitelnost = $products[$i]->getDlitelnost();
 
                                 echo
                                     '<div class="items-inner">
@@ -231,7 +248,7 @@
                                                     <h3>От <span>'.Yii::app()->format->formatNumber($products[$i]['price']).' руб.</span></h3>
                                                     <div class="footer-container">
                                                         <span>'.$sostav['value'].'</span>
-                                                        <span>7 ночей с 7.09</span>
+                                                        <span>'.$dlitelnost['value'].'</span>
                                                         <a class="forward" href = "'.$products[$i]->getUrlForItem($this->getUrlById(Yii::app()->params['pages']['strany-i-oteli'])).'">Перейти</a>
                                                     </div>
                                                 </div>
@@ -255,6 +272,7 @@
                                 $stars = $products[$i + 1]->getStars();
 
                                 $sostav = $products[$i + 1]->getSostav();
+                                $dlitelnost = $products[$i + 1]->getDlitelnost();
 
                                 echo
                                             '<div class="small-container">
@@ -279,7 +297,7 @@
                                                         <h3>От <span>'.Yii::app()->format->formatNumber($products[$i + 1]['price']).' руб.</span></h3>
                                                         <div class="footer-container">
                                                             <span>'.$sostav['value'].'</span>
-                                                            <span>7 ночей с 7.09</span>
+                                                            <span>'.$dlitelnost['value'].'</span>
                                                             <a class="forward" href = "'.$products[$i + 1]->getUrlForItem($this->getUrlById(Yii::app()->params['pages']['strany-i-oteli'])).'">Перейти</a>
                                                         </div>
                                                     </div>
@@ -304,6 +322,7 @@
                                 $stars = $products[$i + 2]->getStars();
 
                                 $sostav = $products[$i + 2]->getSostav();
+                                $dlitelnost = $products[$i + 2]->getDlitelnost();
 
                                 echo
                                                 '<div class="col-xs-6 no-right">
@@ -327,7 +346,7 @@
                                                         <h3>От <span>'.Yii::app()->format->formatNumber($products[$i + 2]['price']).' руб.</span></h3>
                                                         <div class="footer-container">
                                                             <span>'.$sostav['value'].'</span>
-                                                            <span>7 ночей с 7.09</span>
+                                                            <span>'.$dlitelnost['value'].'</span>
                                                             <a class="forward" href = "'.$products[$i + 2]->getUrlForItem($this->getUrlById(Yii::app()->params['pages']['strany-i-oteli'])).'">Перейти</a>
                                                         </div>
                                                     </div>
@@ -352,6 +371,7 @@
                                 $stars = $products[$i + 3]->getStars();
 
                                 $sostav = $products[$i + 3]->getSostav();
+                                $dlitelnost = $products[$i + 3]->getDlitelnost();
 
                                 echo
                                         '<div class="col-xs-6 no-right">
@@ -376,7 +396,7 @@
                                                     <h3>От <span>'.Yii::app()->format->formatNumber($products[$i + 3]['price']).' руб.</span></h3>
                                                     <div class="footer-container">
                                                         <span>'.$sostav['value'].'</span>
-                                                        <span>7 ночей с 7.09</span>
+                                                        <span>'.$dlitelnost['value'].'</span>
                                                         <a class="forward" href = "'.$products[$i + 3]->getUrlForItem($this->getUrlById(Yii::app()->params['pages']['strany-i-oteli'])).'">Перейти</a>
                                                     </div>
                                                 </div>
@@ -462,6 +482,9 @@
                                     $image = $v->getOneFile('big');
                                     $stars = $v->getStars();
 
+                                    $sostav = $v->getSostav();
+                                    $dlitelnost = $v->getDlitelnost();
+
                                     if($k == 0 || $k == 3)
                                     {
                                         echo '<div class="col-xs-6 no-all">';
@@ -488,8 +511,8 @@
                                                 '</div>
                                                 <h5>От <span>'.Yii::app()->format->formatNumber($v->price).' руб.</span></h5>
                                                 <div class="footer-container">
-                                                    <span>2 человека</span>
-                                                    <span>7 ночей с 7.09</span>
+                                                    <span>'.$sostav->value.'</span>
+                                                    <span>'.$dlitelnost->value.'</span>
                                                 </div>
                                             </div>
                                         </div>';

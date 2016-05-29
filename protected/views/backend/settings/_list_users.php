@@ -11,27 +11,31 @@
 
         <tr>
             <td class="table-bold left">
-                <div class="one_item" id="<?php echo $data->id; ?>"
-                <div class="col-xs-1">
-                    <div class="status <?php echo ($data->status == 1) ? 'active' : 'not_active'; ?>">
-                        <?php echo BsHtml::checkBox('checkbox[' . $data->id . ']', false, array('class' => 'checkbox group')); ?>
-                        <?php echo BsHtml::label('', 'checkbox_' . $data->id, false, array('class' => 'checkbox')); ?>
+                <a href = "<?php echo $link ;?>">
+                    <div class="one_item" id="<?php echo $data->id; ?>"
+                    <div class="col-xs-1">
+                        <div class="status <?php echo ($data->status == 1) ? 'active' : 'not_active'; ?>">
+                            <?php echo BsHtml::checkBox('checkbox[' . $data->id . ']', false, array('class' => 'checkbox group')); ?>
+                            <?php echo BsHtml::label('', 'checkbox_' . $data->id, false, array('class' => 'checkbox')); ?>
+                        </div>
                     </div>
-                </div>
-                </div>
+                    </div>
+                </a>
             </td>
             <td>
-                <div class="table-img"><img src="/<?php echo $image ;?>"/></div>
-                <div class="number-user"># <?php echo $data->id ;?></div>
-                <div class="user">
-                    <img src="/images/icon-admin/little_user_company.png"/><?php echo $data->user_info->getFullName() ;?>
-                </div>
-                <div class="mail">
-                    <img src="/images/icon-admin/little_message_company.png"/><?php echo $data->email ;?>
-                </div>
-                <div class="phone">
-                    <img src="/images/icon-admin/little_phone.png"/><?php echo $data->user_info->phone ;?>
-                </div>
+                <a href = "<?php echo $link ;?>">
+                    <div class="table-img"><img src="/<?php echo $image ;?>"/></div>
+                    <div class="number-user"># <?php echo $data->id ;?></div>
+                    <div class="user">
+                        <img src="/images/icon-admin/little_user_company.png"/><?php echo $data->user_info->getFullName() ;?>
+                    </div>
+                    <div class="mail">
+                        <img src="/images/icon-admin/little_message_company.png"/><?php echo $data->email ;?>
+                    </div>
+                    <div class="phone">
+                        <img src="/images/icon-admin/little_phone.png"/><?php echo $data->user_info->phone ;?>
+                    </div>
+                </a>
             </td>
             <td>
                 <div
@@ -54,18 +58,3 @@
 <?php
     }
 ?>
-
-<script>
-
-    $(function()
-    {
-        $('tbody tr td').on('click', function(e)
-        {
-            if(!$(this).hasClass('table-bold'))
-            {
-                location.href='<?php echo $link ;?>';
-            }
-        });
-    });
-
-</script>

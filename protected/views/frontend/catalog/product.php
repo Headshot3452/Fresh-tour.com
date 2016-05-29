@@ -220,7 +220,7 @@
 
                         if ($cookie != FALSE)
                         {
-                            $cookie->expire = time() + 3600 * 24;
+                            $cookie->expire = time() + 3600 * 24 * 7;
 
                             $cookies->add('PHPSESSID', $cookie);
                         }

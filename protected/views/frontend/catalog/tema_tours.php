@@ -102,6 +102,9 @@
 											foreach($tem_slider_array as $k => $v)
 											{
 												$stars = $v->getStars();
+												$dlitelnost = $v->getDlitelnost();
+												$sostav = $v->getSostav();
+
 												$end = false;
 
 												$image = $v->getOneFile('big');
@@ -119,7 +122,7 @@
 													{
 														$img = $parent->getOneFile('small');
 
-														if($num > 0)
+														if($num > 0 && $num < 4)
 														{
 															echo $tem_slider . '</div>';
 															$tem_slider = '';
@@ -134,43 +137,54 @@
 															</div>';
 
 														$num++;
-														$tem_slider = '<div class="tem-slide-' . $num . '">';
-														$end = false;
+
+														if($num < 4)
+														{
+															$tem_slider = '<div class="tem-slide-' . $num . '">';
+															$end = false;
+														}
 													}
 												}
 
-												$tem_slider .=
-													'<div>
-														<img class="small" src = "/' . $image . '">
-														<div class="small-caption caption">
-															<h2>' . $v->title . '</h2>
-															<div class="stars">';
-																for($i = 0; $i < 5; $i++)
-																{
-																	if($i < $stars['value'])
-																	{
-																		$tem_slider .= '<img src = "/images/star_full.png">';
-																	}
-																	else
-																	{
-																		$tem_slider .= '<img src = "/images/star.png">';
-																	}
-																}
-												$tem_slider .=
-															'</div>
-															<h3>От <span>' . Yii::app()->format->formatNumber($v->price) . ' руб.</span></h3>
-															<div class="footer-container">
-																<span>2 человека</span>
-																<span>7 ночей с 7.09</span>
-																<a class="forward" href = "/' . $this->getUrlById(Yii::app()->params['pages']['strany-i-oteli']) . '/' . $parent->name . '/' . $v->name . '">Перейти</a>
-															</div>
-														</div>
-													</div>';
+												if($num < 4)
+												{
+													$tem_slider .=
+															'<div>
+																<img class="small" src = "/' . $image . '">
+																<div class="small-caption caption">
+																	<h2>' . $v->title . '</h2>
+																	<div class="stars">';
+																		for($i = 0; $i < 5; $i++)
+																		{
+																			if($i < $stars['value'])
+																			{
+																				$tem_slider .= '<img src = "/images/star_full.png">';
+																			}
+																			else
+																			{
+																				$tem_slider .= '<img src = "/images/star.png">';
+																			}
+																		}
+													$tem_slider .=
+																	'</div>
+																	<h3>От <span>' . Yii::app()->format->formatNumber($v->price) . ' руб.</span></h3>
+																	<div class="footer-container">
+																		<span>'.$sostav['value'].'</span>
+																		<span>'.$dlitelnost['value'].'</span>
+																		<a class="forward" href = "/' . $this->getUrlById(Yii::app()->params['pages']['strany-i-oteli']) . '/' . $parent->name . '/' . $v->name . '">Перейти</a>
+																	</div>
+																</div>
+															</div>';
+												}
+
 											}
 											if(isset($end) && !$end)
 											{
-												echo $tem_slider.'</div>';
-												$end = true;
+												if($num < 4)
+												{
+													echo $tem_slider.'</div>';
+													$end = true;
+												}
 											}
 										}
 								echo
@@ -189,41 +203,23 @@
 <?php
 	$cs = Yii::app()->getClientScript();
 	$slider_tem = '
-		$(".tem-slide-1").slick(
-		{
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			dots: true,
-			infinite: true,
-			speed: 500,
-			arrows: false,
-			autoplay: true,
-			autoplaySpeed: 5000,
-		});
 
-		$(".tem-slide-2").slick(
+		for(i = 1; i <= 10; i++)
 		{
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			dots: true,
-			infinite: true,
-			speed: 500,
-			arrows: false,
-			autoplay: true,
-			autoplaySpeed: 5000,
-		});
+			el = ".tem-slide-"+i;
 
-		$(".tem-slide-3").slick(
-		{
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			dots: true,
-			infinite: true,
-			speed: 500,
-			arrows: false,
-			autoplay: true,
-			autoplaySpeed: 5000,
-		});
+			$(el).slick(
+			{
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				dots: true,
+				infinite: true,
+				speed: 500,
+				arrows: false,
+				autoplay: true,
+				autoplaySpeed: 5000,
+			});
+		}
 
 		var tab = window.location.hash;
 		tab = tab.replace("#", "");

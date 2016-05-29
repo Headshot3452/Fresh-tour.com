@@ -429,8 +429,18 @@
 
 			$("#tours-form .all_news").on("click", function()
 			{
-				$("#CountryForm_tema_tours").css({"height": "auto"});
-				$(this).hide();
+				cont = $("#CountryForm_tema_tours");
+
+				if(cont.height() == 125)
+				{
+					$("#CountryForm_tema_tours").css({"height": "auto"});
+					$(this).text("Скрыть");
+				}
+				else
+				{
+					$("#CountryForm_tema_tours").css({"height": "125px"});
+					$(this).text("Показать еще");
+				}
 				return false;
 			});
 

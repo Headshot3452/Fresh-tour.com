@@ -2592,6 +2592,11 @@ a#add_user {
       &:hover {
         background-color: #e4e4e4;
       }
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
     td {
       border: none;

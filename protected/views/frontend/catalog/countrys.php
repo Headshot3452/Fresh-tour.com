@@ -16,11 +16,10 @@
 						echo
 						'<div class="item col-xs-4">
 							<img src = "/'.$image.'" alt = "">
-							<h2>'.$value->title.'</h2>
+							<h2 onclick=\'location.href="'.$value->name.'" \'>'.$value->title.'</h2>
 							<a href = "'.$value->name.'" class="kolichestvo">'.$count.' '.Yii::t('app', 'Tours', array($count)).' </a>
 						</div>';
 					}
-
 		echo
 				'</div>
 			</div>

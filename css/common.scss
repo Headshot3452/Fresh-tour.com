@@ -1669,12 +1669,13 @@ header, .hidden-top {
     .stars {
       height: 19px;
       text-align: center;
-      width: 164px;
+      width: 130px;
       display: inline-block;
       img {
         display: inline-block;
         margin: 0 3px;
         width: 20px;
+        opacity: 1;
         float: left;
       }
     }
@@ -1715,6 +1716,15 @@ header, .hidden-top {
     }
     .med-container {
       position: relative;
+      background-color: #000000;
+      .stars {
+        img {
+          opacity: 1;
+        }
+      }
+      img {
+        opacity: .6;
+      }
       .med-caption {
         .forward {
           position: absolute;
@@ -1730,6 +1740,7 @@ header, .hidden-top {
       width: 100%;
       text-align: center;
       z-index: 999;
+      padding-right: 15px;
       h2 {
         font-family: $lb;
         color: #fff;
@@ -1738,8 +1749,8 @@ header, .hidden-top {
       h3 {
         color: #fff;
         line-height: 10px;
-        text-align: left;
-        padding-left: 187px;
+        text-align: center;
+        //padding-left: 187px;
         span {
           font-family: $lh;
         }
@@ -1774,27 +1785,45 @@ header, .hidden-top {
     }
     .small-container {
       display: table;
+      padding-right: 15px;
+      .col-xs-6 {
+        background-color: #000000;
+        background-clip: content-box;
+        img {
+          opacity: .6;
+          margin-bottom: 0;
+        }
+      }
       .stars {
-        width: 150px;
+        width: 130px;
         margin-top: 5px;
+        padding-right: 0;
+        img {
+          opacity: 1;
+        }
       }
       h2 {
         font-size: 18px;
-        height: 96px;
-        padding: 42px 65px 0 50px;
-        display: table-cell;
+        height: 60px;
+        padding-top: 42px;
+        display: flex;
+        flex-direction: column-reverse;
         vertical-align: bottom;
+        padding-right: 15px;
+        padding-left: 15px;
         margin-bottom: 0;
         line-height: 25px;
+        margin-top: 25px;
       }
       h3 {
         margin-top: 10px;
         font-size: 14px;
-        padding-left: 72px;
+        width: 100%;
       }
       .footer-container {
         top: 55%;
-        padding-left: 5px;
+        padding-right: 15px;
+        width: 100%;
         span:nth-child(1) {
           margin: -14px 15px 0 0px;
           background: url("/images/people.png") no-repeat 9px 2px;
@@ -1812,6 +1841,9 @@ header, .hidden-top {
         }
         .forward {
           margin-left: 15px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
           margin-top: 7px;
         }
       }
@@ -1891,7 +1923,9 @@ header, .hidden-top {
     &.tema-page {
       margin-top: 10px;
       background-color: transparent;
-      .tem-slide-1, .tem-slide-2, .tem-slide-3 {
+      .tem-slide-1, .tem-slide-2, .tem-slide-3, .tem-slide-4,
+      .tem-slide-5, .tem-slide-6, .tem-slide-7, .tem-slide-8,
+      .tem-slide-9, .tem-slide-10 {
         h3 {
           color: #fff;
           display: block;
@@ -2074,7 +2108,9 @@ header, .hidden-top {
     padding-bottom: 20px;
     margin-bottom: 18px;
   }
-  .tem-slide-1, .tem-slide-2, .tem-slide-3 {
+  .tem-slide-1, .tem-slide-2, .tem-slide-3, .tem-slide-4,
+  .tem-slide-5, .tem-slide-6, .tem-slide-7, .tem-slide-8,
+  .tem-slide-9, .tem-slide-10 {
     margin-bottom: 60px;
     margin-left: -15px;
     margin-right: -15px;
@@ -2099,12 +2135,14 @@ header, .hidden-top {
       font-size: 18px;
       color: #fff;
       font-family: $lb;
-      display: table-cell;
+      display: flex;
+      flex-direction: column-reverse;
       vertical-align: bottom;
       margin-bottom: 0;
       line-height: 25px;
       height: 96px;
       padding: 0 45px;
+
     }
     .small-caption {
       h3 {
@@ -2132,6 +2170,8 @@ header, .hidden-top {
       height: 270px;
       margin-right: 15px;
       margin-left: 15px;
+      background-color: #000;
+      background-origin: content-box;
       img.small {
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -2206,18 +2246,30 @@ header, .hidden-top {
     }
     .tab-content {
       height: auto;
+      .list-tour {
+        img {
+          opacity: 1;
+        }
+      }
     }
   }
   .tab-content {
     height: 631px;
     overflow: hidden;
+    .stars {
+      img {
+        opacity: 1;
+      }
+    }
     img {
       width: 100%;
+      opacity: .6;
       height: 211px;
       object-fit: cover;
     }
     .item {
       position: relative;
+      background-color: #000;
     }
   }
   h2 {
@@ -2255,6 +2307,10 @@ header, .hidden-top {
     width: 100%;
     position: absolute;
     top: 0;
+    & > h3 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
     .stars {
       width: 100%;
       text-align: center;
@@ -2262,7 +2318,7 @@ header, .hidden-top {
       display: inline-block;
       margin: 0 3px;
       float: left;
-      margin-top: 10px;
+      margin-top: 5px;
       img {
         width: 20px;
         height: 19px;
@@ -2782,7 +2838,7 @@ a.show_all {
     float: left;
     span {
       padding-left: 50px;
-      background: url("/images/arrow-slider-bold.png") no-repeat 10px center;
+      background: url("/images/arrow-slider-bold.png") no-repeat 10px 11px;
       position: absolute;
       left: 100%;
       width: 500px;
@@ -2899,8 +2955,8 @@ a.show_all {
     .email {
       font-size: 24px;
       padding-top: 140px;
-      padding-left: 75px;
-      padding-right: 75px;
+      padding-left: 60px;
+      padding-right: 60px;
       background: url("/images/contakts-letter-white.png") no-repeat 50% 50%;
     }
     .phones {
@@ -3036,6 +3092,7 @@ a.show_all {
             img {
               height: 100%;
               object-fit: cover;
+              width: 100%;
             }
           }
           .slick-track {
@@ -3053,16 +3110,16 @@ a.show_all {
           width: 100%;
         }
         #small {
-          height: 75px;
           margin-left: -2px;
           margin-right: -2px;
           a {
             height: 100%;
             margin: 4px 2px;
             width: calc(20% - 20.5px);
-
             img {
               height: 100%;
+              height: 75px;
+              width: 100%;
               object-fit: cover;
             }
           }
@@ -3369,6 +3426,7 @@ a.show_all {
       margin-right: -16px;
     }
     h2 {
+      cursor: pointer;
       top: 70px;
     }
     a.kolichestvo {
