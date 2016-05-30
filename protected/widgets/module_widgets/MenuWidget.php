@@ -7,8 +7,7 @@
         public $menu_type = 'navbar'; // menu/navbar/tree
         public $dropdown = true; //делать подменю выпадающимим списками
 
-        protected  $_items=array();
-
+        protected  $_items = array();
 
         public function setData()
         {

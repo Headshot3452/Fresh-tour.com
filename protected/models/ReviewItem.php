@@ -46,25 +46,19 @@
         public function rules()
         {
             return array(
-                array('text', 'required'),
+                array('text, fullname, email', 'required'),
                 array('text', 'required', 'on' => 'moderate'),
-                array('verifyCode', 'required', 'on' => 'insert', 'message'=>Yii::t('app','Captcha')),
-                array('status, rating', 'numerical', 'integerOnly' => true),
                 array('theme', 'themevalidate', 'on' => 'insert,update'),
                 array('phone', 'phonevalidate', 'on' => 'insert,update'),
                 array('email', 'emailvalidate', 'on' => 'insert,update'),
-                array('rating', 'ratingvalidate', 'on' => 'insert,update'),
-                array('fullname', 'fullnamevalidate', 'on' => 'insert,update'),
+                array('fullname', 'fullnamevalidate', 'on' => 'insert, update'),
                 array('note', 'safe', 'on' => 'moderate, update'),
                 array('parent_id, user_id, language_id, create_time', 'length', 'max' => 11),
                 array('phone', 'length', 'max' => 20),
                 array('text', 'length', 'min' => 20),
-                array('rating', 'in', 'range' => array(0, 1, 2, 3, 4, 5)),
                 array('fullname', 'length', 'max' => 255),
+                array('header', 'length', 'max' => 60),
                 array('email', 'email'),
-                array('verifyCode', 'captcha', 'allowEmpty' => !CCaptcha::checkRequirements(), 'on' => 'insert'),
-                // The following rule is used by search().
-                // @todo Please remove those attributes that should not be searched.
                 array('id, parent_id, user_id, language_id, create_time, status, rating, text, note, fullname', 'safe', 'on' => 'search'),
             );
         }
@@ -154,7 +148,8 @@
                 'note' => Yii::t('app', 'Note'),
                 'phone' => Yii::t('app', 'Phone'),
                 'email' => Yii::t('app', 'E-mail'),
-                'fullname' => Yii::t('app', 'Fullname'),
+                'fullname' => Yii::t('app', 'Your name'),
+                'header' => 'Заголовок',
             );
         }
 
@@ -284,12 +279,13 @@
             return $key === null ? $array : self::getArrayItem($array, $key);
         }
 
-        public function getReviewProvider($pagesize = 15, $date_from = '', $date_to = '', $status = null, $theme = null, $sort = 't.id', $order = 'DESC')
+        public function getReviewProvider($pagesize = 4, $date_from = '', $date_to = '', $status = null, $theme = null, $sort = 't.id', $order = 'DESC')
         {
             $criteria = new CDbCriteria();
             $criteria->with = array('theme');
 
-            if ($status != self::STATUS_ARCHIVE and $status != self::STATUS_DELETED) {
+            if ($status != self::STATUS_ARCHIVE and $status != self::STATUS_DELETED)
+            {
                 $criteria->addCondition('t.status != :status0')->addCondition('t.status != :status1');
                 $params[':status0'] = self::STATUS_DELETED;
                 $params[':status1'] = self::STATUS_ARCHIVE;

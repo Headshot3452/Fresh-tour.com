@@ -1243,6 +1243,17 @@ header, .hidden-top {
 }
 
 #tyrs {
+  #reviews {
+    .item {
+      margin-left: 0;
+      margin-right: 0;
+      height: auto;
+      &:hover {
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+  }
   h1 {
     font-family: $ll;
     margin-top: 0;
@@ -3519,11 +3530,69 @@ a.show_all {
   }
 }
 
+.modalReview {
+  .modal-dialog {
+    margin-top: 24%;
+    .modal-content {
+      width: 436px;
+      height: 272px;
+      .modal-header {
+        color: #fff;
+        border-bottom: none;
+        margin-bottom: 15px;
+        text-align: center;
+        background: #07ce9d url("/images/modal_ok.png") no-repeat 35px 21px;
+        h4 {
+          font-size: 30px;
+          font-family: $ll;
+          line-height: 55px;
+          padding-left: 40px;
+        }
+      }
+      .modal-body {
+        text-align: center;
+        font-family: $ll;
+        font-size: 16px;
+        padding-left: 70px;
+        padding-right: 70px;
+        border-bottom: none;
+      }
+      .modal-footer {
+        text-align: center;
+        border: none;
+        button {
+          width: 102px;
+          height: 46px;
+          -webkit-border-radius: 23px;
+          -moz-border-radius: 23px;
+          border-radius: 23px;
+          background-color: #2e97e8;
+          background-image: none;
+          &:hover {
+            opacity: .8;
+          }
+        }
+      }
+    }
+  }
+}
+
 #reviews {
   &.about {
     #rewies-form {
       .form-group {
         margin-bottom: 18px;
+      }
+      button {
+        width: 191px;
+        height: 44px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        background-color: #2e97e8;
+        &:hover {
+          opacity: .8;
+        }
       }
     }
   }
@@ -3580,7 +3649,8 @@ a.show_all {
   .text {
     font-family: $ll;
     font-size: 14px;
-    max-height: 120px;
+    max-height: 118px;
+    //height: 119px;
     overflow: hidden;
   }
   .autor {
@@ -3685,6 +3755,10 @@ table#avia {
 }
 
 #zakaz-tyr, #rewies-form {
+  span.required {
+    float: none;
+    width: auto;
+  }
   &.poland {
     button {
       margin-top: 0;

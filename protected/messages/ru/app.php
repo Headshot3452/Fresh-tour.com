@@ -259,6 +259,13 @@
         'Difference' => 'Разница во времени',
         'The name in the nominative' => 'Название в падеже',
         'Country Near' => 'Страны рядом',
+        'Review text' => 'Текст отзыва',
+        'Not rated'                                     => 'Без оценки',
+        'Note'                                          => 'Примечание',
+        'Status moderate'                               => 'На модерации',
+        'Status placement'                              => 'Размещен',
+        'Status rejected'                               => 'Отклонен',
+        'Review'                                        => 'Отзывы',
 
         'Apartment' => 'Квартира / Офис:',
         'To complete the recover password' => 'Для завершения восстановления пароля',

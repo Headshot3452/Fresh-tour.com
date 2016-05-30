@@ -57,7 +57,7 @@
 
                 foreach ($menu_items as $item)
                 {
-                    if ($item->structure && $this->hasActive($item->structure->id,'structure'))
+                    if ($item->structure && $this->hasActive($item->structure->id, 'structure'))
                     {
                         $active = true;
                     }
@@ -262,7 +262,7 @@
             return $this->getHome()->id;
         }
 
-        public function findUrl($item,$type='structure')
+        public function findUrl($item, $type='structure')
         {
             if (!isset($this->url[$type][$item->id]))
             {
@@ -376,7 +376,7 @@
          * @param string $type модель
          */
 
-        public function addActiveId($id,$type='structure')
+        public function addActiveId($id, $type = 'structure')
         {
             $this->_active_ids[$type][$id]=true;
         }
@@ -388,7 +388,7 @@
          * @return bool
          */
 
-        public function hasActive($id,$type='structure')
+        public function hasActive($id, $type='structure')
         {
             if (isset($this->_active_ids[$type][$id]))
             {

@@ -1297,12 +1297,23 @@ header .translate, .hidden-top .translate {
   padding-bottom: 2px;
 }
 
-/* line 1246, common.scss */
+/* line 1247, common.scss */
+#tyrs #reviews .item {
+  margin-left: 0;
+  margin-right: 0;
+  height: auto;
+}
+/* line 1251, common.scss */
+#tyrs #reviews .item:hover {
+  background-color: transparent;
+  box-shadow: none;
+}
+/* line 1257, common.scss */
 #tyrs h1 {
   font-family: "Lato-Light";
   margin-top: 0;
 }
-/* line 1249, common.scss */
+/* line 1260, common.scss */
 #tyrs h1 span.change-country {
   color: #2e97e8;
   font-size: 18px;
@@ -1311,16 +1322,16 @@ header .translate, .hidden-top .translate {
   padding-right: 25px;
   background: url("/images/arrow-blue-down.png") no-repeat 100% 58%;
 }
-/* line 1259, common.scss */
+/* line 1270, common.scss */
 #tyrs.vizy ul.left-title {
   border-bottom: none;
   margin-bottom: 0;
 }
-/* line 1264, common.scss */
+/* line 1275, common.scss */
 #tyrs.vizy .item-link .col-xs-8 {
   border-right: 2px dotted #c2c2c2;
 }
-/* line 1268, common.scss */
+/* line 1279, common.scss */
 #tyrs.vizy .srok {
   display: block;
   max-height: 20px;
@@ -1331,7 +1342,7 @@ header .translate, .hidden-top .translate {
   background-image: url("/images/blue-calendar.png");
   background-repeat: no-repeat;
 }
-/* line 1278, common.scss */
+/* line 1289, common.scss */
 #tyrs.vizy .doc {
   font-size: 14px;
   padding-left: 30px;
@@ -1342,71 +1353,71 @@ header .translate, .hidden-top .translate {
   max-height: 87px;
   overflow: hidden;
 }
-/* line 1288, common.scss */
+/* line 1299, common.scss */
 #tyrs.vizy .price-cont {
   margin-top: 20px;
 }
-/* line 1291, common.scss */
+/* line 1302, common.scss */
 #tyrs.vizy .item {
   height: 168px;
 }
-/* line 1296, common.scss */
+/* line 1307, common.scss */
 #tyrs.vizy .item .img-cont img {
   height: 168px;
 }
-/* line 1301, common.scss */
+/* line 1312, common.scss */
 #tyrs.vizy .item .no-right .forward {
   font-size: 14px;
   margin-top: -50px;
   float: right;
   margin-right: 41px;
 }
-/* line 1308, common.scss */
+/* line 1319, common.scss */
 #tyrs.vizy .item h3 {
   padding-top: 50px;
   background: url("/images/vizy.png") no-repeat 65px 5px;
 }
-/* line 1314, common.scss */
+/* line 1325, common.scss */
 #tyrs .item {
   margin-left: 15px;
   margin-right: 15px;
   height: 198px;
 }
-/* line 1318, common.scss */
+/* line 1329, common.scss */
 #tyrs .item .no-left {
   width: 285px;
 }
-/* line 1321, common.scss */
+/* line 1332, common.scss */
 #tyrs .item:hover {
   background-color: #f2f2f2;
   box-shadow: 3px 2px 10px #e0e0e0;
 }
-/* line 1325, common.scss */
+/* line 1336, common.scss */
 #tyrs .item img {
   width: 100%;
 }
-/* line 1328, common.scss */
+/* line 1339, common.scss */
 #tyrs .item .img-cont > img {
   height: 198px;
 }
-/* line 1331, common.scss */
+/* line 1342, common.scss */
 #tyrs .item .col-xs-3 {
   width: 196px;
 }
-/* line 1334, common.scss */
+/* line 1345, common.scss */
 #tyrs .item .col-xs-8 {
   padding-top: 12px;
 }
-/* line 1336, common.scss */
+/* line 1347, common.scss */
 #tyrs .item .col-xs-8 .col-xs-3 {
   padding-top: 7px;
 }
-/* line 1341, common.scss */
+/* line 1352, common.scss */
 #tyrs hr {
   margin-top: 10px;
   margin-bottom: 15px;
 }
-/* line 1346, common.scss */
+/* line 1357, common.scss */
 #tyrs .no-right .stars {
   position: absolute;
   top: 0;
@@ -1417,7 +1428,7 @@ header .translate, .hidden-top .translate {
   width: 164px;
   display: inline-block;
 }
-/* line 1355, common.scss */
+/* line 1366, common.scss */
 #tyrs .no-right .stars img {
   display: inline-block;
   margin: 0 3px;
@@ -1425,27 +1436,27 @@ header .translate, .hidden-top .translate {
   float: left;
   opacity: 1;
 }
-/* line 1363, common.scss */
+/* line 1374, common.scss */
 #tyrs .no-right .item-link {
   display: block;
 }
-/* line 1365, common.scss */
+/* line 1376, common.scss */
 #tyrs .no-right .item-link span {
   color: #262626;
 }
-/* line 1367, common.scss */
+/* line 1378, common.scss */
 #tyrs .no-right .item-link span.hot, #tyrs .no-right .item-link span.popular {
   color: #fff;
 }
-/* line 1370, common.scss */
+/* line 1381, common.scss */
 #tyrs .no-right .item-link span.sale {
   color: #fb2020;
 }
-/* line 1374, common.scss */
+/* line 1385, common.scss */
 #tyrs .no-right .item-link:hover {
   text-decoration: none;
 }
-/* line 1378, common.scss */
+/* line 1389, common.scss */
 #tyrs .no-right #count {
   font-family: "Lato-Heavy";
   color: #a2a2a2;
@@ -1453,7 +1464,7 @@ header .translate, .hidden-top .translate {
   margin-top: 40px;
   font-size: 14px;
 }
-/* line 1384, common.scss */
+/* line 1395, common.scss */
 #tyrs .no-right #count a {
   font-family: "Lato-Heavy";
   color: #07ce9d;
@@ -1462,19 +1473,19 @@ header .translate, .hidden-top .translate {
   margin-left: 12px;
   background: url("/images/count.png") no-repeat 75% 58%;
 }
-/* line 1391, common.scss */
+/* line 1402, common.scss */
 #tyrs .no-right #count a:hover {
   text-decoration: none;
 }
-/* line 1396, common.scss */
+/* line 1407, common.scss */
 #tyrs .no-right #pagination-container {
   float: left;
 }
-/* line 1398, common.scss */
+/* line 1409, common.scss */
 #tyrs .no-right #pagination-container ul {
   margin-top: 40px;
 }
-/* line 1403, common.scss */
+/* line 1414, common.scss */
 #tyrs .no-right .bottom span {
   font-family: "Lato-Heavy";
   color: #b1b1b1;
@@ -1482,7 +1493,7 @@ header .translate, .hidden-top .translate {
   margin-right: 16px;
   margin-top: 12px;
 }
-/* line 1410, common.scss */
+/* line 1421, common.scss */
 #tyrs .no-right .bottom .forward {
   position: absolute;
   top: 0;
@@ -1490,37 +1501,37 @@ header .translate, .hidden-top .translate {
   margin-left: -180px;
   margin-top: 18px;
 }
-/* line 1418, common.scss */
+/* line 1429, common.scss */
 #tyrs .no-right .kyrort, #tyrs .no-right .vylet, #tyrs .no-right .people, #tyrs .no-right .supper, #tyrs .no-right .avia, #tyrs .no-right .calendar {
   padding-left: 23px;
   margin-bottom: 16px;
   display: block;
 }
-/* line 1423, common.scss */
+/* line 1434, common.scss */
 #tyrs .no-right .vylet {
   background: url("/images/loc-india.png") no-repeat;
   background-size: 15px 21px;
   height: 21px;
 }
-/* line 1428, common.scss */
+/* line 1439, common.scss */
 #tyrs .no-right .kyrort {
   background: url("/images/palms.png") no-repeat;
   background-size: 18px 18px;
   height: 18px;
 }
-/* line 1433, common.scss */
+/* line 1444, common.scss */
 #tyrs .no-right .people {
   background: url("/images/people-blue.png") no-repeat;
   background-size: 16px 14px;
   height: 14px;
 }
-/* line 1438, common.scss */
+/* line 1449, common.scss */
 #tyrs .no-right .supper {
   background: url("/images/supper.png") no-repeat;
   background-size: 10px 20px;
   height: 20px;
 }
-/* line 1443, common.scss */
+/* line 1454, common.scss */
 #tyrs .no-right .avia {
   background: url("/images/avia-blue.png") no-repeat;
   background-size: 23px 17px;
@@ -1528,7 +1539,7 @@ header .translate, .hidden-top .translate {
   margin-left: -9px;
   padding-left: 31px;
 }
-/* line 1450, common.scss */
+/* line 1461, common.scss */
 #tyrs .no-right .calendar {
   background: url("/images/calendar_blue.png") no-repeat;
   background-size: 16px 16px;
@@ -1536,78 +1547,78 @@ header .translate, .hidden-top .translate {
   margin-left: -5px;
   padding-left: 28px;
 }
-/* line 1457, common.scss */
+/* line 1468, common.scss */
 #tyrs .no-right .price-cont.col-xs-3 {
   font-family: "Lato-Light";
   font-size: 18px;
   color: #262626;
   padding-top: 0;
 }
-/* line 1462, common.scss */
+/* line 1473, common.scss */
 #tyrs .no-right .price-cont.col-xs-3 .price {
   font-family: "Lato-Bold";
   color: #2e97e8;
 }
-/* line 1466, common.scss */
+/* line 1477, common.scss */
 #tyrs .no-right .price-cont.col-xs-3 .old-price {
   font-family: "Lato-Semibold";
   font-size: 16px;
   color: #b1b1b1;
   text-decoration: line-through;
 }
-/* line 1471, common.scss */
+/* line 1482, common.scss */
 #tyrs .no-right .price-cont.col-xs-3 .old-price span {
   font-family: "Lato-Light";
 }
-/* line 1477, common.scss */
+/* line 1488, common.scss */
 #tyrs .no-right h1 i {
   color: #0ac19d;
   font-family: "Lato-Light";
   font-size: 18px;
   font-style: normal;
 }
-/* line 1484, common.scss */
+/* line 1495, common.scss */
 #tyrs .no-right .sort {
   margin-bottom: 16px;
   color: #262626;
   font-size: 16px;
 }
-/* line 1488, common.scss */
+/* line 1499, common.scss */
 #tyrs .no-right .sort a {
   font-family: "Lato-Bold";
   color: #262626;
   float: right;
   margin-left: 25px;
 }
-/* line 1493, common.scss */
+/* line 1504, common.scss */
 #tyrs .no-right .sort a:hover, #tyrs .no-right .sort a:focus {
   color: #2e97e8;
   text-decoration: none;
 }
-/* line 1497, common.scss */
+/* line 1508, common.scss */
 #tyrs .no-right .sort a span {
   margin-left: 15px;
   width: 13px;
   height: 8px;
 }
-/* line 1504, common.scss */
+/* line 1515, common.scss */
 #tyrs .no-right .sort a.price_desc span {
   background: url("/images/arrow-sort.png");
 }
-/* line 1508, common.scss */
+/* line 1519, common.scss */
 #tyrs .no-right .sort a.price_desc:hover span {
   background: url("/images/arrow-blue-down.png");
 }
-/* line 1514, common.scss */
+/* line 1525, common.scss */
 #tyrs .no-right .sort a.price_asc span {
   background: url("/images/arrow-sort.png");
   transform: rotate(180deg);
 }
-/* line 1519, common.scss */
+/* line 1530, common.scss */
 #tyrs .no-right .sort a.price_asc:hover span {
   background: url("/images/arrow-blue-down.png");
 }
-/* line 1528, common.scss */
+/* line 1539, common.scss */
 #tyrs #tours-form span {
   margin-left: -.6em;
   margin-top: 0;
@@ -1615,33 +1626,33 @@ header .translate, .hidden-top .translate {
   top: -.4em;
   border-radius: 7px;
 }
-/* line 1534, common.scss */
+/* line 1545, common.scss */
 #tyrs #tours-form span:focus {
   outline: none;
 }
-/* line 1538, common.scss */
+/* line 1549, common.scss */
 #tyrs #tours-form .find {
   color: #484848;
   font-family: "Lato-Regular";
   font-size: 18px;
 }
-/* line 1542, common.scss */
+/* line 1553, common.scss */
 #tyrs #tours-form .find i {
   font-style: normal;
   color: #07ce9d;
 }
-/* line 1547, common.scss */
+/* line 1558, common.scss */
 #tyrs #tours-form button {
   margin-top: 15px;
 }
-/* line 1550, common.scss */
+/* line 1561, common.scss */
 #tyrs #tours-form #slider-range {
   height: 4px;
   margin-right: 4px;
   margin-left: 4px;
   margin-bottom: 15px;
 }
-/* line 1556, common.scss */
+/* line 1567, common.scss */
 #tyrs #tours-form #amount {
   font-size: 14px;
   color: #262626;
@@ -1655,25 +1666,25 @@ header .translate, .hidden-top .translate {
   box-shadow: none;
   color: #1c87b9;
 }
-/* line 1568, common.scss */
+/* line 1579, common.scss */
 #tyrs #tours-form #amount span {
   color: #262626;
   font-family: "Lato-Regular";
 }
-/* line 1573, common.scss */
+/* line 1584, common.scss */
 #tyrs #tours-form .ui-widget-header, #tyrs #tours-form .ui-state-default {
   background: #1c87b9;
 }
-/* line 1576, common.scss */
+/* line 1587, common.scss */
 #tyrs #tours-form #date {
   margin-top: 5px;
   margin-bottom: 20px;
 }
-/* line 1580, common.scss */
+/* line 1591, common.scss */
 #tyrs #tours-form p {
   margin-bottom: 5px;
 }
-/* line 1584, common.scss */
+/* line 1595, common.scss */
 #tyrs #tours-form .checkboxes input + label {
   height: 21px;
   font-family: "Lato-Light";
@@ -1682,16 +1693,16 @@ header .translate, .hidden-top .translate {
   display: block;
   cursor: pointer;
 }
-/* line 1593, common.scss */
+/* line 1604, common.scss */
 #tyrs #tours-form label {
   font-size: 14px;
   width: 100%;
 }
-/* line 1596, common.scss */
+/* line 1607, common.scss */
 #tyrs #tours-form label.search {
   font-size: 16px;
 }
-/* line 1597, common.scss */
+/* line 1608, common.scss */
 #tyrs #tours-form label.search a {
   float: right;
   font-size: 14px;
@@ -1701,7 +1712,7 @@ header .translate, .hidden-top .translate {
   padding-right: 22px;
   background: url("/images/close.png") no-repeat 100% 55%;
 }
-/* line 1605, common.scss */
+/* line 1616, common.scss */
 #tyrs #tours-form label.search a:hover {
   color: #1c87b9;
   text-decoration: none;
@@ -1715,7 +1726,7 @@ header .translate, .hidden-top .translate {
 
 ==================================
 */
-/* line 1625, common.scss */
+/* line 1636, common.scss */
 .border {
   border-right: 2px dotted #c2c2c2;
   height: 180px;
@@ -1726,15 +1737,15 @@ header .translate, .hidden-top .translate {
   margin-top: 10px;
 }
 
-/* line 1635, common.scss */
+/* line 1646, common.scss */
 #slider-hotels {
   background-color: #f2f2f2;
 }
-/* line 1636, common.scss */
+/* line 1647, common.scss */
 #slider-hotels .container {
   padding: 0 50px;
 }
-/* line 1640, common.scss */
+/* line 1651, common.scss */
 #slider-hotels #slider-nav {
   font-family: "Lato-Heavy";
   font-size: 24px;
@@ -1742,22 +1753,22 @@ header .translate, .hidden-top .translate {
   cursor: pointer;
   margin-bottom: 0;
 }
-/* line 1646, common.scss */
+/* line 1657, common.scss */
 #slider-hotels #slider-nav .slick-slide {
   line-height: 102px;
   margin-left: 10px;
   margin-right: 10px;
 }
-/* line 1650, common.scss */
+/* line 1661, common.scss */
 #slider-hotels #slider-nav .slick-slide:hover, #slider-hotels #slider-nav .slick-slide.slick-current {
   color: #00b185;
   outline: none;
 }
-/* line 1653, common.scss */
+/* line 1664, common.scss */
 #slider-hotels #slider-nav .slick-slide:hover:focus, #slider-hotels #slider-nav .slick-slide.slick-current:focus {
   outline: none;
 }
-/* line 1657, common.scss */
+/* line 1668, common.scss */
 #slider-hotels #slider-nav .slick-slide img {
   float: left;
   margin-right: 10px;
@@ -1765,19 +1776,19 @@ header .translate, .hidden-top .translate {
   width: 29px;
   height: 75px;
 }
-/* line 1666, common.scss */
+/* line 1677, common.scss */
 #slider-hotels #slider-for {
   margin-left: -50px;
   margin-right: -50px;
 }
-/* line 1669, common.scss */
+/* line 1680, common.scss */
 #slider-hotels #slider-for .stars {
   height: 19px;
   text-align: center;
   width: 130px;
   display: inline-block;
 }
-/* line 1674, common.scss */
+/* line 1685, common.scss */
 #slider-hotels #slider-for .stars img {
   display: inline-block;
   margin: 0 3px;
@@ -1785,39 +1796,39 @@ header .translate, .hidden-top .translate {
   opacity: 1;
   float: left;
 }
-/* line 1682, common.scss */
+/* line 1693, common.scss */
 #slider-hotels #slider-for .slick-dots {
   list-style: none;
   z-index: 1;
   margin: 0 10px;
   bottom: -30px;
 }
-/* line 1687, common.scss */
+/* line 1698, common.scss */
 #slider-hotels #slider-for .slick-dots button {
   background: url("/images/alips_gray.png") no-repeat;
 }
-/* line 1689, common.scss */
+/* line 1700, common.scss */
 #slider-hotels #slider-for .slick-dots button:before {
   content: '';
 }
-/* line 1694, common.scss */
+/* line 1705, common.scss */
 #slider-hotels #slider-for .slick-dots .slick-active button {
   background: url("/images/alips_gray_full.png") no-repeat;
   content: '';
 }
-/* line 1700, common.scss */
+/* line 1711, common.scss */
 #slider-hotels #slider-for .med {
   height: 255px;
 }
-/* line 1703, common.scss */
+/* line 1714, common.scss */
 #slider-hotels #slider-for .small {
   height: 270px;
 }
-/* line 1706, common.scss */
+/* line 1717, common.scss */
 #slider-hotels #slider-for .big {
   height: 556px;
 }
-/* line 1709, common.scss */
+/* line 1720, common.scss */
 #slider-hotels #slider-for img {
   width: 100%;
   object-fit: cover;
@@ -1826,26 +1837,26 @@ header .translate, .hidden-top .translate {
   border-radius: 8px;
   margin-bottom: 30px;
 }
-/* line 1717, common.scss */
+/* line 1728, common.scss */
 #slider-hotels #slider-for .med-container {
   position: relative;
   background-color: #000000;
 }
-/* line 1721, common.scss */
+/* line 1732, common.scss */
 #slider-hotels #slider-for .med-container .stars img {
   opacity: 1;
 }
-/* line 1725, common.scss */
+/* line 1736, common.scss */
 #slider-hotels #slider-for .med-container img {
   opacity: .6;
 }
-/* line 1729, common.scss */
+/* line 1740, common.scss */
 #slider-hotels #slider-for .med-container .med-caption .forward {
   position: absolute;
   margin-left: 215px;
   margin-top: -32px;
 }
-/* line 1736, common.scss */
+/* line 1747, common.scss */
 #slider-hotels #slider-for .caption {
   position: absolute;
   top: 0;
@@ -1855,30 +1866,30 @@ header .translate, .hidden-top .translate {
   z-index: 999;
   padding-right: 15px;
 }
-/* line 1744, common.scss */
+/* line 1755, common.scss */
 #slider-hotels #slider-for .caption h2 {
   font-family: "Lato-Black";
   color: #fff;
   text-align: center;
 }
-/* line 1749, common.scss */
+/* line 1760, common.scss */
 #slider-hotels #slider-for .caption h3 {
   color: #fff;
   line-height: 10px;
   text-align: center;
 }
-/* line 1754, common.scss */
+/* line 1765, common.scss */
 #slider-hotels #slider-for .caption h3 span {
   font-family: "Lato-Heavy";
 }
-/* line 1758, common.scss */
+/* line 1769, common.scss */
 #slider-hotels #slider-for .caption .footer-container {
   color: #fff;
   position: absolute;
   top: 72%;
   font-family: "Lato-Medium";
 }
-/* line 1763, common.scss */
+/* line 1774, common.scss */
 #slider-hotels #slider-for .caption .footer-container span:nth-child(1) {
   margin: 0 40px;
   width: 249px;
@@ -1887,48 +1898,48 @@ header .translate, .hidden-top .translate {
   display: table-cell;
   text-align: left;
 }
-/* line 1771, common.scss */
+/* line 1782, common.scss */
 #slider-hotels #slider-for .caption .footer-container span:nth-child(2) {
   background: url("/images/calendar_small.png") no-repeat 2px 1px;
   margin: 0 20px;
   padding-left: 23px;
   display: table-cell;
 }
-/* line 1778, common.scss */
+/* line 1789, common.scss */
 #slider-hotels #slider-for .caption .forward {
   vertical-align: 7px;
   margin-left: 53px;
 }
-/* line 1783, common.scss */
+/* line 1794, common.scss */
 #slider-hotels #slider-for .med-container .caption {
   padding-top: 35px;
 }
-/* line 1786, common.scss */
+/* line 1797, common.scss */
 #slider-hotels #slider-for .small-container {
   display: table;
   padding-right: 15px;
 }
-/* line 1789, common.scss */
+/* line 1800, common.scss */
 #slider-hotels #slider-for .small-container .col-xs-6 {
   background-color: #000000;
   background-clip: content-box;
 }
-/* line 1792, common.scss */
+/* line 1803, common.scss */
 #slider-hotels #slider-for .small-container .col-xs-6 img {
   opacity: .6;
   margin-bottom: 0;
 }
-/* line 1797, common.scss */
+/* line 1808, common.scss */
 #slider-hotels #slider-for .small-container .stars {
   width: 130px;
   margin-top: 5px;
   padding-right: 0;
 }
-/* line 1801, common.scss */
+/* line 1812, common.scss */
 #slider-hotels #slider-for .small-container .stars img {
   opacity: 1;
 }
-/* line 1805, common.scss */
+/* line 1816, common.scss */
 #slider-hotels #slider-for .small-container h2 {
   font-size: 18px;
   height: 60px;
@@ -1942,19 +1953,19 @@ header .translate, .hidden-top .translate {
   line-height: 25px;
   margin-top: 25px;
 }
-/* line 1818, common.scss */
+/* line 1829, common.scss */
 #slider-hotels #slider-for .small-container h3 {
   margin-top: 10px;
   font-size: 14px;
   width: 100%;
 }
-/* line 1823, common.scss */
+/* line 1834, common.scss */
 #slider-hotels #slider-for .small-container .footer-container {
   top: 55%;
   padding-right: 15px;
   width: 100%;
 }
-/* line 1827, common.scss */
+/* line 1838, common.scss */
 #slider-hotels #slider-for .small-container .footer-container span:nth-child(1) {
   margin: -14px 15px 0 0px;
   background: url("/images/people.png") no-repeat 9px 2px;
@@ -1963,7 +1974,7 @@ header .translate, .hidden-top .translate {
   padding-left: 30px;
   text-align: left;
 }
-/* line 1835, common.scss */
+/* line 1846, common.scss */
 #slider-hotels #slider-for .small-container .footer-container span:nth-child(2) {
   display: table-cell;
   background: url("/images/calendar_small.png") no-repeat 2px 1px;
@@ -1971,7 +1982,7 @@ header .translate, .hidden-top .translate {
   margin: 0;
   padding-left: 23px;
 }
-/* line 1842, common.scss */
+/* line 1853, common.scss */
 #slider-hotels #slider-for .small-container .footer-container .forward {
   margin-left: 15px;
   display: block;
@@ -1979,54 +1990,54 @@ header .translate, .hidden-top .translate {
   margin-right: auto;
   margin-top: 7px;
 }
-/* line 1852, common.scss */
+/* line 1863, common.scss */
 #slider-hotels #slider-for .big-container .big-caption {
   padding-left: 90px;
   padding-right: 90px;
   padding-top: 175px;
 }
-/* line 1856, common.scss */
+/* line 1867, common.scss */
 #slider-hotels #slider-for .big-container .big-caption .forward {
   position: absolute;
   margin-left: 130px;
   margin-top: -30px;
 }
-/* line 1862, common.scss */
+/* line 1873, common.scss */
 #slider-hotels #slider-for .big-container .stars {
   width: 132px;
 }
-/* line 1865, common.scss */
+/* line 1876, common.scss */
 #slider-hotels #slider-for .big-container h3 {
   text-align: center;
   padding-left: 0;
 }
-/* line 1869, common.scss */
+/* line 1880, common.scss */
 #slider-hotels #slider-for .big-container .footer-container {
   width: 100%;
   left: -25px;
   top: 81%;
 }
-/* line 1876, common.scss */
+/* line 1887, common.scss */
 #slider-hotels .slick-prev, #slider-hotels .slick-next {
   height: 74px;
   width: 46px;
   border: 1px dashed transparent;
   background: #f2f2f2 url("/images/arrow_slider_hotel.png") no-repeat 15px 25px;
 }
-/* line 1881, common.scss */
+/* line 1892, common.scss */
 #slider-hotels .slick-prev:hover, #slider-hotels .slick-next:hover {
   border-color: transparent;
 }
-/* line 1884, common.scss */
+/* line 1895, common.scss */
 #slider-hotels .slick-prev:before, #slider-hotels .slick-next:before {
   content: '';
 }
-/* line 1888, common.scss */
+/* line 1899, common.scss */
 #slider-hotels .slick-next {
   right: -50px;
   z-index: 9000;
 }
-/* line 1893, common.scss */
+/* line 1904, common.scss */
 #slider-hotels .slick-prev {
   transform: rotate(180deg);
   top: 13%;
@@ -2040,27 +2051,27 @@ header .translate, .hidden-top .translate {
 
 ==================================
 */
-/* line 1908, common.scss */
+/* line 1919, common.scss */
 #temat-tyrs {
   padding-bottom: 0;
 }
-/* line 1911, common.scss */
+/* line 1922, common.scss */
 #temat-tyrs .tab-pane > .row {
   margin-left: -500px;
   margin-top: 620px;
   position: absolute;
 }
 
-/* line 1921, common.scss */
+/* line 1932, common.scss */
 #main-content #temat-tyrs {
   padding-bottom: 0;
 }
-/* line 1923, common.scss */
+/* line 1934, common.scss */
 #main-content #temat-tyrs.tema-page {
   margin-top: 10px;
   background-color: transparent;
 }
-/* line 1929, common.scss */
+/* line 1940, common.scss */
 #main-content #temat-tyrs.tema-page .tem-slide-1 h3, #main-content #temat-tyrs.tema-page .tem-slide-2 h3, #main-content #temat-tyrs.tema-page .tem-slide-3 h3, #main-content #temat-tyrs.tema-page .tem-slide-4 h3,
 #main-content #temat-tyrs.tema-page .tem-slide-5 h3, #main-content #temat-tyrs.tema-page .tem-slide-6 h3, #main-content #temat-tyrs.tema-page .tem-slide-7 h3, #main-content #temat-tyrs.tema-page .tem-slide-8 h3,
 #main-content #temat-tyrs.tema-page .tem-slide-9 h3, #main-content #temat-tyrs.tema-page .tem-slide-10 h3 {
@@ -2068,33 +2079,33 @@ header .translate, .hidden-top .translate {
   display: block;
   padding-top: 10px;
 }
-/* line 1935, common.scss */
+/* line 1946, common.scss */
 #main-content #temat-tyrs.tema-page .nav-tabs {
   border-bottom: none;
 }
-/* line 1938, common.scss */
+/* line 1949, common.scss */
 #main-content #temat-tyrs.tema-page #recently-tours {
   background-color: transparent;
   padding-left: 0;
   padding-right: 0;
 }
-/* line 1942, common.scss */
+/* line 1953, common.scss */
 #main-content #temat-tyrs.tema-page #recently-tours h2 {
   color: #454545;
   margin-top: 7px;
 }
-/* line 1946, common.scss */
+/* line 1957, common.scss */
 #main-content #temat-tyrs.tema-page #recently-tours a {
   font-size: 18px;
   font-family: "Lato-Thin";
   width: 100%;
 }
-/* line 1952, common.scss */
+/* line 1963, common.scss */
 #main-content #temat-tyrs.tema-page table {
   margin-top: 25px;
   width: 100%;
 }
-/* line 1956, common.scss */
+/* line 1967, common.scss */
 #main-content #temat-tyrs.tema-page table thead td {
   font-family: "Lato-Light";
   font-size: 18px;
@@ -2105,12 +2116,12 @@ header .translate, .hidden-top .translate {
   background-color: #f0f0f0;
   border: 1px solid #e5e5e5;
 }
-/* line 1967, common.scss */
+/* line 1978, common.scss */
 #main-content #temat-tyrs.tema-page table tbody {
   font-size: 18px;
   font-family: "Lato-Light";
 }
-/* line 1970, common.scss */
+/* line 1981, common.scss */
 #main-content #temat-tyrs.tema-page table tbody td {
   padding-left: 22px;
   padding-top: 20px;
@@ -2118,27 +2129,27 @@ header .translate, .hidden-top .translate {
   border: 1px solid #e5e5e5;
   padding-bottom: 20px;
 }
-/* line 1977, common.scss */
+/* line 1988, common.scss */
 #main-content #temat-tyrs.tema-page table tbody td:nth-child(1) {
   width: 300px;
   font-family: "Lato-Regular";
 }
-/* line 1981, common.scss */
+/* line 1992, common.scss */
 #main-content #temat-tyrs.tema-page table tbody td:nth-child(2) {
   width: 200px;
 }
-/* line 1988, common.scss */
+/* line 1999, common.scss */
 #main-content #temat-tyrs.tema-page .list-tour.col-xs-4 span {
   vertical-align: 5px;
 }
-/* line 1991, common.scss */
+/* line 2002, common.scss */
 #main-content #temat-tyrs.tema-page .list-tour.col-xs-4 a {
   position: absolute;
   width: 131px;
   left: 118px;
   top: 27px;
 }
-/* line 1998, common.scss */
+/* line 2009, common.scss */
 #main-content #temat-tyrs.tema-page .list-tour img {
   width: 71px;
   height: 71px;
@@ -2150,14 +2161,14 @@ header .translate, .hidden-top .translate {
   margin-right: 30px;
   margin-bottom: 25px;
 }
-/* line 2009, common.scss */
+/* line 2020, common.scss */
 #main-content #temat-tyrs.tema-page .list-tour span {
   color: #a2a2a2;
   font-size: 30px;
   font-family: "Lato-Black";
   vertical-align: -10px;
 }
-/* line 2015, common.scss */
+/* line 2026, common.scss */
 #main-content #temat-tyrs.tema-page .list-tour a {
   font-family: "Lato-Regular";
   color: #2e97e8;
@@ -2167,36 +2178,36 @@ header .translate, .hidden-top .translate {
   padding-right: 18px;
   background: url("/images/list-tour.png") no-repeat right 7px;
 }
-/* line 2025, common.scss */
+/* line 2036, common.scss */
 #main-content #temat-tyrs.tema-page h1 {
   font-family: "Lato-Light";
   color: #262626;
   margin-top: 0;
 }
-/* line 2030, common.scss */
+/* line 2041, common.scss */
 #main-content #temat-tyrs.tema-page h3 {
   padding: 5px 0;
   height: auto;
   font-family: "Lato-Bold";
   color: #515151;
 }
-/* line 2036, common.scss */
+/* line 2047, common.scss */
 #main-content #temat-tyrs.tema-page .nav-tabs {
   height: auto;
 }
-/* line 2038, common.scss */
+/* line 2049, common.scss */
 #main-content #temat-tyrs.tema-page .nav-tabs li {
   height: 80px;
 }
-/* line 2041, common.scss */
+/* line 2052, common.scss */
 #main-content #temat-tyrs.tema-page .nav-tabs li.active a {
   background-color: #2e97e8;
 }
-/* line 2044, common.scss */
+/* line 2055, common.scss */
 #main-content #temat-tyrs.tema-page .nav-tabs li.active span {
   display: block;
 }
-/* line 2048, common.scss */
+/* line 2059, common.scss */
 #main-content #temat-tyrs.tema-page .nav-tabs li span {
   height: 30px;
   background-image: url("/images/corner-blue.png");
@@ -2208,7 +2219,7 @@ header .translate, .hidden-top .translate {
   top: 0;
   left: 100%;
 }
-/* line 2059, common.scss */
+/* line 2070, common.scss */
 #main-content #temat-tyrs.tema-page .nav-tabs li a {
   border: none;
   margin-right: 0;
@@ -2218,21 +2229,21 @@ header .translate, .hidden-top .translate {
   vertical-align: middle;
   line-height: 80px;
 }
-/* line 2067, common.scss */
+/* line 2078, common.scss */
 #main-content #temat-tyrs.tema-page .nav-tabs li a:hover {
   background-color: #2e97e8;
 }
-/* line 2069, common.scss */
+/* line 2080, common.scss */
 #main-content #temat-tyrs.tema-page .nav-tabs li a:hover + span {
   display: block;
 }
-/* line 2073, common.scss */
+/* line 2084, common.scss */
 #main-content #temat-tyrs.tema-page .nav-tabs li a.double {
   line-height: 25px;
   padding-top: 13px;
 }
 
-/* line 2085, common.scss */
+/* line 2096, common.scss */
 #main-content ul.left-title {
   padding-left: 0;
   list-style: none;
@@ -2240,24 +2251,24 @@ header .translate, .hidden-top .translate {
   padding-bottom: 20px;
   margin-bottom: 18px;
 }
-/* line 2089, common.scss */
+/* line 2100, common.scss */
 #main-content ul.left-title li a {
   width: 100%;
   color: #262626;
   font-family: "Lato-Light";
   font-size: 18px;
 }
-/* line 2094, common.scss */
+/* line 2105, common.scss */
 #main-content ul.left-title li a:hover {
   color: #2e97e8;
   text-decoration: none;
 }
-/* line 2100, common.scss */
+/* line 2111, common.scss */
 #main-content ul.left-title li.active a {
   color: #2e97e8;
   text-decoration: none;
 }
-/* line 2111, common.scss */
+/* line 2122, common.scss */
 #main-content .tem-slide-1, #main-content .tem-slide-2, #main-content .tem-slide-3, #main-content .tem-slide-4,
 #main-content .tem-slide-5, #main-content .tem-slide-6, #main-content .tem-slide-7, #main-content .tem-slide-8,
 #main-content .tem-slide-9, #main-content .tem-slide-10 {
@@ -2265,38 +2276,38 @@ header .translate, .hidden-top .translate {
   margin-left: -15px;
   margin-right: -15px;
 }
-/* line 2117, common.scss */
+/* line 2128, common.scss */
 #main-content .tem-slide-1 .slick-dots, #main-content .tem-slide-2 .slick-dots, #main-content .tem-slide-3 .slick-dots, #main-content .tem-slide-4 .slick-dots,
 #main-content .tem-slide-5 .slick-dots, #main-content .tem-slide-6 .slick-dots, #main-content .tem-slide-7 .slick-dots, #main-content .tem-slide-8 .slick-dots,
 #main-content .tem-slide-9 .slick-dots, #main-content .tem-slide-10 .slick-dots {
   bottom: -58px;
 }
-/* line 2119, common.scss */
+/* line 2130, common.scss */
 #main-content .tem-slide-1 .slick-dots button, #main-content .tem-slide-2 .slick-dots button, #main-content .tem-slide-3 .slick-dots button, #main-content .tem-slide-4 .slick-dots button,
 #main-content .tem-slide-5 .slick-dots button, #main-content .tem-slide-6 .slick-dots button, #main-content .tem-slide-7 .slick-dots button, #main-content .tem-slide-8 .slick-dots button,
 #main-content .tem-slide-9 .slick-dots button, #main-content .tem-slide-10 .slick-dots button {
   background: url("/images/alips_gray.png") no-repeat;
 }
-/* line 2121, common.scss */
+/* line 2132, common.scss */
 #main-content .tem-slide-1 .slick-dots button:before, #main-content .tem-slide-2 .slick-dots button:before, #main-content .tem-slide-3 .slick-dots button:before, #main-content .tem-slide-4 .slick-dots button:before,
 #main-content .tem-slide-5 .slick-dots button:before, #main-content .tem-slide-6 .slick-dots button:before, #main-content .tem-slide-7 .slick-dots button:before, #main-content .tem-slide-8 .slick-dots button:before,
 #main-content .tem-slide-9 .slick-dots button:before, #main-content .tem-slide-10 .slick-dots button:before {
   content: '';
 }
-/* line 2125, common.scss */
+/* line 2136, common.scss */
 #main-content .tem-slide-1 .slick-dots .slick-active button, #main-content .tem-slide-2 .slick-dots .slick-active button, #main-content .tem-slide-3 .slick-dots .slick-active button, #main-content .tem-slide-4 .slick-dots .slick-active button,
 #main-content .tem-slide-5 .slick-dots .slick-active button, #main-content .tem-slide-6 .slick-dots .slick-active button, #main-content .tem-slide-7 .slick-dots .slick-active button, #main-content .tem-slide-8 .slick-dots .slick-active button,
 #main-content .tem-slide-9 .slick-dots .slick-active button, #main-content .tem-slide-10 .slick-dots .slick-active button {
   background: url("/images/alips_gray_full.png") no-repeat;
   content: '';
 }
-/* line 2130, common.scss */
+/* line 2141, common.scss */
 #main-content .tem-slide-1 h3, #main-content .tem-slide-2 h3, #main-content .tem-slide-3 h3, #main-content .tem-slide-4 h3,
 #main-content .tem-slide-5 h3, #main-content .tem-slide-6 h3, #main-content .tem-slide-7 h3, #main-content .tem-slide-8 h3,
 #main-content .tem-slide-9 h3, #main-content .tem-slide-10 h3 {
   color: #fff;
 }
-/* line 2133, common.scss */
+/* line 2144, common.scss */
 #main-content .tem-slide-1 h2, #main-content .tem-slide-2 h2, #main-content .tem-slide-3 h2, #main-content .tem-slide-4 h2,
 #main-content .tem-slide-5 h2, #main-content .tem-slide-6 h2, #main-content .tem-slide-7 h2, #main-content .tem-slide-8 h2,
 #main-content .tem-slide-9 h2, #main-content .tem-slide-10 h2 {
@@ -2312,7 +2323,7 @@ header .translate, .hidden-top .translate {
   height: 96px;
   padding: 0 45px;
 }
-/* line 2148, common.scss */
+/* line 2159, common.scss */
 #main-content .tem-slide-1 .small-caption h3, #main-content .tem-slide-2 .small-caption h3, #main-content .tem-slide-3 .small-caption h3, #main-content .tem-slide-4 .small-caption h3,
 #main-content .tem-slide-5 .small-caption h3, #main-content .tem-slide-6 .small-caption h3, #main-content .tem-slide-7 .small-caption h3, #main-content .tem-slide-8 .small-caption h3,
 #main-content .tem-slide-9 .small-caption h3, #main-content .tem-slide-10 .small-caption h3 {
@@ -2322,31 +2333,31 @@ header .translate, .hidden-top .translate {
   padding-left: 72px;
   padding-bottom: 12px;
 }
-/* line 2154, common.scss */
+/* line 2165, common.scss */
 #main-content .tem-slide-1 .small-caption h3 span, #main-content .tem-slide-2 .small-caption h3 span, #main-content .tem-slide-3 .small-caption h3 span, #main-content .tem-slide-4 .small-caption h3 span,
 #main-content .tem-slide-5 .small-caption h3 span, #main-content .tem-slide-6 .small-caption h3 span, #main-content .tem-slide-7 .small-caption h3 span, #main-content .tem-slide-8 .small-caption h3 span,
 #main-content .tem-slide-9 .small-caption h3 span, #main-content .tem-slide-10 .small-caption h3 span {
   font-family: "Lato-Heavy";
 }
-/* line 2159, common.scss */
+/* line 2170, common.scss */
 #main-content .tem-slide-1 .stars, #main-content .tem-slide-2 .stars, #main-content .tem-slide-3 .stars, #main-content .tem-slide-4 .stars,
 #main-content .tem-slide-5 .stars, #main-content .tem-slide-6 .stars, #main-content .tem-slide-7 .stars, #main-content .tem-slide-8 .stars,
 #main-content .tem-slide-9 .stars, #main-content .tem-slide-10 .stars {
   margin-top: 3px;
 }
-/* line 2161, common.scss */
+/* line 2172, common.scss */
 #main-content .tem-slide-1 .stars img, #main-content .tem-slide-2 .stars img, #main-content .tem-slide-3 .stars img, #main-content .tem-slide-4 .stars img,
 #main-content .tem-slide-5 .stars img, #main-content .tem-slide-6 .stars img, #main-content .tem-slide-7 .stars img, #main-content .tem-slide-8 .stars img,
 #main-content .tem-slide-9 .stars img, #main-content .tem-slide-10 .stars img {
   display: inline-block;
 }
-/* line 2165, common.scss */
+/* line 2176, common.scss */
 #main-content .tem-slide-1 .forward, #main-content .tem-slide-2 .forward, #main-content .tem-slide-3 .forward, #main-content .tem-slide-4 .forward,
 #main-content .tem-slide-5 .forward, #main-content .tem-slide-6 .forward, #main-content .tem-slide-7 .forward, #main-content .tem-slide-8 .forward,
 #main-content .tem-slide-9 .forward, #main-content .tem-slide-10 .forward {
   margin-top: 30px;
 }
-/* line 2168, common.scss */
+/* line 2179, common.scss */
 #main-content .tem-slide-1 .slick-slide, #main-content .tem-slide-2 .slick-slide, #main-content .tem-slide-3 .slick-slide, #main-content .tem-slide-4 .slick-slide,
 #main-content .tem-slide-5 .slick-slide, #main-content .tem-slide-6 .slick-slide, #main-content .tem-slide-7 .slick-slide, #main-content .tem-slide-8 .slick-slide,
 #main-content .tem-slide-9 .slick-slide, #main-content .tem-slide-10 .slick-slide {
@@ -2357,7 +2368,7 @@ header .translate, .hidden-top .translate {
   background-color: #000;
   background-origin: content-box;
 }
-/* line 2175, common.scss */
+/* line 2186, common.scss */
 #main-content .tem-slide-1 .slick-slide img.small, #main-content .tem-slide-2 .slick-slide img.small, #main-content .tem-slide-3 .slick-slide img.small, #main-content .tem-slide-4 .slick-slide img.small,
 #main-content .tem-slide-5 .slick-slide img.small, #main-content .tem-slide-6 .slick-slide img.small, #main-content .tem-slide-7 .slick-slide img.small, #main-content .tem-slide-8 .slick-slide img.small,
 #main-content .tem-slide-9 .slick-slide img.small, #main-content .tem-slide-10 .slick-slide img.small {
@@ -2369,31 +2380,31 @@ header .translate, .hidden-top .translate {
   object-fit: cover;
 }
 
-/* line 2187, common.scss */
+/* line 2198, common.scss */
 #temat-tyrs {
   background-color: #0776b6;
   padding-bottom: 220px;
 }
-/* line 2190, common.scss */
+/* line 2201, common.scss */
 #temat-tyrs .col-xs-7 {
   height: 631px;
 }
-/* line 2193, common.scss */
+/* line 2204, common.scss */
 #temat-tyrs .nav-tabs {
   height: 631px;
 }
-/* line 2195, common.scss */
+/* line 2206, common.scss */
 #temat-tyrs .nav-tabs li {
   position: relative;
   height: 127px;
 }
-/* line 2198, common.scss */
+/* line 2209, common.scss */
 #temat-tyrs .nav-tabs li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-/* line 2203, common.scss */
+/* line 2214, common.scss */
 #temat-tyrs .nav-tabs li a {
   position: absolute;
   height: 100%;
@@ -2411,61 +2422,61 @@ header .translate, .hidden-top .translate {
   border-radius: 0;
   border-bottom-width: 3px;
 }
-/* line 2219, common.scss */
+/* line 2230, common.scss */
 #temat-tyrs .nav-tabs li a:hover {
   border-color: #fff;
 }
-/* line 2224, common.scss */
+/* line 2235, common.scss */
 #temat-tyrs .nav-tabs li:last-child a {
   border-bottom-width: 2px;
 }
-/* line 2229, common.scss */
+/* line 2240, common.scss */
 #temat-tyrs .nav-tabs li.active a {
   border-color: #fff;
 }
-/* line 2236, common.scss */
+/* line 2247, common.scss */
 #temat-tyrs.tema-page .tab-content > .tab-pane,
 #temat-tyrs.tema-page .pill-content > .pill-pane {
   display: block;
   height: 0px;
   opacity: 0;
 }
-/* line 2242, common.scss */
+/* line 2253, common.scss */
 #temat-tyrs.tema-page .tab-content > .active,
 #temat-tyrs.tema-page .pill-content > .active {
   opacity: 1;
   height: auto;
 }
-/* line 2247, common.scss */
+/* line 2258, common.scss */
 #temat-tyrs.tema-page .tab-content {
   height: auto;
 }
-/* line 2250, common.scss */
+/* line 2261, common.scss */
 #temat-tyrs.tema-page .tab-content .list-tour img {
   opacity: 1;
 }
-/* line 2256, common.scss */
+/* line 2267, common.scss */
 #temat-tyrs .tab-content {
   height: 631px;
   overflow: hidden;
 }
-/* line 2260, common.scss */
+/* line 2271, common.scss */
 #temat-tyrs .tab-content .stars img {
   opacity: 1;
 }
-/* line 2264, common.scss */
+/* line 2275, common.scss */
 #temat-tyrs .tab-content img {
   width: 100%;
   opacity: .6;
   height: 211px;
   object-fit: cover;
 }
-/* line 2270, common.scss */
+/* line 2281, common.scss */
 #temat-tyrs .tab-content .item {
   position: relative;
   background-color: #000;
 }
-/* line 2275, common.scss */
+/* line 2286, common.scss */
 #temat-tyrs h2 {
   font-family: "Lato-Medium";
   margin-bottom: 35px;
@@ -2473,7 +2484,7 @@ header .translate, .hidden-top .translate {
   text-align: left;
   margin-top: 45px;
 }
-/* line 2282, common.scss */
+/* line 2293, common.scss */
 #temat-tyrs h3 {
   font-family: "Lato-Black";
   color: #fff;
@@ -2484,34 +2495,34 @@ header .translate, .hidden-top .translate {
   display: table-cell;
   vertical-align: bottom;
 }
-/* line 2292, common.scss */
+/* line 2303, common.scss */
 #temat-tyrs h5 {
   color: #fff;
   text-align: center;
   padding-left: 7px;
   line-height: 35px;
 }
-/* line 2297, common.scss */
+/* line 2308, common.scss */
 #temat-tyrs h5 span {
   font-family: "Lato-Heavy";
 }
-/* line 2302, common.scss */
+/* line 2313, common.scss */
 #temat-tyrs h4 {
   color: #fff;
   font-family: "Roboto-Light";
 }
-/* line 2306, common.scss */
+/* line 2317, common.scss */
 #temat-tyrs .caption {
   width: 100%;
   position: absolute;
   top: 0;
 }
-/* line 2310, common.scss */
+/* line 2321, common.scss */
 #temat-tyrs .caption > h3 {
   display: flex;
   flex-direction: column-reverse;
 }
-/* line 2314, common.scss */
+/* line 2325, common.scss */
 #temat-tyrs .caption .stars {
   width: 100%;
   text-align: center;
@@ -2521,25 +2532,25 @@ header .translate, .hidden-top .translate {
   float: left;
   margin-top: 5px;
 }
-/* line 2322, common.scss */
+/* line 2333, common.scss */
 #temat-tyrs .caption .stars img {
   width: 20px;
   height: 19px;
 }
-/* line 2328, common.scss */
+/* line 2339, common.scss */
 #temat-tyrs .footer-container {
   top: 57%;
   font-family: "Lato-Medium";
   color: #fff;
   text-align: center;
 }
-/* line 2333, common.scss */
+/* line 2344, common.scss */
 #temat-tyrs .footer-container span:nth-child(1) {
   padding-left: 23px;
   margin-right: 27px;
   background: url("/images/people.png") no-repeat 3px 2px;
 }
-/* line 2338, common.scss */
+/* line 2349, common.scss */
 #temat-tyrs .footer-container span:nth-child(2) {
   background: url("/images/calendar_small.png") no-repeat 2px 1px;
   padding-left: 23px;
@@ -2552,21 +2563,21 @@ header .translate, .hidden-top .translate {
 
 ==================================
 */
-/* line 2353, common.scss */
+/* line 2364, common.scss */
 #map_country {
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-/* line 2358, common.scss */
+/* line 2369, common.scss */
 #slider_fresh {
   margin-bottom: 15px;
 }
-/* line 2361, common.scss */
+/* line 2372, common.scss */
 #slider_fresh .item {
   margin: 0 15px;
 }
-/* line 2363, common.scss */
+/* line 2374, common.scss */
 #slider_fresh .item img {
   width: 100%;
   height: 290px;
@@ -2575,19 +2586,19 @@ header .translate, .hidden-top .translate {
   -moz-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 2377, common.scss */
+/* line 2388, common.scss */
 #slider_fresh .slick-arrow, #slider_fresh .slick-next {
   background: url("/images/fresh_alips.png");
   z-index: 2;
   width: 61px;
   height: 61px;
 }
-/* line 2383, common.scss */
+/* line 2394, common.scss */
 #slider_fresh .slick-prev, #slider_fresh .slick-next {
   top: 125px;
   left: -16px;
 }
-/* line 2386, common.scss */
+/* line 2397, common.scss */
 #slider_fresh .slick-prev:before, #slider_fresh .slick-next:before {
   content: ' ';
   background: url("/images/fresh_arrow.png");
@@ -2598,44 +2609,44 @@ header .translate, .hidden-top .translate {
   margin-left: 17px;
   opacity: 1;
 }
-/* line 2397, common.scss */
+/* line 2408, common.scss */
 #slider_fresh .slick-prev:hover:before, #slider_fresh .slick-next:hover:before {
   opacity: 0.8;
 }
-/* line 2402, common.scss */
+/* line 2413, common.scss */
 #slider_fresh .slick-next {
   left: 100%;
   margin-left: -46px;
 }
-/* line 2405, common.scss */
+/* line 2416, common.scss */
 #slider_fresh .slick-next:before {
   transform: rotate(180deg);
 }
 
-/* line 2412, common.scss */
+/* line 2423, common.scss */
 #fresh-tyr .no-all {
   overflow: hidden;
 }
-/* line 2414, common.scss */
+/* line 2425, common.scss */
 #fresh-tyr .no-all .item {
   position: relative;
   outline: none;
 }
-/* line 2418, common.scss */
+/* line 2429, common.scss */
 #fresh-tyr .no-all h2, #fresh-tyr .no-all a.fresh_counts {
   z-index: 5;
   text-align: center;
   position: absolute;
   width: 100%;
 }
-/* line 2424, common.scss */
+/* line 2435, common.scss */
 #fresh-tyr .no-all h2 {
   color: #fff;
   font-family: "Lato-Black";
   text-transform: uppercase;
   top: 110px;
 }
-/* line 2430, common.scss */
+/* line 2441, common.scss */
 #fresh-tyr .no-all a.fresh_counts {
   font-size: 14px;
   color: #f8e516;
@@ -2645,22 +2656,22 @@ header .translate, .hidden-top .translate {
   top: 0;
   padding-top: 160px;
 }
-/* line 2438, common.scss */
+/* line 2449, common.scss */
 #fresh-tyr .no-all a.fresh_counts:hover {
   text-decoration: underline;
 }
-/* line 2443, common.scss */
+/* line 2454, common.scss */
 #fresh-tyr .slider_fresh_for {
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 40px;
 }
-/* line 2448, common.scss */
+/* line 2459, common.scss */
 #fresh-tyr .slider_fresh_for .slick-list {
   padding-top: 7px;
   padding-bottom: 10px;
 }
-/* line 2452, common.scss */
+/* line 2463, common.scss */
 #fresh-tyr .slider_fresh_for h5.title {
   font-family: "Lato-Black";
   float: left;
@@ -2668,47 +2679,47 @@ header .translate, .hidden-top .translate {
   text-align: left;
   width: 165px;
 }
-/* line 2459, common.scss */
+/* line 2470, common.scss */
 #fresh-tyr .slider_fresh_for h5 {
   font-family: "Lato-Regular";
 }
-/* line 2461, common.scss */
+/* line 2472, common.scss */
 #fresh-tyr .slider_fresh_for h5 span {
   font-family: "Lato-Heavy";
 }
-/* line 2465, common.scss */
+/* line 2476, common.scss */
 #fresh-tyr .slider_fresh_for .items {
   padding: 0 15px;
 }
-/* line 2467, common.scss */
+/* line 2478, common.scss */
 #fresh-tyr .slider_fresh_for .items .item {
   margin: 0;
   padding-left: 5px;
   padding-right: 5px;
 }
-/* line 2473, common.scss */
+/* line 2484, common.scss */
 #fresh-tyr .slider_fresh_for .inner_cont {
   color: #333;
   width: 100%;
 }
-/* line 2476, common.scss */
+/* line 2487, common.scss */
 #fresh-tyr .slider_fresh_for .inner_cont:hover {
   text-decoration: none;
 }
-/* line 2481, common.scss */
+/* line 2492, common.scss */
 #fresh-tyr .slider_fresh_for .item .inner {
   padding: 16px 25px 16px 20px;
   color: #333;
 }
-/* line 2484, common.scss */
+/* line 2495, common.scss */
 #fresh-tyr .slider_fresh_for .item .inner a, #fresh-tyr .slider_fresh_for .item .inner h5 {
   color: #333;
 }
-/* line 2486, common.scss */
+/* line 2497, common.scss */
 #fresh-tyr .slider_fresh_for .item .inner a:hover, #fresh-tyr .slider_fresh_for .item .inner h5:hover {
   text-decoration: none;
 }
-/* line 2490, common.scss */
+/* line 2501, common.scss */
 #fresh-tyr .slider_fresh_for .item .inner > img {
   width: 144px;
   height: 104px;
@@ -2717,18 +2728,18 @@ header .translate, .hidden-top .translate {
   -moz-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 2498, common.scss */
+/* line 2509, common.scss */
 #fresh-tyr .slider_fresh_for .item .inner:hover {
   -webkit-box-shadow: 2px 2px 12px 2px #e0e0e0;
   -moz-box-shadow: 2px 2px 12px 2px #e0e0e0;
   box-shadow: 2px 2px 12px 2px #e0e0e0;
   cursor: pointer;
 }
-/* line 2505, common.scss */
+/* line 2516, common.scss */
 #fresh-tyr .slider_fresh_for .item .stars {
   margin-top: -52px;
 }
-/* line 2507, common.scss */
+/* line 2518, common.scss */
 #fresh-tyr .slider_fresh_for .item .stars img {
   width: 20px;
   height: 19px;
@@ -2742,7 +2753,7 @@ header .translate, .hidden-top .translate {
 
 ==================================
 */
-/* line 2525, common.scss */
+/* line 2536, common.scss */
 #news-main {
   background-image: url("/images/news.png");
   background-repeat: no-repeat;
@@ -2751,51 +2762,51 @@ header .translate, .hidden-top .translate {
   padding-bottom: 30px;
   border-bottom: 13px solid #07ce9d;
 }
-/* line 2532, common.scss */
+/* line 2543, common.scss */
 #news-main h1 {
   font-family: "Lato-Light";
   margin-bottom: 27px;
   margin-top: 25px;
 }
-/* line 2537, common.scss */
+/* line 2548, common.scss */
 #news-main p {
   text-align: left;
   margin-bottom: 30px;
   padding-right: 30px;
 }
-/* line 2542, common.scss */
+/* line 2553, common.scss */
 #news-main .news {
   color: #454545;
   padding-left: 30px;
   background-color: #f2f2f2;
 }
-/* line 2546, common.scss */
+/* line 2557, common.scss */
 #news-main .news .col-xs-2 {
   width: 86px;
   height: 71px;
 }
-/* line 2550, common.scss */
+/* line 2561, common.scss */
 #news-main .news .item {
   margin-bottom: 30px;
 }
-/* line 2553, common.scss */
+/* line 2564, common.scss */
 #news-main .news img {
   height: 71px;
   width: 100%;
 }
-/* line 2558, common.scss */
+/* line 2569, common.scss */
 #news-main .news .no-right a {
   font-family: "Lato-Regular";
   color: #454545;
   font-size: 18px;
 }
-/* line 2562, common.scss */
+/* line 2573, common.scss */
 #news-main .news .no-right a p {
   padding-right: 0;
   margin-bottom: 0;
   line-height: 20px;
 }
-/* line 2568, common.scss */
+/* line 2579, common.scss */
 #news-main .news .no-right span {
   display: block;
   margin-top: 12px;
@@ -2803,7 +2814,7 @@ header .translate, .hidden-top .translate {
   font-family: "Lato-Medium";
   font-size: 14px;
 }
-/* line 2576, common.scss */
+/* line 2587, common.scss */
 #news-main .news .all_items {
   font-size: 16px;
   text-decoration: underline;
@@ -2811,16 +2822,16 @@ header .translate, .hidden-top .translate {
   color: #454545;
   font-family: "Lato-Heavy";
 }
-/* line 2582, common.scss */
+/* line 2593, common.scss */
 #news-main .news .all_items:hover {
   text-decoration: none;
 }
-/* line 2586, common.scss */
+/* line 2597, common.scss */
 #news-main .news #send {
   position: relative;
   background: url("/images/vert.png") no-repeat 347px 35px;
 }
-/* line 2589, common.scss */
+/* line 2600, common.scss */
 #news-main .news #send input {
   margin-top: 28px;
   margin-bottom: 0;
@@ -2833,7 +2844,7 @@ header .translate, .hidden-top .translate {
   padding-left: 85px;
   border: 1px solid #b1b1b1;
 }
-/* line 2601, common.scss */
+/* line 2612, common.scss */
 #news-main .news #send .show_all {
   font-family: "Lato-Regular";
   background-color: transparent;
@@ -2844,28 +2855,28 @@ header .translate, .hidden-top .translate {
   border-left: none;
   margin-left: -208px;
 }
-/* line 2613, common.scss */
+/* line 2624, common.scss */
 #news-main .bron {
   color: #fff;
 }
-/* line 2616, common.scss */
+/* line 2627, common.scss */
 #news-main .bron .form-group label {
   color: #fff;
 }
-/* line 2620, common.scss */
+/* line 2631, common.scss */
 #news-main .bron input, #news-main .bron textarea, #news-main .bron select {
   color: #fff;
 }
-/* line 2624, common.scss */
+/* line 2635, common.scss */
 #news-main .bron #form-bron .has-error .help-block {
   color: #fff;
   margin-top: -15px;
 }
-/* line 2629, common.scss */
+/* line 2640, common.scss */
 #news-main .bron option {
   color: #000;
 }
-/* line 2633, common.scss */
+/* line 2644, common.scss */
 #news-main select, #news-main input {
   height: 55px;
   -webkit-border-radius: 8px;
@@ -2880,7 +2891,7 @@ header .translate, .hidden-top .translate {
   color: #c0c6b8;
   width: 243px;
 }
-/* line 2647, common.scss */
+/* line 2658, common.scss */
 #news-main textarea {
   width: 541px;
   height: 95px;
@@ -2894,16 +2905,16 @@ header .translate, .hidden-top .translate {
   padding-left: 20px;
   outline: none;
 }
-/* line 2660, common.scss */
+/* line 2671, common.scss */
 #news-main .form-group {
   width: 243px;
   float: left;
 }
-/* line 2663, common.scss */
+/* line 2674, common.scss */
 #news-main .form-group:nth-child(1), #news-main .form-group:nth-child(3) {
   margin-right: 55px;
 }
-/* line 2668, common.scss */
+/* line 2679, common.scss */
 #news-main #form-bron button {
   width: 169px;
   height: 55px;
@@ -2919,7 +2930,7 @@ header .translate, .hidden-top .translate {
   display: block;
   margin: 19px 0 0;
 }
-/* line 2682, common.scss */
+/* line 2693, common.scss */
 #news-main #form-bron button:hover {
   background-color: #36d5ae;
 }
@@ -2931,7 +2942,7 @@ header .translate, .hidden-top .translate {
 
 ==================================
 */
-/* line 2697, common.scss */
+/* line 2708, common.scss */
 a.show_all {
   width: 208px;
   line-height: 58px;
@@ -2945,27 +2956,27 @@ a.show_all {
   transition: .5s;
   background: #fff url("/images/arrow_green.png") no-repeat 86% 50%;
 }
-/* line 2709, common.scss */
+/* line 2720, common.scss */
 a.show_all:hover {
   transition: .5s;
   background-position: 96% 50%;
   text-decoration: none;
 }
 
-/* line 2717, common.scss */
+/* line 2728, common.scss */
 .redirect h1 {
   font-family: "Lato-Light";
   margin-top: 39px;
   margin-bottom: 52px;
 }
-/* line 2722, common.scss */
+/* line 2733, common.scss */
 .redirect.gray {
   background-color: #f2f2f2;
   font-family: "Roboto-Light";
   color: #313131;
   padding-bottom: 80px;
 }
-/* line 2726, common.scss */
+/* line 2737, common.scss */
 .redirect.gray h4 {
   margin-top: 0;
   font-family: "Roboto-Light";
@@ -2978,14 +2989,14 @@ a.show_all:hover {
 
 ==================================
 */
-/* line 2742, common.scss */
+/* line 2753, common.scss */
 #title-container {
   position: relative;
   height: 400px;
   overflow: hidden;
   margin-top: -74px;
 }
-/* line 2747, common.scss */
+/* line 2758, common.scss */
 #title-container .flag-country {
   width: 56px;
   height: 38px;
@@ -2993,7 +3004,7 @@ a.show_all:hover {
   left: 100%;
   margin-left: 25px;
 }
-/* line 2754, common.scss */
+/* line 2765, common.scss */
 #title-container #time {
   font-size: 18px;
   font-family: "Lato-Bold";
@@ -3004,19 +3015,19 @@ a.show_all:hover {
   position: absolute;
   z-index: 9999;
 }
-/* line 2765, common.scss */
+/* line 2776, common.scss */
 #title-container.tyr-posad #country-info {
   margin-top: 272px;
 }
-/* line 2769, common.scss */
+/* line 2780, common.scss */
 #title-container.tyr-posad.poland .back-to-country {
   width: 135px;
 }
-/* line 2773, common.scss */
+/* line 2784, common.scss */
 #title-container.tyr-posad.poland #country-info .col-xs-2:nth-child(1) {
   background-image: none;
 }
-/* line 2779, common.scss */
+/* line 2790, common.scss */
 #title-container #country-info {
   position: absolute;
   font-family: "Lato-Semibold";
@@ -3025,7 +3036,7 @@ a.show_all:hover {
   color: #BFC6C6;
   margin-top: 240px;
 }
-/* line 2786, common.scss */
+/* line 2797, common.scss */
 #title-container #country-info a {
   width: 171px;
   height: 44px;
@@ -3040,18 +3051,18 @@ a.show_all:hover {
   text-align: center;
   margin-top: 15px;
 }
-/* line 2799, common.scss */
+/* line 2810, common.scss */
 #title-container #country-info a:hover {
   text-decoration: none;
   background-color: #55a9ea;
 }
-/* line 2804, common.scss */
+/* line 2815, common.scss */
 #title-container #country-info p {
   color: #fff;
   line-height: 20px;
   margin-top: -10px;
 }
-/* line 2811, common.scss */
+/* line 2822, common.scss */
 #title-container .back-to-country {
   position: absolute;
   z-index: 9999;
@@ -3068,13 +3079,13 @@ a.show_all:hover {
   background: url("/images/back-to-country-arrow.png") no-repeat 25px 50%;
   transition: .5s;
 }
-/* line 2826, common.scss */
+/* line 2837, common.scss */
 #title-container .back-to-country:hover {
   text-decoration: none;
   transition: .5s;
   background-position: 10px 50%;
 }
-/* line 2832, common.scss */
+/* line 2843, common.scss */
 #title-container h1 {
   color: #fff;
   margin-top: 170px;
@@ -3083,7 +3094,7 @@ a.show_all:hover {
   font-family: "Lato-Light";
   float: left;
 }
-/* line 2839, common.scss */
+/* line 2850, common.scss */
 #title-container h1 span {
   padding-left: 50px;
   background: url("/images/arrow-slider-bold.png") no-repeat 10px 11px;
@@ -3093,13 +3104,13 @@ a.show_all:hover {
   margin-left: 90px;
   margin-top: -36px;
 }
-/* line 2849, common.scss */
+/* line 2860, common.scss */
 #title-container img {
   width: 100%;
   position: absolute;
   top: 0;
 }
-/* line 2854, common.scss */
+/* line 2865, common.scss */
 #title-container .breadcrumbs-container {
   margin-top: 74px;
   height: 52px;
@@ -3111,92 +3122,92 @@ a.show_all:hover {
   z-index: 1000;
   border-bottom: 1px solid #5d8eb3;
 }
-/* line 2865, common.scss */
+/* line 2876, common.scss */
 #title-container .breadcrumbs-container.description h1 {
   font-family: "Lato-Light";
 }
-/* line 2868, common.scss */
+/* line 2879, common.scss */
 #title-container .breadcrumbs-container.description .back-to-country {
   padding-right: 20px;
   width: auto;
 }
-/* line 2873, common.scss */
+/* line 2884, common.scss */
 #title-container .breadcrumbs-container .breadcrumbs {
   position: absolute;
   top: 0;
   z-index: 1000;
 }
-/* line 2877, common.scss */
+/* line 2888, common.scss */
 #title-container .breadcrumbs-container .breadcrumbs a {
   color: #fff;
 }
 
-/* line 2884, common.scss */
+/* line 2895, common.scss */
 .text {
   font-family: "Roboto-Light";
   font-size: 16px;
   color: #262626;
 }
-/* line 2885, common.scss */
+/* line 2896, common.scss */
 .text h1 {
   margin-bottom: 20px;
 }
-/* line 2888, common.scss */
+/* line 2899, common.scss */
 .text h3 {
   font-family: "Lato-Bold";
   color: #515151;
 }
-/* line 2895, common.scss */
+/* line 2906, common.scss */
 .text p {
   margin-bottom: 18px;
 }
-/* line 2898, common.scss */
+/* line 2909, common.scss */
 .text img {
   width: 100%;
   margin-bottom: 18px;
 }
 
-/* line 2904, common.scss */
+/* line 2915, common.scss */
 .contakts-page.row {
   border-bottom: 13px solid #07ce9d;
 }
-/* line 2906, common.scss */
+/* line 2917, common.scss */
 .contakts-page.row .text {
   height: 465px;
 }
-/* line 2908, common.scss */
+/* line 2919, common.scss */
 .contakts-page.row .text p {
   object-fit: contain;
   width: 100%;
   height: 100%;
 }
-/* line 2912, common.scss */
+/* line 2923, common.scss */
 .contakts-page.row .text p img {
   object-fit: none;
   width: 100%;
   height: 100%;
 }
-/* line 2919, common.scss */
+/* line 2930, common.scss */
 .contakts-page.row .form-contakts {
   padding-left: 30px;
 }
-/* line 2921, common.scss */
+/* line 2932, common.scss */
 .contakts-page.row .form-contakts h1 {
   font-family: "Lato-Light";
 }
-/* line 2925, common.scss */
+/* line 2936, common.scss */
 .contakts-page.row .contakts-green {
   background-color: #07ce9d;
   height: 465px;
   font-family: "Lato-Regular";
   color: #fff;
 }
-/* line 2930, common.scss */
+/* line 2941, common.scss */
 .contakts-page.row .contakts-green span {
   font-family: "Lato-Semibold";
   font-size: 24px;
 }
-/* line 2934, common.scss */
+/* line 2945, common.scss */
 .contakts-page.row .contakts-green .address {
   font-size: 24px;
   padding-left: 65px;
@@ -3204,7 +3215,7 @@ a.show_all:hover {
   padding-top: 130px;
   background: url("/images/contakts-loc-white.png") no-repeat 50% 40%;
 }
-/* line 2941, common.scss */
+/* line 2952, common.scss */
 .contakts-page.row .contakts-green .address {
   font-size: 24px;
   padding-left: 65px;
@@ -3212,7 +3223,7 @@ a.show_all:hover {
   padding-top: 130px;
   background: url("/images/contakts-loc-white.png") no-repeat 50% 40%;
 }
-/* line 2948, common.scss */
+/* line 2959, common.scss */
 .contakts-page.row .contakts-green .work {
   font-size: 22px;
   padding-top: 140px;
@@ -3220,7 +3231,7 @@ a.show_all:hover {
   padding-right: 60px;
   background: url("/images/contakts-clock-white.png") no-repeat 50% 40%;
 }
-/* line 2955, common.scss */
+/* line 2966, common.scss */
 .contakts-page.row .contakts-green .email {
   font-size: 24px;
   padding-top: 140px;
@@ -3228,7 +3239,7 @@ a.show_all:hover {
   padding-right: 60px;
   background: url("/images/contakts-letter-white.png") no-repeat 50% 50%;
 }
-/* line 2962, common.scss */
+/* line 2973, common.scss */
 .contakts-page.row .contakts-green .phones {
   font-size: 18px;
   padding-left: 55px;
@@ -3236,7 +3247,7 @@ a.show_all:hover {
   padding-top: 130px;
   background: url("/images/contakts-phone-white.png") no-repeat 50% 40%;
 }
-/* line 2963, common.scss */
+/* line 2974, common.scss */
 .contakts-page.row .contakts-green .phones i {
   position: absolute;
   margin-top: -7px;
@@ -3247,95 +3258,95 @@ a.show_all:hover {
   color: #a5e7d2;
   margin-left: -15px;
 }
-/* line 2972, common.scss */
+/* line 2983, common.scss */
 .contakts-page.row .contakts-green .phones i:first-child {
   margin-left: -25px;
 }
-/* line 2976, common.scss */
+/* line 2987, common.scss */
 .contakts-page.row .contakts-green .phones span {
   margin-bottom: 4px;
 }
-/* line 2985, common.scss */
+/* line 2996, common.scss */
 .contakts-page.row .contakts-green div {
   width: 315px;
   float: left;
 }
-/* line 2988, common.scss */
+/* line 2999, common.scss */
 .contakts-page.row .contakts-green div.row {
   float: none;
 }
 
-/* line 2995, common.scss */
+/* line 3006, common.scss */
 #main-content {
   padding-top: 35px;
   padding-bottom: 50px;
   border-bottom: 13px solid #07ce9d;
 }
-/* line 2999, common.scss */
+/* line 3010, common.scss */
 #main-content #recently {
   background-color: #f2f2f2;
   font-family: "Lato-Regular";
   font-size: 18px;
 }
-/* line 3003, common.scss */
+/* line 3014, common.scss */
 #main-content #recently div {
   padding-left: 58px;
   padding-right: 10px;
   color: #454545;
   margin-bottom: 20px;
 }
-/* line 3008, common.scss */
+/* line 3019, common.scss */
 #main-content #recently div.item {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 3012, common.scss */
+/* line 3023, common.scss */
 #main-content #recently div.address {
   background: url("/images/locate.png") no-repeat 9px 2px;
 }
-/* line 3015, common.scss */
+/* line 3026, common.scss */
 #main-content #recently div.work {
   background: url("/images/clock.png") no-repeat 9px 2px;
 }
-/* line 3018, common.scss */
+/* line 3029, common.scss */
 #main-content #recently div.phone {
   background: url("/images/phone.png") no-repeat 9px 2px;
 }
-/* line 3019, common.scss */
+/* line 3030, common.scss */
 #main-content #recently div.phone span {
   font-size: 20px;
   font-family: "Lato-Semibold";
   color: #000;
 }
-/* line 3026, common.scss */
+/* line 3037, common.scss */
 #main-content #recently div.mail {
   background: url("/images/letter_footer.png") no-repeat 9px 2px;
 }
-/* line 3032, common.scss */
+/* line 3043, common.scss */
 #main-content #tyr-content .descr-hotel {
   float: left;
   background: url("/images/office.png") no-repeat;
   padding-left: 45px;
   color: #b1b1b1;
 }
-/* line 3039, common.scss */
+/* line 3050, common.scss */
 #main-content #tyr-content .no-right h2.hotel-title {
   font-family: "Lato-Semibold";
   color: #262626;
 }
-/* line 3045, common.scss */
+/* line 3056, common.scss */
 #main-content #tyr-content #description h2.descr {
   margin-right: 25px;
 }
-/* line 3047, common.scss */
+/* line 3058, common.scss */
 #main-content #tyr-content #description h2.descr.no-left {
   padding-left: 0;
 }
-/* line 3051, common.scss */
+/* line 3062, common.scss */
 #main-content #tyr-content #description .stars {
   margin-top: 5px;
 }
-/* line 3055, common.scss */
+/* line 3066, common.scss */
 #main-content #tyr-content #description .param span {
   margin-right: 10px;
   width: 30px;
@@ -3343,126 +3354,126 @@ a.show_all:hover {
   cursor: pointer;
   margin-bottom: 5px;
 }
-/* line 3062, common.scss */
+/* line 3073, common.scss */
 #main-content #tyr-content #description .param .wi-fi {
   background-image: url("/images/wi-fi.png");
 }
-/* line 3064, common.scss */
+/* line 3075, common.scss */
 #main-content #tyr-content #description .param .wi-fi:hover {
   background-image: url("/images/wi-fi-hover.png");
 }
-/* line 3068, common.scss */
+/* line 3079, common.scss */
 #main-content #tyr-content #description .param .transfer {
   background-image: url("/images/transfer.png");
 }
-/* line 3070, common.scss */
+/* line 3081, common.scss */
 #main-content #tyr-content #description .param .transfer:hover {
   background-image: url("/images/transfer.png");
 }
-/* line 3074, common.scss */
+/* line 3085, common.scss */
 #main-content #tyr-content #description .param .restouran {
   background-image: url("/images/restouran.png");
 }
-/* line 3076, common.scss */
+/* line 3087, common.scss */
 #main-content #tyr-content #description .param .restouran:hover {
   background-image: url("/images/restouran.png");
 }
-/* line 3080, common.scss */
+/* line 3091, common.scss */
 #main-content #tyr-content #description .param .sportzal {
   background-image: url("/images/sportzal.png");
 }
-/* line 3082, common.scss */
+/* line 3093, common.scss */
 #main-content #tyr-content #description .param .sportzal:hover {
   background-image: url("/images/sportzal.png");
 }
-/* line 3088, common.scss */
+/* line 3099, common.scss */
 #main-content #tyr-content #description .photo-tour #big {
   height: 342px;
 }
-/* line 3090, common.scss */
+/* line 3101, common.scss */
 #main-content #tyr-content #description .photo-tour #big a {
   height: 100%;
 }
-/* line 3092, common.scss */
+/* line 3103, common.scss */
 #main-content #tyr-content #description .photo-tour #big a img {
   height: 100%;
   object-fit: cover;
   width: 100%;
 }
-/* line 3098, common.scss */
+/* line 3109, common.scss */
 #main-content #tyr-content #description .photo-tour #big .slick-track {
   height: 100%;
 }
-/* line 3100, common.scss */
+/* line 3111, common.scss */
 #main-content #tyr-content #description .photo-tour #big .slick-track img {
   height: 342px;
   object-fit: cover;
 }
-/* line 3105, common.scss */
+/* line 3116, common.scss */
 #main-content #tyr-content #description .photo-tour #big.slick-slider {
   margin-bottom: 4px;
 }
-/* line 3109, common.scss */
+/* line 3120, common.scss */
 #main-content #tyr-content #description .photo-tour .big {
   width: 100%;
 }
-/* line 3112, common.scss */
+/* line 3123, common.scss */
 #main-content #tyr-content #description .photo-tour #small {
   margin-left: -2px;
   margin-right: -2px;
 }
-/* line 3115, common.scss */
+/* line 3126, common.scss */
 #main-content #tyr-content #description .photo-tour #small a {
   height: 100%;
   margin: 4px 2px;
   width: calc(20% - 20.5px);
 }
-/* line 3119, common.scss */
+/* line 3130, common.scss */
 #main-content #tyr-content #description .photo-tour #small a img {
   height: 100%;
   height: 75px;
   width: 100%;
   object-fit: cover;
 }
-/* line 3126, common.scss */
+/* line 3137, common.scss */
 #main-content #tyr-content #description .photo-tour #small .slick-track {
   height: 75px;
   margin-left: -2px;
   margin-right: -2px;
 }
-/* line 3130, common.scss */
+/* line 3141, common.scss */
 #main-content #tyr-content #description .photo-tour #small .slick-track img {
   margin-left: 2px;
   margin-right: 2px;
   cursor: pointer;
 }
-/* line 3136, common.scss */
+/* line 3147, common.scss */
 #main-content #tyr-content #description .photo-tour #small .small {
   object-fit: cover;
   height: 100%;
 }
-/* line 3145, common.scss */
+/* line 3156, common.scss */
 #main-content #description .kyrorts, #main-content #left_panel .kyrorts {
   margin-bottom: 15px;
   color: #262626;
   font-size: 18px;
 }
-/* line 3149, common.scss */
+/* line 3160, common.scss */
 #main-content #description .kyrorts .col-xs-2, #main-content #left_panel .kyrorts .col-xs-2 {
   font-family: "Lato-Light";
   width: 200px;
 }
-/* line 3152, common.scss */
+/* line 3163, common.scss */
 #main-content #description .kyrorts .col-xs-2 a, #main-content #left_panel .kyrorts .col-xs-2 a {
   color: #262626;
   margin-bottom: 20px;
 }
-/* line 3155, common.scss */
+/* line 3166, common.scss */
 #main-content #description .kyrorts .col-xs-2 a:hover, #main-content #left_panel .kyrorts .col-xs-2 a:hover {
   text-decoration: none;
   color: #449ee9;
 }
-/* line 3162, common.scss */
+/* line 3173, common.scss */
 #main-content #description h2.descr, #main-content #left_panel h2.descr {
   color: #b1b1b1;
   font-family: "Lato-Regular";
@@ -3470,44 +3481,44 @@ a.show_all:hover {
   height: 44px;
   padding-top: 2px;
 }
-/* line 3168, common.scss */
+/* line 3179, common.scss */
 #main-content #description h2.descr.descr-kyr, #main-content #left_panel h2.descr.descr-kyr {
   background: url("/images/palms.png") no-repeat;
 }
-/* line 3171, common.scss */
+/* line 3182, common.scss */
 #main-content #description h2.descr.descr-about, #main-content #left_panel h2.descr.descr-about {
   background: url("/images/info.png") no-repeat;
 }
-/* line 3174, common.scss */
+/* line 3185, common.scss */
 #main-content #description h2.descr.descr-kart, #main-content #left_panel h2.descr.descr-kart {
   background: url("/images/loc-india.png") no-repeat;
 }
-/* line 3177, common.scss */
+/* line 3188, common.scss */
 #main-content #description h2.descr.descr-near, #main-content #left_panel h2.descr.descr-near {
   background: url("/images/world-map.png") no-repeat;
 }
-/* line 3180, common.scss */
+/* line 3191, common.scss */
 #main-content #description h2.descr.descr-ok, #main-content #left_panel h2.descr.descr-ok {
   background: url("/images/ok.png") no-repeat 5px 8px;
 }
-/* line 3185, common.scss */
+/* line 3196, common.scss */
 #main-content .map {
   width: 100%;
   margin-top: 7px;
   margin-bottom: 30px;
 }
-/* line 3190, common.scss */
+/* line 3201, common.scss */
 #main-content .country-tabs {
   height: 67px;
   margin-top: -25px;
   border-bottom: none;
   margin-bottom: 10px;
 }
-/* line 3195, common.scss */
+/* line 3206, common.scss */
 #main-content .country-tabs li {
   width: 50%;
 }
-/* line 3197, common.scss */
+/* line 3208, common.scss */
 #main-content .country-tabs li a {
   color: #262626;
   font-size: 24px;
@@ -3518,16 +3529,16 @@ a.show_all:hover {
   margin-right: 0;
   padding-top: 0;
 }
-/* line 3206, common.scss */
+/* line 3217, common.scss */
 #main-content .country-tabs li a:hover, #main-content .country-tabs li a:focus {
   color: #2e97e8;
   background-color: transparent;
 }
-/* line 3212, common.scss */
+/* line 3223, common.scss */
 #main-content .country-tabs li.active a, #main-content .country-tabs li:hover a, #main-content .country-tabs li:focus a {
   color: #2e97e8;
 }
-/* line 3216, common.scss */
+/* line 3227, common.scss */
 #main-content .country-tabs li.active span, #main-content .country-tabs li:hover span, #main-content .country-tabs li:focus span {
   color: #2e97e8;
   background-color: transparent;
@@ -3538,81 +3549,81 @@ a.show_all:hover {
   margin-top: -4px;
   left: 48%;
 }
-/* line 3228, common.scss */
+/* line 3239, common.scss */
 #main-content .country-tabs li.active span {
   background: url("/images/tabs-corner.png") no-repeat;
 }
-/* line 3234, common.scss */
+/* line 3245, common.scss */
 #main-content h2 {
   font-family: "Lato-Bold";
   color: #a2a2a2;
   margin-top: 0;
 }
-/* line 3239, common.scss */
+/* line 3250, common.scss */
 #main-content ul.left-menu {
   padding-left: 0;
   list-style: none;
 }
-/* line 3242, common.scss */
+/* line 3253, common.scss */
 #main-content ul.left-menu li {
   font-family: "Lato-Light";
   font-size: 18px;
   color: #262626;
 }
-/* line 3246, common.scss */
+/* line 3257, common.scss */
 #main-content ul.left-menu li a {
   color: #262626;
   width: 100%;
   height: 100%;
 }
-/* line 3250, common.scss */
+/* line 3261, common.scss */
 #main-content ul.left-menu li a:hover, #main-content ul.left-menu li a:active {
   color: #1c87b9;
   text-decoration: none;
 }
-/* line 3256, common.scss */
+/* line 3267, common.scss */
 #main-content ul.left-menu li.active a {
   color: #1c87b9;
   text-decoration: none;
 }
-/* line 3263, common.scss */
+/* line 3274, common.scss */
 #main-content #recently, #main-content #recently-tours, #main-content #recently-news, #main-content #top-offers, #main-content #banner {
   background-color: #f2f2f2;
   padding: 12px 18px 8px;
 }
-/* line 3266, common.scss */
+/* line 3277, common.scss */
 #main-content #recently h2, #main-content #recently-tours h2, #main-content #recently-news h2, #main-content #top-offers h2, #main-content #banner h2 {
   font-family: "Lato-Light";
   margin-bottom: 14px;
   color: #454545;
 }
-/* line 3272, common.scss */
+/* line 3283, common.scss */
 #main-content #recently .item img, #main-content #recently-tours .item img, #main-content #recently-news .item img, #main-content #top-offers .item img, #main-content #banner .item img {
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 3279, common.scss */
+/* line 3290, common.scss */
 #main-content #recently .hot_tours_item {
   background-color: #000;
 }
-/* line 3282, common.scss */
+/* line 3293, common.scss */
 #main-content #recently .hot_tours_item a > img {
   margin-bottom: 0;
   opacity: 0.6;
 }
-/* line 3289, common.scss */
+/* line 3300, common.scss */
 #main-content #banner {
   padding: 12px 14px 16px;
 }
-/* line 3291, common.scss */
+/* line 3302, common.scss */
 #main-content #banner a {
   width: 100%;
 }
-/* line 3294, common.scss */
+/* line 3305, common.scss */
 #main-content #banner img {
   width: 100%;
 }
-/* line 3298, common.scss */
+/* line 3309, common.scss */
 #main-content .all_news {
   color: #454545;
   font-size: 12px;
@@ -3621,75 +3632,75 @@ a.show_all:hover {
   position: relative;
   top: -2px;
 }
-/* line 3305, common.scss */
+/* line 3316, common.scss */
 #main-content .all_news:hover {
   text-decoration: none;
 }
-/* line 3309, common.scss */
+/* line 3320, common.scss */
 #main-content #recently-news, #main-content #top-offers {
   margin-top: 2px;
 }
-/* line 3312, common.scss */
+/* line 3323, common.scss */
 #main-content #recently-tours {
   margin-top: 2px;
 }
-/* line 3314, common.scss */
+/* line 3325, common.scss */
 #main-content #recently-tours a {
   color: #6d6d6d;
   font-family: "Lato-Semibold";
   margin-right: 22px;
   margin-bottom: 5px;
 }
-/* line 3319, common.scss */
+/* line 3330, common.scss */
 #main-content #recently-tours a:nth-child(2) {
   font-size: 12px;
   float: left;
 }
-/* line 3323, common.scss */
+/* line 3334, common.scss */
 #main-content #recently-tours a:nth-child(3) {
   float: left;
 }
-/* line 3326, common.scss */
+/* line 3337, common.scss */
 #main-content #recently-tours a:nth-child(3), #main-content #recently-tours a:nth-child(5) {
   font-size: 14px;
 }
-/* line 3329, common.scss */
+/* line 3340, common.scss */
 #main-content #recently-tours a:nth-child(4) {
   font-family: "Lato-Bold";
   font-size: 18px;
   float: left;
 }
-/* line 3335, common.scss */
+/* line 3346, common.scss */
 #main-content #recently-tours a:nth-child(6) {
   font-size: 18px;
 }
-/* line 3338, common.scss */
+/* line 3349, common.scss */
 #main-content #recently-tours a:hover, #main-content #recently-tours a:active {
   color: #6d6d6d;
 }
-/* line 3342, common.scss */
+/* line 3353, common.scss */
 #main-content #recently-tours .useful-articles {
   padding-left: 0;
   list-style: none;
 }
-/* line 3345, common.scss */
+/* line 3356, common.scss */
 #main-content #recently-tours .useful-articles a {
   font-family: "Lato-Medium";
   color: #454545;
   background: url("/images/rec-tyrs.png") no-repeat 100% 50%;
   padding-right: 15px;
 }
-/* line 3350, common.scss */
+/* line 3361, common.scss */
 #main-content #recently-tours .useful-articles a:hover, #main-content #recently-tours .useful-articles a:focus {
   text-decoration: none;
   color: #2e97e8;
   background: url("/images/rec-tyrs-hover.png") no-repeat 100% 50%;
 }
-/* line 3360, common.scss */
+/* line 3371, common.scss */
 #main-content #recently-news a:hover, #main-content #recently-news a:focus {
   text-decoration: none;
 }
-/* line 3364, common.scss */
+/* line 3375, common.scss */
 #main-content #recently-news .item {
   background-color: #fff;
   padding: 0 9px 14px;
@@ -3697,74 +3708,74 @@ a.show_all:hover {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 3370, common.scss */
+/* line 3381, common.scss */
 #main-content #recently-news .item img {
   height: 72px;
   object-fit: cover;
 }
-/* line 3374, common.scss */
+/* line 3385, common.scss */
 #main-content #recently-news .item .img-container {
   margin-left: -9px;
   margin-right: -9px;
 }
-/* line 3378, common.scss */
+/* line 3389, common.scss */
 #main-content #recently-news .item h5 {
   margin-top: 0;
   height: 50px;
   line-height: 17px;
 }
-/* line 3383, common.scss */
+/* line 3394, common.scss */
 #main-content #recently-news .item .date {
   margin-top: -2px;
   color: #b8b8b8;
   font-size: 12px;
   font-family: "Lato-Medium";
 }
-/* line 3389, common.scss */
+/* line 3400, common.scss */
 #main-content #recently-news .item p {
   color: #454545;
   line-height: 17px;
   height: 53px;
   overflow: hidden;
 }
-/* line 3396, common.scss */
+/* line 3407, common.scss */
 #main-content #recently-news .item:hover p {
   text-decoration: none;
 }
-/* line 3404, common.scss */
+/* line 3415, common.scss */
 #main-content #fresh-tyr.strany .item {
   margin-left: 0;
   margin-right: 0;
   background-color: #000;
   background-clip: content-box;
 }
-/* line 3409, common.scss */
+/* line 3420, common.scss */
 #main-content #fresh-tyr.strany .item img {
   opacity: 0.6;
 }
-/* line 3414, common.scss */
+/* line 3425, common.scss */
 #main-content #fresh-tyr .item {
   height: 195px;
   padding-left: 1px;
   padding-right: 1px;
   margin-bottom: 2px;
 }
-/* line 3419, common.scss */
+/* line 3430, common.scss */
 #main-content #fresh-tyr .item img {
   width: 100%;
   height: 100%;
 }
-/* line 3424, common.scss */
+/* line 3435, common.scss */
 #main-content #fresh-tyr .row {
   margin-left: -16px;
   margin-right: -16px;
 }
-/* line 3428, common.scss */
+/* line 3439, common.scss */
 #main-content #fresh-tyr h2 {
   cursor: pointer;
   top: 70px;
 }
-/* line 3432, common.scss */
+/* line 3443, common.scss */
 #main-content #fresh-tyr a.kolichestvo {
   height: 100%;
   padding-top: 100px;
@@ -3777,14 +3788,14 @@ a.show_all:hover {
   font-family: "Lato-Heavy";
 }
 
-/* line 3447, common.scss */
+/* line 3458, common.scss */
 #all-tyrs h1 {
   font-size: 30px;
   font-family: "Lato-Light";
   margin-top: 35px;
   float: left;
 }
-/* line 3453, common.scss */
+/* line 3464, common.scss */
 #all-tyrs h2 {
   float: left;
   margin-top: 42px;
@@ -3792,13 +3803,13 @@ a.show_all:hover {
   font-family: "Lato-Heavy";
   color: #60a3c8;
 }
-/* line 3459, common.scss */
+/* line 3470, common.scss */
 #all-tyrs h2 span {
   color: #454545;
   font-family: "Lato-Light";
   font-size: 18px;
 }
-/* line 3465, common.scss */
+/* line 3476, common.scss */
 #all-tyrs h3 {
   text-align: center;
   margin-top: 30px;
@@ -3808,43 +3819,43 @@ a.show_all:hover {
   color: #fff;
   padding-top: 7px;
 }
-/* line 3474, common.scss */
+/* line 3485, common.scss */
 #all-tyrs ul {
   text-align: center;
   list-style: none;
   padding-left: 0;
 }
-/* line 3478, common.scss */
+/* line 3489, common.scss */
 #all-tyrs ul a {
   color: #454545;
   font-family: "Lato-Thin";
   font-size: 18px;
 }
-/* line 3482, common.scss */
+/* line 3493, common.scss */
 #all-tyrs ul a:hover {
   color: #1c87b9;
   text-decoration: none;
 }
 
-/* line 3490, common.scss */
+/* line 3501, common.scss */
 .pagination {
   float: left;
 }
 
-/* line 3496, common.scss */
+/* line 3507, common.scss */
 #main-content #reviews ul.left-title {
   border-bottom: none;
 }
-/* line 3499, common.scss */
+/* line 3510, common.scss */
 #main-content #reviews #pagination-container {
   margin-top: -25px;
 }
-/* line 3503, common.scss */
+/* line 3514, common.scss */
 #main-content #reviews.about #pagination-container {
   margin-bottom: 45px;
 }
 
-/* line 3512, common.scss */
+/* line 3523, common.scss */
 #rewies-form.about span {
   float: right;
   width: 640px;
@@ -3853,16 +3864,82 @@ a.show_all:hover {
   font-family: "Lato-Light";
 }
 
-/* line 3525, common.scss */
+/* line 3534, common.scss */
+.modalReview .modal-dialog {
+  margin-top: 24%;
+}
+/* line 3536, common.scss */
+.modalReview .modal-dialog .modal-content {
+  width: 436px;
+  height: 272px;
+}
+/* line 3539, common.scss */
+.modalReview .modal-dialog .modal-content .modal-header {
+  color: #fff;
+  border-bottom: none;
+  margin-bottom: 15px;
+  text-align: center;
+  background: #07ce9d url("/images/modal_ok.png") no-repeat 35px 21px;
+}
+/* line 3545, common.scss */
+.modalReview .modal-dialog .modal-content .modal-header h4 {
+  font-size: 30px;
+  font-family: "Lato-Light";
+  line-height: 55px;
+  padding-left: 40px;
+}
+/* line 3552, common.scss */
+.modalReview .modal-dialog .modal-content .modal-body {
+  text-align: center;
+  font-family: "Lato-Light";
+  font-size: 16px;
+  padding-left: 70px;
+  padding-right: 70px;
+  border-bottom: none;
+}
+/* line 3560, common.scss */
+.modalReview .modal-dialog .modal-content .modal-footer {
+  text-align: center;
+  border: none;
+}
+/* line 3563, common.scss */
+.modalReview .modal-dialog .modal-content .modal-footer button {
+  width: 102px;
+  height: 46px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  background-color: #2e97e8;
+  background-image: none;
+}
+/* line 3571, common.scss */
+.modalReview .modal-dialog .modal-content .modal-footer button:hover {
+  opacity: .8;
+}
+
+/* line 3583, common.scss */
 #reviews.about #rewies-form .form-group {
   margin-bottom: 18px;
 }
-/* line 3530, common.scss */
+/* line 3586, common.scss */
+#reviews.about #rewies-form button {
+  width: 191px;
+  height: 44px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #2e97e8;
+}
+/* line 3593, common.scss */
+#reviews.about #rewies-form button:hover {
+  opacity: .8;
+}
+/* line 3599, common.scss */
 #reviews h1 {
   margin-top: 0;
   font-family: "Lato-Light";
 }
-/* line 3535, common.scss */
+/* line 3604, common.scss */
 #reviews #rewies-form h2 {
   color: #454545;
   font-family: "Lato-Light";
@@ -3871,67 +3948,67 @@ a.show_all:hover {
   line-height: 40px;
   margin-bottom: 28px;
 }
-/* line 3543, common.scss */
+/* line 3612, common.scss */
 #reviews #rewies-form div.form-group {
   margin-bottom: 18px;
 }
-/* line 3547, common.scss */
+/* line 3616, common.scss */
 #reviews #rewies-form .form-group textarea {
   height: 215px;
 }
-/* line 3551, common.scss */
+/* line 3620, common.scss */
 #reviews #rewies-form button {
   width: 191px;
   margin-top: 8px;
 }
-/* line 3556, common.scss */
+/* line 3625, common.scss */
 #reviews .item {
   margin-top: 20px;
   margin-bottom: 25px;
 }
-/* line 3559, common.scss */
+/* line 3628, common.scss */
 #reviews .item a {
   color: #2e97e8;
   float: right;
   margin-top: -20px;
 }
-/* line 3565, common.scss */
+/* line 3634, common.scss */
 #reviews .answer {
   margin-top: 20px;
   margin-bottom: 25px;
 }
-/* line 3569, common.scss */
+/* line 3638, common.scss */
 #reviews .date {
   font-family: "Lato-Regular";
   font-size: 12px;
   color: #262626;
 }
-/* line 3574, common.scss */
+/* line 3643, common.scss */
 #reviews .title {
   font-family: "Lato-Heavy";
   font-size: 14px;
   margin-top: 7px;
   margin-bottom: 7px;
 }
-/* line 3580, common.scss */
+/* line 3649, common.scss */
 #reviews .text {
   font-family: "Lato-Light";
   font-size: 14px;
-  max-height: 120px;
+  max-height: 118px;
   overflow: hidden;
 }
-/* line 3586, common.scss */
+/* line 3656, common.scss */
 #reviews .autor {
   margin-top: 10px;
   font-size: 14px;
   font-family: "Lato-Italic";
 }
 
-/* line 3593, common.scss */
+/* line 3663, common.scss */
 table#avia {
   width: 100%;
 }
-/* line 3595, common.scss */
+/* line 3665, common.scss */
 table#avia a {
   width: 91px;
   height: 26px;
@@ -3943,18 +4020,18 @@ table#avia a {
   text-align: center;
   padding-top: 2px;
 }
-/* line 3605, common.scss */
+/* line 3675, common.scss */
 table#avia a:hover {
   text-decoration: none;
   background-color: #55a9ea;
 }
-/* line 3610, common.scss */
+/* line 3680, common.scss */
 table#avia span {
   font-family: "Lato-Heavy";
   font-size: 16px;
   color: #2e97e8;
 }
-/* line 3615, common.scss */
+/* line 3685, common.scss */
 table#avia thead {
   color: #838383;
   font-family: "Lato-Bold";
@@ -3962,133 +4039,138 @@ table#avia thead {
   background-color: #f0f0f0;
   border-bottom: 3px solid #e5e5e5;
 }
-/* line 3621, common.scss */
+/* line 3691, common.scss */
 table#avia thead td {
   padding-top: 7px;
   padding-bottom: 7px;
 }
-/* line 3624, common.scss */
+/* line 3694, common.scss */
 table#avia thead td:nth-child(1) {
   width: 100px;
 }
-/* line 3629, common.scss */
+/* line 3699, common.scss */
 table#avia tbody {
   font-family: "Lato-Regular";
   color: #000;
 }
-/* line 3630, common.scss */
+/* line 3700, common.scss */
 table#avia tbody tr:nth-child(odd) {
   background-color: #f3f4f8;
 }
-/* line 3635, common.scss */
+/* line 3705, common.scss */
 table#avia tbody td {
   padding-top: 12px;
   padding-bottom: 12px;
   vertical-align: top;
 }
-/* line 3643, common.scss */
+/* line 3713, common.scss */
 table#avia tbody td:nth-child(1), table#avia thead td:nth-child(1) {
   width: 100px;
   padding-left: 24px;
 }
-/* line 3647, common.scss */
+/* line 3717, common.scss */
 table#avia tbody td:nth-child(2), table#avia thead td:nth-child(2) {
   width: 100px;
   padding-left: 15px;
 }
-/* line 3651, common.scss */
+/* line 3721, common.scss */
 table#avia tbody td:nth-child(3), table#avia thead td:nth-child(3) {
   width: 120px;
   padding-left: 10px;
 }
-/* line 3655, common.scss */
+/* line 3725, common.scss */
 table#avia tbody td:nth-child(4), table#avia thead td:nth-child(4) {
   width: 112px;
   padding-left: 15px;
 }
-/* line 3659, common.scss */
+/* line 3729, common.scss */
 table#avia tbody td:nth-child(5), table#avia thead td:nth-child(5) {
   width: 75px;
   padding-left: 0px;
 }
-/* line 3663, common.scss */
+/* line 3733, common.scss */
 table#avia tbody td:nth-child(6), table#avia thead td:nth-child(6) {
   width: 70px;
   padding-left: 7px;
 }
-/* line 3667, common.scss */
+/* line 3737, common.scss */
 table#avia tbody td:nth-child(7), table#avia thead td:nth-child(7) {
   width: 100px;
   padding-left: 15px;
 }
-/* line 3671, common.scss */
+/* line 3741, common.scss */
 table#avia tbody td:nth-child(8), table#avia thead td:nth-child(8) {
   width: 100px;
   padding-left: 17px;
 }
-/* line 3675, common.scss */
+/* line 3745, common.scss */
 table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   width: 100px;
   padding-left: 0px;
 }
 
-/* line 3683, common.scss */
+/* line 3753, common.scss */
 .hasDatepicker {
   background: url("/images/blue-calendar.png") no-repeat 94% center;
 }
 
-/* line 3689, common.scss */
+/* line 3758, common.scss */
+#zakaz-tyr span.required, #rewies-form span.required {
+  float: none;
+  width: auto;
+}
+/* line 3763, common.scss */
 #zakaz-tyr.poland button, #rewies-form.poland button {
   margin-top: 0;
   padding: 0;
 }
-/* line 3695, common.scss */
+/* line 3769, common.scss */
 #zakaz-tyr.early input, #zakaz-tyr.early select, #rewies-form.early input, #rewies-form.early select {
   margin-bottom: 30px;
 }
-/* line 3698, common.scss */
+/* line 3772, common.scss */
 #zakaz-tyr.early button, #rewies-form.early button {
   margin-top: 0;
 }
-/* line 3702, common.scss */
+/* line 3776, common.scss */
 #zakaz-tyr label, #rewies-form label {
   font-family: "Lato-Heavy";
   font-size: 16px;
   color: #262626;
   margin-bottom: 10px;
 }
-/* line 3708, common.scss */
+/* line 3782, common.scss */
 #zakaz-tyr input, #zakaz-tyr select, #rewies-form input, #rewies-form select {
   font-size: 18px;
 }
-/* line 3711, common.scss */
+/* line 3785, common.scss */
 #zakaz-tyr .form-group, #rewies-form .form-group {
   margin-bottom: 30px;
 }
-/* line 3714, common.scss */
+/* line 3788, common.scss */
 #zakaz-tyr #date, #zakaz-tyr .hasDatepicker, #rewies-form #date, #rewies-form .hasDatepicker {
   background: url("/images/blue-calendar.png") no-repeat 94% center;
 }
-/* line 3717, common.scss */
+/* line 3791, common.scss */
 #zakaz-tyr #to_date, #rewies-form #to_date {
   background: url("/images/blue-calendar.png") no-repeat 94% center;
 }
-/* line 3720, common.scss */
+/* line 3794, common.scss */
 #zakaz-tyr .col-xs-1, #rewies-form .col-xs-1 {
   width: 100px;
 }
-/* line 3722, common.scss */
+/* line 3796, common.scss */
 #zakaz-tyr .col-xs-1 select, #rewies-form .col-xs-1 select {
   width: 70px;
 }
-/* line 3726, common.scss */
+/* line 3800, common.scss */
 #zakaz-tyr textarea, #rewies-form textarea {
   width: 100%;
   height: 155px;
   font-size: 18px;
   resize: none;
 }
-/* line 3732, common.scss */
+/* line 3806, common.scss */
 #zakaz-tyr button, #rewies-form button {
   width: 171px;
   height: 44px;
@@ -4104,13 +4186,13 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   line-height: 42px;
   margin-top: 28px;
 }
-/* line 3746, common.scss */
+/* line 3820, common.scss */
 #zakaz-tyr button:hover, #rewies-form button:hover {
   text-decoration: none;
   background-color: #55a9ea;
 }
 
-/* line 3753, common.scss */
+/* line 3827, common.scss */
 .hot-avia {
   width: 221px;
   height: 44px;
@@ -4126,51 +4208,51 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   text-align: center;
   padding-top: 3px;
 }
-/* line 3767, common.scss */
+/* line 3841, common.scss */
 .hot-avia:hover {
   text-decoration: none;
   background-color: #55a9ea;
   color: #fff;
 }
-/* line 3772, common.scss */
+/* line 3846, common.scss */
 .hot-avia.reviews {
   width: 171px;
 }
 
-/* line 3779, common.scss */
+/* line 3853, common.scss */
 #tours-form.avia button {
   margin-top: 0;
 }
-/* line 3782, common.scss */
+/* line 3856, common.scss */
 #tours-form.avia .radiobtns {
   margin-bottom: 0;
 }
-/* line 3786, common.scss */
+/* line 3860, common.scss */
 #tours-form label {
   font-size: 16px;
   font-family: "Lato-Heavy";
   margin-bottom: 12px;
 }
-/* line 3791, common.scss */
+/* line 3865, common.scss */
 #tours-form select, #tours-form input {
   font-size: 18px;
   font-family: "Lato-Regular";
 }
-/* line 3795, common.scss */
+/* line 3869, common.scss */
 #tours-form .offset {
   margin-bottom: 32px;
 }
-/* line 3798, common.scss */
+/* line 3872, common.scss */
 #tours-form #date {
   background: url("/images/blue-calendar.png") no-repeat 94% center;
 }
-/* line 3801, common.scss */
+/* line 3875, common.scss */
 #tours-form span {
   font-size: 16px;
   margin-left: 28px;
   margin-top: 15px;
 }
-/* line 3806, common.scss */
+/* line 3880, common.scss */
 #tours-form #avto-bron + label {
   color: #262626;
   font-size: 16px;
@@ -4178,7 +4260,7 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   font-weight: normal;
   margin-top: 50px;
 }
-/* line 3813, common.scss */
+/* line 3887, common.scss */
 #tours-form #avto-bron + label span {
   background: url("/images/avto-bron.png") no-repeat;
   width: 43px;
@@ -4191,46 +4273,46 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   margin-right: 18px;
   cursor: pointer;
 }
-/* line 3825, common.scss */
+/* line 3899, common.scss */
 #tours-form #avto-bron {
   display: none;
 }
-/* line 3828, common.scss */
+/* line 3902, common.scss */
 #tours-form #avto-bron:checked + label {
   color: #1c87b9;
 }
-/* line 3831, common.scss */
+/* line 3905, common.scss */
 #tours-form #avto-bron:checked + label span {
   transform: rotate(0deg);
 }
-/* line 3834, common.scss */
+/* line 3908, common.scss */
 #tours-form .checkboxes.form-group {
   margin-bottom: 5px;
 }
-/* line 3836, common.scss */
+/* line 3910, common.scss */
 #tours-form .checkboxes.form-group .checkbox {
   height: 25px;
 }
-/* line 3839, common.scss */
+/* line 3913, common.scss */
 #tours-form .checkboxes.form-group > span#CountryForm_tema_tours {
   margin-left: 0;
   height: 125px;
   overflow: hidden;
   transition-duration: 4s;
 }
-/* line 3845, common.scss */
+/* line 3919, common.scss */
 #tours-form .checkboxes.form-group.checkboxes_stars {
   margin-bottom: -15px;
 }
-/* line 3848, common.scss */
+/* line 3922, common.scss */
 #tours-form .checkboxes.form-group > span#CountryForm_stars, #tours-form .checkboxes.form-group > span#CountryForm_type_hotel {
   margin-left: 0;
 }
-/* line 3850, common.scss */
+/* line 3924, common.scss */
 #tours-form .checkboxes.form-group > span#CountryForm_stars img, #tours-form .checkboxes.form-group > span#CountryForm_type_hotel img {
   margin-right: 10px;
 }
-/* line 3854, common.scss */
+/* line 3928, common.scss */
 #tours-form .checkboxes.form-group input + label {
   color: #262626;
   font-family: "Lato-Regular";
@@ -4239,16 +4321,16 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   padding-left: 30px;
   cursor: pointer;
 }
-/* line 3862, common.scss */
+/* line 3936, common.scss */
 #tours-form .checkboxes.form-group input:checked + label {
   background: url("/images/tour-checkbox-active.png") no-repeat;
   color: #1c87b9;
 }
-/* line 3866, common.scss */
+/* line 3940, common.scss */
 #tours-form .checkboxes.form-group input[type="checkbox"] {
   display: none;
 }
-/* line 3869, common.scss */
+/* line 3943, common.scss */
 #tours-form .checkboxes.form-group .container-group {
   width: 100%;
   padding: 10px;
@@ -4259,27 +4341,27 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   height: 135px;
   overflow: hidden;
 }
-/* line 3879, common.scss */
+/* line 3953, common.scss */
 #tours-form .checkboxes.form-group .group {
   outline: none;
   width: 100%;
   overflow: auto;
   height: 115px;
 }
-/* line 3884, common.scss */
+/* line 3958, common.scss */
 #tours-form .checkboxes.form-group .group .jspVerticalBar {
   width: 4px;
   background-color: transparent;
 }
-/* line 3888, common.scss */
+/* line 3962, common.scss */
 #tours-form .checkboxes.form-group .group .jspDrag {
   background-color: #1c87b9;
 }
-/* line 3891, common.scss */
+/* line 3965, common.scss */
 #tours-form .checkboxes.form-group .group .jspTrack {
   background-color: #dadada;
 }
-/* line 3894, common.scss */
+/* line 3968, common.scss */
 #tours-form .checkboxes.form-group .group input + label {
   height: 21px;
   font-family: "Lato-Light";
@@ -4288,11 +4370,11 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   display: block;
   cursor: pointer;
 }
-/* line 3902, common.scss */
+/* line 3976, common.scss */
 #tours-form .checkboxes.form-group .group input:checked + label {
   background: url("/images/tour-checkbox-active.png") no-repeat;
 }
-/* line 3908, common.scss */
+/* line 3982, common.scss */
 #tours-form .radiobtns label {
   font-weight: normal;
   font-family: "Lato-Regular";
@@ -4301,16 +4383,16 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   background: url("/images/radio-price.png") no-repeat;
   cursor: pointer;
 }
-/* line 3916, common.scss */
+/* line 3990, common.scss */
 #tours-form .radiobtns input:checked + label {
   background: url("/images/radio-price-checked.png") no-repeat;
   color: #1c87b9;
 }
-/* line 3920, common.scss */
+/* line 3994, common.scss */
 #tours-form .radiobtns input {
   display: none;
 }
-/* line 3924, common.scss */
+/* line 3998, common.scss */
 #tours-form button {
   width: 169px;
   height: 55px;
@@ -4326,40 +4408,40 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   text-transform: uppercase;
   margin-top: 30px;
 }
-/* line 3937, common.scss */
+/* line 4011, common.scss */
 #tours-form button:hover, #tours-form button:active {
   background-color: #36d5ae;
 }
-/* line 3941, common.scss */
+/* line 4015, common.scss */
 #tours-form button + span {
   font-size: 24px;
   color: #484848;
 }
-/* line 3944, common.scss */
+/* line 4018, common.scss */
 #tours-form button + span span {
   font-size: 24px;
   color: #07ce9d;
   margin-left: 0;
 }
 
-/* line 3953, common.scss */
+/* line 4027, common.scss */
 #table-result {
   width: 100%;
 }
-/* line 3954, common.scss */
+/* line 4028, common.scss */
 #table-result .ui-accordion .ui-accordion-content {
   padding: 0;
 }
-/* line 3958, common.scss */
+/* line 4032, common.scss */
 #table-result .ui-accordion .ui-accordion-header {
   padding: 0;
   margin: 0;
 }
-/* line 3962, common.scss */
+/* line 4036, common.scss */
 #table-result .ui-accordion-header-icon {
   display: none;
 }
-/* line 3965, common.scss */
+/* line 4039, common.scss */
 #table-result .thead {
   background-color: #f0f0f0;
   width: 100%;
@@ -4367,7 +4449,7 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   font-family: "Lato-Bold";
   border-bottom: 3px solid #e5e5e5;
 }
-/* line 3971, common.scss */
+/* line 4045, common.scss */
 #table-result .thead .td {
   float: left;
   padding-top: 15px;
@@ -4375,27 +4457,27 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   color: #848484;
   background-color: #f0f0f0;
 }
-/* line 3977, common.scss */
+/* line 4051, common.scss */
 #table-result .thead .td:nth-child(1) {
   padding-left: 25px;
   padding-right: 10px;
 }
-/* line 3981, common.scss */
+/* line 4055, common.scss */
 #table-result .thead .td:nth-child(2) {
   padding-left: 10px;
   padding-right: 25px;
 }
-/* line 3985, common.scss */
+/* line 4059, common.scss */
 #table-result .thead .td:nth-child(4) {
   float: right;
   padding-right: 200px;
 }
-/* line 3991, common.scss */
+/* line 4065, common.scss */
 #table-result .tbody {
   font-family: "Lato-Regular";
   font-size: 14px;
 }
-/* line 3994, common.scss */
+/* line 4068, common.scss */
 #table-result .tbody div.tr.ui-state-active.ui-accordion-header {
   outline: none;
   background-color: #2e97e8;
@@ -4403,89 +4485,89 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   border: 1px solid transparent;
   border-radius: 0;
 }
-/* line 4001, common.scss */
+/* line 4075, common.scss */
 #table-result .tbody div.tr.ui-state-active.ui-accordion-header .td span {
   color: #fff;
 }
-/* line 4004, common.scss */
+/* line 4078, common.scss */
 #table-result .tbody div.tr.ui-state-active.ui-accordion-header .td:nth-child(6) {
   background: url("/images/array-open.png") no-repeat 92%;
   width: 100px;
 }
-/* line 4010, common.scss */
+/* line 4084, common.scss */
 #table-result .tbody .ui-state-default {
   outline: none;
   border-radius: 0;
   background-color: #fff;
   border: 1px solid transparent;
 }
-/* line 4016, common.scss */
+/* line 4090, common.scss */
 #table-result .tbody div.tr {
   cursor: pointer;
   width: 100%;
 }
-/* line 4019, common.scss */
+/* line 4093, common.scss */
 #table-result .tbody div.tr:hover, #table-result .tbody div.tr:active {
   outline: none;
   background-color: #2e97e8;
   color: #fff;
   border: 1px solid transparent;
 }
-/* line 4024, common.scss */
+/* line 4098, common.scss */
 #table-result .tbody div.tr:hover span, #table-result .tbody div.tr:active span {
   color: #fff;
 }
-/* line 4028, common.scss */
+/* line 4102, common.scss */
 #table-result .tbody div.tr.odd {
   background-color: #f3f4f8;
 }
-/* line 4030, common.scss */
+/* line 4104, common.scss */
 #table-result .tbody div.tr.odd:hover, #table-result .tbody div.tr.odd:active {
   outline: none;
   background-color: #2e97e8;
   color: #fff;
   border: 1px solid transparent;
 }
-/* line 4035, common.scss */
+/* line 4109, common.scss */
 #table-result .tbody div.tr.odd:hover span, #table-result .tbody div.tr.odd:active span {
   color: #fff;
 }
-/* line 4040, common.scss */
+/* line 4114, common.scss */
 #table-result .tbody div.tr .td {
   float: left;
   line-height: 55px;
 }
-/* line 4043, common.scss */
+/* line 4117, common.scss */
 #table-result .tbody div.tr .td:nth-child(2) {
   padding-left: 25px;
   padding-right: 10px;
 }
-/* line 4047, common.scss */
+/* line 4121, common.scss */
 #table-result .tbody div.tr .td:nth-child(3) {
   padding-left: 25px;
   padding-right: 35px;
 }
-/* line 4051, common.scss */
+/* line 4125, common.scss */
 #table-result .tbody div.tr .td:nth-child(4) {
   width: 453px;
 }
-/* line 4054, common.scss */
+/* line 4128, common.scss */
 #table-result .tbody div.tr .td:nth-child(5) {
   padding-right: 12px;
   width: 160px;
 }
-/* line 4058, common.scss */
+/* line 4132, common.scss */
 #table-result .tbody div.tr .td:nth-child(6) {
   padding-right: 27px;
   background: url("/images/array-close.png") no-repeat 92%;
 }
-/* line 4063, common.scss */
+/* line 4137, common.scss */
 #table-result .tbody div.tr span {
   color: #2e97e8;
   font-family: "Lato-Heavy";
   font-size: 16px;
 }
-/* line 4070, common.scss */
+/* line 4144, common.scss */
 #table-result div.even {
   position: relative;
   z-index: 9999;
@@ -4493,11 +4575,11 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   -moz-box-shadow: 0 0 10px 3px #dadbdf;
   box-shadow: 0 0 10px 3px #dadbdf;
 }
-/* line 4077, common.scss */
+/* line 4151, common.scss */
 #table-result table {
   width: 100%;
 }
-/* line 4079, common.scss */
+/* line 4153, common.scss */
 #table-result table thead {
   font-family: "Lato-Bold";
   color: #8d8d8d;
@@ -4505,29 +4587,29 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   line-height: 55px;
   border-bottom: 3px solid #e5e5e5;
 }
-/* line 4086, common.scss */
+/* line 4160, common.scss */
 #table-result table thead td:nth-child(1) {
   padding-left: 25px;
 }
-/* line 4089, common.scss */
+/* line 4163, common.scss */
 #table-result table thead td:nth-child(5) {
   padding-left: 25px;
 }
-/* line 4094, common.scss */
+/* line 4168, common.scss */
 #table-result table tbody {
   line-height: 55px;
   color: #000;
   font-family: "Lato-Regular";
 }
-/* line 4099, common.scss */
+/* line 4173, common.scss */
 #table-result table tbody td:nth-child(1) {
   padding-left: 25px;
 }
-/* line 4102, common.scss */
+/* line 4176, common.scss */
 #table-result table tbody td:nth-child(5) {
   text-align: center;
 }
-/* line 4104, common.scss */
+/* line 4178, common.scss */
 #table-result table tbody td:nth-child(5) a {
   width: 111px;
   height: 26px;
@@ -4540,12 +4622,12 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   background-color: #2e97e8;
   text-align: center;
 }
-/* line 4115, common.scss */
+/* line 4189, common.scss */
 #table-result table tbody td:nth-child(5) a:hover {
   text-decoration: none;
   background-color: #55a9ea;
 }
-/* line 4124, common.scss */
+/* line 4198, common.scss */
 #table-result .show_more {
   color: #454545;
   font-size: 12px;
@@ -4555,26 +4637,26 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   display: block;
   margin-bottom: 20px;
 }
-/* line 4132, common.scss */
+/* line 4206, common.scss */
 #table-result .show_more:hover {
   text-decoration: none;
 }
 
-/* line 4140, common.scss */
+/* line 4214, common.scss */
 #pagination-container .disabled > a, .pagination .disabled > a {
   border-color: transparent;
 }
-/* line 4142, common.scss */
+/* line 4216, common.scss */
 #pagination-container .disabled > a:hover, .pagination .disabled > a:hover {
   border-color: transparent;
 }
-/* line 4147, common.scss */
+/* line 4221, common.scss */
 #pagination-container ul, .pagination ul {
   padding-left: 0;
   margin-top: 20px;
   list-style: none;
 }
-/* line 4151, common.scss */
+/* line 4225, common.scss */
 #pagination-container ul li, .pagination ul li {
   margin-left: 2px;
   margin-right: 2px;
@@ -4582,7 +4664,7 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   font-family: "Lato-Heavy";
   font-size: 14px;
 }
-/* line 4157, common.scss */
+/* line 4231, common.scss */
 #pagination-container ul li a, .pagination ul li a {
   border-color: transparent;
   color: #a2a2a2;
@@ -4596,49 +4678,49 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
   vertical-align: 5px;
   font-size: 14px;
 }
-/* line 4169, common.scss */
+/* line 4243, common.scss */
 #pagination-container ul li a:hover, .pagination ul li a:hover {
   text-decoration: none;
   color: #63d7b4;
   background-color: #f0f0f0;
   border-color: transparent;
 }
-/* line 4177, common.scss */
+/* line 4251, common.scss */
 #pagination-container ul li.active > a, .pagination ul li.active > a {
   text-decoration: none;
   color: #63d7b4;
   background-color: #f0f0f0;
   border-color: transparent;
 }
-/* line 4182, common.scss */
+/* line 4256, common.scss */
 #pagination-container ul li.active > a:hover, #pagination-container ul li.active > a:focus, #pagination-container ul li.active > a:active, .pagination ul li.active > a:hover, .pagination ul li.active > a:focus, .pagination ul li.active > a:active {
   text-decoration: none;
   color: #63d7b4;
   background-color: #f0f0f0;
   border-color: transparent;
 }
-/* line 4192, common.scss */
+/* line 4266, common.scss */
 #pagination-container li:first-child, .pagination li:first-child {
   width: 29px;
 }
-/* line 4194, common.scss */
+/* line 4268, common.scss */
 #pagination-container li:first-child a, .pagination li:first-child a {
   background: #fff url("/images/duble-arrow.png") no-repeat 50% 50%;
 }
-/* line 4196, common.scss */
+/* line 4270, common.scss */
 #pagination-container li:first-child a:hover, .pagination li:first-child a:hover {
   border-color: transparent;
   background: #f0f0f0 url("/images/duble-arrow-left-hover.png") no-repeat 50% 53.5%;
 }
-/* line 4202, common.scss */
+/* line 4276, common.scss */
 #pagination-container li:last-child, .pagination li:last-child {
   width: 29px;
 }
-/* line 4204, common.scss */
+/* line 4278, common.scss */
 #pagination-container li:last-child a, .pagination li:last-child a {
   background: #fff url("/images/duble-arrow-right.png") no-repeat 50% 53%;
 }
-/* line 4206, common.scss */
+/* line 4280, common.scss */
 #pagination-container li:last-child a:hover, .pagination li:last-child a:hover {
   background: #f0f0f0 url("/images/duble-arrow-hover.png") no-repeat 50% 49.5%;
 }
@@ -4650,88 +4732,88 @@ table#avia tbody td:nth-child(9), table#avia thead td:nth-child(9) {
 
 ==================================
 */
-/* line 4221, common.scss */
+/* line 4295, common.scss */
 footer {
   padding-bottom: 30px;
   padding-top: 45px;
   background-color: #f2f2f2;
 }
-/* line 4225, common.scss */
+/* line 4299, common.scss */
 footer .container {
   padding-left: 10px;
 }
-/* line 4228, common.scss */
+/* line 4302, common.scss */
 footer .container .rows div {
   float: left;
 }
-/* line 4230, common.scss */
+/* line 4304, common.scss */
 footer .container .rows div:nth-child(1) {
   margin-right: 46px;
 }
-/* line 4233, common.scss */
+/* line 4307, common.scss */
 footer .container .rows div:nth-child(2) {
   margin-right: 66px;
 }
-/* line 4236, common.scss */
+/* line 4310, common.scss */
 footer .container .rows div:nth-child(3) {
   margin-right: 46px;
 }
-/* line 4239, common.scss */
+/* line 4313, common.scss */
 footer .container .rows div:nth-child(4) {
   margin-right: 32px;
 }
-/* line 4245, common.scss */
+/* line 4319, common.scss */
 footer h3 {
   margin-top: 0;
   font-family: "Lato-Black";
   color: #555;
   text-transform: uppercase;
 }
-/* line 4250, common.scss */
+/* line 4324, common.scss */
 footer h3 a {
   color: #555;
 }
-/* line 4252, common.scss */
+/* line 4326, common.scss */
 footer h3 a:hover, footer h3 a:active {
   color: #555;
 }
-/* line 4257, common.scss */
+/* line 4331, common.scss */
 footer h2 {
   font-size: 30px;
   color: #a2a2a2;
   font-family: "Lato-Semibold";
 }
-/* line 4262, common.scss */
+/* line 4336, common.scss */
 footer .payment {
   margin-top: -125px;
 }
-/* line 4264, common.scss */
+/* line 4338, common.scss */
 footer .payment a {
   margin-right: 5px;
 }
-/* line 4268, common.scss */
+/* line 4342, common.scss */
 footer .soc {
   margin-top: -125px;
   margin-left: 115px;
 }
-/* line 4271, common.scss */
+/* line 4345, common.scss */
 footer .soc a {
   margin-right: 15px;
 }
-/* line 4274, common.scss */
+/* line 4348, common.scss */
 footer .soc h2 {
   margin-bottom: 23px;
 }
-/* line 4278, common.scss */
+/* line 4352, common.scss */
 footer .contakts {
   margin-top: -10px;
   width: 310px;
 }
-/* line 4281, common.scss */
+/* line 4355, common.scss */
 footer .contakts .clock {
   width: 210px;
 }
-/* line 4284, common.scss */
+/* line 4358, common.scss */
 footer .contakts h5 {
   text-transform: uppercase;
   padding-left: 37px;
@@ -4739,31 +4821,31 @@ footer .contakts h5 {
   color: #0879bb;
   margin-bottom: 0;
 }
-/* line 4290, common.scss */
+/* line 4364, common.scss */
 footer .contakts h5:nth-child(1) {
   background: url("/images/locate.png") no-repeat;
   padding-top: 15px;
   margin-top: -5px;
 }
-/* line 4295, common.scss */
+/* line 4369, common.scss */
 footer .contakts h5:nth-child(3) {
   background: url("/images/clock.png") no-repeat;
   padding-top: 7px;
   margin-top: 15px;
 }
-/* line 4300, common.scss */
+/* line 4374, common.scss */
 footer .contakts h5:nth-child(5) {
   background: url("/images/phone.png") no-repeat;
   padding-top: 12px;
   margin-top: 14px;
 }
-/* line 4306, common.scss */
+/* line 4380, common.scss */
 footer .contakts .mts, footer .contakts .velcom {
   font-size: 16px;
   line-height: 35px;
   margin-top: 7px;
 }
-/* line 4310, common.scss */
+/* line 4384, common.scss */
 footer .contakts .mts i, footer .contakts .velcom i {
   font-size: 20px;
   color: #222222;
@@ -4772,17 +4854,17 @@ footer .contakts .mts i, footer .contakts .velcom i {
   position: relative;
   top: 1px;
 }
-/* line 4319, common.scss */
+/* line 4393, common.scss */
 footer .contakts .mts {
   background: url("/images/mts.png") no-repeat;
   padding-left: 60px;
   margin-left: -22px;
 }
-/* line 4324, common.scss */
+/* line 4398, common.scss */
 footer .contakts .velcom {
   background: url("/images/velcom.png") no-repeat 5px 5px;
 }
-/* line 4327, common.scss */
+/* line 4401, common.scss */
 footer .contakts span {
   color: #454545;
   font-family: "Lato-Regular";
@@ -4790,70 +4872,70 @@ footer .contakts span {
   padding-left: 37px;
   display: inline-block;
 }
-/* line 4333, common.scss */
+/* line 4407, common.scss */
 footer .contakts span.address {
   width: 88%;
 }
-/* line 4337, common.scss */
+/* line 4411, common.scss */
 footer .contakts .email {
   background: url("/images/letter_footer.png") no-repeat;
   margin-top: 18px;
   margin-bottom: 10px;
 }
-/* line 4342, common.scss */
+/* line 4416, common.scss */
 footer .contakts div.row {
   margin-right: 0;
 }
-/* line 4346, common.scss */
+/* line 4420, common.scss */
 footer ul {
   list-style: none;
   padding-left: 0;
 }
-/* line 4350, common.scss */
+/* line 4424, common.scss */
 footer ul li a {
   font-size: 18px;
   color: #555;
 }
-/* line 4353, common.scss */
+/* line 4427, common.scss */
 footer ul li a:hover {
   color: #555;
 }
 
-/* line 4362, common.scss */
+/* line 4436, common.scss */
 .form-contakts .col-xs-7 {
   width: 566px;
   margin-right: -30px;
 }
-/* line 4366, common.scss */
+/* line 4440, common.scss */
 .form-contakts #contacts-form {
   margin-right: -30px;
   position: relative;
 }
-/* line 4369, common.scss */
+/* line 4443, common.scss */
 .form-contakts #contacts-form .form-group {
   float: left;
   margin-right: 30px;
 }
-/* line 4372, common.scss */
+/* line 4446, common.scss */
 .form-contakts #contacts-form .form-group.button {
   float: right;
   margin-bottom: 0;
 }
-/* line 4377, common.scss */
+/* line 4451, common.scss */
 .form-contakts #contacts-form select, .form-contakts #contacts-form input {
   width: 267px;
 }
-/* line 4380, common.scss */
+/* line 4454, common.scss */
 .form-contakts #contacts-form textarea {
   width: 566px;
   height: 60px;
 }
-/* line 4385, common.scss */
+/* line 4459, common.scss */
 .form-contakts .help-block {
   position: absolute;
   margin-top: 2px;
 }
-/* line 4389, common.scss */
+/* line 4463, common.scss */
 .form-contakts button {
   float: right;
   height: 55px;
@@ -4868,38 +4950,38 @@ footer ul li a:hover {
   display: block;
   margin: 10px 0 0;
 }
-/* line 4402, common.scss */
+/* line 4476, common.scss */
 .form-contakts button:hover, .form-contakts button:focus, .form-contakts button:active {
   background: #36d5ae;
   outline: none;
 }
 
-/* line 4410, common.scss */
+/* line 4484, common.scss */
 .news-list .items {
   margin-bottom: -60px;
 }
-/* line 4413, common.scss */
+/* line 4487, common.scss */
 .news-list .pagination {
   margin-top: -10px;
   margin-bottom: 10px;
 }
-/* line 4417, common.scss */
+/* line 4491, common.scss */
 .news-list h1 {
   margin-bottom: 35px;
 }
-/* line 4420, common.scss */
+/* line 4494, common.scss */
 .news-list .image-block {
   width: 100%;
   height: 180px;
   position: relative;
 }
-/* line 4424, common.scss */
+/* line 4498, common.scss */
 .news-list .image-block a {
   width: 100%;
   height: 100%;
   display: inline-block;
 }
-/* line 4428, common.scss */
+/* line 4502, common.scss */
 .news-list .image-block a img {
   width: 100%;
   height: 100%;
@@ -4908,7 +4990,7 @@ footer ul li a:hover {
   -moz-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 4437, common.scss */
+/* line 4511, common.scss */
 .news-list .image-block div {
   color: #fff;
   position: absolute;
@@ -4917,7 +4999,7 @@ footer ul li a:hover {
   font-family: "Lato-Medium";
   font-size: 12px;
 }
-/* line 4444, common.scss */
+/* line 4518, common.scss */
 .news-list .image-block div span {
   padding-top: 1px;
   margin-right: 8px;
@@ -4928,34 +5010,34 @@ footer ul li a:hover {
   border-radius: 9px 10px 10px 9px/9px 9px 10px 10px;
   padding-left: 15px;
 }
-/* line 4455, common.scss */
+/* line 4529, common.scss */
 .news-list .image-block div.soon span {
   background: #04ad38 url("/images/clock_soon.png") no-repeat 55px 3px;
 }
-/* line 4460, common.scss */
+/* line 4534, common.scss */
 .news-list .image-block div.past span {
   background: #a2a2a2 url("/images/clock_past.png") no-repeat 67px 3px;
 }
-/* line 4466, common.scss */
+/* line 4540, common.scss */
 .news-list .create {
   float: left;
   background: url("/images/calendar_grey.png") no-repeat 1px 9px;
   padding-left: 25px;
 }
-/* line 4471, common.scss */
+/* line 4545, common.scss */
 .news-list .count, .news-list .create {
   font-family: "Lato-Medium";
   font-size: 12px;
   color: #262626;
   padding-top: 10px;
 }
-/* line 4477, common.scss */
+/* line 4551, common.scss */
 .news-list .count {
   float: right;
   background: url("/images/eyeball.png") no-repeat 3px 13px;
   padding-left: 25px;
 }
-/* line 4483, common.scss */
+/* line 4557, common.scss */
 .news-list .title {
   clear: both;
   margin-bottom: 4px;
@@ -4966,20 +5048,20 @@ footer ul li a:hover {
   height: 40px;
   overflow: hidden;
 }
-/* line 4492, common.scss */
+/* line 4566, common.scss */
 .news-list .title a {
   color: #262626;
 }
-/* line 4494, common.scss */
+/* line 4568, common.scss */
 .news-list .title a:hover {
   color: #262626;
 }
-/* line 4499, common.scss */
+/* line 4573, common.scss */
 .news-list .col-xs-4 {
   height: 320px;
   margin-bottom: 60px;
 }
-/* line 4503, common.scss */
+/* line 4577, common.scss */
 .news-list .anons {
   height: 60px;
   overflow: hidden;
@@ -4987,16 +5069,16 @@ footer ul li a:hover {
   font-size: 14px;
 }
 
-/* line 4511, common.scss */
+/* line 4585, common.scss */
 #search_container {
   height: 105px;
   background: #f0f0f0;
 }
-/* line 4514, common.scss */
+/* line 4588, common.scss */
 #search_container .row {
   position: relative;
 }
-/* line 4517, common.scss */
+/* line 4591, common.scss */
 #search_container input {
   height: 65px;
   width: 100%;
@@ -5009,7 +5091,7 @@ footer ul li a:hover {
   color: #1c2b3c;
   z-index: 100;
 }
-/* line 4529, common.scss */
+/* line 4603, common.scss */
 #search_container a {
   display: block;
   top: 29px;
@@ -5019,7 +5101,7 @@ footer ul li a:hover {
   z-index: 101;
 }
 
-/* line 4538, common.scss */
+/* line 4612, common.scss */
 .search_result {
   color: #252733;
   font-size: 14px;
@@ -5028,7 +5110,7 @@ footer ul li a:hover {
   margin-bottom: 30px;
 }
 
-/* line 4547, common.scss */
+/* line 4621, common.scss */
 #search_page .items .empty {
   color: #a7a7aa;
   font-family: "Lato-Heavy";
@@ -5038,7 +5120,7 @@ footer ul li a:hover {
   padding-bottom: 20px;
 }
 
-/* line 4559, common.scss */
+/* line 4633, common.scss */
 #main-content .search_result_container img.small {
   width: 100%;
   object-fit: cover;
@@ -5048,7 +5130,7 @@ footer ul li a:hover {
   margin-bottom: 30px;
   height: 270px;
 }
-/* line 4568, common.scss */
+/* line 4642, common.scss */
 #main-content .search_result_container h2 {
   font-size: 18px;
   height: 96px;
@@ -5062,7 +5144,7 @@ footer ul li a:hover {
   text-align: center;
   padding-right: 80px;
 }
-/* line 4581, common.scss */
+/* line 4655, common.scss */
 #main-content .search_result_container h3 {
   margin-top: 10px;
   font-size: 14px;
@@ -5071,11 +5153,11 @@ footer ul li a:hover {
   line-height: 10px;
   text-align: left;
 }
-/* line 4588, common.scss */
+/* line 4662, common.scss */
 #main-content .search_result_container h3 span {
   font-family: "Lato-Heavy";
 }
-/* line 4592, common.scss */
+/* line 4666, common.scss */
 #main-content .search_result_container .stars {
   width: 150px;
   margin-top: 5px;
@@ -5084,14 +5166,14 @@ footer ul li a:hover {
   width: 164px;
   display: inline-block;
 }
-/* line 4599, common.scss */
+/* line 4673, common.scss */
 #main-content .search_result_container .stars img {
   display: inline-block;
   margin: 0 3px;
   width: 20px;
   float: left;
 }
-/* line 4606, common.scss */
+/* line 4680, common.scss */
 #main-content .search_result_container .caption {
   position: absolute;
   top: 0;
@@ -5100,7 +5182,7 @@ footer ul li a:hover {
   text-align: center;
   z-index: 999;
 }
-/* line 4614, common.scss */
+/* line 4688, common.scss */
 #main-content .search_result_container .footer-container {
   color: #fff;
   position: absolute;
@@ -5108,12 +5190,12 @@ footer ul li a:hover {
   padding-left: 5px;
   font-family: "Lato-Medium";
 }
-/* line 4620, common.scss */
+/* line 4694, common.scss */
 #main-content .search_result_container .footer-container .forward {
   margin-left: 15px;
   margin-top: 7px;
 }
-/* line 4624, common.scss */
+/* line 4698, common.scss */
 #main-content .search_result_container .footer-container span:nth-child(1) {
   margin: -14px 15px 0 0px;
   background: url("/images/people.png") no-repeat 9px 2px;
@@ -5122,7 +5204,7 @@ footer ul li a:hover {
   padding-left: 30px;
   text-align: left;
 }
-/* line 4632, common.scss */
+/* line 4706, common.scss */
 #main-content .search_result_container .footer-container span:nth-child(2) {
   display: table-cell;
   background: url("/images/calendar_small.png") no-repeat 2px 1px;

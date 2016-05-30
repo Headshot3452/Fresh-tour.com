@@ -40,19 +40,19 @@ if (!empty($data)) {
                 <img src="/images/icon-admin/little_message_company.png"/>
                 <?php echo $data->user ? $data->user->email : $data->email?:'--'; ?>
             </div>
-            <div class="rating">
-                <?php
-                for($i=1;$i<6;$i++){
-                    echo '<i class="fa fa-star';
-                    if($i>$data->rating)
-                        echo '-o';
-                    echo '"></i>';
-                }
-                ?>
-            </div>
+<!--            <div class="rating">-->
+<!--                --><?php
+//                for($i=1;$i<6;$i++){
+//                    echo '<i class="fa fa-star';
+//                    if($i>$data->rating)
+//                        echo '-o';
+//                    echo '"></i>';
+//                }
+//                ?>
+<!--            </div>-->
         </div>
         <div onclick="location.href='<?php echo $link; ?>'" class="col-xs-2 theme">
-            <?php echo $data->theme->title ?>
+            <?php echo CHtml::encode($data->theme ? $data->theme->title : $data->header) ;?>
         </div>
         <div onclick="location.href='<?php echo $link; ?>'" class="col-xs-7 text">
             <?php echo $data->text; ?>
