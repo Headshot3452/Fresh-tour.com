@@ -42,13 +42,12 @@
 					</ul>
 				</div>
 <?php
-				$table_title =array();
-				$table_title = CatalogParams::model()->active()->findAll('catalog_tree_id = :id AND parent_id > 0', array('id' => Yii::app()->params["avia_catalog"]));
-
+				$table_title = array();
+				$table_title = CatalogParams::model()->active()->findAll(array('condition' => 'catalog_tree_id = :id AND parent_id > 0', 'params' => array('id' => Yii::app()->params["avia_catalog"]), 'order' => 'sort'));
 ?>
 				<div class="col-xs-9 no-right">
 					<h1> <?php echo $this->pageTitle ;?> </h1>
-					<table id="avia">
+					<table id="avia" style="margin-top: 30px;">
 						<thead>
 							<tr>
 <?php
@@ -68,7 +67,7 @@
 								'itemView' => '_hot-avia',
 								'dataProvider' => $dataProducts,
 								'ajaxUpdate' => false,
-								'template' => "{items}\n<div class=\"col-xs-12 text-center\">{pager}</div>",
+								'template' => "{items}\n<tbody></table><div class=\"col-xs-12 no-left text-center\">{pager}</div>",
 								'pager' => array(
 									'class' => 'bootstrap.widgets.BsPager',
 									'firstPageLabel' => '',
@@ -80,8 +79,8 @@
 							)
                         );
 ?>
-						<tbody>
-					</table>
+<!--						<tbody>-->
+<!--					</table>-->
 					<div class="text">
 						<?php echo $this->text ;?>
 					</div>

@@ -48,7 +48,7 @@ class CatalogProductsParams extends Model
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'value' => array(self::BELONGS_TO, 'CatalogParamsVal', 'value_id'),
+			'value' => array(self::BELONGS_TO, 'CatalogParamsVal', 'value_id', 'order' => 'sort DESC'),
 			'product' => array(self::BELONGS_TO, 'CatalogProducts', 'product_id'),
 			'params' => array(self::BELONGS_TO, 'CatalogParams', 'params_id'),
 		);

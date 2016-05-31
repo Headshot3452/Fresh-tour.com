@@ -1,6 +1,5 @@
 <?php
-	$parameters = CatalogProductsParams::model()->findAll('product_id = :id', array(':id' => $data->id));
-
+	$parameters = CatalogProductsParams::model()->findAll(array('condition' => 'product_id = :id', 'params' => array(':id' => $data->id)));
 	if($parameters)
 	{
 		echo '<tr>';

@@ -294,7 +294,7 @@
 
     <div class="form-group">
         <?php echo $form->labelEx($model, 'country_near'); ?>
-        <?php echo $form->dropDownList($model, 'country_near', $all_countrys, array('class' => 'selectpicker', 'data-size' => '10', 'multiple' => true, 'title' => "Выберите страны")); ?>
+        <?php echo $form->dropDownList($model, 'country_near', isset($all_countrys) ? $all_countrys : array(), array('class' => 'selectpicker', 'data-size' => '10', 'multiple' => true, 'title' => "Выберите страны")); ?>
         <?php echo $form->error($model, 'country_near'); ?>
     </div>
 

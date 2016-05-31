@@ -6,7 +6,7 @@
             'dataProvider' => $data,
             'itemView' => '_one_review',
             'ajaxUpdate' => false,
-            'template' => '<div class="row">{items}<div class="clearfix"></div><div class="col-xs-6">{pager}</div></div>',
+            'template' => '{items}<div class="clearfix"></div><div class="col-xs-6">{pager}</div>',
             'pager' => array(
             'class' => 'bootstrap.widgets.BsPager',
             'firstPageLabel' => '',
