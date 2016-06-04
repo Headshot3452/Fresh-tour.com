@@ -65,6 +65,11 @@
                 }
             }
 
+            if($root->id == Yii::app()->params['tema_catalog'])
+            {
+                $count_item = CatalogProducts::model()->active()->count("parent_id = :id", array('id' => $root->id));
+            }
+
             if(!$categories)
             {
                 $products = CatalogProducts::model()->getDataProviderForCategory($root->id, $order, $count_item);
@@ -114,7 +119,7 @@
                 }
 
                 $categories = $root->children()->active()->findAll(array('order' => 'title'));
-                $this->render($view, array('categories' => $categories, 'popular' => $popular, 'dataProducts' => $products, 'sort' => $sort, 'one_country' => $one_country));
+                $this->render($view, array('categories' => $categories, 'root' => $root, 'popular' => $popular, 'dataProducts' => $products, 'sort' => $sort, 'one_country' => $one_country));
                 Yii::app()->end();
             }
 
@@ -123,6 +128,7 @@
             if($root->id == Yii::app()->params['tema_catalog'])
             {
                 $view = 'tema_tours';
+//                $count_item = null;
             }
 
             $this->render($view, array('categories' => $categories, 'dataProducts' => $products, 'count' => $count, 'sort' => $sort));

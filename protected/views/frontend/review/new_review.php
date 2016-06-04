@@ -1,42 +1,39 @@
 <?php
-/* @var $this ReviewController */
-/* @var $model ReviewItem */
-/* @var $form BsActiveForm */
+    /* @var $this ReviewController */
+    /* @var $model ReviewItem */
+    /* @var $form BsActiveForm */
 
-$cs = Yii::app()->getClientScript();
-$cs->registerCssFile(Yii::app()->getBaseUrl() . '/css/backend_manenok.css');
-
+    $cs = Yii::app()->getClientScript();
+    $cs->registerCssFile(Yii::app()->getBaseUrl() . '/css/backend_manenok.css');
 ?>
 <div class="head">
-<div class="container">
-<h2 class='col-xs-12'>
-    Модуль Отзывы
-</h2>
-</div>
+    <div class="container">
+        <h2 class='col-xs-12'>
+            Модуль Отзывы
+        </h2>
+    </div>
 </div>
 
 <div class="form">
-<!--    <div class="row">-->
-
-<!--    </div>-->
     <div class="container">
-        <?php
-        if ($setting[2]->status == 1 and Yii::app()->user->isGuest) {
+<?php
+        if ($setting[2]->status == 1 and Yii::app()->user->isGuest)
+        {
             echo '<div><h3>Оставить отзыв могут только зарегистрированные пользователи!</h3></div>';
-        }else{
-
-        $form = $this->beginWidget('bootstrap.widgets.BsActiveForm', array(
-            'id' => 'new-review',
-            // Please note: When you enable ajax validation, make sure the corresponding
-            // controller action is handling ajax validation correctly.
-            // See class documentation of BsActiveForm for details on this,
-            // you need to use the performAjaxValidation()-method described there.
-            'enableAjaxValidation' => false,
-        )); ?>
-        <div class="container">
-            <h4>Добавить отзыв</h4>
-        </div>
-        <div class="clearfix"></div>
+        }
+        else
+        {
+            $form = $this->beginWidget('bootstrap.widgets.BsActiveForm',
+                array(
+                    'id' => 'new-review',
+                    'enableAjaxValidation' => false,
+                )
+            );
+?>
+            <div class="container">
+                <h4>Добавить отзыв</h4>
+            </div>
+            <div class="clearfix"></div>
 
         <?php
 //                    echo $form->errorSummary($review);

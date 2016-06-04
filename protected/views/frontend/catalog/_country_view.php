@@ -82,9 +82,13 @@
 					{
 						echo '<img src = "/images/star_full.png" alt = "">';
 					}
-					else
+					elseif($i > 0)
 					{
 						echo '<img src = "/images/star.png" alt = "">';
+					}
+					else
+					{
+						break;
 					}
 				}
 ?>

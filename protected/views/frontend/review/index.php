@@ -130,7 +130,6 @@
 
             if(autoHeight <= 119)
             {
-                alert($(this).height());
                 $(this).siblings('a').hide();
             }
         });
@@ -141,7 +140,6 @@
             {
                 var autoHeight = $(this).closest('.item').find('.text').css({'max-height': 'none'}).height();
                 $(this).closest('.item').find('.text').css({"max-height": 118});
-//                alert(autoHeight);
                 $(this).closest('.item').find('.text').animate({ "max-height": parseInt(autoHeight) }, parseInt(500));
                 $(this).text('Скрыть');
             }

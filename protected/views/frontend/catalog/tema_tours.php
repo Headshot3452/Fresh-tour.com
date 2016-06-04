@@ -28,7 +28,7 @@
 
 <?php
 	$tours = $dataProducts->getData();
-	$count_tours = count($tours);
+	$count_tours = $dataProducts->getTotalItemCount();
 ?>
 
 <div id="main-content">
@@ -57,9 +57,10 @@
 						<div id="recently-tours">
 							<h2>Ещё тематические туры</h2>
 <?php
+//var_dump($tours);
 							for($i = 5; $i < $count_tours; $i++)
 							{
-								$image = $tours[$i]->getOneFile('big');
+//								$image = $tours[$i]->getOneFile('big');
 								$active = ($i == 0) ? 'active' : '';
 								echo
 									'<a data-toggle="tab" href = "#'.$tours[$i]['name'].'">'.$tours[$i]['title'].'</a>';
@@ -160,9 +161,13 @@
 																			{
 																				$tem_slider .= '<img src = "/images/star_full.png">';
 																			}
-																			else
+																			elseif($i > 0)
 																			{
 																				$tem_slider .= '<img src = "/images/star.png">';
+																			}
+																			else
+																			{
+																				break;
 																			}
 																		}
 													$tem_slider .=

@@ -28,12 +28,18 @@
 
 <div class="row contakts-page">
 	<div class="col-xs-6 no-right">
-		[[w:MapWidget|map_id=1;height=465px;]]
-		<div class="text">
-			<?php echo $this->text; ?>
+		<div class="form-contakts">
+			<div class="col-xs-7 col-xs-offset-4 no-all">
+				<h1>Обратная связь</h1>
+				<?php $this->renderPartial('_form_contacts',array('model'=>new ContactsForm('contacts'))) ;?>
+			</div>
 		</div>
+
+<!--		<div class="text">-->
+<!--			--><?php //echo $this->text; ?>
+<!--		</div>-->
 	</div>
-	<div class="col-xs-6 no-left">
+	<div class="col-xs-6 no-left no-right">
 		<div class="contakts-green">
 			<div class="address">
 				<?php echo $this->settings['address'] ;?>
@@ -52,11 +58,14 @@
 				<?php echo $this->settings['email_order'] ;?>
 			</div>
 		</div>
-		<div class="form-contakts">
-			<div class="col-xs-7 no-all">
-				<h1>Обратная связь</h1>
-				<?php $this->renderPartial('_form_contacts',array('model'=>new ContactsForm('contacts'))) ;?>
-			</div>
-		</div>
+
+<!--		<div class="form-contakts">-->
+<!--			<div class="col-xs-7 no-all">-->
+<!--				<h1>Обратная связь</h1>-->
+<!--				--><?php //$this->renderPartial('_form_contacts',array('model'=>new ContactsForm('contacts'))) ;?>
+<!--			</div>-->
+<!--		</div>-->
 	</div>
+	<div class="clearfix"></div>
+	[[w:MapWidget|map_id=1;height=465px;]]-->
 </div>

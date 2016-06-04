@@ -69,5 +69,8 @@
 				'</ul>
 			</div>
 			<div class="clearfix"></div>
+		</div>
+		<div class="text" style="margin-top: 30px;">
+		    '.$root->text.'
 		</div>';
 	}

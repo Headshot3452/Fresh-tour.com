@@ -498,7 +498,7 @@ header {
       position: relative;
     }
     li {
-      a {
+      a, .dropdown-toggle {
         line-height: 74px;
         font-family: $lb;
         font-size: 18px;
@@ -590,7 +590,9 @@ header, .hidden-top {
 */
 
 #slider-main {
+  overflow: hidden;
   min-width: 1170px;
+  height: 685px;
   a {
     text-align: center;
     z-index: 1;
@@ -994,8 +996,11 @@ header, .hidden-top {
     position: absolute;
     top: 0;
     margin-top: 44px;
-    width: 61%;
-    margin-left: 50px;
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -1007,6 +1012,11 @@ header, .hidden-top {
 
 #description, #left_panel {
   #recently {
+    .img-cont {
+      h3 {
+        padding-right: 15px;
+      }
+    }
     .hot_tours_item {
       a {
         & > img {
@@ -1048,10 +1058,11 @@ header, .hidden-top {
       }
       .footer-container {
         top: 55%;
-        padding-left: 5px;
+        padding-left: 0px;
         color: #fff;
         position: absolute;
         top: 75%;
+        padding-right: 5px;
         font-family: "Lato-Medium";
         span {
           margin: -14px 15px 0 0px;
@@ -1318,7 +1329,8 @@ header, .hidden-top {
       }
       h3 {
         padding-top: 50px;
-        background: url("/images/vizy.png") no-repeat 65px 5px;
+        padding-right: 30px;
+        background: url("/images/vizy.png") no-repeat 48% 5px;
       }
     }
   }
@@ -1654,6 +1666,18 @@ header, .hidden-top {
     color: #a2a2a2;
     cursor: pointer;
     margin-bottom: 0;
+    height: 102px;
+    overflow: hidden;
+    &.slick-slider {
+      overflow: visible;
+    }
+    img {
+      float: left;
+      margin-right: 10px;
+      padding-top: 33px;
+      width: 29px;
+      height: 75px;
+    }
     .slick-slide {
       line-height: 102px;
       margin-left: 10px;
@@ -1923,7 +1947,16 @@ header, .hidden-top {
       margin-left: -500px;
       margin-top: 620px;
       position: absolute;
-
+    }
+  }
+  .col-xs-5.no-right {
+    .nav-tabs {
+      li {
+        background-color: #000;
+        img {
+          opacity: .6;
+        }
+      }
     }
   }
 }
@@ -1945,6 +1978,12 @@ header, .hidden-top {
       }
       .nav-tabs {
         border-bottom: none;
+        & > li {
+          background-color: #000;
+          img {
+            opacity: .6;
+          }
+        }
       }
       #recently-tours {
         background-color: transparent;
@@ -2024,9 +2063,13 @@ header, .hidden-top {
           vertical-align: -10px;
         }
         a {
+          position: absolute;
+          left: 100%;
+          margin-left: -135px;
+
           font-family: $l;
           color: #2e97e8;
-          float: right;
+          //float: right;
           font-size: 18px;
           margin-top: 47px;
           padding-right: 18px;
@@ -2840,6 +2883,11 @@ a.show_all {
       background-position: 10px 50%;
     }
   }
+  &.tyr-posad {
+    h1 {
+      max-width: 260px;
+    }
+  }
   h1 {
     color: #fff;
     margin-top: 170px;
@@ -2914,6 +2962,7 @@ a.show_all {
 
 .contakts-page.row {
   border-bottom: 13px solid #07ce9d;
+  margin-right: 0;
   .text {
     height: 465px;
     p {
@@ -2952,7 +3001,7 @@ a.show_all {
     .address {
       font-size: 24px;
       padding-left: 65px;
-      padding-right: 65px;
+      padding-right: 50px;
       padding-top: 130px;
       background: url("/images/contakts-loc-white.png") no-repeat 50% 40%;
     }
@@ -2960,7 +3009,7 @@ a.show_all {
       font-size: 22px;
       padding-top: 140px;
       padding-left: 60px;
-      padding-right: 60px;
+      padding-right: 50px;
       background: url("/images/contakts-clock-white.png") no-repeat 50% 40%;
     }
     .email {
@@ -3531,8 +3580,10 @@ a.show_all {
 }
 
 .modalReview {
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 9999;
   .modal-dialog {
-    margin-top: 24%;
+    margin-top: 15%;
     .modal-content {
       width: 436px;
       height: 272px;
@@ -4630,27 +4681,30 @@ footer {
 }
 #main-content {
   .search_result_container {
+    background: #000;
+    background-clip: content-box;
+    padding-bottom: 30px;
     img.small {
       width: 100%;
       object-fit: cover;
       -webkit-border-radius: 8px;
       -moz-border-radius: 8px;
       border-radius: 8px;
-      margin-bottom: 30px;
       height: 270px;
+      opacity: .6;
     }
     h2 {
       font-size: 18px;
       height: 96px;
-      padding: 42px 65px 0 50px;
-      display: table-cell;
+      padding: 42px 45px 0 15px;
+      display: flex;
+      flex-direction: column-reverse;
       vertical-align: bottom;
       margin-bottom: 0;
       line-height: 25px;
       font-family: "Lato-Black";
       color: #fff;
       text-align: center;
-      padding-right: 80px;
     }
     h3 {
       margin-top: 10px;
@@ -4692,7 +4746,9 @@ footer {
       padding-left: 5px;
       font-family: "Lato-Medium";
       .forward {
-        margin-left: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 7px;
       }
       span:nth-child(1) {
