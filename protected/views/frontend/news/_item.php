@@ -29,7 +29,7 @@
                     <div class="create">'.Yii::app()->dateFormatter->format('dd. MM. yyyy', $data->create_time).'</div>
                     <div class="count">'.$data->count .' '. Yii::t('app', 'Visits', $data->count).'</div>
                     <div class="clearfix"></div>
-                    <div class="title">'.CHtml::link($data->title, array($data->name),array('class'=>'black-link')).'</div>
+                    <div class="title">'.CHtml::link($data->title, $data->name, array('class' => 'black-link')).'</div>
                     <div class="anons">'.$data->preview.'</div>
                 </div>
            </div>

@@ -42,17 +42,36 @@
         }
 
         $count = $dataProducts->getTotalItemCount();
+        $selected = (isset($_GET['country']) && $_GET['country']) ? CHtml::encode($_GET['country']) : '';
+        $one_country = new CatalogProducts();
 
         echo
-            '<h1>'. $this->pageTitle . '<i> '.$count.'</i> </h1>
+            '<h1 id="one_country_title">'. $this->pageTitle . '<i> '.$count.'</i> '.CHtml::dropDownList("one_country", $one_country, CatalogProducts::getVizyForFilter(), array("class" => "selectpicker", "data-size" => "6", "empty" => "Все страны", "options" => array($selected => array("selected" => true)))).'</h1>
             <div class="sort">
                 Сортировка по: <a href = "" class="'.$sort.'">Цене <span></span> </a>
             </div>
             <div class="row">';
 
+        $cs = Yii::app()->getClientScript();
+
+        $one_country_select = '
+            $("#one_country").on("change", function()
+            {
+                if($(this).val())
+                {
+                    document.location.href = window.location.pathname+"?country="+$(this).val();
+                }
+                else
+                {
+                    document.location.href = window.location.pathname;
+                }
+            });
+        ';
+
+        $cs->registerPackage("boot-select")->registerPackage("cookie")->registerScript("one_country_select", $one_country_select);
+
         if ($count > 0)
         {
-            $cs = Yii::app()->getClientScript();
             $sorter = '
                 $("body").on("click", ".sort a", function()
                 {
@@ -78,7 +97,7 @@
                     window.location.reload();
                 });
             ';
-            $cs->registerPackage('boot-select')->registerPackage("cookie")->registerScript('sorter', $sorter);
+            $cs->registerScript('sorter', $sorter);
         }
 
         $selected = isset($_COOKIE['count_item']) ? $_COOKIE['count_item'] : '';

@@ -5,6 +5,8 @@
             <div class="row">
                 <div class="breadcrumbs">
 <?php
+                    $name_hotel = '';
+
                     if (!isset($limit))
                     {
                         $limit = 2;
@@ -300,15 +302,27 @@
                             echo
                             '</div>';
                         }
+
+                        $tema_categories = CatalogProducts::model()->active()->findAllByAttributes(array('parent_id' => Yii::app()->params['tema_catalog']));
+
+                        if($tema_categories)
+                        {
+                            echo
+                            '<div id="recently-tours">
+                                <h2>Тематические туры</h2>';
+                                foreach($tema_categories as $key => $value)
+                                {
+                                    if($key > 5)
+                                    {
+                                        break;
+                                    }
+                                    echo '<a href = "/'.$this->getUrlById(Yii::app()->params['pages']['tema-tours']).'/#'.$value->name.'">' . $value->title . '</a>';
+                                }
+                            echo
+                            '</div>
+                            <div class="clearfix"></div>';
+                        }
 ?>
-                        <div id="recently-tours">
-                            <h2>Тематические туры</h2>
-                            <a href = "">Спа отдых</a>
-                            <a href = "">Семейный отдых</a>
-                            <a href = "">Корпаративный отдых</a>
-                            <a href = "">Рекомендуемые отели</a>
-                            <a href = "">Городские отели</a>
-                        </div>
                         [[w:NewsLastWidget|parent_id=2;count=3;]]
                     </div>
                     <div class="col-xs-9 no-right">
@@ -330,6 +344,7 @@
                                     break;
                                 }
                             }
+
 ?>
                         </div>
                         <div class="clearfix"></div>
@@ -450,6 +465,9 @@
                             )
                         );
 ?>
+                        <?php echo $form->hiddenField($model, 'country', array('value' => $country)); ?>
+                        <?php echo $form->hiddenField($model, 'hotel', array('value' => $name_hotel)); ?>
+
                         <div class = "form-group col-xs-4 no-left">
                             <?php echo $form->labelEx($model, 'name'); ?>
                             <?php echo $form->textField($model, 'name', array('placeholder' => 'Иванов Иван')); ?>
@@ -546,7 +564,6 @@
                             <?php echo $form->textarea($model, 'questions', array('placeholder' => 'Оставьте свое предложение..')); ?>
                             <?php echo $form->error($model, 'questions'); ?>
                         </div>
-
 <?php
                         echo BsHtml::submitButton(Yii::t('app', 'Book a tour'), array('id' => 'viz_submit'));
                         $this->endWidget();
@@ -636,11 +653,19 @@
     </div>
 </div>
 
+
+
 <script>
 
     $(function()
     {
         $('[data-toggle="tooltip"]').tooltip({placement : 'bottom'});
+
+        $("#viz_submit").on('click', function()
+        {
+            $("#zakaz-tyr").submit();
+
+        });
 
         $("#country-info a").click(function()
         {

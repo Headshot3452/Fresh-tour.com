@@ -50,7 +50,6 @@ class SiteController extends FrontendController
             }
         }
 
-
         $fresh = CatalogProducts::model()->active()->findAll(array('condition' => 'parent_id IN ('.$list_fresh.') AND new = 1', 'order' => 'parent_id'));
 
         $this->render('index', array('categories' => $categories, 'fresh' => $fresh, 'tem_tours' => $tem_tours, 'tem_products' => $tem_products));
@@ -81,9 +80,9 @@ class SiteController extends FrontendController
             $model->attributes=$_POST['ContactsForm'];
             if ($model->validate())
             {
-                $bodyEmail=$this->renderEmail('contacts',array('model'=>$model));
+                $bodyEmail=$this->renderEmail('contacts', array('model' => $model));
                 $mail=Yii::app()->mailer->isHtml(true)->setFrom($model->email);
-                $mail->send($this->settings->email,'Subject',$bodyEmail);
+                $mail->send($this->settings->email_callback, 'Обратная связь', $bodyEmail);
 
                 echo CJSON::encode(array(
                     'status'=>'success'
@@ -142,9 +141,11 @@ class SiteController extends FrontendController
 
         $this->render('search', array('dataProducts'=>$products));
     }
-	
+
 	public function actionPage($url)
     {
+        $this->layout = 'frontend_two_columns';
+
 		$this->setPageForUrl($url);
 
         if($this->page_id == Yii::app()->params['pages']['o-kompanii'])
@@ -163,7 +164,7 @@ class SiteController extends FrontendController
             $this->redirect('/'.$url);
         }
 
-        $this->render('page',array());
+        $this->render('page', array());
     }
 
     public function actionError()

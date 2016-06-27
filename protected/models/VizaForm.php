@@ -9,6 +9,8 @@
 		public $man;
 		public $child;
 		public $questions;
+		public $country;
+		public $hotel;
 
 		public function rules()
 		{
@@ -16,7 +18,7 @@
 				array('name, phone, date_to, date_from, man, child', 'required'),
 				array('name, email, phone', 'filter', 'filter'=>'trim'),
 				array('email', 'email'),
-				array('questions', 'safe'),
+				array('questions, country, hotel', 'safe'),
 				array('phone', 'match', 'pattern' => Yii::app()->params['phone']['regexp']),
 			);
 		}
@@ -32,6 +34,8 @@
 				'child' => Yii::t('app', 'Сhild'),
 				'man' => Yii::t('app', 'Man'),
 				'questions' => Yii::t('app', 'Questions'),
+				'country' => Yii::t('app', 'Country'),
+				'hotel' => Yii::t('app', 'Hotel'),
 			);
 		}
 	}

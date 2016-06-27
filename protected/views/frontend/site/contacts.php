@@ -29,8 +29,8 @@
 <div class="row contakts-page">
 	<div class="col-xs-6 no-right">
 		<div class="form-contakts">
-			<div class="col-xs-7 col-xs-offset-4 no-all">
-				<h1>Обратная связь</h1>
+			<div class="col-xs-8 no-all" style="float: right; padding-right: 30px;">
+				<h1 class="">Обратная связь</h1>
 				<?php $this->renderPartial('_form_contacts',array('model'=>new ContactsForm('contacts'))) ;?>
 			</div>
 		</div>
@@ -67,5 +67,5 @@
 <!--		</div>-->
 	</div>
 	<div class="clearfix"></div>
-	[[w:MapWidget|map_id=1;height=465px;]]-->
+	[[w:MapWidget|map_id=1;height=465px;]]
 </div>

@@ -149,11 +149,12 @@
 						$this->endWidget();
 
 						$selected = (isset($_GET['country']) && $_GET['country']) ? CHtml::encode($_GET['country']) : '';
+						$one_country = new CatalogTree();
 ?>
 					</div>
 				</div>
 					<div class="col-xs-9 no-right hot_tours_container">
-						<h1 id="one_country"><?php echo $this->pageTitle ;?> <?php echo CHtml::dropDownList('one_country', $one_country, CatalogTree::getCountry(), array('class' => 'selectpicker', 'data-size' => '6', 'empty' => 'Все страны', 'options' => array($selected => array('selected' => true)))) ;?></h1>
+						<h1 id="one_country_title"><?php echo $this->pageTitle ;?> <?php echo CHtml::dropDownList('one_country', $one_country, CatalogTree::getCountry(), array('class' => 'selectpicker', 'data-size' => '6', 'empty' => 'Все страны', 'options' => array($selected => array('selected' => true)))) ;?></h1>
 
 						<div class="sort">
 							Сортировка по: <a href = "" class="<?php echo $sort ;?>">Цене <span></span> </a>
@@ -216,9 +217,15 @@
 ?>
 						</div>
 						<div class="clearfix"></div>
-						<div class="text">
-							<?php echo $this->text ;?>
-						</div>
+<?php
+						if(!isset($_GET['page']))
+						{
+							echo
+							'<div class="text col-xs-12">
+								'.$this->text.'
+							</div>';
+						}
+?>
 					</div>
 				</div>
 			</div>
@@ -273,10 +280,10 @@
 					}
 				});
 
-				$( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) + " Руб - " + $( "#slider-range" ).slider( "values", 1 ) + " Руб " );
-
-				var new_amount = String($("#amount").val()).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, "$1 ");
-				$("#amount").val(new_amount);
+//				$( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) + " Руб - " + $( "#slider-range" ).slider( "values", 1 ) + " Руб " );
+//
+//				var new_amount = String($("#amount").val()).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, "$1 ");
+//				$("#amount").val(new_amount);
 			});
 		';
 	$cs->registerPackage('jquery.ui')->registerPackage('boot-select')->registerScript("price_line", $price_line);

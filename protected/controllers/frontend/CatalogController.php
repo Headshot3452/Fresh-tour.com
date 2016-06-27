@@ -72,7 +72,7 @@
 
             if(!$categories)
             {
-                $products = CatalogProducts::model()->getDataProviderForCategory($root->id, $order, $count_item);
+                $products = CatalogProducts::model()->getDataProviderForCategory($root->id, $order, $count_item, 1);
                 $count = $products->getTotalItemCount();
             }
             else
@@ -105,21 +105,12 @@
                 }
                 else
                 {
+                    $this->layout = 'frontend_two_columns';
                     $view = 'countrys';
                 }
 
-                $one_country =Yii::app()->request->cookies['$one_country'];
-                if (!$one_country)
-                {
-                    $one_country = 'default';
-                }
-                else
-                {
-                    $one_country = $one_country->value;
-                }
-
                 $categories = $root->children()->active()->findAll(array('order' => 'title'));
-                $this->render($view, array('categories' => $categories, 'root' => $root, 'popular' => $popular, 'dataProducts' => $products, 'sort' => $sort, 'one_country' => $one_country));
+                $this->render($view, array('categories' => $categories, 'root' => $root, 'popular' => $popular, 'dataProducts' => $products, 'sort' => $sort));
                 Yii::app()->end();
             }
 
@@ -264,18 +255,20 @@
 
                         if ($vizaForm->validate())
                         {
-                            $bodyEmail = $this->renderEmail('contacts',array('model' => $vizaForm));
+                            $bodyEmail = $this->renderEmail('vizaForm', array('model' => $vizaForm));
                             $mail=Yii::app()->mailer->isHtml(true)->setFrom($vizaForm->email);
-                            $mail->send($this->settings->email,'Subject', $bodyEmail);
+                            $mail->send($this->settings->email_order, 'Заказ тура', $bodyEmail);
                         }
                     }
 
                     if(in_array(Yii::app()->params['pages']['visy'], array($this->page_id, $parent_id)))
                     {
                         $view = 'viza_product';
+                        $this->layout = 'frontend';
                     }
                     else
                     {
+                        $this->layout = 'frontend';
                         $view = 'product';
                     }
 
@@ -314,7 +307,7 @@
 
                 if (!$sort)
                 {
-                    $sort = 't.`sort`';
+                    $order = 't.`sort`';
                 }
                 else
                 {
@@ -357,6 +350,7 @@
             if(in_array(Yii::app()->params['pages']['strany-i-oteli'], array($this->page_id, $parent_id)))
             {
                 $view = 'country';
+                $this->layout = 'frontend';
                 $hots = CatalogProducts::model()->getHotsTours($id);
             }
             else

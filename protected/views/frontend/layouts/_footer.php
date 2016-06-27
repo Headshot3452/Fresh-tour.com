@@ -1,6 +1,35 @@
         <div class="ghost-footer"></div>
     </div>
-        <footer>
+        <footer>		
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter37587465 = new Ya.Metrika({
+                    id:37587465,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/37587465" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->				
             <div class="container no-right">
                 <div class="rows">
                     <div>
@@ -38,18 +67,24 @@
                         <span><?php echo $this->settings['email_order'] ;?></span>
                     </div>
                     <div class="payment">
+<?php
+                        $link = $this->getUrlById(Yii::app()->params['pages']['sposoby-oplaty']);
+?>
                         <h2>Способы оплаты</h2>
-                        <a href = ""><img src = "/images/visa.png" alt = ""></a>
-                        <a href = ""><img src = "/images/visa_electron.png" alt = ""></a>
-                        <a href = ""><img src = "/images/mastercard.png" alt = ""></a>
-                        <a href = ""><img src = "/images/maestro.png" alt = ""></a>
+                        <a href = "/<?php echo $link ;?>"><img src = "/images/visa.png" alt = "visa"></a>
+                        <a href = "/<?php echo $link ;?>"><img src = "/images/visa_electron.png" alt = "visa-electron"></a>
+                        <a href = "/<?php echo $link ;?>"><img src = "/images/mastercard.png" alt = "mastercard"></a>
+                        <a href = "/<?php echo $link ;?>"><img src = "/images/maestro.png" alt = "maestro"></a>
+                        <a href = "/<?php echo $link ;?>"><img src = "/images/mastercard-electronic.png" alt = "mastercard-electronic"></a>
+                        <a href = "/<?php echo $link ;?>"><img src = "/images/belkart.png" alt = "Белкарт"></a>
                     </div>
                     <div class="soc">
                         <h2>Мы в соц сетях</h2>
-                        <a href = "/<?php echo $this->settings['odnoklasniki'] ;?>"><img src = "/images/odnoklasniki.png" alt = ""></a>
-                        <a href = "/<?php echo $this->settings['facebook'] ;?>"><img src = "/images/facebook.png" alt = ""></a>
-                        <a href = "/<?php echo $this->settings['vk'] ;?>"><img src = "/images/vk.png" alt = ""></a>
-                        <a href = "/<?php echo $this->settings['google'] ;?>"><img src = "/images/google+.png" alt = ""></a>
+                        <a href = "<?php echo $this->settings['odnoklasniki'] ;?>"><img src = "/images/odnoklasniki.png" alt = "odnoklasniki"></a>
+                        <a href = "<?php echo $this->settings['facebook'] ;?>"><img src = "/images/facebook.png" alt = "facebook"></a>
+                        <a href = "<?php echo $this->settings['vk'] ;?>"><img src = "/images/vk.png" alt = "vk"></a>
+                        <a href = "<?php echo $this->settings['google'] ;?>"><img src = "/images/instagram.png" alt = "instagram"></a>
+                        <a href = "<?php echo $this->settings['twitter'] ;?>"><img src = "/images/twitter.png" alt = "twitter"></a>
                     </div>
                 </div>
             </div>

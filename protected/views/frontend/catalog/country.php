@@ -155,15 +155,15 @@
 								<li><a href = "">Когда лучше ехать в Индию</a></li>
 							</ul>
 						</div>
-						<div id="top-offers">
-							<h2>Лучшие предложения</h2>
-							<div class="item">
-								<img src = "/images/recently-img.png" alt = "">
-							</div>
-							<div class="item">
-								<img src = "/images/recently-img2.png" alt = "">
-							</div>
-						</div>
+<!--						<div id="top-offers">-->
+<!--							<h2>Лучшие предложения</h2>-->
+<!--							<div class="item">-->
+<!--								<img src = "/images/recently-img.png" alt = "">-->
+<!--							</div>-->
+<!--							<div class="item">-->
+<!--								<img src = "/images/recently-img2.png" alt = "">-->
+<!--							</div>-->
+<!--						</div>-->
 					</div>
 					<div class="col-xs-9 no-right">
 						<h2 class="descr descr-about">О стране</h2>
@@ -435,9 +435,11 @@
 			{
 				cont = $("#CountryForm_tema_tours");
 
+				count = $("#CountryForm_tema_tours .checkbox").length * 35 - 120;
+
 				if(cont.height() == 125)
 				{
-					$("#CountryForm_tema_tours").css({"height": "auto"});
+					$("#CountryForm_tema_tours").animate({"height": count}, 20 );
 					$(this).text("Скрыть");
 				}
 				else

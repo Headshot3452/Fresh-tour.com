@@ -152,7 +152,7 @@
 
         <div class="row form-group">
             <div class="col-xs-5 no-left">
-                <?php echo $form->labelEx($model, 'google'); ?>
+                <?php echo $form->labelEx($model, 'google', array('label' => 'Instagram')); ?>
             </div>
             <div class="col-xs-7">
                 <?php echo $form->textField($model, 'google', array('placeholder' => '')); ?>

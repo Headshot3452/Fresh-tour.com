@@ -61,6 +61,7 @@
             'agentstvam' => '8',
             'nash-ofis' => '10',
             'novosti' => '13',
+            'poisk_tours' => '14',
             'bron' => '15',
             'visy' => '16',
             'sposoby-oplaty' => '18',

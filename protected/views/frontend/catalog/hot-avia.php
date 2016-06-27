@@ -67,7 +67,7 @@
 								'itemView' => '_hot-avia',
 								'dataProvider' => $dataProducts,
 								'ajaxUpdate' => false,
-								'template' => "{items}\n<tbody></table><div class=\"col-xs-12 no-left text-center\">{pager}</div>",
+								'template' => "{items}\n</tbody></table><div class=\"col-xs-12 no-left text-center\">{pager}</div>",
 								'pager' => array(
 									'class' => 'bootstrap.widgets.BsPager',
 									'firstPageLabel' => '',
@@ -78,12 +78,15 @@
 								)
 							)
                         );
+
+						if(!isset($_GET['page']))
+						{
+							echo
+							'<div class="text col-xs-9 col-xs-offset-3">
+								'.$this->text.'
+							</div>';
+						}
 ?>
-<!--						<tbody>-->
-<!--					</table>-->
-					<div class="text">
-						<?php echo $this->text ;?>
-					</div>
 				</div>
 			</div>
 		</div>

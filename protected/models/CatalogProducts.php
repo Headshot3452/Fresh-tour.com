@@ -259,7 +259,7 @@
             return self::model()->active()->findAll('t.`parent_id`=:parent_id',array('parent_id'=>$parent_id));
         }
 
-        public function getDataProviderForCategory($parent_id, $order = '', $count = 6)
+        public function getDataProviderForCategory($parent_id, $order = '', $count = 6, $vizy = null)
         {
             $criteria = new CDbCriteria;
 
@@ -273,7 +273,7 @@
             if(is_array($parent_id) && !isset($_GET['country']))
             {
                 $list = implode(',', $parent_id);
-                $criteria->addInCondition('t.`parent_id`', array($list));
+                $criteria->condition = ('t.`parent_id` IN ( '.$list .')');
 
                 if(!isset($_GET['CountryForm']))
                 {
@@ -285,8 +285,12 @@
                         ':hot' => Yii::app()->params['hot'],
                     );
                 }
+                else
+                {
+                    $criteria->together = true;
+                }
             }
-            elseif(!is_array($parent_id) && isset($_GET['country']) && $_GET['country'])
+            elseif(!is_array($parent_id) && isset($_GET['country']) && $_GET['country'] && !$vizy)
             {
                 $criteria->condition = 't.`parent_id` = :parent_id AND v.`params_id` = :hot AND v.`value` = 1';
 
@@ -296,6 +300,25 @@
                     ':hot' => Yii::app()->params['hot'],
                     ':parent_id' => $parent_id,
                 );
+            }
+            elseif($vizy)
+            {
+                if(isset($_GET['country']))
+                {
+                    $country = CatalogProducts::model()->active()->findByAttributes(array('id' => CHtml::encode($_GET['country'])));
+                    $criteria->condition = 't.`parent_id` = :parent_id AND title = :country';
+                    $criteria->params = array(
+                        ':parent_id' => $parent_id,
+                        ':country' => $country->title
+                    );
+                }
+                else
+                {
+                    $criteria->condition = 't.`parent_id` = :parent_id';
+                    $criteria->params = array(
+                        ':parent_id' => $parent_id,
+                    );
+                }
             }
             else
             {
@@ -639,6 +662,11 @@
         {
             $viza = $this->getProductsForCategory(Yii::app()->params['vizy_catalog']);
             return CHtml::listData($viza, 'name', 'title');
+        }
+
+        public static function getVizyForFilter()
+        {
+            return CHtml::listData(self::model()->active()->findAll(array('condition' => 'parent_id = :parent_id', 'params' => array('parent_id' => Yii::app()->params['vizy_catalog']), 'order' => 'title')), 'id', 'title');
         }
 
         public function getStars()

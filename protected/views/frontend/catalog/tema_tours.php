@@ -91,10 +91,7 @@
 
 								echo
 									'<div role="tabpanel" class="tab-pane '.$active.'" id="'.$value['name'].'">
-										<h1>'.$value['title'].'</h1>
-										<div class="text">
-											'.$this->text.'
-										</div>';
+										<h1>'.$value['title'].'</h1>';
 
 										if($tem_slider_array)
 										{
@@ -194,6 +191,9 @@
 										}
 								echo
 										'<div class="clearfix"></div>
+										<div class="text">
+											'.$this->text.'
+										</div>
 									</div>';
 							}
 						}

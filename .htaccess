@@ -1,3 +1,8 @@
+RewriteCond %{HTTP_HOST} ^fresh\-tour\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.fresh\-tour\.com$
+RewriteRule ^(.*)$ "http\:\/\/fresh\-tour\.by/$1" [R=301,L]
+
+
 RewriteEngine on
 
 RewriteRule ^admin admin.php
@@ -21,3 +26,5 @@ RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteCond %{THE_REQUEST} (.*)\.php
 RewriteRule ^(.*)\.php / [R=301,L]
+
+

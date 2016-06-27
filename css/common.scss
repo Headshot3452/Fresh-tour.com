@@ -675,6 +675,20 @@ header, .hidden-top {
   }
 }
 
+.text {
+  table {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+    td, th {
+      padding: 5px;
+      line-height: 35px;
+      border: 1px solid #ddd;
+      vertical-align: top;
+    }
+  }
+}
+
 @media (min-width: 1200px) {
   .carousel-caption {
     width: 1170px;
@@ -1111,11 +1125,16 @@ header, .hidden-top {
   }
 }
 
-.hot_tours_container {
+.hot_tours_container, #one_country_title {
   .dropdown-menu.open {
     z-index: 9999;
   }
   #one_country {
+    width: 130px;
+    font-size: 18px;
+    border: none;
+    font-family: "Lato-Heavy";
+    color: #2e97e8;
     .bootstrap-select.open {
       .bs-caret {
         .caret {
@@ -1995,7 +2014,7 @@ header, .hidden-top {
         }
         a {
           font-size: 18px;
-          font-family: $lt;
+          font-family: $l;
           width: 100%;
         }
       }
@@ -2291,10 +2310,13 @@ header, .hidden-top {
     .pill-content > .pill-pane {
       display: block;
       height: 0px;
+      //position: absolute;
       opacity: 0;
     }
     .tab-content > .active,
     .pill-content > .active {
+      display: block;
+      //position: static;
       opacity: 1;
       height: auto;
     }
@@ -2950,7 +2972,7 @@ a.show_all {
   }
   font-family: $rl;
   font-size: 16px;
-  color: #262626;
+  color: #000;
   p {
     margin-bottom: 18px;
   }
@@ -2978,8 +3000,11 @@ a.show_all {
   }
   .form-contakts {
     padding-left: 30px;
+    padding-left: 15px;
     h1 {
       font-family: $ll;
+      padding-left: 25px;
+      margin-bottom: 20px;
     }
   }
   .contakts-green {
@@ -3089,6 +3114,7 @@ a.show_all {
     }
   }
   #tyr-content {
+    margin-bottom: 20px;
     .descr-hotel {
       float: left;
       background: url("/images/office.png") no-repeat;
@@ -3119,29 +3145,22 @@ a.show_all {
           cursor: pointer;
           margin-bottom: 5px;
         }
+        .wi-fi, .restouran, .sportzal {
+          &:hover {
+            background-position: 0px -40px;
+          }
+        }
         .wi-fi {
           background-image: url("/images/wi-fi.png");
-          &:hover {
-            background-image: url("/images/wi-fi-hover.png");
-          }
         }
         .transfer {
           background-image: url("/images/transfer.png");
-          &:hover {
-            background-image: url("/images/transfer.png");
-          }
         }
         .restouran {
           background-image: url("/images/restouran.png");
-          &:hover {
-            background-image: url("/images/restouran.png");
-          }
         }
         .sportzal {
-          background-image: url("/images/sportzal.png");
-          &:hover {
-            background-image: url("/images/sportzal.png");
-          }
+          background-image: url("/images/fitnes.png");
         }
       }
       .photo-tour {
@@ -3628,6 +3647,10 @@ a.show_all {
   }
 }
 
+.wrapper {
+  overflow: hidden;
+}
+
 #reviews {
   &.about {
     #rewies-form {
@@ -3659,6 +3682,7 @@ a.show_all {
       background: url("/images/write.png") no-repeat;
       line-height: 40px;
       margin-bottom: 28px;
+      margin-top: 5px;
     }
     div.form-group {
       margin-bottom: 18px;
@@ -3965,7 +3989,7 @@ table#avia {
       margin-left: 0;
       height: 125px;
       overflow: hidden;
-      transition-duration: 4s;
+      transition-duration: 3s;
     }
     &.checkboxes_stars {
       margin-bottom: -15px;
@@ -4392,12 +4416,19 @@ footer {
   }
   .soc {
     margin-top: -125px;
-    margin-left: 115px;
+    margin-left: 515px;
     a {
-      margin-right: 15px;
+      margin-right: 7px;
+      height: 65px;
+      overflow: hidden;
+      &:hover {
+        img {
+          margin-top: -71px;
+        }
+      }
     }
     h2 {
-      margin-bottom: 23px;
+      margin-bottom: 10px;
     }
   }
   .contakts {
@@ -4489,6 +4520,8 @@ footer {
     margin-right: -30px;
   }
   #contacts-form {
+    width: 596px;
+    float: right;
     margin-right: -30px;
     position: relative;
     .form-group {
@@ -4497,13 +4530,14 @@ footer {
       &.button {
         float: right;
         margin-bottom: 0;
+        margin-right: 45px;
       }
     }
     select, input {
-      width: 267px;
+      width: 260px;
     }
     textarea {
-      width: 566px;
+      width: 550px;
       height: 60px;
     }
   }
@@ -4692,6 +4726,7 @@ footer {
       border-radius: 8px;
       height: 270px;
       opacity: .6;
+      border-radius: 0;
     }
     h2 {
       font-size: 18px;

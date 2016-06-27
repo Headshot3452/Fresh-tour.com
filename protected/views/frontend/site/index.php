@@ -2,10 +2,10 @@
     [[w:SliderWidget|slider_id=1;]]
 </div>
 
-<div id="slider-fon"></div>
+<!--<div id="slider-fon"></div>-->
 
 <div id="slider-form">
-	<div class="inner">
+	<!--<div class="inner">
 		<h4>Путешествуйте вместе с нами!</h4>
 		<h3>Найдите свое идеальное путешествие</h3>
 
@@ -156,7 +156,7 @@
 			<div class="tab-pane" id="popular">
 			</div>
 		</div>
-	</div>
+	</div>-->
 </div>
 
 <div class = "redirect container">
@@ -506,36 +506,40 @@
                                         echo '<div class="col-xs-6 no-all">';
                                     }
 
+                                    $link = $this->getUrlById(Yii::app()->params['pages']['strany-i-oteli']).'/'.$v->getUrlForItem(Yii::app()->params['strany_catalog'], false);
+
                                     echo
-                                        '<div class="item">
-                                            <img src = "/'.$image.'" alt = "">
-                                            <div class="caption">
-                                                <h3>'.$v->title.'</h3>
-                                                <div class="stars">';
-                                                    for($i = 0; $i < 5; $i++)
-                                                    {
-                                                        if($i < $stars['value'])
+                                        '<a href="'.$link.'">
+                                            <div class="item">
+                                                <img src = "/'.$image.'" alt = "">
+                                                <div class="caption">
+                                                    <h3>'.$v->title.'</h3>
+                                                    <div class="stars">';
+                                                        for($i = 0; $i < 5; $i++)
                                                         {
-                                                            echo '<img src = "/images/star_full.png" alt = "">';
+                                                            if($i < $stars['value'])
+                                                            {
+                                                                echo '<img src = "/images/star_full.png" alt = "">';
+                                                            }
+                                                            elseif($i > 0)
+                                                            {
+                                                                echo '<img src = "/images/star.png" alt = "">';
+                                                            }
+                                                            else
+                                                            {
+                                                                break;
+                                                            }
                                                         }
-                                                        elseif($i > 0)
-                                                        {
-                                                            echo '<img src = "/images/star.png" alt = "">';
-                                                        }
-                                                        else
-                                                        {
-                                                            break;
-                                                        }
-                                                    }
                                     echo
-                                                '</div>
-                                                <h5>От <span>'.Yii::app()->format->formatNumber($v->price).' руб.</span></h5>
-                                                <div class="footer-container">
-                                                    <span>'.$sostav->value.'</span>
-                                                    <span>'.$dlitelnost->value.'</span>
+                                                    '</div>
+                                                    <h5>От <span>'.Yii::app()->format->formatNumber($v->price).' руб.</span></h5>
+                                                    <div class="footer-container">
+                                                        <span>'.$sostav->value.'</span>
+                                                        <span>'.$dlitelnost->value.'</span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>';
+                                        </a>';
 
                                     if($k == 2 || $k == 5)
                                     {
@@ -607,12 +611,12 @@
                             $parent = CatalogTree::model()->active()->find('id = :id', array('id' => $value->parent_id));
                             $image = $parent->getOneFile('big');
 
-                            $tour_img = $value->getOneFile('small');
-
                             $stars = $value->getStars();
 
                             $count = CatalogProducts::model()->active()->count('parent_id = :id', array('id' => $parent->id));
                         }
+
+                        $tour_img = $value->getOneFile('small');
 
                         if(isset($kol) && $kol > 2)
                         {
