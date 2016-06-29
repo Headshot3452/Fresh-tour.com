@@ -68,8 +68,9 @@
                     var form = $("#contacts-form");
                     if(data.status == "success")
                     {
-                        alert("'.Yii::t('app','Thank you for your message. Manager will contact you.').'");
+//                        alert("'.Yii::t('app','Thank you for your message. Manager will contact you.').'");
                         form[0].reset();
+                        location.reload();
                     }
                     else
                     {

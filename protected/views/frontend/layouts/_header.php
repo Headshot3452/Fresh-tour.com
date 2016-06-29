@@ -52,7 +52,7 @@
 				<img src = "/images/flag.png" alt = "">
 			</div>
 <?php
-			echo CHtml::beginForm(array('/search'), 'get');
+			echo CHtml::beginForm(array('/search'), 'get', array('class' => 'form-search'));
 			echo CHtml::textField('search', '', array('class' => 'hid', 'placeholder' => 'ПОИСК ПО САЙТУ'));
 			echo CHtml::linkButton('Искать на сайте',array('class' => 'search-link'));
 			echo CHtml::endForm();
@@ -113,7 +113,7 @@
 				<img src = "/images/flag.png" alt = "">
 			</div>
 <?php
-			echo CHtml::beginForm(array('/search'), 'get');
+			echo CHtml::beginForm(array('/search'), 'get', array('class' => 'form-search'));
 			echo CHtml::textField('search', '', array('class' => 'top', 'placeholder' => 'ПОИСК ПО САЙТУ'));
 			echo CHtml::linkButton('Искать на сайте',array('class' => 'search-link'));
 			echo CHtml::endForm();
@@ -147,14 +147,26 @@
 
 		$(".search.top i").on("click", function()
 		{
-			$("header input.top").fadeToggle();
-			$("header input.top + a").fadeToggle();
+			$("header input.top").fadeIn();
+			$("header input.top + a").fadeIn();
 		});
 
 		$(".search.hid i").on("click", function()
 		{
-			$("input.hid + a").fadeToggle();
-			$("input.hid").fadeToggle();
+			$("input.hid + a").fadeIn();
+			$("input.hid").fadeIn();
+		});
+
+		$(document).click(function(event)
+		{
+			if ($(event.target).closest("#search").length) return;
+			if ($(event.target).closest(".search").length) return;
+
+			$("input.hid + a").fadeOut();
+			$("input.hid").fadeOut();
+			$("header input.top").fadeOut();
+			$("header input.top + a").fadeOut();
+			event.stopPropagation();
 		});
 	';
 

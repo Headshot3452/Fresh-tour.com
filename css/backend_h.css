@@ -2262,11 +2262,11 @@ input[type="checkbox"]:checked:disabled + label:not(.status)::before {
 }
 
 /* line 1528, backend_h.scss */
-#modal_delete .modal-header .close, #modal_not_active .modal-header .close, #modal_active .modal-header .close, #modal_new .modal-header .close, #modal_archive .modal-header .close, #modal_answer .modal-header .close {
+#modal_delete .modal-header .close, #modal_not_active .modal-header .close, #modal_active .modal-header .close, #modal_new .modal-header .close, #modal_archive .modal-header .close, #modal_answer .modal-header .close, #modal_moderate .modal-header .close {
   opacity: 1;
 }
 /* line 1531, backend_h.scss */
-#modal_delete .modal-header h3, #modal_not_active .modal-header h3, #modal_active .modal-header h3, #modal_new .modal-header h3, #modal_archive .modal-header h3, #modal_answer .modal-header h3 {
+#modal_delete .modal-header h3, #modal_not_active .modal-header h3, #modal_active .modal-header h3, #modal_new .modal-header h3, #modal_archive .modal-header h3, #modal_answer .modal-header h3, #modal_moderate .modal-header h3 {
   font-family: Arial;
   font-weight: bold;
   font-size: 18px;
@@ -2274,16 +2274,16 @@ input[type="checkbox"]:checked:disabled + label:not(.status)::before {
   color: #000000;
 }
 /* line 1539, backend_h.scss */
-#modal_delete .modal-body, #modal_not_active .modal-body, #modal_active .modal-body, #modal_new .modal-body, #modal_archive .modal-body, #modal_answer .modal-body {
+#modal_delete .modal-body, #modal_not_active .modal-body, #modal_active .modal-body, #modal_new .modal-body, #modal_archive .modal-body, #modal_answer .modal-body, #modal_moderate .modal-body {
   text-align: center;
   color: #000000;
 }
 /* line 1544, backend_h.scss */
-#modal_delete .modal-footer button, #modal_not_active .modal-footer button, #modal_active .modal-footer button, #modal_new .modal-footer button, #modal_archive .modal-footer button, #modal_answer .modal-footer button {
+#modal_delete .modal-footer button, #modal_not_active .modal-footer button, #modal_active .modal-footer button, #modal_new .modal-footer button, #modal_archive .modal-footer button, #modal_answer .modal-footer button, #modal_moderate .modal-footer button {
   margin: 0 10px;
 }
 /* line 1546, backend_h.scss */
-#modal_delete .modal-footer button:last-child, #modal_not_active .modal-footer button:last-child, #modal_active .modal-footer button:last-child, #modal_new .modal-footer button:last-child, #modal_archive .modal-footer button:last-child, #modal_answer .modal-footer button:last-child {
+#modal_delete .modal-footer button:last-child, #modal_not_active .modal-footer button:last-child, #modal_active .modal-footer button:last-child, #modal_new .modal-footer button:last-child, #modal_archive .modal-footer button:last-child, #modal_answer .modal-footer button:last-child, #modal_moderate .modal-footer button:last-child {
   background: none;
   border: none;
   border-radius: none;
@@ -2934,54 +2934,96 @@ button.save:hover, button.save:focus {
   /* IE 6-9 */
 }
 
-/* line 2155, backend_h.scss */
+/* line 2157, backend_h.scss */
+#product_review_container #products-list .one_item .status.status-new {
+  border-left-color: #0849e1;
+}
+/* line 2160, backend_h.scss */
+#product_review_container #products-list .one_item .status.status-placement {
+  border-left-color: #009f00;
+}
+/* line 2163, backend_h.scss */
+#product_review_container #products-list .one_item .status.status-moderate {
+  border-left-color: #fb6b00;
+}
+/* line 2166, backend_h.scss */
+#product_review_container #products-list .one_item img.sort {
+  margin-right: 25px;
+}
+/* line 2169, backend_h.scss */
+#product_review_container #products-list .one_item .name:hover {
+  height: 57px;
+  overflow: hidden;
+}
+/* line 2172, backend_h.scss */
+#product_review_container #products-list .one_item .name:hover:hover {
+  color: #0849e1;
+  text-decoration: none;
+}
+
+/* line 2182, backend_h.scss */
+#product_review_container #products-list .one_item .name:hover {
+  color: #0849e1;
+  text-decoration: none;
+}
+
+/* line 2188, backend_h.scss */
+#Products_review {
+  padding-top: 20px;
+}
+/* line 2191, backend_h.scss */
+#Products_review #products-list .items {
+  margin-top: 10px;
+}
+
+/* line 2198, backend_h.scss */
 #currency-form .col-xs-1.text-center {
   margin-top: 10px;
 }
-/* line 2158, backend_h.scss */
+/* line 2201, backend_h.scss */
 #currency-form .col-xs-2.text-right {
   padding-top: 10px;
 }
-/* line 2161, backend_h.scss */
+/* line 2204, backend_h.scss */
 #currency-form .one_item {
   cursor: pointer;
   margin-bottom: 0px;
 }
-/* line 2164, backend_h.scss */
+/* line 2207, backend_h.scss */
 #currency-form .one_item > div {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-/* line 2168, backend_h.scss */
+/* line 2211, backend_h.scss */
 #currency-form .one_item:hover {
   background: #e4e4e4;
 }
-/* line 2171, backend_h.scss */
+/* line 2214, backend_h.scss */
 #currency-form .one_item input[type="text"], #currency-form .one_item select {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
   border: 1px solid #CCC;
 }
-/* line 2177, backend_h.scss */
+/* line 2220, backend_h.scss */
 #currency-form .one_item select {
   width: 90px;
   margin: 0 0 0 20px;
 }
-/* line 2181, backend_h.scss */
+/* line 2224, backend_h.scss */
 #currency-form .one_item .status {
   height: 40px;
   padding-top: 2px;
 }
-/* line 2184, backend_h.scss */
+/* line 2227, backend_h.scss */
 #currency-form .one_item .status.active {
   border-left: 4px solid green;
 }
-/* line 2187, backend_h.scss */
+/* line 2230, backend_h.scss */
 #currency-form .one_item .status.not_active {
   border-left: 4px solid red;
 }
-/* line 2191, backend_h.scss */
+/* line 2234, backend_h.scss */
 #currency-form .one_item .icon {
   margin-top: 2px;
   border: 1px solid #CCC;
@@ -2989,7 +3031,7 @@ button.save:hover, button.save:focus {
   width: 60px;
   padding: 8px 0 0 20px;
 }
-/* line 2198, backend_h.scss */
+/* line 2241, backend_h.scss */
 #currency-form .one_item .one {
   border: 1px solid #CCC;
   height: 34px;
@@ -2997,43 +3039,43 @@ button.save:hover, button.save:focus {
   float: left;
   padding: 9px 0 0 24px;
 }
-/* line 2205, backend_h.scss */
+/* line 2248, backend_h.scss */
 #currency-form .one_item label[for="one"] {
   margin: 9px 12px 0;
   float: left;
 }
-/* line 2209, backend_h.scss */
+/* line 2252, backend_h.scss */
 #currency-form .one_item .course {
   float: left;
   width: 120px;
 }
-/* line 2212, backend_h.scss */
+/* line 2255, backend_h.scss */
 #currency-form .one_item .course p {
   color: #0849e1;
   margin-top: 9px;
 }
-/* line 2217, backend_h.scss */
+/* line 2260, backend_h.scss */
 #currency-form .one_item .kind {
   color: #CCC;
   margin-top: 7px;
 }
-/* line 2221, backend_h.scss */
+/* line 2264, backend_h.scss */
 #currency-form .one_item .btn-small {
   padding: 0;
   width: 38px;
   height: 25px;
 }
-/* line 2225, backend_h.scss */
+/* line 2268, backend_h.scss */
 #currency-form .one_item .btn-small:hover {
   background: #2853e4;
   color: white;
 }
-/* line 2232, backend_h.scss */
+/* line 2275, backend_h.scss */
 #currency-form .one_item .dropdown a:hover {
   background: #2853e4;
   color: white;
 }
-/* line 2239, backend_h.scss */
+/* line 2282, backend_h.scss */
 #currency-form .labels {
   color: #CCC;
   margin-bottom: 10px;
@@ -3046,7 +3088,7 @@ button.save:hover, button.save:focus {
 
   ==============================
 */
-/* line 2253, backend_h.scss */
+/* line 2296, backend_h.scss */
 h2.title {
   font-size: 18px;
   color: #000;
@@ -3055,7 +3097,7 @@ h2.title {
   float: left;
   margin-top: 8px;
 }
-/* line 2260, backend_h.scss */
+/* line 2303, backend_h.scss */
 h2.title a {
   font-size: 12px;
   font-weight: normal;
@@ -3063,44 +3105,44 @@ h2.title a {
   text-decoration: none;
   margin-left: 5px;
 }
-/* line 2266, backend_h.scss */
+/* line 2309, backend_h.scss */
 h2.title a:hover {
   color: #000;
   text-decoration: none;
 }
 
-/* line 2275, backend_h.scss */
+/* line 2318, backend_h.scss */
 .settings-registration #users-registration label {
   margin-top: 7px;
 }
-/* line 2278, backend_h.scss */
+/* line 2321, backend_h.scss */
 .settings-registration #users-registration #Users_password {
   width: 100%;
 }
-/* line 2282, backend_h.scss */
+/* line 2325, backend_h.scss */
 .settings-registration #users-registration .buttons #reg_btn {
   margin-left: 5px;
   margin-right: 15px;
 }
-/* line 2288, backend_h.scss */
+/* line 2331, backend_h.scss */
 .settings-registration .lk_cat {
   font-size: 18px;
   font-family: arial, sans-serif;
 }
 
-/* line 2294, backend_h.scss */
+/* line 2337, backend_h.scss */
 a#all_products, a#add_user {
   font-size: 12px;
   color: #004cff;
   text-decoration: none;
 }
-/* line 2298, backend_h.scss */
+/* line 2341, backend_h.scss */
 a#all_products:hover, a#add_user:hover {
   color: #000;
   text-decoration: none;
 }
 
-/* line 2304, backend_h.scss */
+/* line 2347, backend_h.scss */
 a#all_products {
   position: absolute;
   margin-left: 15px;
@@ -3108,14 +3150,14 @@ a#all_products {
   display: inline-block;
 }
 
-/* line 2311, backend_h.scss */
+/* line 2354, backend_h.scss */
 a#add_user {
   float: right;
   margin-top: 12px;
   margin-right: 55px;
 }
 
-/* line 2317, backend_h.scss */
+/* line 2360, backend_h.scss */
 #changePsw {
   background: url("/images/icon-admin/changePsw.png") no-repeat;
   width: 42px;
@@ -3124,27 +3166,27 @@ a#add_user {
   margin-left: 12px;
 }
 
-/* line 2327, backend_h.scss */
+/* line 2370, backend_h.scss */
 .basic_settings #settings-index-form .qq-upload-success {
   display: none;
 }
-/* line 2330, backend_h.scss */
+/* line 2373, backend_h.scss */
 .basic_settings #settings-index-form .qq-upload-drop-area {
   width: 138px;
   height: 138px;
 }
-/* line 2334, backend_h.scss */
+/* line 2377, backend_h.scss */
 .basic_settings #settings-index-form label {
   text-align: right;
   width: 100%;
   height: 19px;
   margin-top: 7px;
 }
-/* line 2340, backend_h.scss */
+/* line 2383, backend_h.scss */
 .basic_settings #settings-index-form .form-group.image {
   margin-top: 0;
 }
-/* line 2343, backend_h.scss */
+/* line 2386, backend_h.scss */
 .basic_settings #settings-index-form .film {
   text-align: right;
   opacity: 0;
@@ -3155,18 +3197,18 @@ a#add_user {
   position: absolute;
   z-index: 100;
 }
-/* line 2352, backend_h.scss */
+/* line 2395, backend_h.scss */
 .basic_settings #settings-index-form .film p {
   height: 138px;
   width: 139px;
   text-align: center;
 }
-/* line 2357, backend_h.scss */
+/* line 2400, backend_h.scss */
 .basic_settings #settings-index-form .film:hover {
   background-color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-/* line 2362, backend_h.scss */
+/* line 2405, backend_h.scss */
 .basic_settings #settings-index-form .close-img.fa-close {
   position: absolute;
   top: 0;
@@ -3175,26 +3217,26 @@ a#add_user {
   cursor: pointer;
   margin-top: 1px;
 }
-/* line 2370, backend_h.scss */
+/* line 2413, backend_h.scss */
 .basic_settings #settings-index-form span.required {
   margin-top: 0;
 }
-/* line 2373, backend_h.scss */
+/* line 2416, backend_h.scss */
 .basic_settings #settings-index-form .qq-upload-drop-area span {
   position: static;
   margin-top: 20px;
 }
-/* line 2377, backend_h.scss */
+/* line 2420, backend_h.scss */
 .basic_settings #settings-index-form #avatar {
   width: 138px;
   height: 138px;
   z-index: 9000;
 }
-/* line 2381, backend_h.scss */
+/* line 2424, backend_h.scss */
 .basic_settings #settings-index-form #avatar:hover {
   opacity: 0.2;
 }
-/* line 2385, backend_h.scss */
+/* line 2428, backend_h.scss */
 .basic_settings #settings-index-form #load_from_disk {
   width: 90px;
   margin-top: 15px;
@@ -3203,11 +3245,11 @@ a#add_user {
   margin-right: 0px;
   margin-left: 4px;
 }
-/* line 2392, backend_h.scss */
+/* line 2435, backend_h.scss */
 .basic_settings #settings-index-form #load_from_disk input {
   cursor: pointer;
 }
-/* line 2396, backend_h.scss */
+/* line 2439, backend_h.scss */
 .basic_settings #settings-index-form h3 {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -3219,18 +3261,18 @@ a#add_user {
   color: #000000;
 }
 
-/* line 2411, backend_h.scss */
+/* line 2454, backend_h.scss */
 .main-title-block.module-title .one_item.users .img-cont.col-xs-1 {
   margin-left: 0;
   margin-top: 0;
   background-color: transparent;
   border: none;
 }
-/* line 2419, backend_h.scss */
+/* line 2462, backend_h.scss */
 .main-title-block.module-title #user_item_setting .table-img {
   margin-top: -18px;
 }
-/* line 2421, backend_h.scss */
+/* line 2464, backend_h.scss */
 .main-title-block.module-title #user_item_setting .table-img img {
   float: left;
   width: 50px;
@@ -3240,7 +3282,7 @@ a#add_user {
   margin-right: 10px;
   border: none;
 }
-/* line 2431, backend_h.scss */
+/* line 2474, backend_h.scss */
 .main-title-block.module-title #user_item_setting img {
   float: none;
   vertical-align: middle;
@@ -3248,51 +3290,90 @@ a#add_user {
   margin-right: 3px;
   margin-left: -2px;
 }
-/* line 2438, backend_h.scss */
+/* line 2481, backend_h.scss */
 .main-title-block.module-title #user_item_setting .number-user {
   margin-left: 65px;
 }
-/* line 2443, backend_h.scss */
+/* line 2486, backend_h.scss */
 .main-title-block.module-title .user img, .main-title-block.module-title .mail img, .main-title-block.module-title .phone img {
   width: auto;
   border: none;
   background: transparent;
 }
 
-/* line 2452, backend_h.scss */
+/* line 2495, backend_h.scss */
 .add-children.btn.btn-action.btn-add-menu:hover {
   background-image: linear-gradient(to top, #1849e4, #4265e4);
 }
 
-/* line 2458, backend_h.scss */
+/* line 2500, backend_h.scss */
+#modal_review {
+  z-index: 1000;
+  width: 100%;
+  top: 0px;
+}
+/* line 2504, backend_h.scss */
+#modal_review .modal-dialog {
+  width: 100%;
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
+}
+/* line 2509, backend_h.scss */
+#modal_review .modal-dialog .modal-content {
+  border-radius: 0;
+  min-height: 100%;
+  height: 100%;
+}
+/* line 2513, backend_h.scss */
+#modal_review .modal-dialog .modal-content .modal-header {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px !important;
+  font-size: 18px;
+  color: black;
+  height: 8%;
+}
+/* line 2520, backend_h.scss */
+#modal_review .modal-dialog .modal-content .modal-header h3 {
+  padding-top: 10px;
+  font-family: Arial;
+  font-weight: bold;
+}
+/* line 2525, backend_h.scss */
+#modal_review .modal-dialog .modal-content .modal-header button {
+  opacity: 1;
+}
+
+/* line 2535, backend_h.scss */
 #products-list .fa-angle-left:before, #products-list .fa-angle-right:before, .user_list .fa-angle-left:before, .user_list .fa-angle-right:before {
   vertical-align: -3px;
   position: relative;
   left: 9px;
 }
-/* line 2463, backend_h.scss */
+/* line 2540, backend_h.scss */
 #products-list .pag-cont, .user_list .pag-cont {
   margin-left: -225px;
   position: absolute;
   left: 100%;
   width: 110px;
 }
-/* line 2470, backend_h.scss */
+/* line 2547, backend_h.scss */
 #products-list .pag-cont ul.pagination li a, .user_list .pag-cont ul.pagination li a {
   width: 26px;
   height: 27px;
   padding: 0;
 }
-/* line 2478, backend_h.scss */
+/* line 2555, backend_h.scss */
 #products-list .pag-cont.news .pagination, .user_list .pag-cont.news .pagination {
   margin-top: 0;
 }
-/* line 2481, backend_h.scss */
+/* line 2558, backend_h.scss */
 #products-list .pag-cont.news .fa-angle-left:before, #products-list .pag-cont.news .fa-angle-right:before, .user_list .pag-cont.news .fa-angle-left:before, .user_list .pag-cont.news .fa-angle-right:before {
   left: 9px;
   vertical-align: -4px;
 }
-/* line 2486, backend_h.scss */
+/* line 2563, backend_h.scss */
 #products-list .pag-cont .dropdown.dropdown-select, .user_list .pag-cont .dropdown.dropdown-select {
   display: inline-block;
   padding-left: 0;
@@ -3300,7 +3381,7 @@ a#add_user {
   margin: 7px 0 20px 46px;
   border-radius: 4px;
 }
-/* line 2492, backend_h.scss */
+/* line 2569, backend_h.scss */
 #products-list .pag-cont .dropdown.dropdown-select .btn, .user_list .pag-cont .dropdown.dropdown-select .btn {
   font-size: 12px;
   width: 38px;
@@ -3308,25 +3389,25 @@ a#add_user {
   padding: 0;
   padding-top: 1px;
 }
-/* line 2500, backend_h.scss */
+/* line 2577, backend_h.scss */
 #products-list .pag-cont .pagination, .user_list .pag-cont .pagination {
   display: inline-block;
   padding-left: 0;
   margin: 5px 0 20px;
   border-radius: 4px;
 }
-/* line 2506, backend_h.scss */
+/* line 2583, backend_h.scss */
 #products-list .pag-cont .pagination li a, .user_list .pag-cont .pagination li a {
   padding: 4px 9px;
   font-size: 14px;
   color: #343434;
 }
-/* line 2510, backend_h.scss */
+/* line 2587, backend_h.scss */
 #products-list .pag-cont .pagination li a:hover, .user_list .pag-cont .pagination li a:hover {
   background-color: #004cff !important;
   color: white !important;
 }
-/* line 2517, backend_h.scss */
+/* line 2594, backend_h.scss */
 #products-list .pag-cont .pagination select, .user_list .pag-cont .pagination select {
   border-right: none;
   border-radius: 0px;
@@ -3343,28 +3424,28 @@ a#add_user {
   cursor: pointer;
   padding-left: 7px;
 }
-/* line 2532, backend_h.scss */
+/* line 2609, backend_h.scss */
 #products-list .pag-cont .pagination select:hover, #products-list .pag-cont .pagination select:focus, #products-list .pag-cont .pagination select:active, .user_list .pag-cont .pagination select:hover, .user_list .pag-cont .pagination select:focus, .user_list .pag-cont .pagination select:active {
   outline: none;
 }
 
-/* line 2539, backend_h.scss */
+/* line 2616, backend_h.scss */
 .user_list {
   position: relative;
   width: 950px;
   margin-left: -15px;
 }
-/* line 2543, backend_h.scss */
+/* line 2620, backend_h.scss */
 .user_list h2 {
   margin-bottom: 30px;
 }
-/* line 2547, backend_h.scss */
+/* line 2624, backend_h.scss */
 .user_list .fa-angle-left:before, .user_list .fa-angle-right:before {
   vertical-align: -3px;
   position: relative;
   left: 9px;
 }
-/* line 2552, backend_h.scss */
+/* line 2629, backend_h.scss */
 .user_list .product_for_page {
   position: absolute;
   margin-left: -50px;
@@ -3376,69 +3457,69 @@ a#add_user {
   height: 27px;
   background: linear-gradient(to top, #e8e8e8, #ffffff);
 }
-/* line 2563, backend_h.scss */
+/* line 2640, backend_h.scss */
 .user_list .form-control {
   border-radius: none;
 }
-/* line 2566, backend_h.scss */
+/* line 2643, backend_h.scss */
 .user_list .table {
   font-size: 12px;
   color: #999999;
 }
-/* line 2570, backend_h.scss */
+/* line 2647, backend_h.scss */
 .user_list input[type="checkbox"] + label:not(.status) {
   margin: 0;
 }
-/* line 2573, backend_h.scss */
+/* line 2650, backend_h.scss */
 .user_list .checkbox label {
   padding-left: 6px;
 }
 
-/* line 2581, backend_h.scss */
+/* line 2658, backend_h.scss */
 #table-sotrudniki thead td:nth-child(1) {
   padding-top: 2px;
 }
-/* line 2584, backend_h.scss */
+/* line 2661, backend_h.scss */
 #table-sotrudniki thead td .checkbox {
   margin-top: 0;
 }
-/* line 2589, backend_h.scss */
+/* line 2666, backend_h.scss */
 #table-sotrudniki tbody {
   cursor: pointer;
 }
-/* line 2592, backend_h.scss */
+/* line 2669, backend_h.scss */
 #table-sotrudniki tbody tr:hover {
   background-color: #e4e4e4;
 }
-/* line 2596, backend_h.scss */
+/* line 2673, backend_h.scss */
 #table-sotrudniki tbody tr a:hover {
   text-decoration: none;
 }
-/* line 2601, backend_h.scss */
+/* line 2678, backend_h.scss */
 #table-sotrudniki tbody td {
   border: none;
 }
-/* line 2603, backend_h.scss */
+/* line 2680, backend_h.scss */
 #table-sotrudniki tbody td .table-img {
   margin-right: 9px;
   float: left;
 }
-/* line 2606, backend_h.scss */
+/* line 2683, backend_h.scss */
 #table-sotrudniki tbody td .table-img img {
   width: 60px;
   height: 60px;
 }
-/* line 2613, backend_h.scss */
+/* line 2690, backend_h.scss */
 #table-sotrudniki .btn-small.btn-active {
   margin-left: 0;
 }
 
-/* line 2618, backend_h.scss */
+/* line 2695, backend_h.scss */
 .dropdown.navbar-top-links {
   width: 42px !important;
 }
 
-/* line 2622, backend_h.scss */
+/* line 2699, backend_h.scss */
 .status-drop {
   float: left;
   width: 45px;
@@ -3446,7 +3527,7 @@ a#add_user {
   background-position: 10% 60%;
 }
 
-/* line 2629, backend_h.scss */
+/* line 2706, backend_h.scss */
 .active-sotr {
   width: 45px;
   height: 30px;
@@ -3455,7 +3536,7 @@ a#add_user {
   margin-top: -9px;
 }
 
-/* line 2638, backend_h.scss */
+/* line 2715, backend_h.scss */
 .img-cont img {
   border: 1px solid #cfcfcf;
   background-color: #fff;
@@ -3464,41 +3545,41 @@ a#add_user {
   padding: 0;
 }
 
-/* line 2647, backend_h.scss */
+/* line 2724, backend_h.scss */
 .one_item.users {
   margin-left: 15px;
 }
-/* line 2650, backend_h.scss */
+/* line 2727, backend_h.scss */
 .one_item.users .img-cont img {
   padding: 6px 9px;
 }
-/* line 2654, backend_h.scss */
+/* line 2731, backend_h.scss */
 .one_item.users .form-group {
   position: relative;
   float: left;
   margin-top: -3px;
 }
-/* line 2658, backend_h.scss */
+/* line 2735, backend_h.scss */
 .one_item.users .form-group:nth-child(1), .one_item.users .form-group:nth-child(2) {
   width: 180px;
   margin-right: 23px;
 }
-/* line 2662, backend_h.scss */
+/* line 2739, backend_h.scss */
 .one_item.users .form-group:nth-child(3), .one_item.users .form-group:nth-child(4) {
   width: 100px;
 }
-/* line 2665, backend_h.scss */
+/* line 2742, backend_h.scss */
 .one_item.users .form-group:nth-child(3) {
   margin-right: 23px;
 }
-/* line 2668, backend_h.scss */
+/* line 2745, backend_h.scss */
 .one_item.users .form-group label {
   margin-top: -15px;
   position: absolute;
   font-size: 12px;
   color: #999999;
 }
-/* line 2674, backend_h.scss */
+/* line 2751, backend_h.scss */
 .one_item.users .form-group input, .one_item.users .form-group select {
   height: 31px;
   width: 100%;
@@ -3507,49 +3588,49 @@ a#add_user {
   border: 1px solid #dadada;
   padding-left: 5px;
 }
-/* line 2683, backend_h.scss */
+/* line 2760, backend_h.scss */
 .one_item.users .glyphicon-search {
   margin-top: -23px;
   margin-right: 7px;
   cursor: pointer;
 }
-/* line 2688, backend_h.scss */
+/* line 2765, backend_h.scss */
 .one_item.users .title {
   margin-right: 20px;
 }
 
-/* line 2695, backend_h.scss */
+/* line 2772, backend_h.scss */
 #profil_form .avatar .qq-upload-drop-area {
   width: 140px;
   height: 140px;
   border: 2px dashed #dadada;
 }
 
-/* line 2703, backend_h.scss */
+/* line 2780, backend_h.scss */
 .qq-uploader {
   width: 145px;
 }
-/* line 2704, backend_h.scss */
+/* line 2781, backend_h.scss */
 .qq-uploader .qq-upload-button {
   left: 27px;
 }
 
-/* line 2711, backend_h.scss */
+/* line 2788, backend_h.scss */
 #user_setting #load_from_disk {
   display: none;
   width: 90px;
   z-index: 1;
   margin-left: 25px;
 }
-/* line 2717, backend_h.scss */
+/* line 2794, backend_h.scss */
 #user_setting span.help-inline {
   position: static;
 }
-/* line 2720, backend_h.scss */
+/* line 2797, backend_h.scss */
 #user_setting #profile {
   padding-top: 20px;
 }
-/* line 2722, backend_h.scss */
+/* line 2799, backend_h.scss */
 #user_setting #profile .film {
   padding-top: 20px;
   position: absolute;
@@ -3560,24 +3641,24 @@ a#add_user {
   height: 140px;
   display: none;
 }
-/* line 2732, backend_h.scss */
+/* line 2809, backend_h.scss */
 #user_setting #profile .information {
   position: absolute;
   margin-top: 150px;
 }
-/* line 2735, backend_h.scss */
+/* line 2812, backend_h.scss */
 #user_setting #profile .information label.control-label {
   padding-left: 0;
   padding-top: 0;
   text-align: left;
   padding-right: 25px;
 }
-/* line 2743, backend_h.scss */
+/* line 2820, backend_h.scss */
 #user_setting #profile .avatar .photo-label {
   margin-left: -54px;
   padding-top: 0;
 }
-/* line 2747, backend_h.scss */
+/* line 2824, backend_h.scss */
 #user_setting #profile .avatar .avatar {
   width: 140px;
   height: 140px;
@@ -3585,31 +3666,31 @@ a#add_user {
   left: 155px;
   top: 20px;
 }
-/* line 2754, backend_h.scss */
+/* line 2831, backend_h.scss */
 #user_setting #profile .avatar .avatar:hover .film {
   display: block;
 }
-/* line 2756, backend_h.scss */
+/* line 2833, backend_h.scss */
 #user_setting #profile .avatar .avatar:hover .film #load_from_disk {
   display: block;
   z-index: 9999;
 }
-/* line 2763, backend_h.scss */
+/* line 2840, backend_h.scss */
 #user_setting #profile .avatar #FineUploader, #user_setting #profile .avatar .qq-uploader {
   top: 10px;
   width: 100%;
   height: 100%;
   position: absolute;
 }
-/* line 2769, backend_h.scss */
+/* line 2846, backend_h.scss */
 #user_setting #profile .avatar .qq-upload-list {
   display: none;
 }
-/* line 2772, backend_h.scss */
+/* line 2849, backend_h.scss */
 #user_setting #profile .avatar .qq-upload-drop-area {
   margin-left: 140px;
 }
-/* line 2775, backend_h.scss */
+/* line 2852, backend_h.scss */
 #user_setting #profile .avatar img#avatar {
   width: 140px;
   height: 140px;
@@ -3617,11 +3698,11 @@ a#add_user {
   overflow: hidden;
   z-index: 1000;
 }
-/* line 2781, backend_h.scss */
+/* line 2858, backend_h.scss */
 #user_setting #profile .avatar img#avatar:hover {
   opacity: 0.3;
 }
-/* line 2786, backend_h.scss */
+/* line 2863, backend_h.scss */
 #user_setting #profile .close-img {
   position: absolute;
   z-index: 10000;
@@ -3629,11 +3710,11 @@ a#add_user {
   left: 116px;
   cursor: pointer;
 }
-/* line 2793, backend_h.scss */
+/* line 2870, backend_h.scss */
 #user_setting #profile .photo-company {
   height: 140px;
 }
-/* line 2795, backend_h.scss */
+/* line 2872, backend_h.scss */
 #user_setting #profile .photo-company .film {
   position: absolute;
   top: 0;
@@ -3641,84 +3722,84 @@ a#add_user {
   width: 100%;
   height: 100%;
 }
-/* line 2801, backend_h.scss */
+/* line 2878, backend_h.scss */
 #user_setting #profile .photo-company .film p {
   text-align: center;
   width: 140px;
   margin-left: -14px;
 }
-/* line 2809, backend_h.scss */
+/* line 2886, backend_h.scss */
 #user_setting #profile .photo-company label, #user_setting #profile .information label {
   padding-right: 30px;
 }
 
-/* line 2816, backend_h.scss */
+/* line 2893, backend_h.scss */
 .sweet-alert .icon.success.animate .placeholder {
   top: 10px;
 }
 
-/* line 2821, backend_h.scss */
+/* line 2898, backend_h.scss */
 .sweet-alert .icon.error .line {
   top: 19px;
 }
 
-/* line 2826, backend_h.scss */
+/* line 2903, backend_h.scss */
 #orders-filter {
   position: absolute;
   width: 913px;
   top: -10px;
 }
 
-/* line 2833, backend_h.scss */
+/* line 2910, backend_h.scss */
 .top-filter #review-filter {
   position: absolute;
   width: 913px;
   top: 5px;
 }
-/* line 2838, backend_h.scss */
+/* line 2915, backend_h.scss */
 .top-filter #review-filter .period .from, .top-filter #review-filter .period .to {
   width: 90px;
 }
 
-/* line 2848, backend_h.scss */
+/* line 2925, backend_h.scss */
 .main-title-block.module-title .container #review-filter .buttons {
   width: 25%;
 }
-/* line 2850, backend_h.scss */
+/* line 2927, backend_h.scss */
 .main-title-block.module-title .container #review-filter .buttons .btn span {
   font-size: 14px;
 }
-/* line 2853, backend_h.scss */
+/* line 2930, backend_h.scss */
 .main-title-block.module-title .container #review-filter .buttons > * {
   height: 25px;
 }
-/* line 2856, backend_h.scss */
+/* line 2933, backend_h.scss */
 .main-title-block.module-title .container #review-filter .buttons a#reset {
   margin-right: 40px;
 }
 
-/* line 2864, backend_h.scss */
+/* line 2941, backend_h.scss */
 #catalog-tree-form-form .form-group.image-file, #catalog-products-product-form .form-group.image-file {
   margin-left: 0;
 }
-/* line 2867, backend_h.scss */
+/* line 2944, backend_h.scss */
 #catalog-tree-form-form .qq-upload-success, #catalog-products-product-form .qq-upload-success {
   display: none;
 }
-/* line 2870, backend_h.scss */
+/* line 2947, backend_h.scss */
 #catalog-tree-form-form .qq-uploader .qq-upload-button, #catalog-products-product-form .qq-uploader .qq-upload-button {
   left: 22px;
 }
-/* line 2873, backend_h.scss */
+/* line 2950, backend_h.scss */
 #catalog-tree-form-form .qq-upload-success, #catalog-products-product-form .qq-upload-success {
   display: none;
 }
-/* line 2876, backend_h.scss */
+/* line 2953, backend_h.scss */
 #catalog-tree-form-form li.image, #catalog-products-product-form li.image {
   position: relative;
   margin: 0 15px 15px;
 }
-/* line 2880, backend_h.scss */
+/* line 2957, backend_h.scss */
 #catalog-tree-form-form .fa-close, #catalog-products-product-form .fa-close {
   position: absolute;
   margin-left: -24px;
@@ -3727,28 +3808,28 @@ a#add_user {
   left: 100%;
 }
 
-/* line 2891, backend_h.scss */
+/* line 2968, backend_h.scss */
 .form-structure #structure-_form-form .form-group.image-file {
   margin-left: 0;
 }
-/* line 2894, backend_h.scss */
+/* line 2971, backend_h.scss */
 .form-structure #structure-_form-form .qq-upload-success {
   display: none;
 }
-/* line 2899, backend_h.scss */
+/* line 2976, backend_h.scss */
 .form-structure #structure-_form-form .qq-uploader .qq-upload-button {
   left: 22px;
 }
-/* line 2902, backend_h.scss */
+/* line 2979, backend_h.scss */
 .form-structure #structure-_form-form .qq-upload-success {
   display: none;
 }
-/* line 2905, backend_h.scss */
+/* line 2982, backend_h.scss */
 .form-structure #structure-_form-form li.image {
   position: relative;
   margin: 0 15px 15px;
 }
-/* line 2909, backend_h.scss */
+/* line 2986, backend_h.scss */
 .form-structure #structure-_form-form .fa-close {
   position: absolute;
   margin-left: -24px;
@@ -3756,7 +3837,7 @@ a#add_user {
   top: 0;
   left: 100%;
 }
-/* line 2918, backend_h.scss */
+/* line 2995, backend_h.scss */
 .form-structure .add-children.btn.btn-action.btn-add-menu:hover {
   background: linear-gradient(to top, #1849e4, #4265e4);
 }

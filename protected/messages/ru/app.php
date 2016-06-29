@@ -266,7 +266,8 @@
         'Status moderate'                               => 'На модерации',
         'Status placement'                              => 'Размещен',
         'Status rejected'                               => 'Отклонен',
-        'Review'                                        => 'Отзывы',
+        'Review'                                        => 'Отзыв',
+        'Reviews'                                       => 'Отзывы',
 
         'Apartment' => 'Квартира / Офис:',
         'To complete the recover password' => 'Для завершения восстановления пароля',

@@ -48,7 +48,7 @@
             return array(
                 array('text, fullname, email', 'required'),
                 array('text', 'required', 'on' => 'moderate'),
-                array('theme', 'themevalidate', 'on' => 'insert,update'),
+//                array('theme', 'themevalidate', 'on' => 'insert,update'),
                 array('phone', 'phonevalidate', 'on' => 'insert,update'),
                 array('email', 'emailvalidate', 'on' => 'insert,update'),
                 array('fullname', 'fullnamevalidate', 'on' => 'insert, update'),

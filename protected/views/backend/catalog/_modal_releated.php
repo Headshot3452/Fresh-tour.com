@@ -3,6 +3,7 @@
 
     $this->widget('system.web.widgets.CTreeView',
         array(
+            'cssFile' => Yii::app()->assetManager->publish(Yii::getPathOfAlias('webroot.css.treeview')).'/jquery.treeview.css',
             'data' => $this->getLeftMenuModal(),
             'id' => 'modal_tree'
         )
@@ -16,7 +17,7 @@
         array(
             'id' => 'modal_releated',
             'htmlOptions' => array(
-                'class' => 'modal',
+                'class' => 'modal modal_catalog',
                 'data-id' => '1'
             ),
             'header'  => "Выберите сопутствующие товары",
@@ -41,6 +42,7 @@
                     $("#modal_releated .modal-body").find(".products").remove();
                     $("#modal_releated .modal-body").append("<div class = \"products\"> </div>");
                     $("#modal_releated .modal-body .products").html(e);
+                    $("#modal_tree").css("overflow", "visible");
                 }
             });
             return false;

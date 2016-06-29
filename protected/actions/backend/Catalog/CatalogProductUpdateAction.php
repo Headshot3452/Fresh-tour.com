@@ -12,7 +12,6 @@
                     'url' => $this->controller->createUrl('create_category').'?parent='.$model->parent_id
                 )
             );
-
             if ($tree_id === null)
             {
                 $tree_id = $model->parent_id;
@@ -43,17 +42,95 @@
                 $item_params = array_combine(CHtml::listData($item_params, 'params_id', 'params_id'), $item_params);
             }
 
+            if(isset($_POST['CatalogProductsReviews']))
+            {
+                $productsReview = CatalogProductsReviews::model()->findByPk($_POST['CatalogProductsReviews']['id']);
+                $productsReview->attributes = $_POST['CatalogProductsReviews'];
+
+                if($productsReview->validate())
+                {
+                    $productsReview->save();
+                }
+            }
+
             if(isset($_POST['CatalogProducts']))
             {
                 $model->attributes = $_POST['CatalogProducts'];
+
                 $model->price = str_replace(" ", "", $model->price);
+                $model->count = str_replace(" ", "", $model->count);
 
                 if($model->validate())
                 {
-                    $model->sale_info = serialize(array($_POST['sale_value'], $_POST['sale_type'], $_POST['date_from'], $_POST['date_to']));
+                    if($model->type != 2)
+                    {
+                        $sale_value = str_replace(" ", "", $_POST['sale_value']);
+                        if($sale_value != '0.00')
+                        {
+                            $model->sale_info = serialize(array($sale_value, $_POST['sale_type'], $_POST['date_from'], $_POST['date_to']));
+                        }
+                    }
+                    else
+                    {
+                        $model->sale_info = '';
+                        $model->price = '';
+                    }
+
+                    if($model->type == 1 || $model->type == 4)
+                    {
+                        foreach($model->opt_price as $value)
+                        {
+                            $value->delete();
+                        }
+                    }
+
                     $model->stock = serialize(array($_POST['stock'], $_POST['days']));
                     $model->unit_id = $_POST['unit_id'];
+
                     $model->save(false);
+
+                    if(isset($_POST['OptPrice']))
+                    {
+                        $old_opt_price = array();
+
+                        $opt_price = $model->opt_price;
+                        if($opt_price)
+                        {
+                            $opt_price = array_combine(CHtml::listData($opt_price, 'id', 'id'), $opt_price);
+                            $old_opt_price = $opt_price;
+                        }
+
+                        foreach($_POST['OptPrice'] as $key => $value)
+                        {
+                            if(isset($opt_price[$key]))
+                            {
+                                $opt_price[$key]->attributes = $value;
+
+                                if($opt_price[$key]->validate())
+                                {
+                                    $opt_price[$key]->save();
+                                }
+
+                                unset($old_opt_price[$key]);
+                            }
+                            else
+                            {
+                                $opt_price = new OptPrice();
+                                $opt_price->attributes = $value;
+
+                                if($opt_price->validate())
+                                {
+                                    $opt_price->product_id = $model->id;
+                                    $opt_price->save(false);
+                                }
+                            }
+                        }
+
+                        foreach($old_opt_price as $value)
+                        {
+                            $value->delete();
+                        }
+                    }
 
                     if(isset($_POST['CatalogParamsVal']))
                     {
@@ -173,7 +250,7 @@
             $products_releated = array();
             if(!$model->isNewRecord)
             {
-                $this->controller->pageTitleBlock = BackendHelper::htmlTitleBlockDefault('',$this->controller->createUrl('index'));
+                $this->controller->pageTitleBlock = BackendHelper::htmlTitleBlockDefault('', $this->controller->createUrl('index'));
                 $this->controller->pageTitleBlock .= $this->controller->renderPartial('_product_one_for_head_title', array('data' => $model), true);
                 $products_releated_ids = ProductsReleated::getReleatedProducts($model->id);
                 $keys_array = array();
@@ -188,7 +265,11 @@
                 }
             }
 
-            $this->render(array('model' => $model, 'params' => $params, 'item_params' => $item_params, 'products_releated' => $products_releated));
+            $products_review = CatalogProductsReviews::model()->notDeleted()->search($model);
+
+            $count_item = $products_review->getTotalItemCount();
+
+            $this->render(array('model' => $model, 'params' => $params, 'count_item' => $count_item, 'item_params' => $item_params, 'products_releated' => $products_releated, 'products_review' => $products_review));
         }
 
         public function saveCatalogParamsVal($obj,$value,$params_id=null)

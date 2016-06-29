@@ -104,6 +104,10 @@
                     'class' => 'actionsBackend.Tree.SortAction',
                     'Model' => 'CatalogProducts',
                 ),
+                'reviews_sort' => array(
+                    'class' => 'actionsBackend.Tree.SortProductsReviewsAction',
+                    'Model' => 'CatalogProductsReviews',
+                ),
                 'copy_product' => array(
                     'class' => 'actionsBackend.Tree.CopyMoveAction',
                     'Model' => 'CatalogProducts',
@@ -111,6 +115,10 @@
                 'status_products' => array(
                     'class' => 'actionsBackend.Tree.StatusAction',
                     'Model' => 'CatalogProducts',
+                ),
+                'status_reviews'  => array(
+                    'class' => 'actionsBackend.Tree.StatusAction',
+                    'Model' => 'CatalogProductsReviews',
                 ),
                 'active' => array(
                     'class' => 'actionsBackend.ActiveAction',
@@ -148,13 +156,32 @@
             $this->count = (!empty($_COOKIE['count'])) ? $_COOKIE['count'] : 20;
             $model = new CatalogProducts();
 
+            $sorter = Yii::app()->request->cookies['sort_products'];
+
+            if(isset($_GET['title']))
+            {
+                $model->title = $_GET['title'];
+            }
+
             $count_item = $model->notDeleted()->count();
 
             $this->render('all_products',
                 array(
                     'model' => $model,
                     'count' => $this->count,
-                    'count_item' => $count_item
+                    'count_item' => $count_item,
+                    'sorter' => $sorter
+                )
+            );
+        }
+
+        public function actionModal()
+        {
+            $model = CatalogProductsReviews::model()->findByPk($_POST['model_review']);
+
+            $this->renderPartial('_modal_review_data',
+                array(
+                    'model' => $model,
                 )
             );
         }

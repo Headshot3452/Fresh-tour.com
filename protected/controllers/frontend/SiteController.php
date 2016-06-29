@@ -83,6 +83,7 @@ class SiteController extends FrontendController
                 $bodyEmail=$this->renderEmail('contacts', array('model' => $model));
                 $mail=Yii::app()->mailer->isHtml(true)->setFrom($model->email);
                 $mail->send($this->settings->email_callback, 'Обратная связь', $bodyEmail);
+                Yii::app()->user->setFlash('modalReview', array('header' => 'Письмо отправлено', 'content' => 'Ваше письмо отправлено. Вы получите ответ в ближайшее время.'));
 
                 echo CJSON::encode(array(
                     'status'=>'success'

@@ -190,6 +190,21 @@
 
         public function actionTree($url)
         {
+            if(isset($_POST['VizaForm']))
+            {
+                $vizaForm = new VizaForm();
+                $vizaForm->attributes = $_POST['VizaForm'];
+
+                if ($vizaForm->validate())
+                {
+                    $bodyEmail = $this->renderEmail('vizaForm', array('model' => $vizaForm));
+                    $mail=Yii::app()->mailer->isHtml(true)->setFrom($vizaForm->email);
+                    $mail->send($this->settings->email_order, 'Заказ тура', $bodyEmail);
+                    Yii::app()->user->setFlash('modalReview', array('header' => 'Тур успешно заказан', 'content' => 'Вы успешно заказали тур. Мы свяжемся с вами и объясним дальшейшие действия.'));
+                    $this->refresh();
+                }
+            }
+
             $pages = explode('/', $url);
 
             $root = CatalogTree::model()->language($this->getCurrentLanguage()->id)->roots()->active()->findByPk($this->root_id);
@@ -233,9 +248,26 @@
                         throw new CHttpException(404);
                     }
 
+                    if(isset($_POST['CatalogProductsReviews']))
+                    {
+                        $pagesize = 3;
+
+                        $new_review = new CatalogProductsReviews();
+
+                        $new_review->attributes = $_POST['CatalogProductsReviews'];
+                        if($new_review->validate())
+                        {
+                            Yii::app()->user->setFlash('modalReview', array('header' => 'Спасибо за отзыв', 'content' => 'Ваш отзыв будет опубликован после проверки администратором.'));
+                            $new_review->status = CatalogProductsReviews::STATUS_NEW;
+
+                            $new_review->save();
+                            $this->refresh();
+                        }
+                    }
+
                     $this->getPageModule('product');
 
-                    if (!empty($path['breadcrumbs']))//добавить последний уровень крошек
+                    if (!empty($path['breadcrumbs'])) //добавить последний уровень крошек
                     {
                         $this->setBreadcrumbs($path['breadcrumbs'], 'catalog/tree');
                         $temp = array_pop($path['breadcrumbs']);
@@ -245,21 +277,6 @@
                     $this->setPageTitle($product->title);
                     $this->setSeoTags($product);
                     $this->setText($product);
-
-                    if(isset($_POST['VizaForm']))
-                    {
-                        $vizaForm = new VizaForm();
-                        $vizaForm->attributes = $_POST['VizaForm'];
-
-                        CActiveForm::validate($vizaForm);
-
-                        if ($vizaForm->validate())
-                        {
-                            $bodyEmail = $this->renderEmail('vizaForm', array('model' => $vizaForm));
-                            $mail=Yii::app()->mailer->isHtml(true)->setFrom($vizaForm->email);
-                            $mail->send($this->settings->email_order, 'Заказ тура', $bodyEmail);
-                        }
-                    }
 
                     if(in_array(Yii::app()->params['pages']['visy'], array($this->page_id, $parent_id)))
                     {
@@ -271,8 +288,10 @@
                         $this->layout = 'frontend';
                         $view = 'product';
                     }
+                    $reviews = new CatalogProductsReviews();
+                    $reviews_item = $reviews->getDataProviderForReview($product->id);
 
-                    $this->render($view, array('product' => $product, 'tree' => $tree));
+                    $this->render($view, array('reviews_item' => $reviews_item, 'reviews' => $reviews, 'product' => $product, 'tree' => $tree));
                     Yii::app()->end();
                 }
                 elseif($count_page != $count_breadcrumbs)

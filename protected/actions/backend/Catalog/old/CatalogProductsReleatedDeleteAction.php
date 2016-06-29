@@ -9,9 +9,11 @@
 
                 if($model)
                 {
-                    echo 4356;
-                    $model->delete();
-                    unset($model);
+                    if($model->delete())
+                    {
+                        unset($model);
+                        echo $id;
+                    }
                 }
             }
         }
