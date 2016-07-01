@@ -128,7 +128,7 @@
 
 $(function()
 {
-    $("#Products_releated .icon-admin-delete").on('click', function()
+    $(".icon-admin-delete").on('click', function()
     {
         var id = $(this).attr('id');
 

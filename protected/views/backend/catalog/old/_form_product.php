@@ -111,7 +111,7 @@
             </div>
             <div class="col-xs-3">
                 <label>Цена со скидкой</label>
-                <div class="sale_price"><?php echo CatalogProducts::model()->getSalePrice($model->price,$model->sale_info);?> <span>USD</span></div>
+                <div class="sale_price"><?php echo CatalogProducts::getSalePrice($model->price,$model->sale_info);?> <span>USD</span></div>
             </div>
         </div>
     </div>
@@ -235,115 +235,105 @@
 
 <div class="form-group col-xs-12">
     <div class="title">Загрузка изображений товара</div>
-<?php
-        $this->widget('application.extensions.EFineUploader.EFineUploader',
-            array(
-                'id' => 'FineUploaderLogo',
-                'config' => array(
-                    'button' => "js:$('.download_image')[0]",
-                    'autoUpload' => true,
-                    'request' => array(
-                        'endpoint' => $this->createUrl($this->id.'/upload'),
-                        'params' => array('YII_CSRF_TOKEN' => Yii::app()->request->csrfToken),
-                    ),
-                    'retry' => array('enableAuto' => true, 'preventRetryResponseProperty' => true),
-                    'chunking' => array('enable' => true, 'partSize' => 100),
-                    'callbacks' => array(
-                        'onComplete' => 'js:function(id, name, response)
-                                            {
-                                                if (response["success"])
-                                                {
-                                                    $(".images .thumbnails").append("<li class=\"image\" style=\"float: left;\"><input type=\"hidden\" name=\"'.get_class($model).'['.$model->getFilesAttrName().'][]\" value=\""+response["folder"]+response["filename"]+"\"><img src=\"/"+response["folder"]+response["filename"]+"\" width=\"130\" height=\"130\" /><img class=\"close-img fa-close\" src=\"/images/icon-admin/close_photo.png\"></li>")
-                                                }
-                                            }',
-                    ),
-                    'validation' => array(
-                        'allowedExtensions' => array('jpg', 'jpeg', 'png'),
-                        'sizeLimit' => 3 * 1024 * 1024,
-                    ),
-                    'text' => array(
-                        'uploadButton' => Yii::t('app', 'Upload a file'),
-                        'dragZone' => Yii::t('app', 'Drop files here to upload') . '<br/><br/> или',
-                    ),
-                )
+    <?php
+    $this->widget('application.extensions.EFineUploader.EFineUploader',
+        array(
+            'id'=>'FineUploaderLogo',
+            'config'=>array(
+                'button'=>"js:$('.download_image')[0]",
+                'autoUpload'=>true,
+                'request'=>array(
+                    'endpoint'=>$this->createUrl($this->id.'/upload'),
+                    'params'=>array('YII_CSRF_TOKEN'=>Yii::app()->request->csrfToken),
+                ),
+                'retry'=>array('enableAuto'=>true,'preventRetryResponseProperty'=>true),
+                'chunking'=>array('enable'=>true,'partSize'=>100),//bytes
+                'callbacks'=>array(
+                    'onComplete'=>'js:function(id, name, response)
+                    {
+                        if (response["success"])
+                        {
+                            $(".images .thumbnails").append("<li class=\"col-xs-3 image\"><input type=\"hidden\" name=\"'.get_class($model).'['.$model->getFilesAttrName().'][]\" value=\""+response["folder"]+response["filename"]+"\"><img src=\"/"+response["folder"]+response["filename"]+"\" width=\"140\"/><i class=\"glyphicon glyphicon-remove\"></i></li>")
+                        }
+                    }',
+                    //'onError'=>"js:function(id, name, errorReason){ }",
+                ),
+                'validation'=>array(
+                    'allowedExtensions'=>array('jpg','jpeg','png'),
+                    'sizeLimit'=>2 * 1024 * 1024,//maximum file size in bytes
+                    //'minSizeLimit'=>2*1024*1024,// minimum file size in bytes
+                ),
+                /*'messages'=>array(
+                                  'tooManyItemsError'=>'Too many items error',
+                                  'typeError'=>"Файл {file} имеет неверное расширение. Разрешены файлы только с расширениями: {extensions}.",
+                                  'sizeError'=>"Размер файла {file} велик, максимальный размер {sizeLimit}.",
+                                  'minSizeError'=>"Размер файла {file} мал, минимальный размер {minSizeLimit}.",
+                                  'emptyError'=>"{file} is empty, please select files again without it.",
+                                  'onLeave'=>"The files are being uploaded, if you leave now the upload will be cancelled."
+                                 ),*/
             )
-        );
+        ));
 
-        Yii::app()->getClientScript()->registerScript("remove_image",
-            "$('body').on('click','.images-block .fa-close', function()
-                {
-                    $(this).closest('.image').remove();
-                });
-            ");
+    $cs= Yii::app()->getClientScript();
+    $cs->registerScript("remove_image"," $('body').on('click','.images-block .glyphicon-remove',function(){
+                                                                        $(this).closest('.image').remove();
+                                                                });");
+    $cs->registerPackage('jquery.ui')->registerScript("sortable",'
+            $(".images .thumbnails").sortable();
+    ');
 
-        $images_for_key = array(); //для проверки по ключу, наличия картинки
-        $images = @unserialize($model->images);
 
+    $images_for_key=array(); //для проверки по ключу, наличия картинки
+    $images = @unserialize($model->images);
+    $image_result = $images && is_array($images);
+
+    $image_attr_name =  $model->getFilesAttrName();;
+    $form_class = get_class($model);
+
+    if ($image_result)
+    {
+        $count=count($images);
+        for ($i=0; $i<$count; $i++)
+        {
+            $images[$i]=array(
+                'path'=>$images[$i]['path'].'small/'.$images[$i]['name'], //для отображение в теге img
+                'name'=>$images[$i]['path'].$images[$i]['name'] //сама картинка без учета размера
+            );
+
+            $images_for_key[$images[$i]['name']]=$images[$i];
+        }
+    }
+
+    if(isset($_POST[$form_class][$image_attr_name]))
+    {
+        $images = $_POST[$form_class][$image_attr_name];
+        $count=count($images);
+        for ($i=0; $i<$count; $i++)
+        {
+            $images[$i]=array(
+                'path'=>((isset($images_for_key[$images[$i]])) ? $images_for_key[$images[$i]]['path'] : $images[$i]), // проверка если нет в массиве, то это новая картинка
+                'name'=>$images[$i],
+            );
+        }
         $image_result = $images && is_array($images);
-        $image_attr_name =  $model->getFilesAttrName();;
-        $form_class = get_class($model);
+    }
 
-        if ($image_result)
+    echo '<div class="images-block"><div class="images"><ul class="thumbnails row">';
+
+    if ($image_result)
+    {
+        $count=count($images);
+        for ($i=0; $i<$count; $i++)
         {
-            $count = count($images);
-            for ($i = 0; $i < $count; $i++)
-            {
-                $images[$i] = array(
-                    'path' => $images[$i]['path'].'small/'.$images[$i]['name'], //для отображение в теге img
-                    'name' => $images[$i]['path'].$images[$i]['name'] //сама картинка без учета размера
-                );
-
-                $images_for_key[$images[$i]['name']] = $images[$i];
-            }
+            echo '<li class="col-xs-3 image">'.$model->gridImage($images[$i]['path'],'',array('height'=>'140px')).
+                '<input type="hidden" name="'.$form_class.'['.$image_attr_name.'][]" value="'.$images[$i]['name'].'"><i class="glyphicon glyphicon-remove"></i>
+                    </li>';
         }
+    }
 
-        if(isset($_POST[$form_class][$image_attr_name]))
-        {
-            $images = $_POST[$form_class][$image_attr_name];
-            $count = count($images);
-            for ($i = 0; $i < $count; $i++)
-            {
-                $images[$i] = array(
-                    'path' => ((isset($images_for_key[$images[$i]])) ? $images_for_key[$images[$i]]['path'] : $images[$i]), // проверка если нет в массиве, то это новая картинка
-                    'name' => $images[$i],
-                );
-            }
-            $image_result = $images && is_array($images);
-        }
+    echo '</ul></div></div>';
 
-        echo
-            '<div class="images-block">
-                    <div class="images">
-                        <ul class="thumbnails row">';
-
-                            if ($image_result)
-                            {
-                                $count = count($images);
-
-                                for ($i = 0; $i < $count; $i++)
-                                {
-                                    if(isset($images[$i]['path']) && is_file($images[$i]['path']))
-                                    {
-                                        echo
-                                            '<li class="image" style="float: left;">'.$model->gridImage($images[$i]['path'], '', array('width' => '130', 'height' => '130')).
-                                            '<input type="hidden" name="'.$form_class.'['.$image_attr_name.'][]" value="'.$images[$i]['name'].'"><img class="close-img fa-close" src="/images/icon-admin/close_photo.png">
-                                                            </li>';
-                                    }
-                                    else
-                                    {
-                                        echo '<img style="position: absolute;" src="/'.Yii::app()->params['no-image'].'" id="avatar" width="130" />';
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                echo '<img style="position: absolute;" src="/'.Yii::app()->params['no-image'].'" id="avatar" width="130" />';
-                            }
-            echo
-                '</ul>
-            </div>
-        </div>';
-?>
+    ?>
 </div>
 
 <div class="form-group col-xs-12 seo">

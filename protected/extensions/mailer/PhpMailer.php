@@ -46,7 +46,7 @@ class PhpMailer extends Mailer
 
     public function setFrom($from)
     {
-        $this->from=$from;
+        $this->from = $from;
 
         return $this;
     }

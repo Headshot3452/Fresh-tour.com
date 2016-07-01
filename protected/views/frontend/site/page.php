@@ -1,5 +1,5 @@
 <?php
-    if($this->page_id == Yii::app()->params['pages']['poisk_tours'])
+    if($this->page_id == Yii::app()->params['pages']['poisk_tours'] || $this->page_id == Yii::app()->params['pages']['aviabilety'])
     {
         echo
         '<div id = "title-container">

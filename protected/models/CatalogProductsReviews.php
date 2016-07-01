@@ -66,9 +66,10 @@
 
             $count = 3;
 
-            $criteria->condition = 't.`product_id` = :parent_id';
+            $criteria->condition = 't.`product_id` = :parent_id AND t.`status` = :placement';
             $criteria->params = array(
                 ':parent_id' => $parent_id,
+                ':placement' => self::STATUS_PLACEMENT,
             );
 
             return new CActiveDataProvider($this,

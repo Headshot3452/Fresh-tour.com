@@ -10,9 +10,9 @@ return CMap::mergeArray
                         'application.forms.*',
                 ),
                 'components' => array(
-                    'errorHandler'=>array(
-                        'errorAction'=>'site/error',
-                    ),
+//                    'errorHandler'=>array(
+//                        'errorAction'=>'site/error',
+//                    ),
                     'urlManager' => array(
                             'urlFormat' => 'path',
                             'showScriptName' => false,
@@ -21,18 +21,17 @@ return CMap::mergeArray
                             'rules' => file_exists(__DIR__ . '/frontendUrlManager.php') ? require_once __DIR__ . '/frontendUrlManager.php' : array(),
                     ),
                     'log'=>array(
-                        'class'=>'CLogRouter',
-                        'routes'=>array(
-                                    array(
-                                        'class'=>'CFileLogRoute',
-                                        'levels'=>'error, warning',
-                                    ),
-                                     array(
-                                        'class'=>'CProfileLogRoute',
-                                        'levels'=>'profile',
-                                        'enabled'=>true,
-                                    ),
-
+                        'class' => 'CLogRouter',
+                        'routes' => array(
+                            array(
+                                'class'=>'CFileLogRoute',
+                                'levels'=>'error, warning',
+                            ),
+                             array(
+                                'class' => 'CProfileLogRoute',
+                                'levels' => 'profile',
+                                'enabled' => true,
+                            ),
                         ),
                     ),
                 )

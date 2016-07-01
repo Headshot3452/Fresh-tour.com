@@ -214,8 +214,8 @@
                     'path'=>self::PathImage,
                     'find_path'=>'getDir',
                     'files_attr_model'=>'images',
-                    'sizes'=>array('small' => array('150', '150'), 'original' => array(null, null), 'big' => array('800', '800')),
-                    'quality' => 100
+                    'sizes'=>array('small' => array('150', '150'), 'medium' => array('400', '400'), 'original' => array(null, null), 'big' => array('800', '800')),
+                    'quality' => 85
                 ),
             );
         }

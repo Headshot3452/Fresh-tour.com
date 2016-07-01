@@ -61,7 +61,7 @@
 					<span><?php (isset($price[1][0]) && $price[1][0] > 999) ? Yii::app()->format->formatNumber($price[1][0]) : $little_price ;?> </span> 000 руб
 				</div>
 
-				<h1><?php echo $product->title; ?><img class="flag-country" src = "/<?php echo isset($flag) ? $flag : '' ;?> " alt = ""></h1>
+				<h1><?php echo $product->title ;?><img class="flag-country" src = "/<?php echo isset($flag) ? $flag : '' ;?> " alt = ""></h1>
 
 				<div id="country-info">
 					<div class="col-xs-2 col-xs-offset-10 no-right">
@@ -163,6 +163,8 @@
 ?>
 								</div>
 
+								<?php echo $form->hiddenField($model, 'country', array('value' => $product->title)) ;?>
+
 								<div class = "form-group col-xs-4 no-right">
 									<?php echo $form->labelEx($model, 'email'); ?>
 									<?php echo $form->textField($model, 'email', array('placeholder' => 'ivanov@gmail.com')); ?>
@@ -234,7 +236,6 @@
 									<?php echo $form->textarea($model, 'questions', array('placeholder' => 'Оставьте свое предложение..')); ?>
 									<?php echo $form->error($model, 'questions'); ?>
 								</div>
-
 <?php
 								echo BsHtml::submitButton(Yii::t('app', 'Order visa'), array('id' => 'viz_submit'));
 								$this->endWidget();

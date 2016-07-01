@@ -16,10 +16,19 @@
 		    <td style="text-align:right;width:110px;border:solid 1px #999999;padding: 4px 6px 4px 6px;"><?php echo $model->getAttributeLabel('country'); ?></td>
 		    <td style="border:solid 1px #999999;padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $model->country; ?></div></td>
 	    </tr>
-	    <tr>
-		    <td style="text-align:right;width:110px;border:solid 1px #999999;padding: 4px 6px 4px 6px;"><?php echo $model->getAttributeLabel('hotel'); ?></td>
-		    <td style="border:solid 1px #999999;padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $model->hotel; ?></div></td>
-	    </tr>
+<?php
+	    if(isset($model->hotel) && $model->hotel)
+	    {
+?>
+		    <tr>
+			    <td style = "text-align:right;width:110px;border:solid 1px #999999;padding: 4px 6px 4px 6px;"><?php echo $model->getAttributeLabel('hotel'); ?></td>
+			    <td style = "border:solid 1px #999999;padding: 4px 6px 4px 6px;">
+				    <div class = "input-xlarge"><?php echo $model->hotel; ?></div>
+			    </td>
+		    </tr>
+<?php
+	    }
+?>
 	    <tr>
 		    <td style="text-align:right;width:110px;border:solid 1px #999999;padding: 4px 6px 4px 6px;"><?php echo $model->getAttributeLabel('date_to'); ?></td>
 		    <td style="border:solid 1px #999999;padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $model->date_to; ?></div></td>

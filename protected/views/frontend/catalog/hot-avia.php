@@ -78,7 +78,10 @@
 								)
 							)
                         );
-
+?>
+<!--						<tbody>-->
+<!--					</table>-->
+<?php
 						if(!isset($_GET['page']))
 						{
 							echo

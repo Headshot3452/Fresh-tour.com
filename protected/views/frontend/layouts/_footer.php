@@ -1,35 +1,37 @@
         <div class="ghost-footer"></div>
     </div>
-        <footer>		
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter37587465 = new Ya.Metrika({
-                    id:37587465,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true,
-                    webvisor:true
-                });
-            } catch(e) { }
-        });
+        <footer>
 
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+                (function (d, w, c) {
+                    (w[c] = w[c] || []).push(function() {
+                        try {
+                            w.yaCounter37587465 = new Ya.Metrika({
+                                id:37587465,
+                                clickmap:true,
+                                trackLinks:true,
+                                accurateTrackBounce:true,
+                                webvisor:true
+                            });
+                        } catch(e) { }
+                    });
 
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/37587465" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->				
+                    var n = d.getElementsByTagName("script")[0],
+                        s = d.createElement("script"),
+                        f = function () { n.parentNode.insertBefore(s, n); };
+                    s.type = "text/javascript";
+                    s.async = true;
+                    s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                    if (w.opera == "[object Opera]") {
+                        d.addEventListener("DOMContentLoaded", f, false);
+                    } else { f(); }
+                })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/37587465" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+
             <div class="container no-right">
                 <div class="rows">
                     <div>
@@ -61,8 +63,9 @@
                         <h5>Время работы</h5>
                         <span class="clock"><?php echo $this->settings['work'] ;?></span>
                         <h5>Телефоны для связи</h5>
-                        <span class="mts"><?php echo $this->mts[1][0].'<i> '.$this->mts[2][0].'</i>' ;?></span><br>
-                        <span class="velcom"><?php echo $this->velcom[1][0].' <i> '.$this->velcom[2][0].'</i>' ;?></span>
+                        <span class="mts"><?php if(isset($this->mts[1][0]) && isset($this->mts[2][0])) echo $this->mts[1][0].'<i> '.$this->mts[2][0].'</i>' ;?></span><br>
+                        <span class="velcom"><?php if(isset($this->velcom[1][0]) && isset($this->velcom[2][0])) echo $this->velcom[1][0].' <i> '.$this->velcom[2][0].'</i>' ;?></span>
+                        <span class="gorod"><?php if(isset($this->gorod[1][0]) && isset($this->gorod[2][0])) echo $this->gorod[1][0].' <i> '.$this->gorod[2][0].'</i>' ;?></span>
                         <h5 class="email">Наш e-mail</h5>
                         <span><?php echo $this->settings['email_order'] ;?></span>
                     </div>
@@ -84,7 +87,7 @@
                         <a href = "<?php echo $this->settings['facebook'] ;?>"><img src = "/images/facebook.png" alt = "facebook"></a>
                         <a href = "<?php echo $this->settings['vk'] ;?>"><img src = "/images/vk.png" alt = "vk"></a>
                         <a href = "<?php echo $this->settings['google'] ;?>"><img src = "/images/instagram.png" alt = "instagram"></a>
-                        <a href = "<?php echo $this->settings['twitter'] ;?>"><img src = "/images/twitter.png" alt = "twitter"></a>
+                        <!--<a href = "<?php echo $this->settings['twitter'] ;?>"><img src = "/images/twitter.png" alt = "twitter"></a>-->
                     </div>
                 </div>
             </div>

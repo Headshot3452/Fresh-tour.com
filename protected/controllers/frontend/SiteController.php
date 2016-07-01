@@ -18,6 +18,23 @@ class SiteController extends FrontendController
     {
         $this->getPage($this->getHomeId());
 
+        if(isset($_POST['BronForm']))
+        {
+            $bron = new BronForm();
+            $bron->attributes = $_POST['BronForm'];
+
+            if($bron->validate())
+            {
+                Yii::app()->user->setFlash('modalReview', array('header' => 'Забронировано', 'content' => 'Ожидайте подтверждения брони.'));
+
+                $bodyEmail = $this->renderEmail('bron', array('model' => $bron));
+                $mail=Yii::app()->mailer->isHtml(true)->setFrom($bron->email);
+                $mail->send($this->settings->email_order, 'Раннее бронирование', $bodyEmail);
+
+                $this->refresh();
+            }
+        }
+
         $root = CatalogTree::model()->language($this->getCurrentLanguage()->id)->roots()->active()->findByPk(Yii::app()->params['strany_catalog']);
         $categories = $root->children()->active()->findAll();
 
@@ -77,7 +94,7 @@ class SiteController extends FrontendController
 
         if (isset($_POST['ContactsForm']))
         {
-            $model->attributes=$_POST['ContactsForm'];
+            $model->attributes = $_POST['ContactsForm'];
             if ($model->validate())
             {
                 $bodyEmail=$this->renderEmail('contacts', array('model' => $model));
@@ -85,9 +102,11 @@ class SiteController extends FrontendController
                 $mail->send($this->settings->email_callback, 'Обратная связь', $bodyEmail);
                 Yii::app()->user->setFlash('modalReview', array('header' => 'Письмо отправлено', 'content' => 'Ваше письмо отправлено. Вы получите ответ в ближайшее время.'));
 
-                echo CJSON::encode(array(
-                    'status'=>'success'
-                ));
+                echo CJSON::encode(
+                    array(
+                        'status' => 'success'
+                    )
+                );
                 Yii::app()->end();
             }
             else
@@ -163,6 +182,23 @@ class SiteController extends FrontendController
         {
             $url = $this->getUrlById(Yii::app()->params['pages']['hot-tour']);
             $this->redirect('/'.$url);
+        }
+
+        if(isset($_POST['BronForm']))
+        {
+            $bron = new BronForm();
+            $bron->attributes = $_POST['BronForm'];
+
+            if($bron->validate())
+            {
+                Yii::app()->user->setFlash('modalReview', array('header' => 'Забронировано', 'content' => 'Ожидайте подтверждения брони.'));
+
+                $bodyEmail = $this->renderEmail('bron', array('model' => $bron));
+                $mail=Yii::app()->mailer->isHtml(true)->setFrom($bron->email);
+                $mail->send($this->settings->email_order, 'Раннее бронирование', $bodyEmail);
+
+                $this->refresh();
+            }
         }
 
         $this->render('page', array());

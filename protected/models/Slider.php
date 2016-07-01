@@ -115,12 +115,7 @@ class Slider extends Model
         );
     }
 
-	public static function getAllTree($language_id=1)
-	{
-		return self::model()->language($language_id)->notDeleted()->tree()->findAll();
-	}
-
-    public static function getAllForMenu($language_id = 1)
+    public static function getAllForMenu($language_id)
     {
         return self::model()->language($language_id)->notDeleted()->findAll(array('select'=>'t.`id`,t.`title`'));
     }

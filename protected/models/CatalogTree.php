@@ -208,8 +208,8 @@ class CatalogTree extends Model
                 'class'=>'application.behaviors.ImageBehavior',
                 'path'=>self::PathImage,
                 'files_attr_model'=>'images',
-                'sizes'=>array('small' => array('250', '250'), 'big' => array('1000', '1000')),
-                'quality'=>100
+                'sizes'=>array('small' => array('250', '250'), 'medium' => array('500', '500'), 'big' => array('1000', '1000')),
+                'quality' => 85
             ),
         );
     }

@@ -78,6 +78,16 @@
 
         <div class="row form-group">
             <div class="col-xs-5 no-left">
+                <?php echo $form->labelEx($model, 'gorod', array('style' => 'padding-left: 10px;')); ?>
+            </div>
+            <div class="col-xs-7">
+                <?php echo $form->textField($model, 'gorod', array('placeholder' => '')); ?>
+                <?php echo $form->error($model, 'gorod'); ?>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-xs-5 no-left">
                 <?php echo $form->labelEx($model, 'email', array('label' => 'Email суперадминистратора для восстановления пароля:', 'style' => 'padding-left: 10px; margin-top: 0;')); ?>
             </div>
             <div class="col-xs-7">

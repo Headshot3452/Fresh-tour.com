@@ -185,7 +185,7 @@
                 )
             );
 
-            $this->render('tree', array('children' => array(), 'dataProducts'=>$products, 'category' => array()));
+            $this->render('tree', array('children' => array(), 'dataProducts' => $products, 'category' => array()));
         }
 
         public function actionTree($url)
@@ -199,8 +199,9 @@
                 {
                     $bodyEmail = $this->renderEmail('vizaForm', array('model' => $vizaForm));
                     $mail=Yii::app()->mailer->isHtml(true)->setFrom($vizaForm->email);
-                    $mail->send($this->settings->email_order, 'Заказ тура', $bodyEmail);
-                    Yii::app()->user->setFlash('modalReview', array('header' => 'Тур успешно заказан', 'content' => 'Вы успешно заказали тур. Мы свяжемся с вами и объясним дальшейшие действия.'));
+                    $mail->send($this->settings->email_order, 'Заказ визы', $bodyEmail);
+
+                    Yii::app()->user->setFlash('modalReview', array('header' => 'Виза успешно заказана', 'content' => 'Вы успешно заказали визу. Мы свяжемся с вами и объясним дальшейшие действия.'));
                     $this->refresh();
                 }
             }
@@ -259,6 +260,10 @@
                         {
                             Yii::app()->user->setFlash('modalReview', array('header' => 'Спасибо за отзыв', 'content' => 'Ваш отзыв будет опубликован после проверки администратором.'));
                             $new_review->status = CatalogProductsReviews::STATUS_NEW;
+
+                            $bodyEmail = $this->renderEmail('new_review_product', array('product' => $product));
+                            $mail=Yii::app()->mailer->isHtml(true)->setFrom($new_review->email);
+                            $mail->send($this->settings->email_callback, 'Отзыв о туре', $bodyEmail);
 
                             $new_review->save();
                             $this->refresh();

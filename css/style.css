@@ -655,3 +655,8 @@ span.required {
   text-decoration: underline;
   color: #0849e1;
 }
+
+/* line 571, style.scss */
+#VizaForm_email_em_ {
+  width: 290px;
+}

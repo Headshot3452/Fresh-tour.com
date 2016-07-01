@@ -41,48 +41,6 @@
     </div>
 
     <div class="form-group">
-        <?php echo $form->labelEx($model, 'preview'); ?>
-<?php
-        $this->widget('application.widgets.ImperaviRedactorWidget',
-            array(
-                'model' => $model,
-                'attribute' => 'preview',
-                'plugins' => array(
-                    'imagemanager' => array(
-                        'js' => array('imagemanager.js',),
-                    ),
-                    'filemanager' => array(
-                        'js' => array('filemanager.js',),
-                    ),
-                    'fullscreen' => array(
-                        'js' => array('fullscreen.js'),
-                    ),
-                    'table' => array(
-                        'js' => array('table.js'),
-                    ),
-                ),
-                'options' => array(
-                    'lang' => Yii::app()->language,
-                    'imageUpload' => $this->createUrl('admin/imageImperaviUpload'),
-                    'imageManagerJson' => $this->createUrl('admin/imageImperaviJson'),
-                    'fileUpload' => $this->createUrl('admin/fileImperaviUpload'),
-                    'fileManagerJson' => $this->createUrl('admin/fileImperaviJson'),
-                    'uploadFileFields' => array(
-                        'name' => '#redactor-filename'
-                    ),
-                    'changeCallback' => 'js:function()
-                    {
-                        viewSubmitButton(this.$element[0]);
-                    }',
-                    'buttonSource' => true,
-                ),
-            )
-        );
-?>
-        <?php echo $form->error($model,'preview'); ?>
-    </div>
-
-    <div class="form-group">
         <?php echo $form->labelEx($model,'text'); ?>
 <?php
         $this->widget('application.widgets.ImperaviRedactorWidget',
@@ -125,13 +83,6 @@
     </div>
 
     <div class="form-group">
-        <?php echo $form->labelEx($model, 'map'); ?>
-        <?php echo $form->textField($model, 'map'); ?>
-        <?php echo $form->error($model, 'map'); ?>
-    </div>
-
-    <div class="form-group">
-        <span>1. Картинка, 2. Флаг, 3. Иконка</span><br/><br/>
 <?php
         $this->widget('application.extensions.EFineUploader.EFineUploader',
             array(
@@ -241,18 +192,6 @@
                 '</ul>
             </div>
         </div>';
-
-        if($model->country_near)
-        {
-            $model->country_near = unserialize($model->country_near);
-
-            $all_countrys = $model->getCountry();
-
-            if(($key = array_search($model->title, $all_countrys)) !== FALSE)
-            {
-                unset($all_countrys[$key]);
-            }
-        }
 ?>
     </div>
 
@@ -284,18 +223,6 @@
         <?php echo $form->labelEx($model, 'viza'); ?>
         <?php echo $form->dropdownlist($model, 'viza', CatalogProducts::model()->getViza(), array('empty' => '-')); ?>
         <?php echo $form->error($model, 'viza'); ?>
-    </div>
-
-    <div class="form-group">
-        <?php echo $form->labelEx($model, 'viza_info', array('label' => 'Виза по прилёту')); ?>
-        <?php echo $form->checkbox($model, 'viza_info', array('class' => 'visible')); ?>
-        <?php echo $form->error($model, 'viza_info'); ?>
-    </div>
-
-    <div class="form-group">
-        <?php echo $form->labelEx($model, 'country_near'); ?>
-        <?php echo $form->dropDownList($model, 'country_near', isset($all_countrys) ? $all_countrys : array(), array('class' => 'selectpicker', 'data-size' => '10', 'multiple' => true, 'title' => "Выберите страны")); ?>
-        <?php echo $form->error($model, 'country_near'); ?>
     </div>
 
     <div class="form-group">
@@ -331,8 +258,4 @@
 
     <?php $this->endWidget(); ?>
 
-</div><!-- form -->
-
-<?php
-    $cs = Yii::app()->getClientScript();
-    $cs->registerPackage('boot-select');
+</div><!-- form --> 

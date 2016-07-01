@@ -453,7 +453,12 @@
                         {
                             foreach($tem_tours as $key => $value)
                             {
-                                $image = $value->getOneFile('big');
+                                $image = $value->getOneFile('medium');
+
+                                if(!is_file($image))
+                                {
+                                    $image = $value->getOneFile('big');
+                                }
                                 $active = ($key == 0) ? 'active' : '';
                                 echo
                                     '<li class="'.$active.'">
@@ -495,7 +500,13 @@
                                 foreach($value as $k => $v)
                                 {
                                     $end = false;
-                                    $image = $v->getOneFile('big');
+                                    $image = $v->getOneFile('medium');
+
+                                    if(!is_file($image))
+                                    {
+                                        $image = $v->getOneFile('big');
+                                    }
+
                                     $stars = $v->getStars();
 
                                     $sostav = $v->getSostav();
@@ -609,7 +620,13 @@
                             $kol = 0;
 
                             $parent = CatalogTree::model()->active()->find('id = :id', array('id' => $value->parent_id));
-                            $image = $parent->getOneFile('big');
+
+                            $image = $parent->getOneFile('medium');
+
+                            if(!is_file($image))
+                            {
+                                $image = $parent->getOneFile('big');
+                            }
 
                             $stars = $value->getStars();
 

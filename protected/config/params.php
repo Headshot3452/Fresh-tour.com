@@ -64,6 +64,7 @@
             'poisk_tours' => '14',
             'bron' => '15',
             'visy' => '16',
+            'aviabilety' => '17',
             'sposoby-oplaty' => '18',
             'hot-tour' => '20',
             'hot-avia' => '21',

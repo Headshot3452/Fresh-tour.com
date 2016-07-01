@@ -230,7 +230,7 @@
                     foreach($val['children'] as $c_key=>$c_val)
                     {
                         $m_item = array();
-                        $m_item['text'] = CHtml::link($c_val, $this->createUrl($childUrl, array('id' => $c_key)), array('data-id' => $c_key)).
+                        $m_item['text'] = CHtml::link($c_val,$this->createUrl($childUrl,array('id'=>$c_key))).
                                             ($deleteChildUrl?CHtml::link('<i class="glyphicon glyphicon-remove-circle"></i>',$this->createUrl($deleteChildUrl,array('id'=>$c_key)),array('class'=>'action','rel'=>'tooltip','data-title'=>Yii::t('app','Delete'))):'');
                         $item['children'][] = $m_item;
                     }

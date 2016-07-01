@@ -891,6 +891,10 @@ header, .hidden-top {
   position: absolute;
 }
 
+.navbar-nav > li {
+    float: left;
+}
+
 .hot {
   &.count {
     background-color: #000;
@@ -904,7 +908,7 @@ header, .hidden-top {
     position: absolute;
     font-family: $ll;
     margin-top: 163px;
-    margin-left: 770px;
+    left: 770px;
     span {
       font-size: 36px;
       font-family: $lB;
@@ -1971,6 +1975,7 @@ header, .hidden-top {
   .col-xs-5.no-right {
     .nav-tabs {
       li {
+        width: 100%;
         background-color: #000;
         img {
           opacity: .6;
@@ -2932,6 +2937,9 @@ a.show_all {
     position: absolute;
     top: 0;
   }
+  & > img {
+    min-width: 1181px;
+  }
   .breadcrumbs-container {
     margin-top: 74px;
     height: 52px;
@@ -2942,6 +2950,11 @@ a.show_all {
     position: relative;
     z-index: 1000;
     border-bottom: 1px solid #5d8eb3;
+    & > .container {
+      & > .row {
+        position: relative;
+      }
+    }
     &.description {
       h1 {
         font-family: $ll;
@@ -3611,7 +3624,7 @@ a.show_all {
         border-bottom: none;
         margin-bottom: 15px;
         text-align: center;
-        background: #07ce9d url("/images/modal_ok.png") no-repeat 35px 21px;
+        background: #07ce9d url("/images/modal_ok.png") no-repeat 25px 21px;
         h4 {
           font-size: 30px;
           font-family: $ll;
@@ -4459,10 +4472,10 @@ footer {
         margin-top: 14px;
       }
     }
-    .mts, .velcom {
+    .mts, .velcom, .gorod {
       font-size: 16px;
       line-height: 35px;
-      margin-top: 7px;
+      margin-top: 3px;
       i {
         font-size: 20px;
         color: #222222;

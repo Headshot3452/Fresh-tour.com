@@ -91,16 +91,16 @@
 
 	<nav class = "navbar nav" role = "navigation">
 		<div class = "container no-left no-right">
-			<div class = "navbar-header navbar-default">
-				<button type = "button" class = "navbar-toggle" data-toggle = "collapse"
-				        data-target = "#bs-example-navbar-collapse-1">
-					<span class = "sr-only">Toggle navigation</span>
-					<span class = "icon-bar"></span>
-					<span class = "icon-bar"></span>
-					<span class = "icon-bar"></span>
-				</button>
-			</div>
-			<div class = "collapse navbar-collapse navbar-left no-left no-right" id = "bs-example-navbar-collapse-1">
+<!--			<div class = "navbar-header navbar-default">-->
+<!--				<button type = "button" class = "navbar-toggle" data-toggle = "collapse"-->
+<!--				        data-target = "#bs-example-navbar-collapse-1">-->
+<!--					<span class = "sr-only">Toggle navigation</span>-->
+<!--					<span class = "icon-bar"></span>-->
+<!--					<span class = "icon-bar"></span>-->
+<!--					<span class = "icon-bar"></span>-->
+<!--				</button>-->
+<!--			</div>-->
+			<div class = "navbar-left no-left no-right">
 				<ul class = "nav navbar-nav">
 					[[w:MenuWidget|menu_id=5;menu_type=custom;]]
 				</ul>

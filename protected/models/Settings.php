@@ -31,7 +31,7 @@
                 array('site_name, company, email', 'required'),
                 array('vk, company, facebook, odnoklasniki, google, twitter', 'length', 'max' => 100),
                 array('email_order, email_comment, email_callback, site_name', 'length', 'max' => 50),
-                array('item_file, images, info, mts, velcom, address, work', 'safe'),
+                array('item_file, images, info, mts, velcom, gorod, address, work', 'safe'),
             );
         }
 
@@ -63,6 +63,7 @@
                 'odnoklasniki'      => Yii::t('app','Odnoklasniki'),
                 'google'            => 'Google+:',
                 'info'              => Yii::t('app','Info about company'),
+                'gorod'             => 'Городской',
             );
         }
 

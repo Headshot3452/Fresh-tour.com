@@ -18,6 +18,7 @@
 
         public $mts = '';
         public $velcom = '';
+        public $gorod = '';
 
         public $blocks_widgets = array();
 
@@ -33,8 +34,18 @@
 
             $this->settings = Settings::getSettings(Yii::app()->params['settings_id']);
 
-            preg_match_all("/(\+\d* \(\d*\)) ([0-9 ]*)/", $this->settings['mts'], $this->mts);
-            preg_match_all("/(\+\d* \(\d*\)) ([0-9 ]*)/", $this->settings['velcom'], $this->velcom);
+            if($this->settings['mts'])
+            {
+                preg_match_all("/(\+\d* \(\d*\)) ([0-9 ]*)/", $this->settings['mts'], $this->mts);
+            }
+            if($this->settings['velcom'])
+            {
+                preg_match_all("/(\+\d* \(\d*\)) ([0-9 ]*)/", $this->settings['velcom'], $this->velcom);
+            }
+            if($this->settings['gorod'])
+            {
+                preg_match_all("/(\+\d* \(\d*\)) ([0-9 ]*)/", $this->settings['gorod'], $this->gorod);
+            }
 
             parent::init();
         }
@@ -57,7 +68,7 @@
 
                 foreach ($menu_items as $item)
                 {
-                    if ($item->structure && $this->hasActive($item->structure->id, 'structure'))
+                    if ($item->structure && $this->hasActive($item->structure->id,'structure'))
                     {
                         $active = true;
                     }
@@ -103,9 +114,9 @@
 
             //смена layout
 
-            if (!empty($page->layout) && $page->layout!=$this->layout)
+            if (!empty($page->layout) && $page->layout != $this->layout)
             {
-                $this->layout=$page->layout;
+                $this->layout = $page->layout;
             }
 
             //добавление widget-ов на страницу
@@ -262,7 +273,7 @@
             return $this->getHome()->id;
         }
 
-        public function findUrl($item, $type='structure')
+        public function findUrl($item,$type='structure')
         {
             if (!isset($this->url[$type][$item->id]))
             {
@@ -376,7 +387,7 @@
          * @param string $type модель
          */
 
-        public function addActiveId($id, $type = 'structure')
+        public function addActiveId($id,$type='structure')
         {
             $this->_active_ids[$type][$id]=true;
         }
@@ -388,7 +399,7 @@
          * @return bool
          */
 
-        public function hasActive($id, $type='structure')
+        public function hasActive($id,$type='structure')
         {
             if (isset($this->_active_ids[$type][$id]))
             {

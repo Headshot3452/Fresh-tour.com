@@ -25,11 +25,6 @@
                 'url' => '#Products_releated',
                 'active' => false,
             ),
-            array(
-                'label' => Yii::t('app', 'Reviews'),
-                'url' => '#Products_review',
-                'active' => false,
-            ),
         )
     );
 ?>
@@ -44,18 +39,10 @@
         <div class="tab-pane row" id="Products_releated">
             <?php echo $this->renderPartial('_form_products_releated',array('products_releated' => $products_releated)); ?>
         </div>
-        <div class="tab-pane row" id="Products_review">
-            <?php echo $this->renderPartial('_form_products_review',array('products_review' => $products_review, 'form' => $form, 'count_item' => $count_item)); ?>
-        </div>
-    </div>
-
-    <div id="_modal_reviews_container">
-
     </div>
 
 <?php
     $this->renderPartial('_modal_releated');
-    $this->renderPartial('_modal_reviews');
 
     $cs = Yii::app()->getClientScript();
 

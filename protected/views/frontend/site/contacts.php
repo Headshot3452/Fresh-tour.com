@@ -49,6 +49,8 @@
 				<?php echo $this->velcom[1][0] ;?> <span> <?php echo $this->velcom[2][0] ;?></span>
 				<i>Горячая линия</i>
 				<?php echo $this->mts[1][0] ;?> <span> <?php echo $this->mts[2][0] ;?></span>
+                <i>Городской номер</i>
+                <?php echo $this->gorod[1][0] ;?> <span> <?php echo $this->gorod[2][0] ;?></span>
 			</div>
 			<div class="row"></div>
 			<div class="work">

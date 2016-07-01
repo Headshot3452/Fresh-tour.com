@@ -51,6 +51,11 @@
                         Yii::app()->user->setFlash('modalReview', array('header' => 'Спасибо за отзыв', 'content' => 'Ваш отзыв будет опубликован после проверки администратором.'));
                         $reviews->status = ReviewItem::STATUS_NEW;
                     }
+
+                    $bodyEmail = $this->renderEmail('new_review');
+                    $mail = Yii::app()->mailer->isHtml(true)->setFrom($reviews->email);
+                    $mail->send($this->settings->email_callback, 'Новый отзыв', $bodyEmail);
+
                     $reviews->save();
                     $this->refresh();
                 }
@@ -77,6 +82,7 @@
                         Yii::app()->user->setFlash('modal', Yii::t('app', 'Your review has been successfully sent to moderation'));
                         $review->status = ReviewItem::STATUS_NEW;
                     }
+
                     if ($setting[2]->status == 1 and !Yii::app()->user->isGuest)
                     {
                         $user = Users::model()->findByPk(Yii::app()->user->id);
@@ -85,6 +91,7 @@
                         $review->phone =$user->user_info->phone;
                         $review->fullname = $user->user_info->getFullName();
                     }
+
                     $review->save();
                 }
             }
