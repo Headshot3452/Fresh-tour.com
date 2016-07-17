@@ -17,7 +17,8 @@
                     $item->status = ($item->status) ? 0 : 1;
                     break;
                 case 'basic' :
-                    $this->changeBasicCurrency($item);
+                    $recalculate = isset($_GET['recalculate_rates']) ? $_GET['recalculate_rates'] : 0;
+                    $this->changeBasicCurrency($item, $recalculate);
                     $item->course = 1;
                     break;
                 default:
@@ -32,9 +33,9 @@
 
         }
 
-        public function changeBasicCurrency($item)
+        public function changeBasicCurrency($item, $recalculate)
         {
-            $new_course = 1/$item->course;
+            $new_course = ($item->course) ? 1/$item->course : 1;
             $model = new SettingsCurrency();
             $items = $model->findAll();
             foreach ($items as $value)
@@ -53,13 +54,16 @@
             $new_basic_currency->basic = 1;
             $new_basic_currency->save();
 
-            $catalog_model = new CatalogProducts();
-            $products = $catalog_model->findAll();
-
-            foreach ($products as $value)
+            if($recalculate !== "false")
             {
-                $value->price = $value->price * $new_course;
-                $value->save();
+                $catalog_model = new CatalogProducts();
+                $products = $catalog_model->findAll();
+
+                foreach($products as $value)
+                {
+                    $value->price = $value->price * $new_course;
+                    $value->save();
+                }
             }
         }
     }

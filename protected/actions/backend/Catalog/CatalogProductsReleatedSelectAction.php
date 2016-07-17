@@ -18,11 +18,20 @@
                 $page = $_POST['page'];
             }
 
-            $releated_products = ProductsReleated::getReleatedProducts($product_id);
             $keys_array = array();
-            foreach ($releated_products as $value)
+
+            if(isset($product_id) && $product_id != 'undefined')
             {
-                $keys_array[] = $value->releated_id;
+                $releated_products = ProductsReleated::getReleatedProducts($product_id);
+
+                foreach ($releated_products as $value)
+                {
+                    $keys_array[] = $value->releated_id;
+                }
+            }
+            else
+            {
+                $product_id = 0;
             }
 
             $count = (!empty($_COOKIE['count'])) ? $_COOKIE['count'] : 20;

@@ -63,7 +63,7 @@
                 array('parent_id, title', 'required'),
                 array('status','default','value'=>self::STATUS_OK,'on'=>'insert'),
                 array('parent_id, create_time, update_time, status, sale, popular, new, hit', 'numerical', 'integerOnly'=>true),
-                array('price,old_price,count,unit_id', 'numerical'),
+                array('price, price_eur, old_price, count, unit_id', 'numerical'),
                 array('language_id', 'length', 'max'=>10),
                 array('article', 'length', 'max'=>15),
                 array('barcode', 'length', 'max'=>20),

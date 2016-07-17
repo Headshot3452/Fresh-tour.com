@@ -29,15 +29,15 @@
     ?>
     <div class="container">
 
-        <div class="col-xs-4"></div>
+        <div class="col-xs-2"></div>
 
-        <div class="col-xs-4" style="margin-top: 150px;">
+        <div class="col-xs-8" style="margin-top: 15px;">
             <?php
             echo $content;
             ?>
         </div>
 
-        <div class="col-xs-4"></div>
+        <div class="col-xs-2"></div>
     </div>
 
 </div>

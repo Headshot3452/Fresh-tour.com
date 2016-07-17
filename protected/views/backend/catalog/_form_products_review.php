@@ -42,7 +42,6 @@
     ';
 
     $cs = Yii::app()->getClientScript();
-
     $cs->registerScript("reviews_sortable", $reviews_sortable);
 
     $typeCatalog = 'small review-item';

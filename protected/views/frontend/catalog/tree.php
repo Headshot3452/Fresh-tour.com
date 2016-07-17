@@ -127,7 +127,7 @@
                 'pager' => array(
                     'class' => 'bootstrap.widgets.BsPager',
                     'firstPageLabel' => '<<',
-                    'prevPageLabel' => '',
+                    'pvPageLabel' => '',
                     'nextPageLabel' => '',
                     'lastPageLabel' => '',
                     'hideFirstAndLast' => true,

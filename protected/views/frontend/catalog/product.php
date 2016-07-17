@@ -7,6 +7,12 @@
 <?php
                     $name_hotel = '';
 
+                    $ico = ($product->price)
+                        ? '<i class=" icon-prod '.$this->currency_usd->currencyName->icon.'"></i>'
+                        : '<i class=" icon-prod '.$this->currency_eur->currencyName->icon.'"></i>';
+                    $price = ($product->price) ? $product->price * $this->currency_byn->course : $product->price_eur * $this->currency_byn->course * $this->currency_eur->course;
+                    $price_int = ($product->price) ? $product->price : $product->price_eur;
+
                     if (!isset($limit))
                     {
                         $limit = 2;
@@ -145,16 +151,11 @@
                 </div>
                 <div class="price">
 <?php
-                    preg_match_all("/([0-9]*)([0-9]{3})$/", $product->price, $price);
+                    preg_match_all("/([0-9]*).([0-9]*)$/", $price, $_price);
 
-                    if(isset($price[1][0]) && $price[1][0])
-                    {
-                        echo '<span>'.Yii::app()->format->formatNumber($price[1][0]).'</span> 000 руб';
-                    }
-                    else
-                    {
-                        echo $product->price.' руб';
-                    }
+                    echo '<span class = "int-price-prod">'.Yii::app()->format->formatNumber($price_int).$ico.'</span>';
+
+                    echo '<span>'.Yii::app()->format->formatNumber($_price[1][0]).'</span>.'. substr($_price[2][0], 0, 2) .' руб.';
 ?>
                 </div>
                 <h1><?php echo $country ;?> <img class="flag-country" src = "/<?php echo $flag ;?>" alt = ""><span class="tyr-title"> <?php echo $product->title ;?> </span></h1>
@@ -287,9 +288,17 @@
                                                 break;
                                             }
                                         }
+
+                                $ico = ($value->price)
+                                    ? '<i class=" icon '.$this->currency_usd->currencyName->icon.'"></i>'
+                                    : '<i class=" icon '.$this->currency_eur->currencyName->icon.'"></i>';
+                                $price = ($value->price) ? $value->price * $this->currency_byn->course : $value->price_eur * $this->currency_byn->course * $this->currency_eur->course;
+                                $price_int = ($value->price) ? $value->price : $value->price_eur;
+
                                 echo
                                         '</div>
-                                        <h5>От <span>'.Yii::app()->format->formatNumber($value->price).' руб.</span></h5>
+                                        <h5>От <span>'.number_format($price, 2, ".", " ").' руб.</span></h5>
+                                        <span class = "int-price">'.Yii::app()->format->formatNumber($price_int).$ico.'</span>
                                         '.$hot.$popular.'
                                         '.$sale.'
                                         <div class="footer-container">
@@ -365,6 +374,9 @@
                                     {
                                         $path_small = '/'.$image['path'].'small/'.$image['name'];
                                         $path_big = '/'.$image['path'].'big/'.$image['name'];
+//                                        $path_medium = '/'.$image['path'].'medium/'.$image['name'];
+
+//                                        $main_img = $path_medium ? $path_medium : $path_big;
 
                                         if ($image_big == '')
                                         {
@@ -705,6 +717,7 @@
 
         $("#country-info a").click(function()
         {
+            $('.country-tabs a:first').tab('show')
             var destination = $('#viz_submit').offset().top;
             $('body, html').animate( { scrollTop: destination - 500 }, 1100 );
             return false;

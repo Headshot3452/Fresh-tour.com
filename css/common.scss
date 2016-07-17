@@ -908,10 +908,15 @@ header, .hidden-top {
     position: absolute;
     font-family: $ll;
     margin-top: 163px;
-    left: 770px;
+    left: 725px;
     span {
       font-size: 36px;
       font-family: $lB;
+      &.int-price-prod {
+        font-size: 18px;
+        color: #fff;
+        font-family: $ls;
+      }
     }
   }
   #country-info {
@@ -990,22 +995,17 @@ header, .hidden-top {
   position: relative;
   .sale {
     color: #fb2020;
-    font-family: $lh;
+    font-family: "Lato-Heavy";
     font-size: 18px;
-    width: 93px;
-    height: 93px;
-    -webkit-border-radius: 46px 47px 47px 46px/46px 46px 47px 47px;
-    -moz-border-radius: 46px 47px 47px 46px/46px 46px 47px 47px;
-    border-radius: 46px 47px 47px 46px/46px 46px 47px 47px;
-    background-color: rgba(255, 255, 255, .9);
+    width: 63px;
+    height: 50px;
     position: absolute;
     top: 0;
-    left: 100%;
-    z-index: 8888;
-    margin-left: -80px;
-    margin-top: -37px;
-    padding-top: 48px;
-    padding-left: 15px;
+    right: 15px;
+    background: transparent url("/images/sale.png");
+    background-size: cover;
+    padding-top: 9px;
+    padding-left: 23px;
   }
   h3 {
     font-family: $lB;
@@ -1043,7 +1043,7 @@ header, .hidden-top {
       }
       .stars {
         position: absolute;
-        top: 72px;
+        top: 60px;
         margin-top: 5px;
         width: 100%;
         text-align: center;
@@ -1064,7 +1064,7 @@ header, .hidden-top {
         top: 0;
         color: #fff;
         font-size: 12px;
-        margin-top: 95px;
+        margin-top: 85px;
         width: 100%;
         text-align: center;
         span {
@@ -1102,11 +1102,12 @@ header, .hidden-top {
         top: 0px;
         left: 100%;
         z-index: 8888;
-        margin-left: -51px;
-        margin-top: -53px;
-        padding-top: 59px;
-        padding-left: 16px;
+        margin-left: -63px;
+        //margin-top: -53px;
+        padding-top: 11px;
+        //padding-left: 16px;
         font-size: 14px;
+
       }
     }
     .all_news_hot {
@@ -1125,6 +1126,25 @@ header, .hidden-top {
         background-image: none;
         margin-top: -15px;
       }
+    }
+  }
+}
+
+#description, #left_panel {
+  #recently {
+    .int-price {
+      position: absolute;
+      top: 103px;
+      left: 0;
+      width: 100%;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+      font-size: 14px;
+    }
+    .icon {
+      color: #fff;
+      font-size: 12px;
     }
   }
 }
@@ -1191,6 +1211,10 @@ header, .hidden-top {
   }
 }
 
+#left_panel {
+
+}
+
 #products-list {
   .item {
     .img-cont {
@@ -1198,6 +1222,14 @@ header, .hidden-top {
       background-color: #000;
       img {
         opacity: .6;
+      }
+    }
+    .price-cont {
+      .int-price {
+        text-align: left;
+      }
+      .icon {
+        color: #000;
       }
     }
   }
@@ -1393,7 +1425,7 @@ header, .hidden-top {
       position: absolute;
       top: 0;
       margin-top: 114px;
-      margin-left: 74px;
+      margin-left: 70px;
       height: 19px;
       text-align: center;
       width: 164px;
@@ -1502,12 +1534,13 @@ header, .hidden-top {
     }
     .price-cont.col-xs-3 {
       font-family: $ll;
-      font-size: 18px;
+      font-size: 26px;
       color: #262626;
       padding-top: 0;
       .price {
         font-family: $lB;
         color: #2e97e8;
+        font-size: 26px;
       }
       .old-price {
         font-family: $ls;
@@ -1660,6 +1693,37 @@ header, .hidden-top {
   }
 }
 
+.tab-pane {
+  .int-price, .icon {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 7px;
+  }
+  .icon {
+    font-size: 12px;
+  }
+}
+
+.int-price {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+}
+.int-price, .icon {
+  font-size: 16px;
+  color: #000;
+}
+.icon {
+  font-size: 14px;
+  color: #444;
+}
+.icon-prod {
+  font-size: 14px;
+  color: #fff;
+  margin-right: 20px;
+}
+
 /*
 ==================================
 
@@ -1681,6 +1745,9 @@ header, .hidden-top {
 #slider-hotels {
   .container {
     padding: 0 50px;
+    &.redirect {
+      padding: 0 15px;
+    }
   }
   background-color: #f2f2f2;
   #slider-nav {
@@ -1724,6 +1791,19 @@ header, .hidden-top {
   #slider-for {
     margin-left: -50px;
     margin-right: -50px;
+    .int-price, .icon {
+      color: #fff;
+      text-align: center;
+    }
+    .icon {
+      font-size: 12px;
+    }
+    .slick-slider {
+      margin-bottom: 0px;
+    }
+    &.slick-slider {
+      margin-bottom: 0px;
+    }
     .stars {
       height: 19px;
       text-align: center;
@@ -1741,7 +1821,7 @@ header, .hidden-top {
       list-style: none;
       z-index: 1;
       margin: 0 10px;
-      bottom: -30px;
+      bottom: 10px;
       button {
         background: url("/images/alips_gray.png") no-repeat;
         &:before {
@@ -1770,7 +1850,8 @@ header, .hidden-top {
       -webkit-border-radius: 8px;
       -moz-border-radius: 8px;
       border-radius: 8px;
-      margin-bottom: 30px;
+      margin-bottom: 45px;
+
     }
     .med-container {
       position: relative;
@@ -1782,6 +1863,7 @@ header, .hidden-top {
       }
       img {
         opacity: .6;
+        border-radius: 0;
       }
       .med-caption {
         .forward {
@@ -1803,14 +1885,15 @@ header, .hidden-top {
         font-family: $lb;
         color: #fff;
         text-align: center;
+        margin-top: 0px;
       }
       h3 {
         color: #fff;
         line-height: 10px;
         text-align: center;
-        //padding-left: 187px;
         span {
           font-family: $lh;
+          font-size: 24px;
         }
       }
       .footer-container {
@@ -1843,13 +1926,15 @@ header, .hidden-top {
     }
     .small-container {
       display: table;
-      padding-right: 15px;
+      //padding-right: 15px;
+
       .col-xs-6 {
         background-color: #000000;
         background-clip: content-box;
         img {
           opacity: .6;
           margin-bottom: 0;
+          border-radius: 0;
         }
       }
       .stars {
@@ -1907,6 +1992,10 @@ header, .hidden-top {
       }
     }
     .big-container {
+      background-color: #000;
+      img {
+        opacity: .6;
+      }
       .big-caption {
         padding-left: 90px;
         padding-right: 90px;
@@ -1972,6 +2061,9 @@ header, .hidden-top {
       position: absolute;
     }
   }
+  & > .container {
+    padding: 0 15px;
+  }
   .col-xs-5.no-right {
     .nav-tabs {
       li {
@@ -1998,6 +2090,7 @@ header, .hidden-top {
           color: #fff;
           display: block;
           padding-top: 10px;
+          margin-bottom: 0;
         }
       }
       .nav-tabs {
@@ -2108,8 +2201,14 @@ header, .hidden-top {
       h3 {
         padding: 5px 0;
         height: auto;
+        font-size: 18px;
         font-family: $lB;
         color: #515151;
+        margin-top: 25px;
+        span {
+          font-size: 24px;
+          font-family: $l;
+        }
       }
       .nav-tabs {
         height: auto;
@@ -2154,6 +2253,21 @@ header, .hidden-top {
             }
           }
         }
+      }
+    }
+  }
+}
+
+.caption {
+  .int-price {
+    font-size: 14px;
+    &.tem-price {
+      color: #fff;
+      margin-bottom: 5px;
+      text-align: center;
+      .icon {
+        color: #fff;
+        font-size: 12px;
       }
     }
   }
@@ -2218,7 +2332,7 @@ header, .hidden-top {
       vertical-align: bottom;
       margin-bottom: 0;
       line-height: 25px;
-      height: 96px;
+      height: 70px;
       padding: 0 45px;
 
     }
@@ -2241,7 +2355,7 @@ header, .hidden-top {
       }
     }
     .forward {
-      margin-top: 30px;
+      margin-top: 25px;
     }
     .slick-slide {
       position: relative;
@@ -2257,9 +2371,14 @@ header, .hidden-top {
         height: 270px;
         width: 100%;
         object-fit: cover;
+        border-radius: 0;
       }
     }
   }
+}
+
+#VizaForm_email_em_ {
+  width: 290px;
 }
 
 #temat-tyrs {
@@ -2364,7 +2483,7 @@ header, .hidden-top {
     font-family: $lb;
     color: #fff;
     padding: 0 81px 0;
-    height: 76px;
+    height: 55px;
     text-align: center;
     margin-bottom: 3px;
     display: table-cell;
@@ -2375,9 +2494,12 @@ header, .hidden-top {
     text-align: center;
     padding-left: 7px;
     line-height: 35px;
+    font-size: 18px;
+    margin-bottom: 0;
     span {
+      font-size: 24px;
       font-family: $lh;
-
+      margin-top: 5px;
     }
   }
   h4 {
@@ -2403,6 +2525,7 @@ header, .hidden-top {
       img {
         width: 20px;
         height: 19px;
+        margin: 0 2px;
       }
     }
   }
@@ -2876,8 +2999,8 @@ a.show_all {
       font-family: $ls;
       line-height: 42px;
       text-align: center;
-      margin-top: 15px;
-      &:hover {
+      //margin-top: 15px;
+      &:hover, &:focus, &:active {
         text-decoration: none;
         background-color: #55a9ea;
       }

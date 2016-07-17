@@ -321,7 +321,7 @@ $(document).ready(function()
         });
     });
 
-    $(".col-info .status div, .o-status .o-status-div div, #tab-details .btn-success").on("click", function()
+    $(".col-info .status div, .o-status .o-status-div div, #tab-details btn-success").on("click", function()
     {
         var order = $(this).parent().data("order");
         var status = $(this).data("status");

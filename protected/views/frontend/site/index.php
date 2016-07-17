@@ -193,7 +193,7 @@
                     $flag = next($images);
                     $gerb = next($images);
 
-                    echo  '<div><img src = "'.$gerb['path'].'/small/'.$gerb['name'].'" alt = "'.$category['title'].'">'.$category['title'].'</div>';
+                    echo '<div><img src = "'.$gerb['path'].'/small/'.$gerb['name'].'" alt = "'.$category['title'].'">'.$category['title'].'</div>';
                 }
             }
 ?>
@@ -210,20 +210,24 @@
                     if($products)
                     {
                         echo
-                            '<div class="item">';
+                        '<div class="item">';
 
-                        for($i = 0, $count = count($products); $i < $count; $i += 4)
-                        {
-                            if($i <= $count)
+                            for($i = 0, $count = count($products); $i < $count; $i += 2)
                             {
-                                $images = $products[$i]->getOneFile('big');
+                                if($i == 4)
+                                {
+                                    break;
+                                }
+                                if($i <= $count)
+                                {
+                                    $images = $products[$i]->getOneFile('big');
 
-                                $stars = $products[$i]->getStars();
+                                    $stars = $products[$i]->getStars();
 
-                                $sostav = $products[$i]->getSostav();
-                                $dlitelnost = $products[$i]->getDlitelnost();
+                                    $sostav = $products[$i]->getSostav();
+                                    $dlitelnost = $products[$i]->getDlitelnost();
 
-                                echo
+                                    echo
                                     '<div class="items-inner">
                                         <div class="col-xs-6 no-left">
                                             <div class="med-container">
@@ -247,97 +251,49 @@
                                                                 break;
                                                             }
                                                         }
-                                echo
+                                    $ico = ($products[$i]->price)
+                                        ? '<i class=" icon '.$this->currency_usd->currencyName->icon.'"></i>'
+                                        : '<i class=" icon '.$this->currency_eur->currencyName->icon.'"></i>';
+                                    $price = ($products[$i]->price) ? $products[$i]->price * $this->currency_byn->course : $products[$i]->price_eur * $this->currency_byn->course * $this->currency_eur->course;
+                                    $price_int = ($products[$i]->price) ? $products[$i]->price : $products[$i]->price_eur;
+
+                                    echo
                                                     '</div>
-                                                    <h3>От <span>'.Yii::app()->format->formatNumber($products[$i]['price']).' руб.</span></h3>
+                                                    <h3>От <span>'.number_format($price, 2, ".", " ").' руб.</span></h3>
+                                                    <span class = "int-price">'.Yii::app()->format->formatNumber($price_int).$ico .'</span>
                                                     <div class="footer-container">
                                                         <span>'.$sostav['value'].'</span>
                                                         <span>'.$dlitelnost['value'].'</span>
                                                         <a class="forward" href = "'.$products[$i]->getUrlForItem($this->getUrlById(Yii::app()->params['pages']['strany-i-oteli'])).'">Перейти</a>
                                                     </div>
                                                 </div>
-                                            </div>';
-
-                                if($i + 1 >= $count)
-                                {
-                                    echo
-                                         '</div>
-                                    </div>
-                                    </div>';
-
-                                    break;
+                                            </div>
+                                         </div>';
                                 }
-                            }
 
-                            if($i + 1 < $count)
-                            {
-                                $images = $products[$i + 1]->getOneFile('big');
+                                if($i + 1 < $count)
+                                {
+                                    $image = $products[$i + 1]->getOneFile('big');
 
-                                $stars = $products[$i + 1]->getStars();
+                                    $stars = $products[$i + 1]->getStars();
 
-                                $sostav = $products[$i + 1]->getSostav();
-                                $dlitelnost = $products[$i + 1]->getDlitelnost();
+                                    $sostav = $products[$i + 1]->getSostav();
+                                    $dlitelnost = $products[$i + 1]->getDlitelnost();
 
-                                echo
-                                            '<div class="small-container">
-                                                <div class="col-xs-6 no-left">
-                                                    <img class="small" src = "'.$images.'" alt = "'.$products[$i + 1]['title'].'">
-                                                    <div class="small-caption caption">
+                                    $ico = ($products[$i + 1]->price)
+                                        ? '<i class=" icon '.$this->currency_usd->currencyName->icon.'"></i>'
+                                        : '<i class=" icon '.$this->currency_eur->currencyName->icon.'"></i>';
+                                    $price = ($products[$i + 1]->price) ? $products[$i + 1]->price * $this->currency_byn->course : $products[$i + 1]->price_eur * $this->currency_byn->course * $this->currency_eur->course;
+                                    $price_int = ($products[$i + 1]->price) ? $products[$i + 1]->price : $products[$i + 1]->price_eur;
+
+                                        echo
+                                            '<div class="col-xs-6 no-right">
+                                                <div class="med-container">
+                                                    <img class="med" src = "'.$image.'" alt = "'.$products[$i + 1]['title'].'">
+                                                    <div class="med-caption caption">
                                                         <h2>'.$products[$i + 1]['title'].'</h2>
                                                         <div class="stars">';
-                                                             for($j = 0; $j < 5; $j++)
-                                                                {
-                                                                    if($j < $stars['value'])
-                                                                    {
-                                                                        echo '<img src = "/images/star_full.png" alt = "">';
-                                                                    }
-                                                                    elseif($j > 0)
-                                                                    {
-                                                                        echo '<img src = "/images/star.png" alt = "">';
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        break;
-                                                                    }
-                                                                }
-                                echo
-                                                        '</div>
-                                                        <h3>От <span>'.Yii::app()->format->formatNumber($products[$i + 1]['price']).' руб.</span></h3>
-                                                        <div class="footer-container">
-                                                            <span>'.$sostav['value'].'</span>
-                                                            <span>'.$dlitelnost['value'].'</span>
-                                                            <a class="forward" href = "'.$products[$i + 1]->getUrlForItem($this->getUrlById(Yii::app()->params['pages']['strany-i-oteli'])).'">Перейти</a>
-                                                        </div>
-                                                    </div>
-                                                </div>';
 
-                                if($i + 2 >= $count)
-                                {
-                                    echo
-                                            '</div>
-                                        </div>
-                                    </div>
-                                    </div>';
-
-                                    break;
-                                }
-                            }
-
-                            if($i + 2 < $count)
-                            {
-                                $images = $products[$i + 2]->getOneFile('big');
-
-                                $stars = $products[$i + 2]->getStars();
-
-                                $sostav = $products[$i + 2]->getSostav();
-                                $dlitelnost = $products[$i + 2]->getDlitelnost();
-
-                                echo
-                                                '<div class="col-xs-6 no-right">
-                                                    <img class="small" src = "'.$images.'" alt = "'.$products[$i + 2]['title'].'">
-                                                    <div class="small-caption caption">
-                                                        <h2>'.$products[$i + 2]['title'].'</h2>
-                                                        <div class="stars">';
                                                             for($j = 0; $j < 5; $j++)
                                                             {
                                                                 if($j < $stars['value'])
@@ -353,80 +309,28 @@
                                                                     break;
                                                                 }
                                                             }
-                                echo
+                                        echo
                                                         '</div>
-                                                        <h3>От <span>'.Yii::app()->format->formatNumber($products[$i + 2]['price']).' руб.</span></h3>
+                                                        <h3>От <span>'.number_format($price, 2, ".", " ").' руб.</span></h3>
+                                                        <span class = "int-price">'.Yii::app()->format->formatNumber($price_int).$ico .'</span>
                                                         <div class="footer-container">
                                                             <span>'.$sostav['value'].'</span>
                                                             <span>'.$dlitelnost['value'].'</span>
-                                                            <a class="forward" href = "'.$products[$i + 2]->getUrlForItem($this->getUrlById(Yii::app()->params['pages']['strany-i-oteli'])).'">Перейти</a>
+                                                            <a class="forward" href = "'.$products[$i + 1]->getUrlForItem($this->getUrlById(Yii::app()->params['pages']['strany-i-oteli'])).'">Перейти</a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                             </div>
                                         </div>';
-
-                                if($i + 3 >= $count)
+                                }
+                                else
                                 {
                                     echo
-                                    '</div>
-                                    </div>';
-
-                                    break;
+                                    '</div>';
                                 }
                             }
-
-                            if($i + 3 < $count)
-                            {
-                                $images = $products[$i + 3]->getOneFile('big');
-
-                                $stars = $products[$i + 3]->getStars();
-
-                                $sostav = $products[$i + 3]->getSostav();
-                                $dlitelnost = $products[$i + 3]->getDlitelnost();
-
-                                echo
-                                        '<div class="col-xs-6 no-right">
-                                            <div class="big-container">
-                                                <img class="big" src = "'.$images.'" alt = "'.$products[$i + 3]['title'].'">
-                                                <div class="big-caption caption">
-                                                    <h2>'.$products[$i + 3]['title'].'</h2>
-                                                    <div class="stars">';
-                                                        for($j = 0; $j < 5; $j++)
-                                                        {
-                                                            if($j < $stars['value'])
-                                                            {
-                                                                echo '<img src = "/images/star_full.png" alt = "">';
-                                                            }
-                                                            elseif($j > 0)
-                                                            {
-                                                                echo '<img src = "/images/star.png" alt = "">';
-                                                            }
-                                                            else
-                                                            {
-                                                                break;
-                                                            }
-                                                        }
-                                echo
-                                                    '</div>
-                                                    <h3>От <span>'.Yii::app()->format->formatNumber($products[$i + 3]['price']).' руб.</span></h3>
-                                                    <div class="footer-container">
-                                                        <span>'.$sostav['value'].'</span>
-                                                        <span>'.$dlitelnost['value'].'</span>
-                                                        <a class="forward" href = "'.$products[$i + 3]->getUrlForItem($this->getUrlById(Yii::app()->params['pages']['strany-i-oteli'])).'">Перейти</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>';
-
-                                if($i + 4 >= $count)
-                                {
-                                    echo '</div>';
-                                    break;
-                                }
-                            }
-                        }
+                        echo
+                        '</div>';
                     }
                 }
             }
@@ -541,9 +445,17 @@
                                                                 break;
                                                             }
                                                         }
+
+                                    $ico = ($v->price)
+                                        ? '<i class=" icon '.$this->currency_usd->currencyName->icon.'"></i>'
+                                        : '<i class=" icon '.$this->currency_eur->currencyName->icon.'"></i>';
+                                    $price = ($v->price) ? $v->price * $this->currency_byn->course : $v->price_eur * $this->currency_byn->course * $this->currency_eur->course;
+                                    $price_int = ($v->price) ? $v->price : $v->price_eur;
+
                                     echo
                                                     '</div>
-                                                    <h5>От <span>'.Yii::app()->format->formatNumber($v->price).' руб.</span></h5>
+                                                    <h5>От <span>'.number_format($price, 2, ".", " ").' руб.</span></h5>
+                                                    <span class = "int-price">'. Yii::app()->format->formatNumber($price_int).$ico .'</span>
                                                     <div class="footer-container">
                                                         <span>'.$sostav->value.'</span>
                                                         <span>'.$dlitelnost->value.'</span>
@@ -678,9 +590,15 @@
                                                                     break;
                                                                 }
                                                             }
+
+                                            $price = ($value->price) ? $value->price * $this->currency_byn->course : $value->price_eur * $this->currency_byn->course * $this->currency_eur->course;
+                                            $price = ($value->price) ? $value->price * $this->currency_byn->course : $value->price_eur * $this->currency_byn->course * $this->currency_eur->course;
+                                            $price_int = ($value->price) ? $value->price : $value->price_eur;
+
                                             echo
                                                         '</div>
-                                                        <h5>От <span>'.Yii::app()->format->formatNumber($value->price).' руб.</span></h5>
+                                                        <h5>От <span>'.number_format($price, 2, ".", " ").' руб.</span></h5>
+                                                        <span class = "int-price" style="font-size: 14px; margin-top: -5px;">'.Yii::app()->format->formatNumber($price_int).$ico.'</span>
                                                     </div>
                                                 </a>';
 

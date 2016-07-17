@@ -5,15 +5,18 @@
     {
         public $typeCatalog = 'small';
         public $counter = 10;
+        public $sorter = 'sort ASC';
 
         public function renderMainItems()
         {
             echo CHtml::openTag($this->itemsTagName,array('class' => $this->itemsCssClass))."\n";
+            echo CHtml::openTag('ul');
+
             $data = $this->dataProvider->getData();
             if(($n = count($data)) > 0)
             {
                 $temp_title = '';
-                $owner=$this->getOwner();
+                $owner = $this->getOwner();
                 $viewFile = $owner->getViewFile($this->itemView);
                 $j = 0;
                 $folder_count = 0;
@@ -26,21 +29,21 @@
                     $data['data'] = $item;
                     $data['widget'] = $this;
 
-                    if (isset($item->parent) && isset($item->parent->title) && $temp_title != $item->parent->title)
+                    if (isset($item->parent) && isset($item->parent->title) && ($temp_title != $item->parent->title || $temp_id != $item->parent->id))
                     {
                         $temp_title = $item->parent->title;
+                        $temp_id = $item->parent->id;
                         $folder_count++;
                         $title = CHtml::tag('span', array('class' => 'icon-admin-folder-gray'), $folder_count);
                         $title .= CHtml::tag('span', array('class' => 'parent'), $temp_title);
-                        if($folder_count == 0)
-                        {
-                            echo CHtml::openTag('ul');
-                        }
-                        else
-                        {
-                            echo CHtml::closeTag('ul');
-                            echo CHtml::openTag('ul');
-                        }
+
+                        $model_name = get_class($item);
+
+                        $title .= ' ('.$model_name::model()->notDeleted()->count('parent_id = :id', array(':id' => $item->parent->id)).')';
+
+                        echo CHtml::closeTag('ul');
+                        echo CHtml::openTag('ul');
+
                         echo CHtml::tag('div', array('class' => 'title_parent'), $title);
                     }
 
@@ -68,14 +71,6 @@
 
             $cs = Yii::app()->getClientScript();
             $button_show = '
-                $(".items ul").each(function()
-                {
-                    var title = $(this).find(".parent").text();
-                    var count = $(this).find("li").length;
-
-                    $(this).find(".parent").text(title+" ("+count+")");
-                });
-
                 $(".btn-group.checkbox .checkbox-action").on("click",function()
                 {
                     if($(this).hasClass("checked-all") || $(this).hasClass("checked-single"))
@@ -121,26 +116,46 @@
 
         public function renderMainSorter()
         {
-            $count=$this->dataProvider->getItemCount();
-            if ($count>0)
+            $count = $this->dataProvider->getItemCount();
+            if ($count > 0)
             {
-                $cs=Yii::app()->getClientScript();
-                $sorter='
-                        $("body").on("change","#sort-main",function()
-                        {
-                            $.cookie("sort_products",$(this).val(),{expires: 3600, path: "/"});
-                            window.location.reload();
-                        });
-                    ';
-                $cs->registerPackage("cookie")->registerScript('sorter',$sorter);
+                $cs = Yii::app()->getClientScript();
+                $sorter = '
+                    $("body").on("change", "#sort-main", function()
+                    {
+                        $.cookie("sort_products", $(this).val(), {expires: 3600, path: "/"});
+                        window.location.reload();
+                    });
+                ';
+                $cs->registerPackage("cookie")->registerScript('sorter', $sorter);
 
-                echo 'Сортировать: '.CHtml::dropDownList('sort-main',$this->sorter,array('price_asc'=>'Сначало дешевые','price_desc'=>'Сначало дорогие','title_asc'=>'А-Я','title_desc'=>'Я-А'),array('prompt'=>'---'));;
+                echo CHtml::dropDownList('sort-main', $this->sorter ? $this->sorter->value : '', array('price_asc' => 'По цене &#8593;', 'price_desc' => 'По цене &#8595;', 'title_asc' => 'По алфавиту &#8593;', 'title_desc' => 'По алфавиту &#8595;', 'sort_asc' => 'Пользовательская'), array("encode" => false, 'prompt' => 'Сортировка'));;
+            }
+        }
+
+        public function renderTimeAndUserSorter()
+        {
+            $count = $this->dataProvider->getItemCount();
+            if ($count > 0)
+            {
+                $cs = Yii::app()->getClientScript();
+                $user_sorter = '
+                    $("body").on("change", "#sort_user_main", function()
+                    {
+                        $.cookie("user_sort_products", $(this).val(), {expires: 3600, path: "/"});
+                        window.location.reload();
+                    });
+                ';
+                $cs->registerPackage("cookie")->registerScript('user_sorter', $user_sorter);
+
+                echo CHtml::dropDownList('sort_user_main', $this->sorter ? $this->sorter->value : '', array('date_asc' => "По новизне &#8593;", 'date_desc' => 'По новизне &#8595;', 'sort_asc' => 'Пользовательская'), array("encode" => false, 'prompt' => 'Сортировка'));;
             }
         }
 
         public function renderCounter()
         {
             $count = $this->dataProvider->getItemCount();
+            $this->counter = (!empty($_COOKIE['count'])) ? $_COOKIE['count'] : 10;
             if ($count > 0)
             {
                 $cs = Yii::app()->getClientScript();
@@ -153,7 +168,7 @@
                 ';
                 $cs->registerPackage("cookie")->registerScript('counter', $counter);
 
-                echo CHtml::dropDownList('count-main', $this->counter, array('10' => '10', '20' => '20', '40' => '40', '50' => '50'), array('class' => 'product_for_page'));
+                echo CHtml::dropDownList('count-main', $this->counter, array('20' => '20', '50' => '50', '100' => '100', '200' => '200'), array('class' => 'product_for_page'));
             }
         }
 
@@ -161,6 +176,7 @@
         {
             Yii::app()->clientScript->registerPackage('boot-select');
             $count = $this->dataProvider->getItemCount();
+            $this->counter = (!empty($_COOKIE['count'])) ? $_COOKIE['count'] : 10;
             if ($count > 0) {
                 $cs = Yii::app()->getClientScript();
                 $counter = '
@@ -174,7 +190,7 @@
                 ';
                 $cs->registerPackage("cookie")->registerScript('counter', $counter);
 
-                echo CHtml::dropDownList('count-main', $this->counter, array('20' => '20', '50' => '50', '100' => '100', '200' => '200'), array('class' => 'product_for_page selectpicker'));
+                echo CHtml::dropDownList('count-main', $this->counter, array('5'=>'5', '20' => '20', '50' => '50', '100' => '100', '200' => '200'), array('class' => 'product_for_page selectpicker'));
             }
         }
         public function renderCounterGallery()

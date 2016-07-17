@@ -15,17 +15,17 @@
 ?>
     <div class="form-group text-center title">
         <?php // добавить описание в app.php?>
-        Вход
+        Введите учетные данные
     </div>
 
-	<div class="form-group">
+	<div class="form-group col-xs-6">
         <div class="col-xs-12">
             <?php echo $form->textField($model,'email'); ?>
             <?php echo $form->error($model,'email',array('class'=>'errorMessage', 'placeholder'=>'E-mail')); ?>
         </div>
 	</div>
 
-	<div class="form-group">
+	<div class="form-group col-xs-6">
         <div class="col-xs-12">
             <?php echo $form->passwordField($model,'password'); ?>
             <?php echo $form->error($model,'password',array('class'=>'errorMessage', 'placeholder'=>'Пароль')); ?>
@@ -40,7 +40,7 @@
                 echo BsHtml::link(Yii::t('app','Register'),array('user/register'));
             }
             ?>
-            <?php echo BsHtml::submitButton(Yii::t('app','Login'), array('color' => BsHtml::BUTTON_COLOR_PRIMARY));?>
+            <?php echo BsHtml::submitButton(Yii::t('app', 'Login'), array('color' => BsHtml::BUTTON_COLOR_PRIMARY));?>
 
             <?php echo BsHtml::checkBox('checkbox',false,array('class'=>'checkbox group')); ?>
             <?php echo BsHtml::label(Yii::t('app','Remember Me'),'checkbox',false,array('class'=>'checkbox')); ?>

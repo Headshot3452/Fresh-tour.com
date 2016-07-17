@@ -537,7 +537,7 @@ label.checkbox-active.active::before {
   vertical-align: 0;
 }
 
-#btn-next-prev .fa,
+#btn-next-prev .fa
 {
   font-size: 18px;
   margin-bottom: 0px;

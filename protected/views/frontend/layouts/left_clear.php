@@ -100,9 +100,17 @@
 							echo '<img src = "/images/star.png" alt = "">';
 						}
 					}
+
+					$ico = ($value->price)
+                        ? '<i class=" icon '.$this->currency_usd->currencyName->icon.'"></i>'
+                        : '<i class=" icon '.$this->currency_eur->currencyName->icon.'"></i>';
+                    $price = ($value->price) ? $value->price * $this->currency_byn->course : $value->price_eur * $this->currency_byn->course * $this->currency_eur->course;
+                    $price_int = ($value->price) ? $value->price : $value->price_eur;
+
 					echo
 							'</div>
-								<h5>От <span>' . Yii::app()->format->formatNumber($value->price) . ' руб.</span></h5>
+								<h5>От <span>'.number_format($price, 2, ".", " ").' руб.</span></h5>
+                                <span class = "int-price">'.Yii::app()->format->formatNumber($price_int).$ico.'</span>
 								' . $hot . $popular . '
 								' . $sale . '
 								<div class="footer-container">

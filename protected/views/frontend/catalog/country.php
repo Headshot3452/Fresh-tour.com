@@ -93,15 +93,15 @@
 									$link = $value->getUrlForItem(1);
 									$stars = $value->getStars();
 
-									$image = $value->getOneFile('original');
+									$image = $value->getOneFile('medium');
 
 									$sostav = $value->getSostav();
 
 									$dlitelnost = $value->getDlitelnost();
 
-									if(!$image)
+									if(!is_file($image))
 									{
-										$image = Yii::app()->params['noimage'];
+										$image = $value->getOneFile('big');
 									}
 
 									$sale = $sale_array[0] ? '<span class = "sale">'.$sale_array[0].'%</span>' : '';
@@ -129,9 +129,17 @@
 														break;
 													}
 												}
+
+									$ico = ($value->price)
+											? '<i class=" icon '.$this->currency_usd->currencyName->icon.'"></i>'
+											: '<i class=" icon '.$this->currency_eur->currencyName->icon.'"></i>';
+									$price = ($value->price) ? $value->price * $this->currency_byn->course : $value->price_eur * $this->currency_byn->course * $this->currency_eur->course;
+									$price_int = ($value->price) ? $value->price : $value->price_eur;
+
 									echo
 											'</div>
-											<h5>От <span>'.Yii::app()->format->formatNumber($value->price).' руб.</span></h5>
+											<h5>От <span>'.number_format($price, 2, ".", " ").' руб.</span></h5>
+											<span class = "int-price">'.Yii::app()->format->formatNumber($price_int).$ico.'</span>
 											<span class = "hot">Горящий тур</span>
 											'.$sale.'
 											<div class="footer-container">

@@ -6,11 +6,11 @@
 
     $link = $this->createUrl('catalog/tree', array('url' => $url.$data->name));
 
-    $image = $data->getOneFile('original');
+    $image = $data->getOneFile('medium');
 
-    if(!$image)
+    if(!is_file($image))
     {
-        $image = Yii::app()->params['noimage'];
+        $image = $data->getOneFile('big');
     }
 
     foreach($data->parameters_value as $value)
@@ -24,6 +24,12 @@
             $srok = $value["value"];
         }
     }
+
+    $ico = ($data->price)
+        ? '<i class=" icon '.$this->currency_usd->currencyName->icon.'"></i>'
+        : '<i class=" icon '.$this->currency_eur->currencyName->icon.'"></i>';
+    $price = ($data->price) ? $data->price * $this->currency_byn->course : $data->price_eur * $this->currency_byn->course * $this->currency_eur->course;
+    $price_int = ($data->price) ? $data->price : $data->price_eur;
 ?>
 
 <a href = "<?php echo $data->name ;?>" class="item-link">
@@ -44,7 +50,19 @@
                     </span>
                 </div>
                 <div class="col-xs-3 no-right price-cont">
-                    <span class="price"><?php echo  Yii::app()->format->formatNumber($data->price) ;?> </span> руб
+<?php
+                    if($price)
+                    {
+?>
+                        <span class="price"><?php echo number_format($price, 2, ".", " ") ;?></span> руб
+                        <span class = "int-price"><?php echo Yii::app()->format->formatNumber($price_int).$ico ;?></span>
+<?php
+                    }
+                    else
+                    {
+                        echo '<span class = "price" style="font-size: 18px;">Уточняйте цену</span>';
+                    }
+?>
                 </div>
                 <div class="clearfix"></div>
                 <a href = "<?php echo $data->name ;?>" class="forward">Подробнее</a>

@@ -1,6 +1,10 @@
 <?php
 class SiteController extends FrontendController
 {
+    public $currency_byn;
+    public $currency_eur;
+    public $currency_usd;
+
     public function init()
     {
         parent::init();
@@ -12,6 +16,10 @@ class SiteController extends FrontendController
         {
             unset(Yii::app()->request->cookies['count_item']);
         }
+
+        $this->currency_byn = SettingsCurrency::model()->findByAttributes(array('currency_name' => 'BYN'));
+        $this->currency_eur = SettingsCurrency::model()->findByAttributes(array('currency_name' => 'EUR'));
+        $this->currency_usd = SettingsCurrency::model()->findByAttributes(array('currency_name' => 'USD'));
     }
 
     public function actionIndex()
@@ -181,6 +189,11 @@ class SiteController extends FrontendController
         elseif($this->page_id == Yii::app()->params['pages']['srochno'])
         {
             $url = $this->getUrlById(Yii::app()->params['pages']['hot-tour']);
+            $this->redirect('/'.$url);
+        }
+        elseif($this->page_id == Yii::app()->params['pages']['tours_and_vizy'])
+        {
+            $url = $this->getUrlById(Yii::app()->params['pages']['poisk_tours']);
             $this->redirect('/'.$url);
         }
 

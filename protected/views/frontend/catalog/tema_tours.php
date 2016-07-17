@@ -40,7 +40,13 @@
 <?php
 						for($i = 0; $i < 5; $i++)
 						{
-							$image = $tours[$i]->getOneFile('big');
+							$image = $tours[$i]->getOneFile('medium');
+
+							if(!is_file($image))
+							{
+								$image = $tours[$i]->getOneFile('big');
+							}
+
 							$active = ($i == 0) ? 'active' : '';
 							echo
 								'<li class="'.$active.'">
@@ -57,13 +63,11 @@
 						<div id="recently-tours">
 							<h2>Ещё тематические туры</h2>
 <?php
-//var_dump($tours);
 							for($i = 5; $i < $count_tours; $i++)
 							{
-//								$image = $tours[$i]->getOneFile('big');
 								$active = ($i == 0) ? 'active' : '';
 								echo
-									'<a data-toggle="tab" href = "#'.$tours[$i]['name'].'">'.$tours[$i]['title'].'</a>';
+								'<a data-toggle="tab" href = "#'.$tours[$i]['name'].'">'.$tours[$i]['title'].'</a>';
 
 								$tabs[] = $tours[$i]['name'];
 							}
@@ -105,11 +109,11 @@
 
 												$end = false;
 
-												$image = $v->getOneFile('big');
+												$image = $v->getOneFile('medium');
 
-												if(!$image)
+												if(!is_file($image))
 												{
-													$image = Yii::app()->params['noimage'];
+													$image = $v->getOneFile('big');
 												}
 
 												if(!isset($new_parent) || $new_parent != $v->parent_id)
@@ -167,9 +171,17 @@
 																				break;
 																			}
 																		}
+
+													$ico = ($v->price)
+															? '<i class=" icon '.$this->currency_usd->currencyName->icon.'"></i>'
+															: '<i class=" icon '.$this->currency_eur->currencyName->icon.'"></i>';
+													$price = ($v->price) ? $v->price * $this->currency_byn->course : $v->price_eur * $this->currency_byn->course * $this->currency_eur->course;
+													$price_int = ($v->price) ? $v->price : $v->price_eur;
+
 													$tem_slider .=
 																	'</div>
-																	<h3>От <span>' . Yii::app()->format->formatNumber($v->price) . ' руб.</span></h3>
+																	<h3>От <span>'.number_format($price, 2, ".", " ").' руб.</span></h3>
+																	<span class = "int-price tem-price">'.Yii::app()->format->formatNumber($price_int).$ico.'</span>
 																	<div class="footer-container">
 																		<span>'.$sostav['value'].'</span>
 																		<span>'.$dlitelnost['value'].'</span>

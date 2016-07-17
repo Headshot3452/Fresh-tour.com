@@ -1,8 +1,8 @@
 <?php
-	$image = $data->getOneFile('original');
-	if(!$image)
+	$image = $data->getOneFile('medium');
+	if(!is_file($image))
 	{
-		$image = Yii::app()->params['noimage'];
+		$image = $data->getOneFile('big');
 	}
 
 	$link = $data->getUrlForItem(1);
@@ -116,7 +116,21 @@
 					}
 					else
 					{
-						echo '<span class = "price">'.Yii::app()->format->formatNumber($data->price).'</span> руб';
+						$ico = ($data->price)
+								? '<i class=" icon '.$this->currency_usd->currencyName->icon.'"></i>'
+								: '<i class=" icon '.$this->currency_eur->currencyName->icon.'"></i>';
+						$price = ($data->price) ? $data->price * $this->currency_byn->course : $data->price_eur * $this->currency_byn->course * $this->currency_eur->course;
+						$price_int = ($data->price) ? $data->price : $data->price_eur;
+
+						if($price)
+						{
+							echo '<span class = "price">'.number_format($price, 2, ".", " ").'</span> руб';
+							echo '<span class = "int-price">'.Yii::app()->format->formatNumber($price_int).$ico.'</span>';
+						}
+						else
+						{
+							echo '<span class = "price">Уточняйте цену</span>';
+						}
 					}
 ?>
 				</div>

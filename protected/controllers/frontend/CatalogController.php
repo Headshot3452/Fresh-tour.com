@@ -2,10 +2,17 @@
     class CatalogController extends FrontendController
     {
         public $root_id;
+        public $currency_byn;
+        public $currency_eur;
+        public $currency_usd;
 
         public function init()
         {
             parent::init();
+
+            $this->currency_byn = SettingsCurrency::model()->findByAttributes(array('currency_name' => 'BYN'));
+            $this->currency_eur = SettingsCurrency::model()->findByAttributes(array('currency_name' => 'EUR'));
+            $this->currency_usd = SettingsCurrency::model()->findByAttributes(array('currency_name' => 'USD'));
 
             $this->getPageModule();
             $struct = Structure::model()->findByPk($this->page_id);

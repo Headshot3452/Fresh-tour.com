@@ -22,9 +22,9 @@
 <div class="form-group col-xs-12">
     <div class="row">
         <div class="col-xs-3">
-            <?php echo $form->labelEx($model,'price'); ?>
-            <?php echo $form->textField($model,'price', array('placeholder'=>'')); ?>
-            <?php echo $form->error($model,'price'); ?>
+            <?php echo $form->labelEx($model, 'price', array('label' => 'Цена (USD)')); ?>
+            <?php echo $form->textField($model, 'price', array('placeholder'=>'')); ?>
+            <?php echo $form->error($model, 'price'); ?>
         </div>
         <div class="col-xs-1 mar_t">
             <label>USD</label>
@@ -48,8 +48,18 @@
 <div class="form-group col-xs-12">
     <div class="row">
         <div class="col-xs-3">
-            <?php echo $form->labelEx($model,'price'); ?>
-            <?php echo BsHtml::dropDownList('count','',array('Розница','Опт'),array('empty'=>'-')); ?>
+            <?php echo $form->labelEx($model, 'price_eur', array('label' => 'Цена (EUR)')); ?>
+            <?php echo $form->textField($model, 'price_eur', array('placeholder'=>'')); ?>
+            <?php echo $form->error($model, 'price_eur'); ?>
+        </div>
+    </div>
+</div>
+
+<div class="form-group col-xs-12">
+    <div class="row">
+        <div class="col-xs-3">
+            <?php echo $form->labelEx($model, 'price', array('label' => 'Тип')) ;?>
+            <?php echo BsHtml::dropDownList('count','',array('Розница', 'Опт'),array('empty'=>'-')); ?>
         </div>
         <div class="col-xs-4">
             <?php echo $form->labelEx($model,'stock'); ?>

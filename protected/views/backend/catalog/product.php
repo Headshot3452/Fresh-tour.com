@@ -33,7 +33,6 @@
         )
     );
 ?>
-
     <div class="tab-content">
         <div class="tab-pane active row" id="Description">
             <?php echo $this->renderPartial('_form_product', array('model' => $model, 'form' => $form, 'sale' => unserialize($model->sale_info), 'stock' => unserialize($model->stock)), true, false); ?>
@@ -54,8 +53,8 @@
     </div>
 
 <?php
-    $this->renderPartial('_modal_releated');
     $this->renderPartial('_modal_reviews');
+    $this->renderPartial('_modal_releated');
 
     $cs = Yii::app()->getClientScript();
 

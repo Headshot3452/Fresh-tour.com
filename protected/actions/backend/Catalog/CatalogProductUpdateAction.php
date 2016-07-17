@@ -62,21 +62,22 @@
 
                 if($model->validate())
                 {
-                    if($model->type != 2)
-                    {
-                        $sale_value = str_replace(" ", "", $_POST['sale_value']);
-                        if($sale_value != '0.00')
-                        {
-                            $model->sale_info = serialize(array($sale_value, $_POST['sale_type'], $_POST['date_from'], $_POST['date_to']));
-                        }
-                    }
-                    else
-                    {
-                        $model->sale_info = '';
-                        $model->price = '';
-                    }
+//                    var_dump($model->price);
+//                    if($model->hasAttribute('type') && $model->type != 2)
+//                    {
+//                        $sale_value = str_replace(" ", "", $_POST['sale_value']);
+//                        if($sale_value != '0.00')
+//                        {
+//                            $model->sale_info = serialize(array($sale_value, $_POST['sale_type'], $_POST['date_from'], $_POST['date_to']));
+//                        }
+//                    }
+//                    else
+//                    {
+//                        $model->sale_info = '';
+//                        $model->price = '';
+//                    }
 
-                    if($model->type == 1 || $model->type == 4)
+                    if($model->hasAttribute('type') && $model->type == 1 || $model->hasAttribute('type') && $model->type == 4)
                     {
                         foreach($model->opt_price as $value)
                         {

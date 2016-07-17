@@ -1,4 +1,13 @@
 <?php
+    if(!isset ($order))
+    {
+        $order = '';
+    }
+    if(!isset($orders))
+    {
+        $orders = 0;
+    }
+
     $header  = '<div class="buttons_group">';
     $header .= '<div class="btn-group checkbox">
                     <button type="button" class="btn checkbox-action">-</button>
@@ -9,7 +18,7 @@
     ';
 
     $cs = Yii::app()->getClientScript();
-    $dataProducts = $model->language($this->getCurrentLanguage()->id)->search($count);
+    $dataProducts = $model->language($this->getCurrentLanguage()->id)->search($count, $order, $page);
     $typeCatalog = 'small';
 
     $this->widget('application.widgets.ProductListViewAdmin',
@@ -19,10 +28,10 @@
                 'class' => $typeCatalog
             ),
             'typeCatalog' => $typeCatalog,
-            'itemView' => '_product_one_for_list',
+            'itemView' => '//catalog/_product_one_for_list',
             'dataProvider' => $dataProducts,
             'ajaxUpdate' => false,
-            'template' => $header."{mainItems}\n<div class=\"row\"><div class=\"col-xs-12 text-center\"></div></div>",
+            'template' => $header."{mainItems}\n<div class=\"row\"><div class=\"col-xs-12 text-center\">{pager}</div></div>",
             'pager' => array(
                 'class' => 'bootstrap.widgets.BsPager',
                 'firstPageLabel' => '<<',
@@ -33,9 +42,11 @@
             ),
         )
     );
+
+    echo CHtml::hiddenField('orders', $orders);
 ?>
 
-<div class="form-group buttons">
+<div class="form-group buttons" id="releated_buttons">
     <?php echo BsHtml::submitButton(Yii::t('app','Save'), array('color' => BsHtml::BUTTON_COLOR_PRIMARY, 'class' => 'save save_releated')); ?>
     <span>Отмена</span>
 </div>

@@ -70,7 +70,7 @@
                             <li><a tabindex="-1" href="<?php echo $this->createUrl('/admin/settings/update_currency/').'?action=format&id='.$item->id;?>"><?php echo ($item->format) ? 'Не выводить копейки' : 'Выводить копейки' ;?></a></li>
                             <li><a tabindex="-1" href="<?php echo $this->createUrl('/admin/settings/update_currency/').'?action=status&id='.$item->id;?>"><?php echo ($item->status) ? 'Отключить' : 'Включить' ;?></a></li>
                             <li><a tabindex="-1" href="<?php echo $this->createUrl('/admin/settings/update_currency/').'?action=delete&id='.$item->id;?>">Удалить</a></li>
-                            <li><a tabindex="-1" href="<?php echo $this->createUrl('/admin/settings/update_currency/').'?action=basic&id='.$item->id;?>">Сделать основной валютой</a></li>
+                            <li><a class="recalculate_rates" tabindex="-1" href="<?php echo $this->createUrl('/admin/settings/update_currency/').'?action=basic&id='.$item->id.'&recalculate_rates=false';?>">Сделать основной валютой</a></li>
                         </ul>
                     </span>
                 </div>
@@ -94,8 +94,11 @@
 ?>
         </div>
     </div>
-
-    <?php $this->endWidget(); ?>
+<?php
+    echo BsHtml::checkBox('recalculate_rates');
+    echo BsHtml::label(Yii::t('app', 'Recalculate rates'), 'recalculate_rates');
+    $this->endWidget();
+?>
 
 <?php
 
@@ -103,30 +106,30 @@
     $cs->registerScriptFile("/js/jquery.mjs.nestedSortable.js");
 
     $products_sortable =
-                '$("div#currency_container").nestedSortable(
-                {
-                    items: ".one_item",
-                    listType: "div",
-                    tabSize : 15,
-                    maxLevels: 0,
+        '$("div#currency_container").nestedSortable(
+        {
+            items: ".one_item",
+            listType: "div",
+            tabSize : 15,
+            maxLevels: 0,
 
-                    update:function( event, ui )
+            update:function( event, ui )
+            {
+                $.ajax(
+                {
+                    type: "POST",
+                    url:" '.$this->createUrl("settings/products_sort").'",
+                    data:{
+                        id : $(ui.item).attr("id"),
+                        index : parseInt($(ui.item).index())+parseInt(1),
+                    },
+                    success: function(data)
                     {
-                        $.ajax(
-                        {
-                            type: "POST",
-                            url:" '.$this->createUrl("settings/products_sort").'",
-                            data:{
-                                id : $(ui.item).attr("id"),
-                                index : parseInt($(ui.item).index())+parseInt(1),
-                            },
-                            success: function(data)
-                            {
-                                console.log(data);
-                            }
-                        });
+                        console.log(data);
                     }
-                });';
+                });
+            }
+        });';
 
     $items =
         "function prepareAttrs(item, idNumber)
@@ -156,6 +159,25 @@
             key = $('.row.one_item').length;
             initNewInputs(div, key);
             $('#currency_container').append(div.html());
+        });
+
+        $('#recalculate_rates').change(function()
+        {
+            $('.recalculate_rates').each(function()
+            {
+                var href = $(this).attr('href');
+
+                if(href.match(/false/) != null)
+                {
+                    var newstr = href.replace(/false/, 'true');
+                    $(this).attr('href', newstr);
+                }
+                else
+                {
+                    var newstr = href.replace(/true/, 'false');
+                    $(this).attr('href', newstr);
+                }
+            })
         });
 
         $('body').on('click', '.del-form', function()

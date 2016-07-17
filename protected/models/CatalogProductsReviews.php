@@ -29,8 +29,8 @@
         const STATUS_MODERATE = 2;
         const STATUS_ARCHIVE = 3;
         const STATUS_DELETED = 4;
-        const STATUS_ANSWERED = 5;
-        const STATUS_PLACEMENT = 6;
+        const STATUS_PLACEMENT = 5;
+        const STATUS_ANSWERED = 6;
         const STATUS_REJECTED = 7;
 
         /**
@@ -69,7 +69,7 @@
             $criteria->condition = 't.`product_id` = :parent_id AND t.`status` = :placement';
             $criteria->params = array(
                 ':parent_id' => $parent_id,
-                ':placement' => self::STATUS_PLACEMENT,
+                ':placement' => self::STATUS_ANSWERED,
             );
 
             return new CActiveDataProvider($this,

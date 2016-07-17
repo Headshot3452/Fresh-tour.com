@@ -9,28 +9,44 @@
         public $active_category = null;
 
         public $currency_ico = null;
+        public $currency_ico_view = null;
+
         private $count = 20;
 
         public function init()
         {
             parent::init();
 
-            $this->pageTitleBlock = BackendHelper::htmlTitleBlockDefault('', $this->createUrl('admin/'));
+            $this->count = (!empty($_COOKIE['count'])) ? $_COOKIE['count'] : 20;
+
+            $this->pageTitleBlock = BackendHelper::htmlTitleBlockDefault('', $this->createUrl('admin/siteManagement'));
             $this->pageTitleBlock .=
                 '<div class="img-cont">
-                    <a href="'.$this->createUrl("admin/").'">
+                    <a href="'.$this->createUrl("admin/siteManagement").'">
                         <img src="/images/icon-admin/catalog.png" alt="" title="">
                     </a>
                 </div>';
             $this->pageTitleBlock .= '<span class="pull-left title">'.Yii::t('app', 'Catalog').'</span>';
 
+            $this->pageTitleBlock .=
+                CHtml::beginForm($action='/admin/catalog', $method='get', array('id' => 'catalog_search_form'))
+                    .'<div class="form-group col-xs-3 pull-right">
+                        '.CHtml::label(Yii::t('app', 'Search by goods').':', '').'
+                        '.CHtml::textField('title', (isset($_GET['title'])) ? $_GET['title'] : '', array('placeholder' => '', 'class' => 'form-control')).'
+                        '.CHtml::linkButton(' ', array('class' => 'glyphicon glyphicon-search pull-right')).'
+                    </div>'.
+                CHtml::endForm();
+
+            $parent_id = ($this->_active_category_id) ? '?parent='.$this->_active_category_id : '';
+
             $this->addButtonsLeftMenu('create',
                 array(
-                    'url' => $this->createUrl('create_category')
+                    'url' => $this->createUrl('create_category').$parent_id
                 )
             );
 
             $this->currency_ico = SettingsCurrency::model()->active()->with('currencyName')->find('currencyName.basic = :basic', array(':basic' => 1));
+            $this->currency_ico_view = ($this->currency_ico->format_icon == 0) ? $this->currency_ico["currency_name"] : '<span class="'.$this->currency_ico->currencyName->icon.'">';
         }
 
         public function filters()
@@ -104,6 +120,10 @@
                     'class' => 'actionsBackend.Tree.SortAction',
                     'Model' => 'CatalogProducts',
                 ),
+                'reviews_sort' => array(
+                    'class' => 'actionsBackend.Tree.SortProductsReviewsAction',
+                    'Model' => 'CatalogProductsReviews',
+                ),
                 'copy_product' => array(
                     'class' => 'actionsBackend.Tree.CopyMoveAction',
                     'Model' => 'CatalogProducts',
@@ -111,6 +131,10 @@
                 'status_products' => array(
                     'class' => 'actionsBackend.Tree.StatusAction',
                     'Model' => 'CatalogProducts',
+                ),
+                'status_reviews'  => array(
+                    'class' => 'actionsBackend.Tree.StatusAction',
+                    'Model' => 'CatalogProductsReviews',
                 ),
                 'active' => array(
                     'class' => 'actionsBackend.ActiveAction',
@@ -145,8 +169,14 @@
 
         public function actionIndex()
         {
-            $this->count = (!empty($_COOKIE['count'])) ? $_COOKIE['count'] : 20;
             $model = new CatalogProducts();
+
+            $sorter = Yii::app()->request->cookies['sort_products'];
+
+            if(isset($_GET['title']))
+            {
+                $model->title = $_GET['title'];
+            }
 
             $count_item = $model->notDeleted()->count();
 
@@ -154,7 +184,19 @@
                 array(
                     'model' => $model,
                     'count' => $this->count,
-                    'count_item' => $count_item
+                    'count_item' => $count_item,
+                    'sorter' => $sorter
+                )
+            );
+        }
+
+        public function actionModal()
+        {
+            $model = CatalogProductsReviews::model()->findByPk($_POST['model_review']);
+
+            $this->renderPartial('_modal_review_data',
+                array(
+                    'model' => $model,
                 )
             );
         }
@@ -466,13 +508,15 @@
             }
 
             $this->count = (!empty($_COOKIE['count'])) ? $_COOKIE['count'] : 20;
+            $sorter = Yii::app()->request->cookies['sort_products'];
 
             $this->render('products',
                 array(
                     'model' => CatalogProducts::model()->notDeleted()->parent($this->_active_category_id),
                     'category_id' => $category_id,
                     'count' => $this->count,
-                    'count_item' => $count_item
+                    'count_item' => $count_item,
+                    'sorter' => $sorter
                 )
             );
         }
@@ -491,7 +535,7 @@
             return array_merge(
                 array(
                     array(
-                        'text' => CHtml::link('<img class="root-folder-orange" src="/images/icon-admin/folder-orange.png"><span>'.
+                        'text' => CHtml::link('<img class="root-folder-orange" src="/images/icon-admin/add_folder.png"><span>'.
                         Yii::t('app','Create root category').'</span>', array('create_category')), 'children' => array()
                     )
                 ),
@@ -626,8 +670,8 @@
             return array_merge(
                 array(
                     array(
-                        'text' => CHtml::link('<img class="root-folder-orange" src="/images/icon-admin/folder-orange.png"><span class="modal_first">'.
-                        Yii::t('app', 'The root level directory').'</span>', array('create_category'), array('class' => 'active root')),'children' => array()
+                        'text' => CHtml::link('<img class="root-folder-orange" src="/images/icon-admin/folder-orange.png">
+                        <span class="modal_first"></span>', array('create_category'), array('class' => 'active root')),'children' => array()
                     )
                 ),
                 NestedSetHelper::nestedToTreeViewWithOptions($categories, 'id', $this->getTreeOptionsModal())
