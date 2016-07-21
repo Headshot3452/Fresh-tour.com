@@ -15,14 +15,14 @@
             return array(
                 array('deny',
                     'users'=>array('@'),
-                    'actions'=>array('register','login','passwordreset','passwordresetcheck'),
+                    'actions'=>array('register','hslogin','passwordreset','passwordresetcheck'),
                 ),
                 array('allow',
                     'users'=>array('@'),
                 ),
                 array('allow',
                     'users'=>array('*'),
-                    'actions'=>array('register','passwordreset','passwordresetcheck','usercheck','login','captcha'),
+                    'actions'=>array('register','passwordreset','passwordresetcheck','usercheck','hslogin','captcha'),
                 ),
                 array('deny',
                     'users'=>array('*'),
@@ -30,7 +30,7 @@
             );
         }
 
-        public function actionLogin()
+        public function actionHslogin()
         {
             $model = new Users('login');
 
@@ -72,7 +72,7 @@
         public function actionLogout()
         {
             Yii::app()->user->logout();
-            $this->redirect(array('user/login'));
+            $this->redirect(array('user/hslogin'));
         }
 
         public function actionRegister()

@@ -155,7 +155,10 @@
 
                     echo '<span class = "int-price-prod">'.Yii::app()->format->formatNumber($price_int).$ico.'</span>';
 
-                    echo '<span>'.Yii::app()->format->formatNumber($_price[1][0]).'</span>.'. substr($_price[2][0], 0, 2) .' руб.';
+                    if(isset($_price[1][0], $_price[2][0]))
+                    {
+                        echo '<span>'.Yii::app()->format->formatNumber($_price[1][0]).'</span>.'. substr($_price[2][0], 0, 2) .' руб.';
+                    }
 ?>
                 </div>
                 <h1><?php echo $country ;?> <img class="flag-country" src = "/<?php echo $flag ;?>" alt = ""><span class="tyr-title"> <?php echo $product->title ;?> </span></h1>

@@ -5,7 +5,7 @@ RewriteRule ^(.*)$ "http\:\/\/fresh\-tour\.by/$1" [R=301,L]
 
 RewriteEngine on
 
-RewriteRule ^admin admin.php
+RewriteRule ^hsadmin hsadmin.php
 
 # если директория или файл существуют, использовать их напрямую
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -2060,6 +2060,11 @@ header, .hidden-top {
       margin-top: 620px;
       position: absolute;
     }
+    & > .col-xs-6.no-all {
+      a {
+        width: 100%;
+      }
+    }
   }
   & > .container {
     padding: 0 15px;
@@ -2470,6 +2475,9 @@ header, .hidden-top {
     .item {
       position: relative;
       background-color: #000;
+      a {
+        width: 100%;
+      }
     }
   }
   h2 {
@@ -2947,7 +2955,9 @@ a.show_all {
   position: relative;
   height: 400px;
   overflow: hidden;
-  margin-top: -74px;
+  //margin-top: -74px;
+  top: -74px;
+  margin-bottom: -74px;
   .flag-country {
     width: 56px;
     height: 38px;

@@ -5,7 +5,7 @@ return CMap::mergeArray
     array(
                 'controllerPath' => realpath(__DIR__ . '/../controllers/backend'),
                 'viewPath' => realpath(__DIR__ . '/../views/backend'),
-                'defaultController' => 'admin',
+                'defaultController' => 'hsadmin',
                 'import' => array(
                         'application.forms.backend.*',
                 ),
@@ -16,10 +16,10 @@ return CMap::mergeArray
                             'caseSensitive'=>false,
                             'urlSuffix'=>'/',
                             'rules' => array(
-                                    'admin'=>'admin/index',
-                                    'admin/action/<_a>'=>'admin/<_a>',
-                                    'admin/<_c>'=>'<_c>/index',
-                                    'admin/<_c>/<_a>'=>'<_c>/<_a>',
+                                    'hsadmin'=>'admin/index',
+                                    'hsadmin/action/<_a>'=>'admin/<_a>',
+                                    'hsadmin/<_c>'=>'<_c>/index',
+                                    'hsadmin/<_c>/<_a>'=>'<_c>/<_a>',
                             ),
                     ),
                     'log'=>array(
@@ -29,7 +29,7 @@ return CMap::mergeArray
                             'class'=>'CFileLogRoute',
                             'levels'=>'error, warning',
                             ),
-	                     array(
+	                    array(
 	                        'class'=>'CProfileLogRoute',
 	                        'levels'=>'profile',
 	                        'enabled'=>true,
