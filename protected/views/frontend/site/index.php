@@ -161,7 +161,7 @@
 
 <div class = "redirect container">
     <div class="row">
-        <h1>Отели и страны <a href = "<?php echo $this->getUrlById(Yii::app()->params['pages']['strany-i-oteli']) ;?>" class = "show_all">Показать всё</a></h1>
+        <h3 class="redirect_h3">Отели и страны <a href = "<?php echo $this->getUrlById(Yii::app()->params['pages']['strany-i-oteli']) ;?>" class = "show_all">Показать всё</a></h3>
     </div>
 </div>
 
@@ -342,7 +342,7 @@
 <div class="clearfix"></div>
 <div class = "redirect container">
     <div class="row">
-        <h1>Тематические туры <a href = "<?php echo $this->getUrlById(Yii::app()->params['pages']['tema-tours']) ;?>" class = "show_all">Показать всё</a></h1>
+        <h3 class="redirect_h3">Тематические туры <a href = "<?php echo $this->getUrlById(Yii::app()->params['pages']['tema-tours']) ;?>" class = "show_all">Показать всё</a></h3>
     </div>
 </div>
 
@@ -395,7 +395,7 @@
 
                             echo
                                 '<div class="row">
-                                    <h2>'.$title[$key].'</h2>
+                                    <h3 class="temat_title">'.$title[$key].'</h3>
                                     <h4 class="col-xs-11 no-all">
                                         '.$description[$key].'
                                     </h4>
@@ -502,7 +502,7 @@
 ?>
         <div class = "redirect container">
             <div class="row">
-                <h1>Свежие туры <a href = "" class = "show_all">Показать всё</a></h1>
+                <h3 class="redirect_h3">Свежие туры <a href = "" class = "show_all">Показать всё</a></h3>
             </div>
         </div>
 
@@ -637,7 +637,7 @@
     <div class="container no-all">
         <div class="row">
             <div class="col-xs-6 bron">
-                <h1>Раннее бронирование</h1>
+                <h3>Раннее бронирование</h3>
                 [[w:BlockWidget|block_id=1;]]
 <?php
                 $model = new BronForm();
@@ -709,7 +709,7 @@
 ?>
             </div>
             <div class="col-xs-6 news">
-                <h1>Новости</h1>
+                <h3>Новости</h3>
                 [[w:NewsLastWidget|count=4;parent_id=2;view=main;]]
 
                 <a href = "<?php echo $this->getUrlById(Yii::app()->params['pages']['novosti']) ;?>" class="all_items">Все новости</a>

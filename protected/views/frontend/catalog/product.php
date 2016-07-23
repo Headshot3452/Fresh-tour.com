@@ -161,7 +161,7 @@
                     }
 ?>
                 </div>
-                <h1><?php echo $country ;?> <img class="flag-country" src = "/<?php echo $flag ;?>" alt = ""><span class="tyr-title"> <?php echo $product->title ;?> </span></h1>
+                <h3><?php echo $country ;?> <img class="flag-country" src = "/<?php echo $flag ;?>" alt = ""><span class="tyr-title"> <?php echo $product->title ;?> </span></h3>
                 <div id="country-info">
                     <div class="col-xs-2 no-left">
                         <p>Вылет из: <span><?php echo $vylet ;?></span></p>
@@ -338,7 +338,7 @@
                         [[w:NewsLastWidget|parent_id=2;count=3;]]
                     </div>
                     <div class="col-xs-9 no-right">
-                        <h2 class="descr descr-hotel">Отель</h2>
+                        <h3 class="descr hotel_title descr-hotel">Отель</h3>
                         <div class="stars">
 <?php
                             for($i = 0; $i < 5; $i++)

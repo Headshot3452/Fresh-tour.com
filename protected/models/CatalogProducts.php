@@ -68,7 +68,7 @@
                 array('article', 'length', 'max'=>15),
                 array('barcode', 'length', 'max'=>20),
                 array('seo_title, seo_keywords, title, name, preview', 'length', 'max'=>255),
-                array('sort,seo_description,text, item_file,sale_info,stock,unit_id','safe'),
+                array('sort, seo_description, text, item_file, sale_info, stock, unit_id, info', 'safe'),
                 // The following rule is used by search().
                 // @todo Please remove those attributes that should not be searched.
                 array('id, parent_id, language_id, seo_title, seo_keywords, seo_description, article, barcode, price, old_price, images, title, name, text, create_time, update_time, sale, popular, new, hit, status', 'safe', 'on'=>'search'),
@@ -127,6 +127,7 @@
                 'stock' => Yii::t('app','Stock'),
                 'sale_info' => Yii::t('app','Sale Info'),
                 'preview' => Yii::t('app','Preview'),
+                'info' => 'Информация'
             );
         }
 

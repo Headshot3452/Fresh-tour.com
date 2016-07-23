@@ -77,7 +77,7 @@
 ?>
 				</div>
 
-				<h1><?php echo $product->title ;?><img class="flag-country" src = "/<?php echo isset($flag) ? $flag : '' ;?> " alt = ""></h1>
+				<h3><?php echo $product->title ;?><img class="flag-country" src = "/<?php echo isset($flag) ? $flag : '' ;?> " alt = ""></h3>
 
 				<div id="country-info">
 					<div class="col-xs-2 col-xs-offset-10 no-right">
@@ -130,7 +130,7 @@
 	                <div class="col-xs-9 no-right">
 	                    <div id="tyr-content">
 							<div id="description">
-								<h2 class="descr descr-about">Информация о визе</h2>
+								<h1 class="descr descr-about">'.$product->info.'</h1>
 								<div class="text">
 									' . $product->text . '
 								</div>';

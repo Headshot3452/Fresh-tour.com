@@ -35,7 +35,7 @@
 				</div>
 				<a href = "/<?php echo $this->getUrlById(Yii::app()->params['pages']['strany-i-oteli']) ;?>" class="back-to-country">К списку стран</a>
 				<span id="time"><?php echo $tree->difference;?></span>
-				<h1><?php echo $this->pageTitle ;?> <img class="flag-country" src = "/<?php echo $flag ;?>" alt = ""></h1>
+				<h3><?php echo $this->pageTitle ;?> <img class="flag-country" src = "/<?php echo $flag ;?>" alt = ""></h3>
 				<div id="country-info">
 					<div class="col-xs-3 no-left">
 						Столица:
@@ -174,11 +174,11 @@
 <!--						</div>-->
 					</div>
 					<div class="col-xs-9 no-right">
-						<h2 class="descr descr-about">О стране</h2>
+						<h2 class="descr descr-about"><?php echo $tree->info ;?></h2>
 						<div class="text">
 							<?php echo $tree->text ;?>
 						</div>
-						<h2 class="descr descr-kart"><?php echo $tree->title ;?> на карте</h2>
+						<h3 class="descr hotel_title descr-kart"><?php echo $tree->title ;?> на карте</h3>
 						<div id="map_country">
 							<?php echo $tree->map ;?>
 						</div>
@@ -340,7 +340,7 @@
 						</div>
 					</div>
 					<div class="col-xs-9 no-right">
-						<h1>Туры <?php echo $tree->padej ;?> <i><?php echo $dataProducts->getTotalItemCount() ;?></i> </h1>
+						<h3 id="one_country_title">Туры <?php echo $tree->padej ;?> <i><?php echo $dataProducts->getTotalItemCount() ;?></i> </h3>
 						<div class="sort">
 							Сортировка по: <a href = "" class="<?php echo $sort ;?>">Цене <span></span> </a>
 						</div>

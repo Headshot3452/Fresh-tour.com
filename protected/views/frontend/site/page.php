@@ -22,7 +22,7 @@
                             }
         echo
                         '</div>
-                        <h1>'.$this->pageTitle.'</h1>
+                        <h3>'.$this->pageTitle.'</h3>
                     </div>
                 </div>
                 <div class = "clearfix"></div>

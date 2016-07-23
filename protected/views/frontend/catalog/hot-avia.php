@@ -24,7 +24,7 @@
 					}
 					?>
 				</div>
-				<h1><?php echo $this->pageTitle ;?></h1>
+				<h3><?php echo $this->pageTitle ;?></h3>
 			</div>
 		</div>
 		<div class="clearfix"></div>
@@ -46,7 +46,7 @@
 				$table_title = CatalogParams::model()->active()->findAll(array('condition' => 'catalog_tree_id = :id AND parent_id > 0', 'params' => array('id' => Yii::app()->params["avia_catalog"]), 'order' => 'sort'));
 ?>
 				<div class="col-xs-9 no-right">
-					<h1> <?php echo $this->pageTitle ;?> </h1>
+					<h3 id="one_country_title"><?php echo $this->pageTitle ;?></h3>
 					<table id="avia" style="margin-top: 30px;">
 						<thead>
 							<tr>

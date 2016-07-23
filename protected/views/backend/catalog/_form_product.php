@@ -20,6 +20,12 @@
 </div>
 
 <div class="form-group col-xs-12">
+    <?php echo $form->labelEx($model, 'info'); ?>
+    <?php echo $form->textArea($model, 'info', array('placeholder'=>'')); ?>
+    <?php echo $form->error($model, 'info'); ?>
+</div>
+
+<div class="form-group col-xs-12">
     <div class="row">
         <div class="col-xs-3">
             <?php echo $form->labelEx($model, 'price', array('label' => 'Цена (USD)')); ?>

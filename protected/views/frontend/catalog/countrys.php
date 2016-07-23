@@ -16,7 +16,7 @@
 						echo
 						'<div class="item col-xs-4">
 							<img src = "/'.$image.'" alt = "">
-							<h2 onclick=\'location.href="'.$value->name.'" \'>'.$value->title.'</h2>
+							<h3 class="strana_title" onclick=\'location.href="'.$value->name.'" \'>'.$value->title.'</h2>
 							<a href = "'.$value->name.'" class="kolichestvo">'.$count.' '.Yii::t('app', 'Tours', array($count)).' </a>
 						</div>';
 					}
@@ -26,7 +26,7 @@
 		</div>
 
 		<div id="all-tyrs">
-			<h1>Все маршруты <h2>'.$kol.' <span>'.Yii::t('app', 'Countries', array($kol)).'</span></h2></h1>
+			<h3 id="all-dest">Все маршруты <h3 id="all-strany">'.$kol.' <span>'.Yii::t('app', 'Countries', array($kol)).'</span></h3></h3>
 			<div class="clearfix"></div>';
 
 			mb_internal_encoding("UTF-8");

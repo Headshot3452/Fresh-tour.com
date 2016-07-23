@@ -24,7 +24,7 @@
 					}
 ?>
 				</div>
-				<h1><?php echo $this->pageTitle ;?></h1>
+				<h3><?php echo $this->pageTitle ;?></h3>
 			</div>
 		</div>
 		<div class="clearfix"></div>
@@ -154,7 +154,9 @@
 					</div>
 				</div>
 					<div class="col-xs-9 no-right hot_tours_container">
-						<h1 id="one_country_title"><?php echo $this->pageTitle ;?> <?php echo CHtml::dropDownList('one_country', $one_country, CatalogTree::getCountry(), array('class' => 'selectpicker', 'data-size' => '6', 'empty' => 'Все страны', 'options' => array($selected => array('selected' => true)))) ;?></h1>
+						<h3 id="one_country_title">
+							<?php echo $this->pageTitle ;?> <?php echo CHtml::dropDownList('one_country', $one_country, CatalogTree::getCountry(), array('class' => 'selectpicker', 'data-size' => '6', 'empty' => 'Все страны', 'options' => array($selected => array('selected' => true)))) ;?>
+						</h3>
 
 						<div class="sort">
 							Сортировка по: <a href = "" class="<?php echo $sort ;?>">Цене <span></span> </a>

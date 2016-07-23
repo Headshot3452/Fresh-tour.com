@@ -74,6 +74,12 @@
         <?php echo $form->error($model, 'name'); ?>
     </div>
 
+    <div class="form-group">
+        <?php echo $form->labelEx($model, 'info'); ?>
+        <?php echo $form->textArea($model, 'info', array('placeholder'=>'')); ?>
+        <?php echo $form->error($model, 'info'); ?>
+    </div>
+
 <!--    <div class="form-group">-->
 <!--        --><?php //echo $form->labelEx($model, 'type'); ?>
 <!--        --><?php //echo $form->dropDownlist($model, 'type', $model->getType()); ?>

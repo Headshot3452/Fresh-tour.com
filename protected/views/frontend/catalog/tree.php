@@ -46,7 +46,7 @@
         $one_country = new CatalogProducts();
 
         echo
-            '<h1 id="one_country_title">'. $this->pageTitle . '<i> '.$count.'</i> '.CHtml::dropDownList("one_country", $one_country, CatalogProducts::getVizyForFilter(), array("class" => "selectpicker", "data-size" => "6", "empty" => "Все страны", "options" => array($selected => array("selected" => true)))).'</h1>
+            '<h3 id="one_country_title">'. $this->pageTitle . '<i> '.$count.'</i> '.CHtml::dropDownList("one_country", $one_country, CatalogProducts::getVizyForFilter(), array("class" => "selectpicker", "data-size" => "6", "empty" => "Все страны", "options" => array($selected => array("selected" => true)))).'</h3>
             <div class="sort">
                 Сортировка по: <a href = "" class="'.$sort.'">Цене <span></span> </a>
             </div>
@@ -127,7 +127,7 @@
                 'pager' => array(
                     'class' => 'bootstrap.widgets.BsPager',
                     'firstPageLabel' => '<<',
-                    'pvPageLabel' => '',
+                    'prevPageLabel' => '',
                     'nextPageLabel' => '',
                     'lastPageLabel' => '',
                     'hideFirstAndLast' => true,

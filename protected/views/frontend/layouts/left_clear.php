@@ -24,7 +24,7 @@
 					}
 ?>
 				</div>
-				<h1><?php echo $this->pageTitle; ?></h1>
+				<h3><?php echo $this->pageTitle; ?></h3>
 			</div>
 		</div>
 		<div class = "clearfix"></div>

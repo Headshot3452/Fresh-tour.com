@@ -19,7 +19,7 @@
 					}
 ?>
 				</div>
-				<h1><?php echo $this->pageTitle; ?></h1>
+				<h3><?php echo $this->pageTitle; ?></h3>
 			</div>
 		</div>
 		<div class = "clearfix"></div>
@@ -95,7 +95,7 @@
 
 								echo
 									'<div role="tabpanel" class="tab-pane '.$active.'" id="'.$value['name'].'">
-										<h1>'.$value['title'].'</h1>';
+										<h3 class="tem_title">'.$value['title'].'</h1>';
 
 										if($tem_slider_array)
 										{
